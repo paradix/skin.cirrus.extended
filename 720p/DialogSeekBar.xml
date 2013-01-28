@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <window id="115">
 	<defaultcontrol>1</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
@@ -10,25 +11,25 @@
 		<posy>165</posy>
 	</coordinates>
 	<controls>
-	
 		<control type="group">
-			<control type="image"> <!-- background -->
+			<control type="image">
+				<!-- background -->
 				<posx>228</posx>
 				<posy>240</posy>
 				<width>824</width>
 				<height>300</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>contentpanel.png</texture>
+				<texture>contentpanel.png</texture>
 				<visible>!VideoPlayer.Content(Files)</visible>
 				<visible>!Skin.HasSetting(slimseek)</visible>
 			</control>
-			<control type="image"> 
+			<control type="image">
 				<posx>228</posx>
 				<posy>330</posy>
 				<width>824</width>
 				<height>190</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>contentpanel.png</texture>
+				<texture>contentpanel.png</texture>
 				<visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
 			</control>
 			<control type="image">
@@ -46,7 +47,8 @@
 				<visible>VideoPlayer.Content(Movies)</visible>
 				<visible>!Skin.HasSetting(slimseek)</visible>
 			</control>
-			 <control type="image">   <!-- STARS-->
+			<control type="image">
+				<!-- STARS-->
 				<description>IMDB rating</description>
 				<posx>248</posx>
 				<posy>505</posy>
@@ -55,8 +57,9 @@
 				<texture>$INFO[Player.StarRating]</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<visible>VideoPlayer.Content(Movies) + !Skin.HasSetting(slimseek)</visible>
-			</control>	
-                <control type="image">   <!-- STARS TV-->
+			</control>
+			<control type="image">
+				<!-- STARS TV-->
 				<description>IMDB rating</description>
 				<posx>248</posx>
 				<posy>505</posy>
@@ -64,9 +67,9 @@
 				<height>19</height>
 				<texture>$INFO[Player.StarRating]</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
-			    <visible>VideoPlayer.Content(Episodes) + !Skin.HasSetting(slimseek)</visible>
-			</control>							
-				<control type="image">
+				<visible>VideoPlayer.Content(Episodes) + !Skin.HasSetting(slimseek)</visible>
+			</control>
+			<control type="image">
 				<description>TV Show Poster cover image</description>
 				<posx>244</posx>
 				<posy>260</posy>
@@ -80,7 +83,7 @@
 				<bordersize>6</bordersize>
 				<aspectratio aligny="bottom">stretch</aspectratio>
 				<visible>VideoPlayer.Content(Episodes)</visible>
-				<visible>!Skin.HasSetting(slimseek)</visible> 
+				<visible>!Skin.HasSetting(slimseek)</visible>
 			</control>
 			<!-- NOW PLAYING INFO LiveTV -->
 			<control type="image">
@@ -96,7 +99,7 @@
 				<bordersize>6</bordersize>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
-				<visible>!Skin.HasSetting(slimseek)</visible> -->
+				<visible>!Skin.HasSetting(slimseek)</visible> --&gt;
 			</control>
 			<control type="progress">
 				<description>Progressbar</description>
@@ -109,180 +112,178 @@
 				<visible>!Skin.HasSetting(slimseek)</visible>
 			</control>
 			<control type="slider" id="401">
-					<description>Seek Slider</description>
-					<posx>385</posx>
-					<posy>507</posy>
-					<width>610</width>
-					<height>12</height>
-					<texturesliderbar>seekslider.png</texturesliderbar>
-					<textureslidernib>osd_slider_nib.png</textureslidernib>
-					<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
-					<visible>Player.Seeking</visible>
-					<visible>!VideoPlayer.Content(Files)</visible>
-				    <visible>!Skin.HasSetting(slimseek)</visible>
-				</control>
-				<control type="progress">
+				<description>Seek Slider</description>
+				<posx>385</posx>
+				<posy>507</posy>
+				<width>610</width>
+				<height>12</height>
+				<texturesliderbar>seekslider.png</texturesliderbar>
+				<textureslidernib>osd_slider_nib.png</textureslidernib>
+				<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+				<visible>Player.Seeking</visible>
+				<visible>!VideoPlayer.Content(Files)</visible>
+				<visible>!Skin.HasSetting(slimseek)</visible>
+			</control>
+			<control type="progress">
 				<description>Progressbar</description>
 				<posx>250</posx>
 				<posy>492</posy>
 				<width>780</width>
 				<height>14</height>
 				<info>Player.Progress</info>
-	            <visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
+				<visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
 			</control>
 			<control type="slider" id="401">
-					<description>Seek Slider</description>
-					<posx>220</posx>
-					<posy>389</posy>
-					<width>780</width>
-					<height>12</height>
-					<texturesliderbar>seekslider.png</texturesliderbar>
-					<textureslidernib>osd_slider_nib.png</textureslidernib>
-					<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
-					<visible>Player.Seeking</visible>
-				    <visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
-				</control>
-				</control>
-				<control type="group">
-				<posx>515</posx>
-				<posy>180</posy>
-				<control type="grouplist">
-			    	<visible>!VideoPlayer.Content(Files)</visible>
-                    <visible>!Skin.HasSetting(slimseek)</visible>
-					<description>Media Codec Flagging Images</description>
-					<posx>-100</posx>
-					<posy>150</posy>
-					<width min="100" max="550">auto</width>
-					<align>left</align>
-					<itemgap>0</itemgap>
-					<orientation>horizontal</orientation>
-					<control type="image">
-						<description>Video rez Image</description>
-						<width>80</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture diffuse="maskflags.png">$INFO[VideoPlayer.VideoResolution,special://skin/extras/flagging/video/,.png]</texture>
-						<visible>!Skin.HasSetting(newFlags)</visible>
-					</control>
-					<control type="image">
-						<description>Video rez Image</description>
-						<width>80</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture diffuse="maskflags.png">$INFO[VideoPlayer.VideoResolution,special://skin/extras/flagging/videoNew/,.png]</texture>
-						<visible>Skin.HasSetting(newFlags)</visible>
-					</control>
-					<control type="image">
-						<description>Common Codec Image</description>
-						<width min="30" max="120">auto</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture diffuse="maskflags.png">$INFO[VideoPlayer.VideoCodec,special://skin/extras/flagging/video/,.png]</texture>
-						<!-- Don't show if its one of the 500 divx codecs -->
-						<visible>![substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)]</visible>
-						<visible>!Skin.HasSetting(newFlags)</visible>
-					</control>
-					<control type="image">
-						<description>Common Codec Image</description>
-						<width min="30" max="120">auto</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture diffuse="maskflags.png">$INFO[VideoPlayer.VideoCodec,special://skin/extras/flagging/videoNew/,.png]</texture>
-						<!-- Don't show if its one of the 500 divx codecs -->
-						<visible>![substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)]</visible>
-						<visible>Skin.HasSetting(newFlags)</visible>
-					</control>
-					<control type="image">
-						<description>Divx Codec Image</description>
-						<width min="30" max="120">auto</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture diffuse="maskflags.png">special://skin/extras/flagging/video/divx.png</texture>
-						<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)</visible>
-						<visible>!Skin.HasSetting(newFlags)</visible>
-					</control>
-					<control type="image">
-						<description>Divx Codec Image</description>
-						<width min="30" max="120">auto</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture diffuse="maskflags.png">special://skin/extras/flagging/videoNew/divx.png</texture>
-						<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)</visible>
-						<visible>Skin.HasSetting(newFlags)</visible>
-					</control>
-					<control type="image">
-						<description>Dolby Digital Image</description>
-						<width min="30" max="120">auto</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture diffuse="maskflags.png">special://skin/extras/flagging/audio/dolbydigital.png</texture>
-						<visible>[substring(VideoPlayer.AudioCodec,ac3) + substring(VideoPlayer.AudioChannels,6)]</visible>
-						<visible>!Skin.HasSetting(newFlags)</visible>
-					</control>
-					<control type="image">
-						<description>Dolby Digital Image</description>
-						<width min="30" max="120">auto</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture diffuse="maskflags.png">special://skin/extras/flagging/audioNew/dolbydigital.png</texture>
-						<visible>[substring(VideoPlayer.AudioCodec,ac3) + substring(VideoPlayer.AudioChannels,6)]</visible>
-						<visible>Skin.HasSetting(newFlags)</visible>
-					</control>
-					<control type="image">
-						<description>Audio Codec Image</description>
-						<width min="30" max="120">auto</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture diffuse="maskflags.png">$INFO[VideoPlayer.AudioCodec,special://skin/extras/flagging/audio/,.png]</texture>
-						<!-- Don't show if I want the Dolby Digital Logo -->
-						<visible>![substring(VideoPlayer.AudioCodec,ac3) + substring(VideoPlayer.AudioChannels,6)]</visible>
-						<visible>!Skin.HasSetting(newFlags)</visible>
-					</control>
-					<control type="image">
-						<description>Audio Codec Image</description>
-						<width min="30" max="120">auto</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture diffuse="maskflags.png">$INFO[VideoPlayer.AudioCodec,special://skin/extras/flagging/audioNew/,.png]</texture>
-						<!-- Don't show if I want the Dolby Digital Logo -->
-						<visible>![substring(VideoPlayer.AudioCodec,ac3) + substring(VideoPlayer.AudioChannels,6)]</visible>
-						<visible>Skin.HasSetting(newFlags)</visible>
-					</control>
-					<control type="image">
-						<description>Audio Channels Image</description>
-						<width min="30" max="80">auto</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture diffuse="maskflags.png">$INFO[VideoPlayer.AudioChannels,special://skin/extras/flagging/audio/,.png]</texture>
-						<visible>!Skin.HasSetting(newFlags)</visible>
-					</control>
-					<control type="image">
-						<description>Audio Channels Image</description>
-						<width min="30" max="80">auto</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture diffuse="maskflags.png">$INFO[VideoPlayer.AudioChannels,special://skin/extras/flagging/audioNew/,.png]</texture>
-						<visible>Skin.HasSetting(newFlags)</visible>
-					</control>
-				</control>
-				
-				<control type="label">
-					<posx>-100</posx>
-					<posy>80</posy>
-					<width>550</width>
+				<description>Seek Slider</description>
+				<posx>220</posx>
+				<posy>389</posy>
+				<width>780</width>
+				<height>12</height>
+				<texturesliderbar>seekslider.png</texturesliderbar>
+				<textureslidernib>osd_slider_nib.png</textureslidernib>
+				<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+				<visible>Player.Seeking</visible>
+				<visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<posx>515</posx>
+			<posy>180</posy>
+			<control type="grouplist">
+				<visible>!VideoPlayer.Content(Files)</visible>
+				<visible>!Skin.HasSetting(slimseek)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>-100</posx>
+				<posy>150</posy>
+				<width min="100" max="550">auto</width>
+				<align>left</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="image">
+					<description>Video rez Image</description>
+					<width>80</width>
 					<height>30</height>
-					<label>$INFO[VideoPlayer.TVShowTitle]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<scroll>true</scroll>
-					<font>cirrus_24_Bold</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(Episodes)</visible>
-					<visible>!Skin.HasSetting(slimseek)</visible>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="maskflags.png">$INFO[VideoPlayer.VideoResolution,special://skin/extras/flagging/video/,.png]</texture>
+					<visible>!Skin.HasSetting(newFlags)</visible>
 				</control>
-				
-				<!-- <control type="label">
+				<control type="image">
+					<description>Video rez Image</description>
+					<width>80</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="maskflags.png">$INFO[VideoPlayer.VideoResolution,special://skin/extras/flagging/videoNew/,.png]</texture>
+					<visible>Skin.HasSetting(newFlags)</visible>
+				</control>
+				<control type="image">
+					<description>Common Codec Image</description>
+					<width min="30" max="120">auto</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="maskflags.png">$INFO[VideoPlayer.VideoCodec,special://skin/extras/flagging/video/,.png]</texture>
+					<!-- Don't show if its one of the 500 divx codecs -->
+					<visible>![substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)]</visible>
+					<visible>!Skin.HasSetting(newFlags)</visible>
+				</control>
+				<control type="image">
+					<description>Common Codec Image</description>
+					<width min="30" max="120">auto</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="maskflags.png">$INFO[VideoPlayer.VideoCodec,special://skin/extras/flagging/videoNew/,.png]</texture>
+					<!-- Don't show if its one of the 500 divx codecs -->
+					<visible>![substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)]</visible>
+					<visible>Skin.HasSetting(newFlags)</visible>
+				</control>
+				<control type="image">
+					<description>Divx Codec Image</description>
+					<width min="30" max="120">auto</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="maskflags.png">special://skin/extras/flagging/video/divx.png</texture>
+					<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)</visible>
+					<visible>!Skin.HasSetting(newFlags)</visible>
+				</control>
+				<control type="image">
+					<description>Divx Codec Image</description>
+					<width min="30" max="120">auto</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="maskflags.png">special://skin/extras/flagging/videoNew/divx.png</texture>
+					<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)</visible>
+					<visible>Skin.HasSetting(newFlags)</visible>
+				</control>
+				<control type="image">
+					<description>Dolby Digital Image</description>
+					<width min="30" max="120">auto</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="maskflags.png">special://skin/extras/flagging/audio/dolbydigital.png</texture>
+					<visible>[substring(VideoPlayer.AudioCodec,ac3) + substring(VideoPlayer.AudioChannels,6)]</visible>
+					<visible>!Skin.HasSetting(newFlags)</visible>
+				</control>
+				<control type="image">
+					<description>Dolby Digital Image</description>
+					<width min="30" max="120">auto</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="maskflags.png">special://skin/extras/flagging/audioNew/dolbydigital.png</texture>
+					<visible>[substring(VideoPlayer.AudioCodec,ac3) + substring(VideoPlayer.AudioChannels,6)]</visible>
+					<visible>Skin.HasSetting(newFlags)</visible>
+				</control>
+				<control type="image">
+					<description>Audio Codec Image</description>
+					<width min="30" max="120">auto</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="maskflags.png">$INFO[VideoPlayer.AudioCodec,special://skin/extras/flagging/audio/,.png]</texture>
+					<!-- Don't show if I want the Dolby Digital Logo -->
+					<visible>![substring(VideoPlayer.AudioCodec,ac3) + substring(VideoPlayer.AudioChannels,6)]</visible>
+					<visible>!Skin.HasSetting(newFlags)</visible>
+				</control>
+				<control type="image">
+					<description>Audio Codec Image</description>
+					<width min="30" max="120">auto</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="maskflags.png">$INFO[VideoPlayer.AudioCodec,special://skin/extras/flagging/audioNew/,.png]</texture>
+					<!-- Don't show if I want the Dolby Digital Logo -->
+					<visible>![substring(VideoPlayer.AudioCodec,ac3) + substring(VideoPlayer.AudioChannels,6)]</visible>
+					<visible>Skin.HasSetting(newFlags)</visible>
+				</control>
+				<control type="image">
+					<description>Audio Channels Image</description>
+					<width min="30" max="80">auto</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="maskflags.png">$INFO[VideoPlayer.AudioChannels,special://skin/extras/flagging/audio/,.png]</texture>
+					<visible>!Skin.HasSetting(newFlags)</visible>
+				</control>
+				<control type="image">
+					<description>Audio Channels Image</description>
+					<width min="30" max="80">auto</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="maskflags.png">$INFO[VideoPlayer.AudioChannels,special://skin/extras/flagging/audioNew/,.png]</texture>
+					<visible>Skin.HasSetting(newFlags)</visible>
+				</control>
+			</control>
+			<control type="label">
+				<posx>-100</posx>
+				<posy>80</posy>
+				<width>550</width>
+				<height>30</height>
+				<label>$INFO[VideoPlayer.TVShowTitle]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+				<font>cirrus_24_Bold</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(Episodes)</visible>
+				<visible>!Skin.HasSetting(slimseek)</visible>
+			</control>
+			<!-- <control type="label">
 					<posx>-100</posx>
 					<posy>110</posy>
 					<width>550</width>
@@ -297,110 +298,110 @@
 					<visible>VideoPlayer.Content(Episodes)</visible>
 					<visible>!Skin.HasSetting(slimseek)</visible>
 				</control> -->
-				<control type="label">
-					<posx>-25</posx>
-					<posy>190</posy>
-					<width>300</width>
-					<height>30</height>
-					<label>$INFO[VideoPlayer.TVShowTitle]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<scroll>true</scroll>
-					<font>cirrus_24</font>
-					<textcolor>grey</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(Episodes)</visible>
-					<visible>Skin.HasSetting(slimseek)</visible>
-				</control>
-				<control type="label">
-					<posx>-100</posx>
-					<posy>110</posy>
-					<width>550</width>
-					<height>30</height>
-					<label>[COLOR=accent]$LOCALIZE[31063][/COLOR] $INFO[VideoPlayer.Season]  [COLOR=accent]$LOCALIZE[31064][/COLOR] $INFO[VideoPlayer.Episode]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<scroll>true</scroll>
-					<font>cirrus_22_Bold</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(Episodes)</visible>
-					<visible>!Skin.HasSetting(slimseek)</visible>
-				</control>
-				<control type="label">
-					<posx>-25</posx>
-					<posy>220</posy>
-					<width>300</width>
-					<height>30</height>
-					<label>[COLOR=accent]$LOCALIZE[31063][/COLOR] $INFO[VideoPlayer.Season]  [COLOR=accent]$LOCALIZE[31064][/COLOR] $INFO[VideoPlayer.Episode]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<scroll>true</scroll>
-					<font>cirrus_22_Bold</font>
-					<textcolor>accent</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(Episodes)</visible>
-					<visible>Skin.HasSetting(slimseek)</visible>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>35</posy>
-					<width>680</width>
-					<height>30</height>
-					<label>$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album, - ]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>cirrus_20</font>
-					<textcolor>grey</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(MusicVideos)</visible>
-					<visible>!Skin.HasSetting(slimseek)</visible>
-				</control>
-				<control type="label">
-					<posx>-25</posx>
-					<posy>230</posy>
-					<width>300</width>
-					<height>30</height>
-					<label>$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album, - ]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>cirrus_20</font>
-					<textcolor>grey</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(MusicVideos)</visible>
-					<visible>Skin.HasSetting(slimseek)</visible>
-				</control>
-				<control type="label">
-					<posx>-100</posx>
-					<posy>80</posy>
-					<width>550</width>
-					<height>30</height>
-					<label>$INFO[VideoPlayer.Title]</label>
-					<scroll>true</scroll>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>cirrus_24_Bold</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(Movies)</visible>
-                    <visible>!Skin.HasSetting(slimseek)</visible>
-				</control>
-					<control type="label">
-					<posx>-100</posx>
-					<posy>110</posy>
-					<width>550</width>
-					<height>30</height>
-					<label>$INFO[VideoPlayer.Year]</label>
-					<scroll>true</scroll>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>cirrus_22_Bold</font>
-					<textcolor>accent</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(Movies)</visible>
-                    <visible>!Skin.HasSetting(slimseek)</visible>
-				</control>
-				<!-- <control type="label">
+			<control type="label">
+				<posx>-25</posx>
+				<posy>190</posy>
+				<width>300</width>
+				<height>30</height>
+				<label>$INFO[VideoPlayer.TVShowTitle]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+				<font>cirrus_24</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(Episodes)</visible>
+				<visible>Skin.HasSetting(slimseek)</visible>
+			</control>
+			<control type="label">
+				<posx>-100</posx>
+				<posy>110</posy>
+				<width>550</width>
+				<height>30</height>
+				<label>[COLOR=accent]$LOCALIZE[31063][/COLOR] $INFO[VideoPlayer.Season]  [COLOR=accent]$LOCALIZE[31064][/COLOR] $INFO[VideoPlayer.Episode]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+				<font>cirrus_22_Bold</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(Episodes)</visible>
+				<visible>!Skin.HasSetting(slimseek)</visible>
+			</control>
+			<control type="label">
+				<posx>-25</posx>
+				<posy>220</posy>
+				<width>300</width>
+				<height>30</height>
+				<label>[COLOR=accent]$LOCALIZE[31063][/COLOR] $INFO[VideoPlayer.Season]  [COLOR=accent]$LOCALIZE[31064][/COLOR] $INFO[VideoPlayer.Episode]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+				<font>cirrus_22_Bold</font>
+				<textcolor>accent</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(Episodes)</visible>
+				<visible>Skin.HasSetting(slimseek)</visible>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>35</posy>
+				<width>680</width>
+				<height>30</height>
+				<label>$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album, - ]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>cirrus_20</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(MusicVideos)</visible>
+				<visible>!Skin.HasSetting(slimseek)</visible>
+			</control>
+			<control type="label">
+				<posx>-25</posx>
+				<posy>230</posy>
+				<width>300</width>
+				<height>30</height>
+				<label>$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album, - ]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cirrus_20</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(MusicVideos)</visible>
+				<visible>Skin.HasSetting(slimseek)</visible>
+			</control>
+			<control type="label">
+				<posx>-100</posx>
+				<posy>80</posy>
+				<width>550</width>
+				<height>30</height>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<scroll>true</scroll>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>cirrus_24_Bold</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(Movies)</visible>
+				<visible>!Skin.HasSetting(slimseek)</visible>
+			</control>
+			<control type="label">
+				<posx>-100</posx>
+				<posy>110</posy>
+				<width>550</width>
+				<height>30</height>
+				<label>$INFO[VideoPlayer.Year]</label>
+				<scroll>true</scroll>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>cirrus_22_Bold</font>
+				<textcolor>accent</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(Movies)</visible>
+				<visible>!Skin.HasSetting(slimseek)</visible>
+			</control>
+			<!-- <control type="label">
 					<posx>-265</posx>
 					<posy>5</posy>
 					<width>780</width>
@@ -417,16 +418,16 @@
 				</control> -->
 			<!-- TODO -->
 			<control type="largeimage">
-					<description>TV Show Image</description>
-					<posx>200r</posx>
-					<posy>263</posy> 
-					<width>200</width>
-					<height>112</height>
-					<texture fallback="blank.png">$INFO[Player.FolderPath]../clearart.png</texture>
-					<aspectratio>keep</aspectratio>
-					<visible>Skin.HasSetting(clearart) + VideoPlayer.Content(episodes)</visible>
-				</control>
-				<!-- <control type="largeimage">
+				<description>TV Show Image</description>
+				<posx>200r</posx>
+				<posy>263</posy>
+				<width>200</width>
+				<height>112</height>
+				<texture fallback="blank.png">$INFO[Player.FolderPath]../clearart.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Skin.HasSetting(clearart) + VideoPlayer.Content(episodes)</visible>
+			</control>
+			<!-- <control type="largeimage">
 					<description>Movie Image Logo</description>
 					<posx>324r</posx>
 					<posy>382</posy> 
@@ -436,113 +437,113 @@
 					<aspectratio>keep</aspectratio>
 					<visible>VideoPlayer.Content(movies)</visible>
 				</control> -->
-				<control type="label">
-					<posx>-265</posx>
-					<posy>220</posy>
-					<width>780</width>
-					<height>30</height>
-					<label>$LOCALIZE[41260] $INFO[VideoPlayer.Director]</label>
-					<scroll>true</scroll>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>cirrus_18</font>
-					<textcolor>grey</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(Movies)</visible>
-					<visible>Skin.HasSetting(slimseek)</visible>
-				</control>
-				<control type="label">
-					<posx>-25</posx>
-					<posy>250</posy>
-					<width>300</width>
-					<height>20</height>
-					<label>$LOCALIZE[572]: $INFO[VideoPlayer.Studio]</label>
-					<scroll>true</scroll>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>cirrus_18</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(episodes)</visible>
-					<visible>Skin.HasSetting(slimseek)</visible>
-				</control>
-                <control type="label">
-					<posx>0</posx>
-					<posy>75</posy>
-					<width>530</width>
-					<height>30</height>
-					<label>$INFO[VideoPlayer.Title]</label>
-					<scroll>true</scroll>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>cirrus_30</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(LiveTV)</visible>
-				</control>
-				<!-- Changes Begin Butchabay MOD 1.2.0 -->
-					<control type="label">
-					<posx>-265</posx>
-					<posy>190</posy>
-					<width>780</width>
-					<height>30</height>
-					<label>$INFO[VideoPlayer.Title]</label>
-					<scroll>true</scroll>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>cirrus_24</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
-					<visible>!VideoPlayer.Content(episodes)</visible>
-				</control>
-				<control type="label">
-					<description>Playing Label</description>
-					<posx>-265</posx>
-					<posy>157</posy>
-					<width>780</width>
-					<height>25</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>cirrus_22_Bold</font>
-					<textcolor>accent</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<label>$INFO[VideoPlayer.Year]</label>
-					<visible>Skin.HasSetting(slimseek)</visible>
-				</control>
-				<control type="label">
-					<description>Paused Label</description>
-					<posx>-265</posx>
-					<posy>275</posy>
-					<width>780</width>
-					<height>35</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>cirrus_24_Bold</font>
-					<textcolor>accent</textcolor>
-					<label>31043</label>
-					<visible>[Player.Paused + !Player.Caching] + !Player.Seeking</visible>
-					<visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
-				</control>
-				<control type="label">
-					<description>Cache Label</description>
-					<posx>-265</posx>
-					<posy>275</posy>
-					<width>780</width>
-					<height>35</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>cirrus_22_Bold</font>
-					<textcolor>accent</textcolor>
-					<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
-					<visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
-					<visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
-				</control>
+			<control type="label">
+				<posx>-265</posx>
+				<posy>220</posy>
+				<width>780</width>
+				<height>30</height>
+				<label>$LOCALIZE[41260] $INFO[VideoPlayer.Director]</label>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cirrus_18</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(Movies)</visible>
+				<visible>Skin.HasSetting(slimseek)</visible>
+			</control>
+			<control type="label">
+				<posx>-25</posx>
+				<posy>250</posy>
+				<width>300</width>
+				<height>20</height>
+				<label>$LOCALIZE[572]: $INFO[VideoPlayer.Studio]</label>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cirrus_18</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(episodes)</visible>
+				<visible>Skin.HasSetting(slimseek)</visible>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>75</posy>
+				<width>530</width>
+				<height>30</height>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<scroll>true</scroll>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>cirrus_30</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+			</control>
+			<!-- Changes Begin Butchabay MOD 1.2.0 -->
+			<control type="label">
+				<posx>-265</posx>
+				<posy>190</posy>
+				<width>780</width>
+				<height>30</height>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cirrus_24</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
+				<visible>!VideoPlayer.Content(episodes)</visible>
+			</control>
+			<control type="label">
+				<description>Playing Label</description>
+				<posx>-265</posx>
+				<posy>157</posy>
+				<width>780</width>
+				<height>25</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cirrus_22_Bold</font>
+				<textcolor>accent</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[VideoPlayer.Year]</label>
+				<visible>Skin.HasSetting(slimseek)</visible>
+			</control>
+			<control type="label">
+				<description>Paused Label</description>
+				<posx>-265</posx>
+				<posy>275</posy>
+				<width>780</width>
+				<height>35</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cirrus_24_Bold</font>
+				<textcolor>accent</textcolor>
+				<label>31043</label>
+				<visible>[Player.Paused + !Player.Caching] + !Player.Seeking</visible>
+				<visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
+			</control>
+			<control type="label">
+				<description>Cache Label</description>
+				<posx>-265</posx>
+				<posy>275</posy>
+				<width>780</width>
+				<height>35</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cirrus_22_Bold</font>
+				<textcolor>accent</textcolor>
+				<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
+				<visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
+				<visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
+			</control>
 			<!-- Plot and other Stuff when Paused -->
-				<control type="group">
-					<posx>0</posx>
-					<posy>0</posy>
-					<control type="textbox">
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<control type="textbox">
 					<posx>-100</posx>
 					<posy>200</posy>
 					<width>600</width>
@@ -555,11 +556,11 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>!VideoPlayer.Content(Files)</visible>
-                    <visible>!Skin.HasSetting(slimseek)</visible>
+					<visible>!Skin.HasSetting(slimseek)</visible>
 					<visible>!Skin.HasSetting(noplotonpause)</visible>
-				</control>	
-						<!-- el_Paraguayo Mod -->
-					<control type="label">
+				</control>
+				<!-- el_Paraguayo Mod -->
+				<control type="label">
 					<description>System Time</description>
 					<posx>510</posx>
 					<posy>80</posy>
@@ -571,8 +572,8 @@
 					<font>cirrus_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-                    <visible>!VideoPlayer.Content(Files)</visible>
-                    <visible>!Skin.HasSetting(slimseek)</visible>
+					<visible>!VideoPlayer.Content(Files)</visible>
+					<visible>!Skin.HasSetting(slimseek)</visible>
 				</control>
 				<control type="label">
 					<description>System Time</description>
@@ -586,9 +587,9 @@
 					<font>cirrus_18</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-                    <visible>Skin.HasSetting(slimseek) | VideoPlayer.Content(Files)</visible>
+					<visible>Skin.HasSetting(slimseek) | VideoPlayer.Content(Files)</visible>
 				</control>
-					<control type="label">
+				<control type="label">
 					<description>Current Video End Time</description>
 					<posx>510</posx>
 					<posy>300</posy>
@@ -600,8 +601,8 @@
 					<font>cirrus_20</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
-                    <visible>!VideoPlayer.Content(Files)</visible>
-                    <visible>!Skin.HasSetting(slimseek)</visible>
+					<visible>!VideoPlayer.Content(Files)</visible>
+					<visible>!Skin.HasSetting(slimseek)</visible>
 				</control>
 				<control type="label">
 					<description>Current Video End Time</description>
@@ -615,7 +616,7 @@
 					<font>cirrus_20</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
-                    <visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
+					<visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
 				</control>
 				<control type="label">
 					<description>Elapsed Time Label</description>
@@ -629,7 +630,7 @@
 					<aligny>center</aligny>
 					<label>$INFO[Player.Time] - $INFO[Player.Duration]</label>
 					<visible>!VideoPlayer.Content(Files)</visible>
-                    <visible>!Skin.HasSetting(slimseek)</visible>
+					<visible>!Skin.HasSetting(slimseek)</visible>
 				</control>
 				<control type="label">
 					<description>Player Times</description>
@@ -643,10 +644,11 @@
 					<font>cirrus_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-				    <visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
+					<visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
 				</control>
 			</control>
-			<control type="group"><!-- images for ff rew pause etc -->
+			<control type="group">
+				<!-- images for ff rew pause etc -->
 				<posx>340</posx>
 				<posy>125</posy>
 				<visible>!VideoPlayer.Content(Files)</visible>
@@ -748,7 +750,8 @@
 					<visible>Player.Forwarding32x</visible>
 				</control>
 			</control>
-			<control type="group"><!-- images for ff rew pause etc -->
+			<control type="group">
+				<!-- images for ff rew pause etc -->
 				<posx>40</posx>
 				<posy>272</posy>
 				<visible>VideoPlayer.Content(Files) | Skin.HasSetting(slimseek)</visible>
@@ -849,7 +852,7 @@
 					<visible>Player.Forwarding32x</visible>
 				</control>
 			</control>
-		<!-- 	<control type="image">
+			<!-- 	<control type="image">
 				<description>TV Show Image</description>
 				<posx>925</posx>
 				<posy>-200</posy> 
@@ -871,7 +874,8 @@
 				<aspectratio>keep</aspectratio>
 				<visible>Skin.HasSetting(clearart) + VideoPlayer.Content(episodes)</visible>
 			</control> -->
-			<control type="group"> <!-- Center labels -->
+			<control type="group">
+				<!-- Center labels -->
 				<posx>310</posx>
 				<posy>150</posy>
 				<align>center</align>
@@ -908,7 +912,7 @@
 				<posx>0</posx>
 				<posy>85</posy>
 				<control type="grouplist">
-			    	<visible>VideoPlayer.Content(Files)</visible>
+					<visible>VideoPlayer.Content(Files)</visible>
 					<description>Media Codec Flagging Images</description>
 					<posx>-150</posx>
 					<posy>150</posy>
@@ -932,7 +936,6 @@
 						<texture diffuse="maskflags.png">$INFO[VideoPlayer.VideoResolution,special://skin/extras/flagging/videoNew/,.png]</texture>
 						<visible>Skin.HasSetting(newFlags)</visible>
 					</control>
-					
 					<control type="image">
 						<description>Common Codec Image</description>
 						<width min="30" max="120">auto</width>
@@ -953,7 +956,6 @@
 						<visible>![substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)]</visible>
 						<visible>Skin.HasSetting(newFlags)</visible>
 					</control>
-					
 					<control type="image">
 						<description>Divx Codec Image</description>
 						<width min="30" max="120">auto</width>
@@ -972,7 +974,6 @@
 						<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)</visible>
 						<visible>Skin.HasSetting(newFlags)</visible>
 					</control>
-					
 					<control type="image">
 						<description>Dolby Digital Image</description>
 						<width min="30" max="120">auto</width>
@@ -991,7 +992,6 @@
 						<visible>[substring(VideoPlayer.AudioCodec,ac3) + substring(VideoPlayer.AudioChannels,6)]</visible>
 						<visible>Skin.HasSetting(newFlags)</visible>
 					</control>
-					
 					<control type="image">
 						<description>Audio Codec Image</description>
 						<width min="30" max="120">auto</width>
@@ -1012,7 +1012,6 @@
 						<visible>![substring(VideoPlayer.AudioCodec,ac3) + substring(VideoPlayer.AudioChannels,6)]</visible>
 						<visible>Skin.HasSetting(newFlags)</visible>
 					</control>
-					
 					<control type="image">
 						<description>Audio Channels Image</description>
 						<width min="30" max="80">auto</width>
@@ -1021,7 +1020,6 @@
 						<texture diffuse="maskflags.png">$INFO[VideoPlayer.AudioChannels,special://skin/extras/flagging/audio/,.png]</texture>
 						<visible>!Skin.HasSetting(newFlags)</visible>
 					</control>
-					
 					<control type="image">
 						<description>Audio Channels Image</description>
 						<width min="30" max="80">auto</width>
@@ -1031,8 +1029,6 @@
 						<visible>Skin.HasSetting(newFlags)</visible>
 					</control>
 				</control>
-				
-				
 			</control>
 		</control>
 	</controls>

@@ -1,35 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="MovieCoverflow">
 		<control type="group">
-		<animation type="WindowOpen" reversible="false">
-			<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-			<effect type="fade" start="0" end="100" time="300" />
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+				<effect type="fade" start="0" end="100" time="300" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-			<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-			<effect type="fade" start="100" end="0" time="300" />
-			</animation>      
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
 			<visible>Control.IsVisible(555)</visible>
-			<control type="image"> <!-- bottom bar background -->
+			<control type="image">
+				<!-- bottom bar background -->
 				<posx>0</posx>
 				<posy>155r</posy>
 				<width>1280</width>
 				<height>700</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>rightlistbackground.png</texture>
+				<texture>rightlistbackground.png</texture>
 			</control>
-			<control type="image"> <!-- bottom bar background -->
+			<control type="image">
+				<!-- bottom bar background -->
 				<posx>0</posx>
 				<posy>50r</posy>
 				<width>1280</width>
 				<height>700</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>rightlistbackground.png</texture>
+				<texture>rightlistbackground.png</texture>
 				<visible>Container.Content(Movies) | Container.Content(Episodes)</visible>
 				<visible>!ListItem.IsFolder</visible>
 			</control>
 		</control>
-
 		<!-- ======== ANIMATIONS TO THE righT ============ -->
 		<control type="group" id="7001">
 			<include>Window_OpenClose_Animation</include>
@@ -41,82 +43,82 @@
 				<visible>Container.OnNext</visible>
 				<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
 				<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>300</width>
-						<height>440</height>
-						<texture background="true">$INFO[ListItem(-4).Icon]</texture>
-						<bordertexture border="8">ThumbBorder.png</bordertexture>
-						<bordersize>8</bordersize>
-					</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>440</height>
+					<texture background="true">$INFO[ListItem(-4).Icon]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
 			</control>
 			<control type="group">
 				<posx>180</posx>
 				<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>300</width>
-						<height>440</height>
-						<texture background="true">$INFO[ListItem(-3).Icon]</texture>
-						<bordertexture border="8">ThumbBorder.png</bordertexture>
-						<bordersize>8</bordersize>
-					</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>440</height>
+					<texture background="true">$INFO[ListItem(-3).Icon]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
 			</control>
 			<control type="group">
 				<posx>280</posx>
 				<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>300</width>
-						<height>440</height>
-						<texture background="true">$INFO[ListItem(-2).Icon]</texture>
-						<bordertexture border="8">ThumbBorder.png</bordertexture>
-						<bordersize>8</bordersize>
-					</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>440</height>
+					<texture background="true">$INFO[ListItem(-2).Icon]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
 			</control>
 			<control type="group">
 				<posx>1000</posx>
 				<visible>!Container.OnNext</visible>
 				<animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
 				<animation effect="rotatey" center="1320" start="60" end="60" time="0" condition="true">Conditional</animation>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>300</width>
-						<height>440</height>
-						<texture background="true">$INFO[ListItem(3).Icon]</texture>
-						<bordertexture border="8">ThumbBorder.png</bordertexture>
-						<bordersize>8</bordersize>
-					</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>440</height>
+					<texture background="true">$INFO[ListItem(3).Icon]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
 			</control>
 			<control type="group">
 				<posx>900</posx>
 				<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>300</width>
-						<height>440</height>
-						<texture background="true">$INFO[ListItem(2).Icon]</texture>
-						<bordertexture border="8">ThumbBorder.png</bordertexture>
-						<bordersize>8</bordersize>
-					</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>440</height>
+					<texture background="true">$INFO[ListItem(2).Icon]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
 			</control>
 			<control type="group">
 				<posx>800</posx>
 				<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>300</width>
-						<height>440</height>
-						<texture background="true">$INFO[ListItem(1).Icon]</texture>
-						<bordertexture border="8">ThumbBorder.png</bordertexture>
-						<bordersize>8</bordersize>
-					</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>440</height>
+					<texture background="true">$INFO[ListItem(1).Icon]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
 			</control>
 			<control type="group">
 				<visible>Container.OnNext</visible>
@@ -152,9 +154,7 @@
 				</control>
 			</control>
 		</control>
-
-		
-<!-- ========== animations to the left =================== -->
+		<!-- ========== animations to the left =================== -->
 		<control type="group" id="7002">
 			<include>Window_OpenClose_Animation</include>
 			<posy>110</posy>
@@ -276,7 +276,7 @@
 				</control>
 			</control>
 		</control>
-<!-- ============================================= -->
+		<!-- ============================================= -->
 		<control type="group" id="7000">
 			<include>Window_OpenClose_Animation</include>
 			<posy>110</posy>
@@ -359,17 +359,16 @@
 					<bordersize>8</bordersize>
 				</control>
 			</control>
-
 			<!-- MAIN MIDDLE ICON -->
 			<control type="group">
-			<animation type="WindowOpen" reversible="false">
-			<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-			<effect type="fade" start="0" end="100" time="300" />
-			</animation>
-			<animation type="WindowClose" reversible="false">
-			<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-			<effect type="fade" start="100" end="0" time="300" />
-			</animation>      
+				<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+					<effect type="fade" start="0" end="100" time="300" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+					<effect type="fade" start="100" end="0" time="300" />
+				</animation>
 				<posx>490</posx>
 				<control type="image">
 					<posx>0</posx>
@@ -382,14 +381,14 @@
 					<visible>Control.HasFocus(555) | !Control.HasFocus(555)</visible>
 				</control>
 				<control type="image">
-						<posx>201</posx>
-						<posy>8</posy>
-						<width>91</width>
-						<height>91</height>
-						<aspectratio>keep</aspectratio>
-						<texture background="true">Overlayicons/$INFO[ListItem.Overlay]</texture>
-					</control>
-					<control type="image">
+					<posx>201</posx>
+					<posy>8</posy>
+					<width>91</width>
+					<height>91</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">Overlayicons/$INFO[ListItem.Overlay]</texture>
+				</control>
+				<control type="image">
 					<posx>8</posx>
 					<posy>8</posy>
 					<width>91</width>
@@ -400,10 +399,7 @@
 				</control>
 			</control>
 		</control>
-
-
-
-<!-- LIST BIT -->
+		<!-- LIST BIT -->
 		<control type="wraplist" id="555">
 			<visible>Skin.HasSetting(coverflow_view)</visible>
 			<include>Window_OpenClose_Animation</include>
@@ -422,50 +418,48 @@
 			<orientation>horizontal</orientation>
 			<scrolltime>250</scrolltime>
 			<focusedposition>3</focusedposition>
-			<itemlayout height="1" width="1">
-			</itemlayout>
-			<focusedlayout height="440" width="300">
-			</focusedlayout>
+			<itemlayout height="1" width="1"></itemlayout>
+			<focusedlayout height="440" width="300"></focusedlayout>
 		</control>
 		<control type="image">
-					<posx>850</posx>
-					<posy>370</posy>
-					<width>385</width>
-					<height>200</height>
-					<texture>black-back.png</texture>
-					<bordertexture border="8">contentpanelvertical.png</bordertexture>
-					<bordersize>8</bordersize>
-					<aspectratio>stretch</aspectratio>
-					<visible>Skin.Hassetting(videowindowglobal)</visible>
-					<visible>Player.HasVideo</visible>
-					<visible>!Skin.Hassetting(videowindownoborder)</visible>
-					<visible>Control.IsVisible(555)</visible>
-				</control>
-				<control type="videowindow" id="8">
-					<posx>863</posx>
-					<posy>380</posy>
-					<width>362</width>
-					<height>180</height>
-					<visible>Skin.Hassetting(videowindowglobal)</visible>
-					<visible>Control.IsVisible(555)</visible>
-				</control> 
-				<control type="label">
-					<description>Title label</description>
-					<posx>879</posx>
-					<posy>520</posy>
-					<height>30</height>
-					<width>330</width>
-					<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=accent] (,)[/COLOR]]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>cirrus_20</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>Skin.HasSetting(videowindowglobal)</visible>
-					<visible>Player.HasVideo</visible>
-					<visible>Control.IsVisible(555)</visible>
-					<visible>!Skin.HasSetting(videonotitle)</visible>
-				</control>
+			<posx>850</posx>
+			<posy>370</posy>
+			<width>385</width>
+			<height>200</height>
+			<texture>black-back.png</texture>
+			<bordertexture border="8">contentpanelvertical.png</bordertexture>
+			<bordersize>8</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<visible>Skin.Hassetting(videowindowglobal)</visible>
+			<visible>Player.HasVideo</visible>
+			<visible>!Skin.Hassetting(videowindownoborder)</visible>
+			<visible>Control.IsVisible(555)</visible>
+		</control>
+		<control type="videowindow" id="8">
+			<posx>863</posx>
+			<posy>380</posy>
+			<width>362</width>
+			<height>180</height>
+			<visible>Skin.Hassetting(videowindowglobal)</visible>
+			<visible>Control.IsVisible(555)</visible>
+		</control>
+		<control type="label">
+			<description>Title label</description>
+			<posx>879</posx>
+			<posy>520</posy>
+			<height>30</height>
+			<width>330</width>
+			<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=accent] (,)[/COLOR]]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>cirrus_20</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<visible>Skin.HasSetting(videowindowglobal)</visible>
+			<visible>Player.HasVideo</visible>
+			<visible>Control.IsVisible(555)</visible>
+			<visible>!Skin.HasSetting(videonotitle)</visible>
+		</control>
 		<!-- Extra shit -->
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
@@ -484,9 +478,7 @@
 				<orientation>horizontal</orientation>
 				<visible allowhiddenfocus="true">Control.IsVisible(555) + Control.HasFocus(60)</visible>
 			</control>
-			
 		</control>
-		
 		<!-- movies labels -->
 		<control type="group">
 			<posx>0</posx>
@@ -524,7 +516,7 @@
 					<visible>!Skin.HasSetting(plotoutline)</visible>
 					<visible>!Skin.HasSetting(newMPAAFlags) + !Skin.HasSetting(noMPAAStudioFlags)</visible>
 				</control>
-				 <control type="textbox">
+				<control type="textbox">
 					<description>plot</description>
 					<posx>0</posx>
 					<posy>30</posy>
@@ -572,7 +564,7 @@
 					<visible>Skin.HasSetting(plotoutline)</visible>
 					<visible>!Skin.HasSetting(newMPAAFlags) + !Skin.HasSetting(noMPAAStudioFlags)</visible>
 				</control>
-					<control type="textbox">
+				<control type="textbox">
 					<description>plotoutline</description>
 					<posx>0</posx>
 					<posy>30</posy>
@@ -587,7 +579,7 @@
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>Skin.HasSetting(plotoutline)</visible>
 					<visible>Skin.HasSetting(noMPAAStudioFlags)</visible>
-				</control>	
+				</control>
 				<control type="textbox">
 					<description>plotoutline</description>
 					<posx>0</posx>
@@ -603,7 +595,7 @@
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>Skin.HasSetting(plotoutline)</visible>
 					<visible>Skin.HasSetting(newMPAAFlags) + !Skin.HasSetting(noMPAAStudioFlags)</visible>
-				</control>	
+				</control>
 				<control type="label">
 					<description>Year Label</description>
 					<posx>0</posx>
@@ -647,7 +639,8 @@
 					<visible>SubString(ListItem.Duration,mins)</visible>
 					<visible>!ListItem.IsFolder</visible>
 				</control>
-				<control type="image"> <!-- Top250IMDB Mod 1.2 -->
+				<control type="image">
+					<!-- Top250IMDB Mod 1.2 -->
 					<posx>370</posx>
 					<posy>110</posy>
 					<width>88</width>
@@ -658,7 +651,8 @@
 					<visible>!IsEmpty(ListItem.Top250)</visible>
 					<colordiffuse>accent</colordiffuse>
 				</control>
-				<control type="label"> <!-- Top250IMDB Mod 1.2 -->
+				<control type="label">
+					<!-- Top250IMDB Mod 1.2 -->
 					<description>top250</description>
 					<posx>230</posx>
 					<posy>109</posy>
@@ -673,15 +667,15 @@
 				</control>
 			</control>
 			<control type="image">
-					<posx>690</posx>
-					<posy>41r</posy>
-					<width>70</width>
-					<height>31</height>
-					<aspectratio>keep</aspectratio>
-					<fadetime>FanartCrossfadeTime</fadetime>
-					<texture>Overlayicons/Trailer.png</texture>
-					<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(trailerflag)</visible>
-				</control>
+				<posx>690</posx>
+				<posy>41r</posy>
+				<width>70</width>
+				<height>31</height>
+				<aspectratio>keep</aspectratio>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<texture>Overlayicons/Trailer.png</texture>
+				<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(trailerflag)</visible>
+			</control>
 			<control type="image">
 				<width>240</width>
 				<height>50</height>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">5</defaultcontrol>
 	<coordinates>
@@ -45,7 +46,6 @@
 			<ondown>10</ondown>
 			<visible>system.getbool(input.enablemouse)</visible>
 		</control>
-
 		<control type="grouplist" id="5">
 			<description>control area</description>
 			<posx>30</posx>
@@ -74,7 +74,6 @@
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
 		</control>
-
 		<control type="button" id="7">
 			<description>Default Button</description>
 			<posx>0</posx>
@@ -119,7 +118,7 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
-			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>	
+			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
 			<aligny>center</aligny>
 		</control>
 		<control type="edit" id="12">
@@ -131,9 +130,8 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
-			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>	
+			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
 		</control>
-
 		<control type="group" id="9001">
 			<posx>190</posx>
 			<posy>435</posy>

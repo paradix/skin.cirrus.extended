@@ -1,12 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="HomeHorzSubmenu">
-
 		<!-- HOME MENU SUBMENUS HORIZONTAL -->
 		<control type="group" id="9001">
 			<posx>-250</posx>
 			<posy>299</posy>
-			
-			<control type="image"> <!-- background bar for horizontal submenus -->
+			<control type="image">
+				<!-- background bar for horizontal submenus -->
 				<posx>0</posx>
 				<posy>85</posy>
 				<width>1350</width>
@@ -14,7 +14,6 @@
 				<texture>horzmenuback.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			
 			<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
 			<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
 			<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
@@ -23,7 +22,6 @@
 			<animation effect="slide" end="0,-102" time="300" condition="Container(9000).Row(2)">conditional</animation>
 			<animation effect="slide" end="0,102" time="300" condition="Container(9000).Row(4)">conditional</animation>
 			<animation effect="slide" end="0,204" time="300" condition="Container(9000).Row(5)">conditional</animation>
-
 			<!-- VIDEOS SUBMENU -->
 			<control type="wraplist" id="9010">
 				<posx>40</posx>
@@ -41,10 +39,11 @@
 				<itemgap>0</itemgap>
 				<visible>Container(9000).HasFocus(12)</visible>
 				<itemlayout width="270" height="245">
-					<control type="group">	
+					<control type="group">
 						<posx>20</posx>
 						<posy>-5</posy>
-						<control type="label"><!--Movie title-->
+						<control type="label">
+							<!--Movie title-->
 							<width>270</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -55,10 +54,11 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="270" height="515">
-					<control type="group">	
+					<control type="group">
 						<posx>20</posx>
 						<posy>-5</posy>
-						<control type="label"><!--Movie title-->
+						<control type="label">
+							<!--Movie title-->
 							<width>270</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -69,8 +69,8 @@
 					</control>
 				</focusedlayout>
 				<content>
-				<!-- SearchSUBMENU Butchabay -->
-				   <item id="90100">
+					<!-- SearchSUBMENU Butchabay -->
+					<item id="90100">
 						<label>31331</label>
 						<onclick>ActivateWindow(Videos,Root)</onclick>
 						<onclick>SendClick(8)</onclick>
@@ -97,12 +97,11 @@
 					</item>
 					<item id="90106">
 						<label>31007</label>
-                        <onclick>SetProperty(DontRunTVShowScripts,True,Home)</onclick>
-                        <onclick>ActivateWindow(Videos,Addons,return)</onclick>
+						<onclick>SetProperty(DontRunTVShowScripts,True,Home)</onclick>
+						<onclick>ActivateWindow(Videos,Addons,return)</onclick>
 					</item>
 				</content>
 			</control>
-
 			<!-- MUSIC SUBMENU -->
 			<control type="wraplist" id="9011">
 				<posx>40</posx>
@@ -120,10 +119,11 @@
 				<itemgap>0</itemgap>
 				<visible>Container(9000).HasFocus(14)</visible>
 				<itemlayout width="270" height="245">
-					<control type="group">	
+					<control type="group">
 						<posx>20</posx>
 						<posy>-5</posy>
-						<control type="label"><!--Movie title-->
+						<control type="label">
+							<!--Movie title-->
 							<width>270</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -134,10 +134,11 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="270" height="515">
-					<control type="group">	
+					<control type="group">
 						<posx>20</posx>
 						<posy>-5</posy>
-						<control type="label"><!--Movie title-->
+						<control type="label">
+							<!--Movie title-->
 							<width>270</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -148,8 +149,8 @@
 					</control>
 				</focusedlayout>
 				<content>
-				    <!-- SearchSUBMENU Butchabay -->
-				    <item id="90110">
+					<!-- SearchSUBMENU Butchabay -->
+					<item id="90110">
 						<label>31331</label>
 						<onclick>ActivateWindow(MusicLibrary)</onclick>
 						<onclick>SendClick(8)</onclick>
@@ -184,7 +185,6 @@
 					</item>
 				</content>
 			</control>
-
 			<!-- SETTINGS SUBMENU -->
 			<control type="wraplist" id="9014">
 				<posx>40</posx>
@@ -201,11 +201,12 @@
 				<ondown>9000</ondown>
 				<itemgap>0</itemgap>
 				<visible>Container(9000).HasFocus(25)</visible>
- 				<itemlayout width="270" height="245">
-					<control type="group">	
+				<itemlayout width="270" height="245">
+					<control type="group">
 						<posx>20</posx>
 						<posy>-5</posy>
-						<control type="label"><!--Movie title-->
+						<control type="label">
+							<!--Movie title-->
 							<width>270</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -216,10 +217,11 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="270" height="515">
-					<control type="group">	
+					<control type="group">
 						<posx>20</posx>
 						<posy>-5</posy>
-						<control type="label"><!--Movie title-->
+						<control type="label">
+							<!--Movie title-->
 							<width>270</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -230,45 +232,44 @@
 					</control>
 				</focusedlayout>
 				<content>
-				<item id="90141">
-					<label>5</label>
-					<onclick>ActivateWindow(Settings)</onclick>
-				</item>
-				<item id="90142">
-					<label>7</label>
-					<onclick>ActivateWindow(FileManager)</onclick>
-				</item>
-				<item id="90143">
-					<label>13200</label>
-					<onclick>ActivateWindow(Profiles)</onclick>
-				</item>
-				<item id="90144">
-					<label>130</label>
-					<onclick>ActivateWindow(SystemInfo)</onclick>
-				</item>
-				<item id="90145">
-					<label>470</label>
-					<onclick>ActivateWindow(Credits)</onclick>
-				</item>
-				<!-- WHEN CLEAN HOME SELECTED (shutdown, play dvd etc added to settings submenu -->
-				<item type="button" id="90146">
-					<label>13005</label>
-					<onclick>ActivateWindow(ShutdownMenu)</onclick>
-					<visible>Skin.HasSetting(cleanHome)</visible>
-				</item>
-				<item type="button" id="90147">
-					<label>1036</label>
-					<onclick>ActivateWindow(Favourites)</onclick>
-					<visible>Skin.HasSetting(cleanHome)</visible>
-				</item>
-				<item type="button" id="90148">
-					<label>446</label>
-					<onclick>XBMC.PlayDVD()</onclick>
-					<visible>Skin.HasSetting(cleanHome)</visible>
-				</item>
+					<item id="90141">
+						<label>5</label>
+						<onclick>ActivateWindow(Settings)</onclick>
+					</item>
+					<item id="90142">
+						<label>7</label>
+						<onclick>ActivateWindow(FileManager)</onclick>
+					</item>
+					<item id="90143">
+						<label>13200</label>
+						<onclick>ActivateWindow(Profiles)</onclick>
+					</item>
+					<item id="90144">
+						<label>130</label>
+						<onclick>ActivateWindow(SystemInfo)</onclick>
+					</item>
+					<item id="90145">
+						<label>470</label>
+						<onclick>ActivateWindow(Credits)</onclick>
+					</item>
+					<!-- WHEN CLEAN HOME SELECTED (shutdown, play dvd etc added to settings submenu -->
+					<item type="button" id="90146">
+						<label>13005</label>
+						<onclick>ActivateWindow(ShutdownMenu)</onclick>
+						<visible>Skin.HasSetting(cleanHome)</visible>
+					</item>
+					<item type="button" id="90147">
+						<label>1036</label>
+						<onclick>ActivateWindow(Favourites)</onclick>
+						<visible>Skin.HasSetting(cleanHome)</visible>
+					</item>
+					<item type="button" id="90148">
+						<label>446</label>
+						<onclick>XBMC.PlayDVD()</onclick>
+						<visible>Skin.HasSetting(cleanHome)</visible>
+					</item>
 				</content>
 			</control>
-
 			<!-- Addon Submenu -->
 			<control type="wraplist" id="9015">
 				<posx>40</posx>
@@ -286,10 +287,11 @@
 				<itemgap>0</itemgap>
 				<visible>Container(9000).HasFocus(18) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
 				<itemlayout width="270" height="245">
-					<control type="group">	
+					<control type="group">
 						<posx>20</posx>
 						<posy>-5</posy>
-						<control type="label"><!--Movie title-->
+						<control type="label">
+							<!--Movie title-->
 							<width>270</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -300,10 +302,11 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="270" height="515">
-					<control type="group">	
+					<control type="group">
 						<posx>20</posx>
 						<posy>-5</posy>
-						<control type="label"><!--Movie title-->
+						<control type="label">
+							<!--Movie title-->
 							<width>270</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -314,7 +317,8 @@
 					</control>
 				</focusedlayout>
 				<content>
-					<item id="90151"> <!--Addon Mod-->
+					<item id="90151">
+						<!--Addon Mod-->
 						<description>Button1</description>
 						<label>$INFO[Skin.String(HomeScriptButton1_label)]</label>
 						<onclick>Setfocus(9000)</onclick>
@@ -391,7 +395,7 @@
 						<onclick>$INFO[Skin.String(HomeappButton5_Path)]</onclick>
 						<visible>Skin.HasSetting(HomeappButton5) + !IsEmpty(Skin.String(HomeappButton5_label))</visible>
 					</item>
-				</content>	
+				</content>
 			</control>
 			<!-- Changes for Favs Submenu 1.2.4 Butchabay -->
 			<!-- MOVIES SUBMENU -->
@@ -411,10 +415,11 @@
 				<itemgap>0</itemgap>
 				<visible>Container(9000).HasFocus(1)</visible>
 				<itemlayout width="270" height="245">
-					<control type="group">	
+					<control type="group">
 						<posx>20</posx>
 						<posy>-5</posy>
-						<control type="label"><!--Movie title-->
+						<control type="label">
+							<!--Movie title-->
 							<width>270</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -425,10 +430,11 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="270" height="515">
-					<control type="group">	
+					<control type="group">
 						<posx>20</posx>
 						<posy>-5</posy>
-						<control type="label"><!--Movie title-->
+						<control type="label">
+							<!--Movie title-->
 							<width>270</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -439,14 +445,13 @@
 					</control>
 				</focusedlayout>
 				<content>
-				<!-- Attention changed ID From Here -->
-				<!-- SearchSUBMENU Butchabay -->
-				    <item id="901620">
+					<!-- Attention changed ID From Here -->
+					<!-- SearchSUBMENU Butchabay -->
+					<item id="901620">
 						<label>31331</label>
 						<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
 						<onclick>SendClick(8)</onclick>
 					</item>
-				
 					<item id="90162">
 						<label>1219</label>
 						<onclick>ActivateWindow(Videos,Files,return)</onclick>
@@ -490,7 +495,7 @@
 					<item id="90170">
 						<label>31007</label>
 						<onclick>SetProperty(DontRunTVShowScripts,True,Home)</onclick>
-                        <onclick>ActivateWindow(Videos,Addons,return)</onclick>
+						<onclick>ActivateWindow(Videos,Addons,return)</onclick>
 						<visible>!Skin.HasSetting(hidemovievideoaddon)</visible>
 					</item>
 					<item id="90171">
@@ -529,19 +534,19 @@
 						<onclick>$INFO[Skin.String(movieplaylistButton6_Path)]</onclick>
 						<visible>Skin.HasSetting(movieplaylistButton6) + !IsEmpty(Skin.String(movieplaylistButton6_label))</visible>
 					</item>
-					<item id="90177"> 
+					<item id="90177">
 						<label>$INFO[Skin.String(MovieScriptButton1_label)]</label>
 						<onclick>Setfocus(9000)</onclick>
 						<onclick>$INFO[Skin.String(MovieScriptButton1_Path)]</onclick>
 						<visible>Skin.HasSetting(MovieScriptButton1) + !IsEmpty(Skin.String(MovieScriptButton1_label))</visible>
 					</item>
-					<item id="90178"> 
+					<item id="90178">
 						<label>$INFO[Skin.String(MovieScriptButton2_label)]</label>
 						<onclick>Setfocus(9000)</onclick>
 						<onclick>$INFO[Skin.String(MovieScriptButton2_Path)]</onclick>
 						<visible>Skin.HasSetting(MovieScriptButton2) + !IsEmpty(Skin.String(MovieScriptButton2_label))</visible>
 					</item>
-					<item id="90179"> 
+					<item id="90179">
 						<label>$INFO[Skin.String(MovieScriptButton3_label)]</label>
 						<onclick>Setfocus(9000)</onclick>
 						<onclick>$INFO[Skin.String(MovieScriptButton3_Path)]</onclick>
@@ -585,21 +590,21 @@
 						<onclick>RunScript(script.randommovie, filtergenre=True)</onclick>
 						<visible>System.HasAddon(script.randommovie)</visible>
 					</item>
-					 <item id="90186">
+					<item id="90186">
 						<label>41182</label>
 						<onclick>RunScript(script.randommovie)</onclick>
 						<visible>System.HasAddon(script.randommovie)</visible>
-					 </item>
-					 <item id="90187">
+					</item>
+					<item id="90187">
 						<label>41183</label>
 						<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
 						<visible>!Skin.HasSetting(hidemovievideofiles)</visible>
 					</item>
 				</content>
 			</control>
- 
 			<!-- TV SHOWS SUBMENU -->
-			<control type="wraplist" id="9019"><!-- Changed ID Butchabay 1.2.4 -->
+			<control type="wraplist" id="9019">
+				<!-- Changed ID Butchabay 1.2.4 -->
 				<posx>40</posx>
 				<posy>30</posy>
 				<width>1280</width>
@@ -615,10 +620,11 @@
 				<itemgap>0</itemgap>
 				<visible>Container(9000).HasFocus(7)</visible>
 				<itemlayout width="270" height="245">
-					<control type="group">	
+					<control type="group">
 						<posx>20</posx>
 						<posy>-5</posy>
-						<control type="label"><!--Movie title-->
+						<control type="label">
+							<!--Movie title-->
 							<width>270</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -629,10 +635,11 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="270" height="515">
-					<control type="group">	
+					<control type="group">
 						<posx>20</posx>
 						<posy>-5</posy>
-						<control type="label"><!--Movie title-->
+						<control type="label">
+							<!--Movie title-->
 							<width>270</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -643,10 +650,9 @@
 					</control>
 				</focusedlayout>
 				<content>
-				<!-- ATTENTION CHANGED ID BUTCHABAY FROM HERE 1.2.4 -->
-				
-				    <!-- SearchSUBMENU Butchabay -->
-				    <item id="901900">
+					<!-- ATTENTION CHANGED ID BUTCHABAY FROM HERE 1.2.4 -->
+					<!-- SearchSUBMENU Butchabay -->
+					<item id="901900">
 						<label>31331</label>
 						<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
 						<onclick>SendClick(8)</onclick>
@@ -674,7 +680,7 @@
 					<item id="90194">
 						<label>31328</label>
 						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
-						<visible>!Skin.HasSetting(hidetvrecently)</visible>	
+						<visible>!Skin.HasSetting(hidetvrecently)</visible>
 					</item>
 					<item id="90195">
 						<label>653</label>
@@ -738,43 +744,43 @@
 					<!-- TO HERE BUTCHABAY 1.2.4 -->
 					<!-- Custom Favourites TV Shows Butchabay 1.2.4 -->
 					<item id="90205">
-					    <label>$INFO[Skin.String(HomeTVbutton25_label)]</label>
+						<label>$INFO[Skin.String(HomeTVbutton25_label)]</label>
 						<onclick>Setfocus(9000)</onclick>
 						<onclick>$INFO[Skin.String(Menu_Custom25_Path)]</onclick>
 						<visible>Skin.HasSetting(HomeTVbutton25) + !IsEmpty(Skin.String(HomeTVbutton25_label))</visible>
 					</item>
 					<item id="90206">
-					    <label>$INFO[Skin.String(HomeTVbutton26_label)]</label>
+						<label>$INFO[Skin.String(HomeTVbutton26_label)]</label>
 						<onclick>Setfocus(9000)</onclick>
 						<onclick>$INFO[Skin.String(Menu_Custom26_Path)]</onclick>
 						<visible>Skin.HasSetting(HomeTVbutton26) + !IsEmpty(Skin.String(HomeTVbutton26_label))</visible>
 					</item>
 					<item id="90207">
-					    <label>$INFO[Skin.String(HomeTVbutton27_label)]</label>
+						<label>$INFO[Skin.String(HomeTVbutton27_label)]</label>
 						<onclick>Setfocus(9000)</onclick>
 						<onclick>$INFO[Skin.String(Menu_Custom27_Path)]</onclick>
 						<visible>Skin.HasSetting(HomeTVbutton27) + !IsEmpty(Skin.String(HomeTVbutton27_label))</visible>
 					</item>
 					<item id="90208">
-					    <label>$INFO[Skin.String(HomeTVbutton28_label)]</label>
+						<label>$INFO[Skin.String(HomeTVbutton28_label)]</label>
 						<onclick>Setfocus(9000)</onclick>
 						<onclick>$INFO[Skin.String(Menu_Custom28_Path)]</onclick>
 						<visible>Skin.HasSetting(HomeTVbutton28) + !IsEmpty(Skin.String(HomeTVbutton28_label))</visible>
 					</item>
 					<item id="90209">
-					    <label>$INFO[Skin.String(HomeTVbutton29_label)]</label>
+						<label>$INFO[Skin.String(HomeTVbutton29_label)]</label>
 						<onclick>Setfocus(9000)</onclick>
 						<onclick>$INFO[Skin.String(Menu_Custom29_Path)]</onclick>
 						<visible>Skin.HasSetting(HomeTVbutton29) + !IsEmpty(Skin.String(HomeTVbutton29_label))</visible>
 					</item>
 					<!-- Custom Favourites TV Shows Butchabay END 1.2.4 -->
 					<item id="90210">
-					    <label>31187</label>
+						<label>31187</label>
 						<onclick>RunScript(script.tv.show.next.aired)</onclick>
 						<visible>Library.HasContent(TVShows) + System.HasAddon(script.tv.show.next.aired)</visible>
 					</item>
 				</content>
 			</control>
-		</control>	
+		</control>
 	</include>
 </includes>

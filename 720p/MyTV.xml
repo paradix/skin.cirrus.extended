@@ -1,17 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <window id="600">
 	<defaultcontrol>32</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>CommonTVBackground</include>
 		<control type="image">
-			       <description>background</description>
-			       <posx>0</posx>
-			       <posy>55</posy>
-			       <width>1290</width>
-			       <height>605</height>
-			       <colordiffuse>DDFFFFFF</colordiffuse>
-			       <texture border="20">DialogBackground.png</texture>
-		       </control>
+			<description>background</description>
+			<posx>0</posx>
+			<posy>55</posy>
+			<width>1290</width>
+			<height>605</height>
+			<colordiffuse>DDFFFFFF</colordiffuse>
+			<texture border="20">DialogBackground.png</texture>
+		</control>
 		<control type="group">
 			<visible>!Control.IsVisible(11) + !Control.IsVisible(12)</visible>
 			<control type="image">
@@ -38,7 +39,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>		
+			<include>Window_OpenClose_Animation</include>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -52,7 +53,7 @@
 			<description>Small Media Window</description>
 			<visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
 			<include>VisibleFadeEffect</include>
-			<include>Window_OpenClose_Animation</include>		
+			<include>Window_OpenClose_Animation</include>
 			<control type="image">
 				<posx>80</posx>
 				<posy>80</posy>
@@ -81,32 +82,32 @@
 				<visible>Player.HasVideo</visible>
 			</control>
 			<control type="image">
-					<posx>85</posx>
-					<posy>85</posy>
-					<width>700</width>
-					<height>390</height>
-					<aspectratio aligny="top">stretch</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture diffuse="maskfanart.png">GlassOverlay2.png</texture>
-				</control>
-				<control type="image">
-					<posx>85</posx>
-					<posy>85</posy>
-					<width>700</width>
-					<height>390</height>
-					<aspectratio aligny="bottom">stretch</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" diffuse="maskfanart.png">videoinfobottom.png</texture>
-				</control>
-				<control type="image">
-					<posx>85</posx>
-					<posy>85</posy>
-					<width>700</width>
-					<height>390</height>
-					<aspectratio aligny="bottom">stretch</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture>border-fanart.png</texture>
-				</control>
+				<posx>85</posx>
+				<posy>85</posy>
+				<width>700</width>
+				<height>390</height>
+				<aspectratio aligny="top">stretch</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture diffuse="maskfanart.png">GlassOverlay2.png</texture>
+			</control>
+			<control type="image">
+				<posx>85</posx>
+				<posy>85</posy>
+				<width>700</width>
+				<height>390</height>
+				<aspectratio aligny="bottom">stretch</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true" diffuse="maskfanart.png">videoinfobottom.png</texture>
+			</control>
+			<control type="image">
+				<posx>85</posx>
+				<posy>85</posy>
+				<width>700</width>
+				<height>390</height>
+				<aspectratio aligny="bottom">stretch</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture>border-fanart.png</texture>
+			</control>
 			<!-- control type="visualisation">
 				<posx>85</posx>
 				<posy>85</posy>
@@ -128,10 +129,10 @@
 			<shadowcolor>black</shadowcolor>
 			<visible>Player.HasMedia + !Control.IsVisible(10)</visible>
 			<include>VisibleFadeEffect</include>
-			<include>Window_OpenClose_Animation</include>		
+			<include>Window_OpenClose_Animation</include>
 		</control>
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>		
+			<include>Window_OpenClose_Animation</include>
 			<control type="group">
 				<description>TV Guide Channel</description>
 				<visible>Control.IsVisible(15)</visible>
@@ -777,7 +778,6 @@
 				<description>TV Guide Timeline</description>
 				<visible>Control.IsVisible(10)</visible>
 				<include>VisibleFadeEffect</include>
-				
 				<control type="epggrid" id="10">
 					<description>EPG Grid</description>
 					<posx>80</posx>
@@ -811,7 +811,7 @@
 							<aligny>center</aligny>
 							<selectedcolor>selected</selectedcolor>
 							<textcolor>accent</textcolor>
-						    <shadowcolor>black</shadowcolor>
+							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
@@ -843,7 +843,7 @@
 							<aligny>center</aligny>
 							<selectedcolor>selected</selectedcolor>
 							<textcolor>grey2</textcolor>
-						    <shadowcolor>black</shadowcolor>
+							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<label>$INFO[ListItem.ChannelName]</label>
 						</control>
@@ -874,7 +874,7 @@
 							<aligny>center</aligny>
 							<selectedcolor>selected</selectedcolor>
 							<textcolor>accent</textcolor>
-						    <shadowcolor>black</shadowcolor>
+							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<label>$INFO[ListItem.ChannelName]</label>
 						</control>
@@ -985,7 +985,7 @@
 							<aligny>center</aligny>
 							<selectedcolor>selected</selectedcolor>
 							<textcolor>white</textcolor>
-						    <shadowcolor>black</shadowcolor>
+							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<info>ListItem.Label</info>
 						</control>
@@ -1182,105 +1182,97 @@
 						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
-								<posx>100</posx>
-								<posy>5</posy>
-								<width>100</width>
-								<height>40</height>
-								<label>Start:</label>
-								<font>cirrus_20</font>
-								<align>left</align>
-								<aligny>left</aligny>
-								<textcolor>accent</textcolor>
-								<selectedcolor>selected</selectedcolor>
-								<info>-</info>
-							</control>
-							<control type="label">
-								<posx>160</posx>
-								<posy>5</posy>
-								<width>100</width>
-								<height>40</height>
-								<font>cirrus_20</font>
-								<align>left</align>
-								<aligny>left</aligny>
-								<textcolor>grey</textcolor>
-								<selectedcolor>selected</selectedcolor>
-								<info>ListItem.StartTime</info>
-							</control>
-							<control type="label">
-								<posx>100</posx>
-								<posy>30</posy>
-								<width>100</width>
-								<height>40</height>
-								<label>End:</label>
-								<font>cirrus_20</font>
-								<align>left</align>
-								<aligny>left</aligny>
-								<textcolor>accent</textcolor>
-								<selectedcolor>selected</selectedcolor>
-								<info>-</info>
-							</control>
-							<control type="label">
-								<posx>160</posx>
-								<posy>30</posy>
-								<width>100</width>
-								<height>40</height>
-								<font>cirrus_20</font>
-								<align>left</align>
-								<aligny>left</aligny>
-								<textcolor>grey</textcolor>
-								<selectedcolor>selected</selectedcolor>
-								<info>ListItem.EndTime</info>
-							</control>
-							<control type="label">
-								<posx>250</posx>
-								<posy>5</posy>
-								<width>100</width>
-								<height>40</height>
-								<label>Duration:</label>
-								<font>cirrus_20</font>
-								<align>left</align>
-								<aligny>left</aligny>
-								<textcolor>accent</textcolor>
-								<selectedcolor>selected</selectedcolor>
-								<info>-</info>
-							</control>
-							<control type="label">
-								<posx>350</posx>
-								<posy>5</posy>
-								<width>200</width>
-								<height>40</height>
-								<font>cirrus_20</font>
-								<align>left</align>
-								<aligny>left</aligny>
-								<textcolor>grey</textcolor>
-								<selectedcolor>selected</selectedcolor>
-								<info>ListItem.Duration</info>
-							</control>
-							<control type="label">
-								<posx>250</posx>
-								<posy>30</posy>
-								<width>100</width>
-								<height>40</height>
-								<label>Genre:</label>
-								<font>cirrus_20</font>
-								<align>left</align>
-								<aligny>left</aligny>
-								<textcolor>accent</textcolor>
-								<selectedcolor>selected</selectedcolor>
-								<info>-</info>
-							</control>
-							<control type="label">
-								<posx>350</posx>
-								<posy>30</posy>
-								<width>400</width>
-								<height>40</height>
-								<font>cirrus_20</font>
-								<align>left</align>
-								<aligny>left</aligny>
-								<textcolor>grey</textcolor>
-								<selectedcolor>selected</selectedcolor>
-								<info>ListItem.Genre</info>
-							</control>
+						<posx>100</posx>
+						<posy>5</posy>
+						<width>100</width>
+						<height>40</height>
+						<label>Start:</label>
+						<font>cirrus_20</font>
+						<align>left</align>
+						<textcolor>accent</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<info>-</info>
+					</control>
+					<control type="label">
+						<posx>160</posx>
+						<posy>5</posy>
+						<width>100</width>
+						<height>40</height>
+						<font>cirrus_20</font>
+						<align>left</align>
+						<textcolor>grey</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.StartTime</info>
+					</control>
+					<control type="label">
+						<posx>100</posx>
+						<posy>30</posy>
+						<width>100</width>
+						<height>40</height>
+						<label>End:</label>
+						<font>cirrus_20</font>
+						<align>left</align>
+						<textcolor>accent</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<info>-</info>
+					</control>
+					<control type="label">
+						<posx>160</posx>
+						<posy>30</posy>
+						<width>100</width>
+						<height>40</height>
+						<font>cirrus_20</font>
+						<align>left</align>
+						<textcolor>grey</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.EndTime</info>
+					</control>
+					<control type="label">
+						<posx>250</posx>
+						<posy>5</posy>
+						<width>100</width>
+						<height>40</height>
+						<label>Duration:</label>
+						<font>cirrus_20</font>
+						<align>left</align>
+						<textcolor>accent</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<info>-</info>
+					</control>
+					<control type="label">
+						<posx>350</posx>
+						<posy>5</posy>
+						<width>200</width>
+						<height>40</height>
+						<font>cirrus_20</font>
+						<align>left</align>
+						<textcolor>grey</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Duration</info>
+					</control>
+					<control type="label">
+						<posx>250</posx>
+						<posy>30</posy>
+						<width>100</width>
+						<height>40</height>
+						<label>Genre:</label>
+						<font>cirrus_20</font>
+						<align>left</align>
+						<textcolor>accent</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<info>-</info>
+					</control>
+					<control type="label">
+						<posx>350</posx>
+						<posy>30</posy>
+						<width>400</width>
+						<height>40</height>
+						<font>cirrus_20</font>
+						<align>left</align>
+						<textcolor>grey</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Genre</info>
+					</control>
 					<control type="label">
 						<posx>100</posx>
 						<posy>-115</posy>
@@ -1291,7 +1283,6 @@
 						<shadowcolor>black</shadowcolor>
 						<scroll>true</scroll>
 						<align>left</align>
-						<aligny>left</aligny>
 						<label>$INFO[ListItem.Title]</label>
 					</control>
 					<control type="textbox">
@@ -1533,7 +1524,6 @@
 					</control> -->
 				</control>
 			</control>
-
 			<!-- TV Channels group -->
 			<control type="group">
 				<description>TV Channels group</description>
@@ -1556,12 +1546,12 @@
 						<label>$INFO[Container(11).ListItem.Title]</label>
 					</control>
 					<control type="image">
-								<posx>10</posx>
-								<posy>-65</posy>
-								<width>45</width>
-								<height>45</height>
-								<info>ListItem.Icon</info>
-							</control>
+						<posx>10</posx>
+						<posy>-65</posy>
+						<width>45</width>
+						<height>45</height>
+						<info>ListItem.Icon</info>
+					</control>
 					<control type="textbox">
 						<description>Plot Value for TVShow</description>
 						<posx>0</posx>
@@ -1764,7 +1754,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>([COLOR=accent]$INFO[Container(11).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=accent]$INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages][/COLOR])</label>
-					<include>Window_OpenClose_Animation</include>		
+					<include>Window_OpenClose_Animation</include>
 				</control>
 			</control>
 			<!-- Radio Channels group -->
@@ -1990,7 +1980,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>([COLOR=accent]$INFO[Container(12).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=accent]$INFO[Container(12).CurrentPage]/$INFO[Container(12).NumPages][/COLOR])</label>
-					<include>Window_OpenClose_Animation</include>		
+					<include>Window_OpenClose_Animation</include>
 				</control>
 			</control>
 			<!-- Recordings group -->
@@ -2141,7 +2131,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>([COLOR=accent]$INFO[Container(13).NumItems][/COLOR]) $LOCALIZE[19163] - $LOCALIZE[31024] ([COLOR=accent]$INFO[Container(13).CurrentPage]/$INFO[Container(13).NumPages][/COLOR])</label>
-					<include>Window_OpenClose_Animation</include>		
+					<include>Window_OpenClose_Animation</include>
 				</control>
 				<control type="group">
 					<posx>80</posx>
@@ -2453,7 +2443,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>([COLOR=accent]$INFO[Container(14).NumItems][/COLOR]) $LOCALIZE[19040] - $LOCALIZE[31024] ([COLOR=accent]$INFO[Container(14).CurrentPage]/$INFO[Container(14).NumPages][/COLOR])</label>
-					<include>Window_OpenClose_Animation</include>		
+					<include>Window_OpenClose_Animation</include>
 				</control>
 			</control>
 			<!-- EGP search group -->
@@ -2991,7 +2981,6 @@
 				<label></label>
 			</control>
 		</control>
-		<include>WindowTitleHomeButton</include>
 		<include>Clock</include>
 	</controls>
 </window>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <window id="106">
 	<defaultcontrol>1000</defaultcontrol>
 	<include>dialogeffect</include>
@@ -7,7 +8,6 @@
 		<posy>0</posy>
 	</coordinates>
 	<controls>
-	
 		<control type="image" id="997">
 			<description>background top image</description>
 			<posx>0</posx>
@@ -32,7 +32,6 @@
 			<texture>background-contextmenubottom.png</texture>
 			<aligny>bottom</aligny>
 		</control>
-		
 		<control type="button" id="1000">
 			<description>button template</description>
 			<posx>15</posx>
@@ -43,7 +42,7 @@
 			<align>center</align>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-		    <include>ButtonCommonValues</include>
+			<include>ButtonCommonValues</include>
 		</control>
 	</controls>
 </window>

@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
-<!-- MUSIC VIDEO INFO LIST VIEW -->
+	<!-- MUSIC VIDEO INFO LIST VIEW -->
 	<include name="MusicVideoInfoListView">
 		<control type="group">
 			<visible>Control.IsVisible(511)</visible>

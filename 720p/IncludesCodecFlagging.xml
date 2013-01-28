@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<!-- ==============VIDEO FLAGS================= -->
-	
 	<include name="VideoCodecFlaggingConditions">
 		<control type="image">
 			<description>Video rez Image</description>
@@ -17,9 +17,7 @@
 			<texture>$INFO[ListItem.VideoCodec,special://skin/extras/flagging/video/,.png]</texture>
 		</control>
 	</include>
-
 	<!-- =============NEW VIDEO FLAGS============ -->
-	
 	<include name="VideoCodecFlaggingConditionsNew">
 		<control type="image">
 			<description>Video rez Image</description>
@@ -36,9 +34,7 @@
 			<texture>$INFO[ListItem.VideoCodec,special://skin/extras/flagging/videoNew/,.png]</texture>
 		</control>
 	</include>
-	
 	<!-- ============AUDIO FLAGS============= -->
-	
 	<include name="AudioCodecFlaggingConditions">
 		<control type="image">
 			<description>AudioCodecFlagging</description>
@@ -55,7 +51,6 @@
 			<texture>$INFO[ListItem.AudioChannels,special://skin/extras/flagging/audio/,.png]</texture>
 		</control>
 	</include>
-
 	<!-- ============AUDIO FLAGS NEW============= -->
 	<include name="AudioCodecFlaggingConditionsNew">
 		<control type="image">
@@ -73,7 +68,6 @@
 			<texture>$INFO[ListItem.AudioChannels,special://skin/extras/flagging/audioNew/,.png]</texture>
 		</control>
 	</include>
-	
 	<!-- ==============ASPECTRATIO FLAGS============= -->
 	<include name="AspectCodecFlaggingConditions">
 		<control type="image">
@@ -84,7 +78,6 @@
 			<texture>$INFO[ListItem.VideoAspect,special://skin/extras/flagging/aspectratio/,.png]</texture>
 		</control>
 	</include>
-
 	<!-- ==============ASPECTRATIO FLAGS NEW============= -->
 	<include name="AspectCodecFlaggingConditionsNew">
 		<control type="image">
@@ -95,9 +88,7 @@
 			<texture>$INFO[ListItem.VideoAspect,special://skin/extras/flagging/aspectratioNew/,.png]</texture>
 		</control>
 	</include>
-	
 	<!-- ==============MPAA RATINGS FLAGS============= -->
-	
 	<include name="VideoMPAAFlaggingConditions">
 		<!-- AUSTRALIAN -->
 		<control type="image">
@@ -204,7 +195,7 @@
 			<height>57</height>
 			<aspectratio>keep</aspectratio>
 			<texture>special://skin/extras/flagging/ratings/mpaa_pg.png</texture>
-	        <visible>substring(Container(7000).listitem.mpaa,Rated PG)</visible>
+			<visible>substring(Container(7000).listitem.mpaa,Rated PG)</visible>
 		</control>
 		<control type="image">
 			<description>Rated PG-13</description>
@@ -220,7 +211,7 @@
 			<height>57</height>
 			<aspectratio>keep</aspectratio>
 			<texture>special://skin/extras/flagging/ratings/mpaa_restricted.png</texture>
-	    	<visible>substring(Container(7000).Listitem.mpaa,Rated R)</visible>
+			<visible>substring(Container(7000).Listitem.mpaa,Rated R)</visible>
 		</control>
 		<control type="image">
 			<description>Rated NC-17</description>
@@ -538,9 +529,9 @@
 			<texture>special://skin/extras/flagging/newratings/mpaa_notrated.png</texture>
 			<visible>isEmpty(listitem.mpaa)</visible>
 		</control>
-		</include>
-		<!-- Audio Language Flags -->
-		<include name="VideoLangFlaggingConditionsAudiotrackWhite">
+	</include>
+	<!-- Audio Language Flags -->
+	<include name="VideoLangFlaggingConditionsAudiotrackWhite">
 		<control type="image">
 			<description>German</description>
 			<width>75</width>
@@ -570,7 +561,7 @@
 		</control>
 		<control type="image">
 			<description>French</description>
-		    <width>75</width>
+			<width>75</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>special://skin/extras/flagsaudiolanguagewhite/fra.png</texture>
@@ -586,8 +577,8 @@
 			<visible>substring(listitem.filename,.it.)</visible>
 			<visible>Skin.HasSetting(showlanflag)</visible>
 		</control>
-		</include>
-		<include name="VideoLangFlaggingConditionsAudiotrackOrange">
+	</include>
+	<include name="VideoLangFlaggingConditionsAudiotrackOrange">
 		<control type="image">
 			<description>German</description>
 			<width>75</width>
@@ -604,7 +595,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>special://skin/extras/flagsaudiolanguageorange/eng.png</texture>
 			<visible>substring(listitem.filename,.en.)</visible>
-			 <visible>Skin.HasSetting(showlanflag)</visible>
+			<visible>Skin.HasSetting(showlanflag)</visible>
 		</control>
 		<control type="image">
 			<description>Spanish</description>
@@ -613,7 +604,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>special://skin/extras/flagsaudiolanguageorange/spa.png</texture>
 			<visible>substring(listitem.filename,.es.)</visible>
-			 <visible>Skin.HasSetting(showlanflag)</visible>
+			<visible>Skin.HasSetting(showlanflag)</visible>
 		</control>
 		<control type="image">
 			<description>French</description>
@@ -633,30 +624,30 @@
 			<visible>substring(listitem.filename,.it.)</visible>
 			<visible>Skin.HasSetting(showlanflag)</visible>
 		</control>
-		</include>
-		<include name="VideoLangFlaggingConditionsAudiotrackWhite2">
-			<control type="image">
+	</include>
+	<include name="VideoLangFlaggingConditionsAudiotrackWhite2">
+		<control type="image">
 			<description>Audiotrack Language</description>
 			<width>75</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			 <texture>$INFO[ListItem.AudioLanguage,special://skin/extras/flagsaudiolanguagewhite/,.png]</texture>
-			 <visible>!IsEmpty(ListItem.AudioLanguage)</visible>
-			 <visible>Skin.HasSetting(showlanflag)</visible>
+			<texture>$INFO[ListItem.AudioLanguage,special://skin/extras/flagsaudiolanguagewhite/,.png]</texture>
+			<visible>!IsEmpty(ListItem.AudioLanguage)</visible>
+			<visible>Skin.HasSetting(showlanflag)</visible>
 		</control>
-		</include>
-		<include name="VideoLangFlaggingConditionsAudiotrackOrange2">
-			<control type="image">
+	</include>
+	<include name="VideoLangFlaggingConditionsAudiotrackOrange2">
+		<control type="image">
 			<description>Audiotrack Language</description>
 			<width>75</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			 <texture>$INFO[ListItem.AudioLanguage,special://skin/extras/flagsaudiolanguageorange/,.png]</texture>
-			 <visible>!IsEmpty(ListItem.AudioLanguage)</visible>
-			 <visible>Skin.HasSetting(showlanflag)</visible>
+			<texture>$INFO[ListItem.AudioLanguage,special://skin/extras/flagsaudiolanguageorange/,.png]</texture>
+			<visible>!IsEmpty(ListItem.AudioLanguage)</visible>
+			<visible>Skin.HasSetting(showlanflag)</visible>
 		</control>
-		</include>
-		<!-- Audio Subtitle Language Flags -->
+	</include>
+	<!-- Audio Subtitle Language Flags -->
 	<!--  <include name="VideoSubLangFlaggingConditions">
 		<control type="image">
 			<description>Sub</description>
@@ -667,7 +658,7 @@
 		    <visible>substring(listitem.filename,.en.srt)</visible>
 		</control>
 		</include> -->
-		<!-- <control type="image">
+	<!-- <control type="image">
 			<description>English</description>
 			<width>35</width>
 			<height>35</height>
@@ -747,5 +738,4 @@
 			<texture>flagging/lang/sv.png</texture>
 			<visible>substring(listitem.filename,.sv.)</visible>
 		</control> -->
-	
 </includes>

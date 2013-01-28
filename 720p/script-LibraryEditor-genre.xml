@@ -1,18 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
 <window type="dialog">
 	<zorder>1</zorder>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-
 	<controls>
 		<control type="group">
 			<description>See content on list 9000</description>
-			<control type="button" id="24"><description>Add button</description></control>
-			<control type="button" id="25"><description>Del button</description></control>
-			<control type="button" id="22"><description>Save button</description></control>
-			<control type="button" id="23"><description>Cancel button</description></control>
+			<control type="button" id="24">
+				<description>Add button</description>
+			</control>
+			<control type="button" id="25">
+				<description>Del button</description>
+			</control>
+			<control type="button" id="22">
+				<description>Save button</description>
+			</control>
+			<control type="button" id="23">
+				<description>Cancel button</description>
+			</control>
 			<visible>false</visible>
 		</control>
-
 		<control type="group">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -26,7 +33,7 @@
 				<width>1280</width>
 				<height>720</height>
 				<texture>black-back3.png</texture>
-                <aspectratio>stretch</aspectratio>
+				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -60,7 +67,7 @@
 				<height>40</height>
 				<texture>xbmc_logo_white.png</texture>
 			</control>
-				<control type="image">
+			<control type="image">
 				<description>LOGO Mirror</description>
 				<posx>30</posx>
 				<posy>55</posy>
@@ -174,7 +181,6 @@
 					</item>
 				</content>
 			</control>
-
 			<control type="image">
 				<posx>268</posx>
 				<posy>0</posy>
@@ -195,7 +201,6 @@
 				<textcolor>accent</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
-
 			<control type="group" id="9010">
 				<control type="list" id="120">
 					<posx>290</posx>
@@ -319,7 +324,6 @@
 					<orientation>vertical</orientation>
 				</control>
 			</control>
-
 			<control type="image">
 				<posx>268</posx>
 				<posy>510</posy>

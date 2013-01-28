@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <window id="603">
 	<defaultcontrol>29</defaultcontrol>
 	<coordinates>
@@ -14,7 +15,7 @@
 			<width>800</width>
 			<height>620</height>
 			<colordiffuse>EEFFFFFF</colordiffuse>
-		    <texture border="40">OverlayDialogBackground.png</texture>
+			<texture border="40">OverlayDialogBackground.png</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -22,7 +23,7 @@
 			<width>800</width>
 			<height>620</height>
 			<colordiffuse>EEFFFFFF</colordiffuse>
-		    <texture border="40">OverlayDialogBackground.png</texture>
+			<texture border="40">OverlayDialogBackground.png</texture>
 		</control>
 		<control type="button">
 			<description>Close Window button</description>
