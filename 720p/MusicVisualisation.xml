@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <window id="2006">
 	<defaultcontrol always="true">999</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
@@ -10,17 +11,17 @@
 			<height>720</height>
 		</control>
 		<control type="image">
-		<description>Default background</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<colordiffuse>88FFFFFF</colordiffuse>					
-		<visible>!Skin.HasSetting(CustomBackground) + !Skin.HasSetting(BlackBackground) + !Skin.HasSetting(Artistslideshow) + !Skin.HasSetting(CDWallNoVisualisation)</visible>
-		<texture fallback="special://skin/backgrounds/DefaultFanart.jpg">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
-        <animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-        <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-        <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>		
+			<description>Default background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<colordiffuse>88FFFFFF</colordiffuse>
+			<visible>!Skin.HasSetting(CustomBackground) + !Skin.HasSetting(BlackBackground) + !Skin.HasSetting(Artistslideshow) + !Skin.HasSetting(CDWallNoVisualisation)</visible>
+			<texture fallback="special://skin/backgrounds/DefaultFanart.jpg">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
+			<animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
+			<animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
 		</control>
 		<control type="multiimage">
 			<posx>0</posx>
@@ -42,35 +43,33 @@
 			<visible>!Skin.HasSetting(BlackBackground)</visible>
 			<visible>!Skin.HasSetting(CustomBackground)</visible>
 			<visible>!Skin.HasSetting(DefaultBackground)</visible>
-			
 		</control>
-	<control type="multiimage">
-		<description>Custom background</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<fadetime>2000</fadetime>
-		<timeperimage>5000</timeperimage>
-		<colordiffuse>88FFFFFF</colordiffuse>
-		<visible>Skin.HasSetting(CustomBackground) + !Skin.HasSetting(BlackBackground) + !Skin.HasSetting(DefaultBackground) + !Skin.HasSetting(Artistslideshow)</visible>		
-		<imagepath>$INFO[Skin.String(Home_Custom_Back_MusicVisualisation_Folder)]</imagepath> 	
-        <animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-        <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-        <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>				
-	</control>
-	<control type="image">
-		<description>Black background</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<colordiffuse>88FFFFFF</colordiffuse>
-		<visible>Skin.HasSetting(BlackBackground) + !Skin.HasSetting(CustomBackground) + !Skin.HasSetting(DefaultBackground) + !Skin.HasSetting(Artistslideshow)</visible>	
-		<texture>BlackFanart.png</texture>					
-	</control>
-           
-        <control type="group">
+		<control type="multiimage">
+			<description>Custom background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<fadetime>2000</fadetime>
+			<timeperimage>5000</timeperimage>
+			<colordiffuse>88FFFFFF</colordiffuse>
+			<visible>Skin.HasSetting(CustomBackground) + !Skin.HasSetting(BlackBackground) + !Skin.HasSetting(DefaultBackground) + !Skin.HasSetting(Artistslideshow)</visible>
+			<imagepath>$INFO[Skin.String(Home_Custom_Back_MusicVisualisation_Folder)]</imagepath>
+			<animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
+			<animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
+			<animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
+		</control>
+		<control type="image">
+			<description>Black background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<colordiffuse>88FFFFFF</colordiffuse>
+			<visible>Skin.HasSetting(BlackBackground) + !Skin.HasSetting(CustomBackground) + !Skin.HasSetting(DefaultBackground) + !Skin.HasSetting(Artistslideshow)</visible>
+			<texture>BlackFanart.png</texture>
+		</control>
+		<control type="group">
 			<posx>-35</posx>
 			<posy>-15</posy>
 			<visible>!Skin.HasSetting(BlackBackground)</visible>
@@ -625,45 +624,50 @@
 			<height>720</height>
 			<texture background="true">cdwall-grid.png</texture>
 			<colordiffuse>88FFFFFF</colordiffuse>
-			<visible>Player.HasAudio + Skin.HasSetting(CDWallNoVisualisation)</visible>	
+			<visible>Player.HasAudio + Skin.HasSetting(CDWallNoVisualisation)</visible>
 		</control>
-	
 		<control type="group">
 			<visible>Player.ShowInfo + ![Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
 			<animation effect="fade" start="0" end="100" time="300" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="fade" start="0" end="100" time="300" tween="quadratic" easing="out">visible</animation>
 			<animation effect="fade" start="100" end="0" time="300" delay="150" tween="quadratic" easing="out">hidden</animation>
- <!-- Zombie -->
-			<control type="image"> <!-- Top Bar background -->
+			<!-- Zombie -->
+			<control type="image">
+				<!-- Top Bar background -->
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
 				<height>125</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture flipy="true">OSDbackground.png</texture> <!-- flip y when up the top -->
+				<texture flipy="true">OSDbackground.png</texture>
+				<!-- flip y when up the top -->
 				<visible>Skin.HasSetting(zombie_osd)</visible>
 			</control>
-			<control type="image"> <!-- Top Bar background -->
+			<control type="image">
+				<!-- Top Bar background -->
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
 				<height>125</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture flipy="true">OSDbackground.png</texture> <!-- flip y when up the top -->
+				<texture flipy="true">OSDbackground.png</texture>
+				<!-- flip y when up the top -->
 				<visible>Skin.HasSetting(zombie_osd)</visible>
-			</control>	
-
-			<control type="image"> <!-- background -->
+			</control>
+			<control type="image">
+				<!-- background -->
 				<posx>0</posx>
 				<posy>100r</posy>
 				<width>1280</width>
 				<height>100</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>OSDbackground.png</texture> <!-- flip y when up the top -->
+				<texture>OSDbackground.png</texture>
+				<!-- flip y when up the top -->
 				<visible>Skin.HasSetting(zombie_osd)</visible>
-			</control>				
-            <control type="image">   <!-- STARS Music-->
+			</control>
+			<control type="image">
+				<!-- STARS Music-->
 				<description>Album rating</description>
 				<posx>597</posx>
 				<posy>102</posy>
@@ -672,15 +676,16 @@
 				<texture>$INFO[Player.StarRating]</texture>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<visible>Skin.HasSetting(zombie_osd)</visible>
-			</control>	
-			
-			<control type="image"> <!-- background -->
+			</control>
+			<control type="image">
+				<!-- background -->
 				<posx>0</posx>
 				<posy>170r</posy>
 				<width>1280</width>
 				<height>170</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>OSDbackground.png</texture> <!-- flip y when up the top -->
+				<texture>OSDbackground.png</texture>
+				<!-- flip y when up the top -->
 				<visible>!Skin.HasSetting(zombie_osd)</visible>
 			</control>
 			<!-- ==================== CD ART ================== -->
@@ -690,15 +695,15 @@
 				<posy>397</posy>
 				<animation effect="fade" time="900" condition="Skin.HasSetting(zombie_osd)">VisibleChange</animation>
 				<animation effect="slide" time="300" start="-350,0" end="0,0" delay="0" condition="Skin.HasSetting(zombie_osd)">WindowOpen</animation>
-				<animation effect="slide" time="300" start="0,0" end="-360,0" delay="0" condition="Skin.HasSetting(zombie_osd)">WindowClose</animation>			
+				<animation effect="slide" time="300" start="0,0" end="-360,0" delay="0" condition="Skin.HasSetting(zombie_osd)">WindowClose</animation>
 				<!-- CD Animation -->
 				<control type="image">
 					<description>Cd Disc</description>
 					<animation effect="slide" start="-118" end="0" time="900" tween="cubic" easing="out" delay="1000">WindowOpen</animation>
 					<animation type="WindowClose">
-						<effect type="slide" start="0" end="-114" time="800" tween="cubic" easing="in" delay="0"/>
-						<effect type="fade" start="100" end="0" time="1300"/>
-						<condition type="!Player.Playing"/>
+						<effect type="slide" start="0" end="-114" time="800" tween="cubic" easing="in" delay="0" />
+						<effect type="fade" start="100" end="0" time="1300" />
+						<condition type="!Player.Playing" />
 					</animation>
 					<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="!Player.Paused + !Skin.HasSetting(zombie_osd)">Conditional</animation>
 					<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="!Player.Paused + Skin.HasSetting(zombie_osd)">Conditional</animation>
@@ -710,15 +715,13 @@
 					<aspectratio align="bottom">keep</aspectratio>
 					<visible>!Skin.HasSetting(cdart2) + !Skin.HasSetting(cdart3)</visible>
 				</control>
-				
-				
 				<control type="image">
 					<description>Cd Disc</description>
 					<animation effect="slide" start="-118" end="0" time="900" tween="cubic" easing="out" delay="1000">WindowOpen</animation>
 					<animation type="WindowClose">
-						<effect type="slide" start="0" end="-114" time="800" tween="cubic" easing="in" delay="0"/>
-						<effect type="fade" start="100" end="0" time="1300"/>
-						<condition type="!Player.Playing"/>
+						<effect type="slide" start="0" end="-114" time="800" tween="cubic" easing="in" delay="0" />
+						<effect type="fade" start="100" end="0" time="1300" />
+						<condition type="!Player.Playing" />
 					</animation>
 					<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="!Player.Paused + !Skin.HasSetting(zombie_osd)">Conditional</animation>
 					<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="!Player.Paused + Skin.HasSetting(zombie_osd)">Conditional</animation>
@@ -730,14 +733,13 @@
 					<aspectratio align="bottom">keep</aspectratio>
 					<visible>Skin.HasSetting(cdart2)</visible>
 				</control>
-				
 				<control type="image">
 					<description>Cd Disc</description>
 					<animation effect="slide" start="-118" end="0" time="900" tween="cubic" easing="out" delay="1000">WindowOpen</animation>
 					<animation type="WindowClose">
-						<effect type="slide" start="0" end="-114" time="800" tween="cubic" easing="in" delay="0"/>
-						<effect type="fade" start="100" end="0" time="1300"/>
-						<condition type="!Player.Playing"/>
+						<effect type="slide" start="0" end="-114" time="800" tween="cubic" easing="in" delay="0" />
+						<effect type="fade" start="100" end="0" time="1300" />
+						<condition type="!Player.Playing" />
 					</animation>
 					<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="!Player.Paused + !Skin.HasSetting(zombie_osd)">Conditional</animation>
 					<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="!Player.Paused + Skin.HasSetting(zombie_osd)">Conditional</animation>
@@ -753,9 +755,9 @@
 					<description>Cd Disc</description>
 					<animation effect="slide" start="-118" end="0" time="900" tween="cubic" easing="out" delay="1000">WindowOpen</animation>
 					<animation type="WindowClose">
-						<effect type="slide" start="0" end="-114" time="800" tween="cubic" easing="in" delay="0"/>
-						<effect type="fade" start="100" end="0" time="1300"/>
-						<condition type="!Player.Playing"/>
+						<effect type="slide" start="0" end="-114" time="800" tween="cubic" easing="in" delay="0" />
+						<effect type="fade" start="100" end="0" time="1300" />
+						<condition type="!Player.Playing" />
 					</animation>
 					<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="!Player.Paused + !Skin.HasSetting(zombie_osd)">Conditional</animation>
 					<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="!Player.Paused + Skin.HasSetting(zombie_osd)">Conditional</animation>
@@ -771,12 +773,13 @@
 				</control>
 			</control>
 			<!-- =========== END CDART ============= -->
-			<control type="group"><!-- cover image -->
+			<control type="group">
+				<!-- cover image -->
 				<posx>30</posx>
 				<posy>395r</posy>
 				<animation effect="fade" time="900" condition="Skin.HasSetting(zombie_osd)">VisibleChange</animation>
 				<animation effect="slide" time="300" start="-350,0" end="0,0" delay="0" condition="Skin.HasSetting(zombie_osd)">WindowOpen</animation>
-				<animation effect="slide" time="300" start="0,0" end="-360,0" delay="0" condition="Skin.HasSetting(zombie_osd)">WindowClose</animation>				
+				<animation effect="slide" time="300" start="0,0" end="-360,0" delay="0" condition="Skin.HasSetting(zombie_osd)">WindowClose</animation>
 				<control type="image">
 					<posx>0</posx>
 					<posy>60</posy>
@@ -789,8 +792,6 @@
 					<bordersize>6</bordersize>
 				</control>
 			</control>
-			
-			
 			<control type="progress">
 				<description>Progressbar</description>
 				<posx>25</posx>
@@ -834,7 +835,6 @@
 						<texture>$INFO[MusicPlayer.Codec,flagging/audioNew/,.png]</texture>
 						<visible>Skin.HasSetting(newFlags)</visible>
 					</control>
-					
 					<control type="image">
 						<description>Channels Image</description>
 						<width>80</width>
@@ -851,9 +851,8 @@
 						<texture>$INFO[MusicPlayer.Channels,flagging/audioNew/,.png]</texture>
 						<visible>Skin.HasSetting(newFlags)</visible>
 					</control>
-					
 				</control>
-<!-- Zombie -->				
+				<!-- Zombie -->
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
 					<posx>337</posx>
@@ -863,7 +862,6 @@
 					<visible>Skin.HasSetting(zombie_osd)</visible>
 					<itemgap>20</itemgap>
 					<orientation>horizontal</orientation>
-
 					<control type="image">
 						<description>Codec Image</description>
 						<width>80</width>
@@ -880,8 +878,7 @@
 						<texture>$INFO[MusicPlayer.Codec,flagging/audioNew/,.png]</texture>
 						<visible>Skin.HasSetting(newFlags)</visible>
 					</control>
-					
-				</control>	
+				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
 					<posx>-820</posx>
@@ -898,7 +895,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[MusicPlayer.Channels,flagging/audio/,.png]</texture>
 						<visible>!Skin.HasSetting(newFlags)</visible>
-					</control>	
+					</control>
 					<control type="image">
 						<description>Channels Image</description>
 						<width>80</width>
@@ -906,10 +903,9 @@
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[MusicPlayer.Channels,flagging/audioNew/,.png]</texture>
 						<visible>Skin.HasSetting(newFlags)</visible>
-					</control>	
-					
-				</control>				
-<!-- Zombie -->							
+					</control>
+				</control>
+				<!-- Zombie -->
 				<control type="label">
 					<description>Now Playing Label</description>
 					<posx>0</posx>
@@ -925,7 +921,8 @@
 					<visible>!Skin.HasSetting(cdart) + !Skin.HasSetting(zombie_osd)</visible>
 				</control>
 				<control type="label">
-					<description>Now Playing Label</description> <!-- moves to right if cdart enabled -->
+					<description>Now Playing Label</description>
+					<!-- moves to right if cdart enabled -->
 					<posx>100</posx>
 					<posy>0</posy>
 					<width>400</width>
@@ -994,7 +991,7 @@
 					<shadowcolor>black</shadowcolor>
 					<visible>Skin.HasSetting(cdart) + !Skin.HasSetting(zombie_osd)</visible>
 				</control>
-<!-- Zombie -->
+				<!-- Zombie -->
 				<control type="label">
 					<posx>-35</posx>
 					<posy>-555</posy>
@@ -1008,7 +1005,7 @@
 					<textcolor>accent</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>Skin.HasSetting(zombie_osd)</visible>
-				</control>	
+				</control>
 				<control type="label">
 					<posx>-73</posx>
 					<posy>-515</posy>
@@ -1021,7 +1018,7 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>Skin.HasSetting(zombie_osd)</visible>
-				</control>	
+				</control>
 				<control type="label">
 					<posx>-71</posx>
 					<posy>-485</posy>
@@ -1034,7 +1031,7 @@
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>Skin.HasSetting(zombie_osd)</visible>
-				</control>	
+				</control>
 				<control type="label">
 					<description>Player duration Times</description>
 					<posx>-17</posx>
@@ -1048,7 +1045,7 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>Skin.HasSetting(zombie_osd)</visible>
-				</control>	
+				</control>
 				<control type="label">
 					<posx>121</posx>
 					<posy>60</posy>
@@ -1061,28 +1058,28 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>Skin.HasSetting(zombie_osd)</visible>
-				</control>	
+				</control>
 				<control type="label">
 					<posx>890</posx>
 					<posy>-595</posy>
 					<width>350</width>
 					<height>100</height>
 					<label>$INFO[musicplayer.Codec,Info: ,] : $INFO[musicplayer.Bitrate,kbps]</label>
-<!--				<label>$INFO[musicplayer.Codec,· Codec: ,]$INFO[musicplayer.Bitrate,[CR]· Bitrate: ,kbps]$INFO[musicplayer.bitspersample,[CR]· Bits:,bit]$INFO[musicplayer.Samplerate,[CR]· Freq.: ,kHz]$INFO[musicplayer.Channels,[CR]· Channels: ]</label> -->
+					<!--				<label>$INFO[musicplayer.Codec,· Codec: ,]$INFO[musicplayer.Bitrate,[CR]· Bitrate: ,kbps]$INFO[musicplayer.bitspersample,[CR]· Bits:,bit]$INFO[musicplayer.Samplerate,[CR]· Freq.: ,kHz]$INFO[musicplayer.Channels,[CR]· Channels: ]</label> -->
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>cirrus_16</font>
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>Skin.HasSetting(zombie_osd)</visible>
-				</control>			
+				</control>
 				<control type="label">
 					<posx>890</posx>
 					<posy>-575</posy>
 					<width>350</width>
 					<height>100</height>
 					<label> $INFO[musicplayer.bitspersample,:,bit]</label>
-<!--				<label>$INFO[musicplayer.Codec,· Codec: ,]$INFO[musicplayer.Bitrate,[CR]· Bitrate: ,kbps]$INFO[musicplayer.bitspersample,[CR]· Bits:,bit]$INFO[musicplayer.Samplerate,[CR]· Freq.: ,kHz]$INFO[musicplayer.Channels,[CR]· Channels: ]</label> -->
+					<!--				<label>$INFO[musicplayer.Codec,· Codec: ,]$INFO[musicplayer.Bitrate,[CR]· Bitrate: ,kbps]$INFO[musicplayer.bitspersample,[CR]· Bits:,bit]$INFO[musicplayer.Samplerate,[CR]· Freq.: ,kHz]$INFO[musicplayer.Channels,[CR]· Channels: ]</label> -->
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>cirrus_16</font>
@@ -1096,15 +1093,15 @@
 					<width>350</width>
 					<height>100</height>
 					<label>$INFO[musicplayer.Samplerate,: ,kHz]$INFO[musicplayer.Channels,: ,ch]</label>
-<!--				<label>$INFO[musicplayer.Codec,· Codec: ,]$INFO[musicplayer.Bitrate,[CR]· Bitrate: ,kbps]$INFO[musicplayer.bitspersample,[CR]· Bits:,bit]$INFO[musicplayer.Samplerate,[CR]· Freq.: ,kHz]$INFO[musicplayer.Channels,[CR]· Channels: ]</label> -->
+					<!--				<label>$INFO[musicplayer.Codec,· Codec: ,]$INFO[musicplayer.Bitrate,[CR]· Bitrate: ,kbps]$INFO[musicplayer.bitspersample,[CR]· Bits:,bit]$INFO[musicplayer.Samplerate,[CR]· Freq.: ,kHz]$INFO[musicplayer.Channels,[CR]· Channels: ]</label> -->
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>cirrus_16</font>
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>Skin.HasSetting(zombie_osd)</visible>
-				</control>				
-<!-- Zombie -->								
+				</control>
+				<!-- Zombie -->
 				<control type="label">
 					<posx>0</posx>
 					<posy>100</posy>
@@ -1137,7 +1134,7 @@
 					<width>350</width>
 					<height>100</height>
 					<label>$INFO[musicplayer.Codec,Info: ,]$INFO[musicplayer.Bitrate,: ,kbps]$INFO[musicplayer.bitspersample,:,bit]$INFO[musicplayer.Samplerate,: ,kHz]$INFO[musicplayer.Channels,: ,ch]</label>
-<!--				<label>$INFO[musicplayer.Codec,· Codec: ,]$INFO[musicplayer.Bitrate,[CR]· Bitrate: ,kbps]$INFO[musicplayer.bitspersample,[CR]· Bits:,bit]$INFO[musicplayer.Samplerate,[CR]· Freq.: ,kHz]$INFO[musicplayer.Channels,[CR]· Channels: ]</label> -->
+					<!--				<label>$INFO[musicplayer.Codec,· Codec: ,]$INFO[musicplayer.Bitrate,[CR]· Bitrate: ,kbps]$INFO[musicplayer.bitspersample,[CR]· Bits:,bit]$INFO[musicplayer.Samplerate,[CR]· Freq.: ,kHz]$INFO[musicplayer.Channels,[CR]· Channels: ]</label> -->
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>cirrus_16</font>

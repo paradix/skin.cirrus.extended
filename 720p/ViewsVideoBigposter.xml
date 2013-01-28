@@ -1,65 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
-<!-- ===================================================================================== -->
-<!-- ============================== BIGPOSTER VIEW ID 556 ================================ -->
-<!-- ====================================== Movies ======================================= -->
+	<!-- ===================================================================================== -->
+	<!-- ============================== BIGPOSTER VIEW ID 556 ================================ -->
+	<!-- ====================================== Movies ======================================= -->
 	<include name="BigPosterView">
 		<control type="group">
-		<animation type="WindowOpen" reversible="false">
-			<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-			<effect type="fade" start="0" end="100" time="300" />
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+				<effect type="fade" start="0" end="100" time="300" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-			<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-			<effect type="fade" start="100" end="0" time="300" />
-			</animation>      
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
 			<visible>Control.IsVisible(556)</visible>
 			<include>VisibleFadeEffect</include>
-			<control type="image"> <!-- genre -->
+			<control type="image">
+				<!-- genre -->
 				<posx>0</posx>
 				<posy>130</posy>
 				<width>1280</width>
 				<height>700</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>rightlistbackground.png</texture>
+				<texture>rightlistbackground.png</texture>
 				<visible>Control.IsVisible(556) + Container.Content(movies) + Control.HasFocus(8241) | Control.HasFocus(2)</visible>
 				<animation effect="slide" start="1000,0" end="0,0" time="400" delay="400">Visible</animation>
 			</control>
-			<control type="image"> <!-- plot-->
+			<control type="image">
+				<!-- plot-->
 				<posx>0</posx>
 				<posy>170</posy>
 				<width>1280</width>
 				<height>700</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>rightlistbackground.png</texture>
+				<texture>rightlistbackground.png</texture>
 				<visible>Control.IsVisible(556) + Container.Content(movies) + Control.HasFocus(8241) | Control.HasFocus(2)</visible>
 				<animation effect="slide" start="1000,0" end="0,0" time="400" delay="400">Visible</animation>
 			</control>
-			<control type="image"> <!-- title date -->
+			<control type="image">
+				<!-- title date -->
 				<posx>0</posx>
 				<posy>370</posy>
 				<width>1280</width>
 				<height>700</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>rightlistbackground.png</texture>
+				<texture>rightlistbackground.png</texture>
 			</control>
-			<control type="image"> <!-- poster -->
+			<control type="image">
+				<!-- poster -->
 				<posx>0</posx>
 				<posy>410</posy>
 				<width>1280</width>
 				<height>700</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>rightlistbackground.png</texture>
+				<texture>rightlistbackground.png</texture>
 			</control>
-			<control type="image"> <!-- bottom bar background -->
+			<control type="image">
+				<!-- bottom bar background -->
 				<posx>0</posx>
 				<posy>50r</posy>
 				<width>1280</width>
 				<height>700</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>rightlistbackground.png</texture>
+				<texture>rightlistbackground.png</texture>
 				<visible>Container.Content(Movies)</visible>
 			</control>
-			<control type="image"> <!-- Black gradient up the top -->
+			<control type="image">
+				<!-- Black gradient up the top -->
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
@@ -67,7 +74,8 @@
 				<texture>blackgradientvert.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="image"> <!-- right gradient -->
+			<control type="image">
+				<!-- right gradient -->
 				<posx>700r</posx>
 				<posy>0</posy>
 				<width>700</width>
@@ -75,52 +83,53 @@
 				<texture flipx="true">blackgradient.png</texture>
 			</control>
 			<control type="image">
-					<posx>600</posx>
-					<posy>50</posy>
-					<width>540</width>
-					<height>303</height>
-					<texture>black-back.png</texture>
-					<bordertexture border="8">contentpanelvertical.png</bordertexture>
-					<bordersize>8</bordersize>
-					<aspectratio>stretch</aspectratio>
-					<align>center</align>
-					<aligy>center</aligy>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<visible>Skin.Hassetting(videowindowglobal)</visible>
-					<visible>Player.HasVideo</visible>
-					<visible>!Skin.Hassetting(videowindownoborder)</visible>
-					<visible>Control.IsVisible(556) + !Control.HasFocus(8241) + !Control.HasFocus(2)</visible>
-				</control>
-				<control type="videowindow" id="8">
-					<posx>614</posx>
-					<posy>65</posy>
-					<width>511</width>
-					<height>275</height>
-					<align>center</align>
-					<aligy>center</aligy>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<visible>Skin.Hassetting(videowindowglobal)</visible>
-					<visible>Control.IsVisible(556) + !Control.HasFocus(8241) + !Control.HasFocus(2)</visible>
-				</control> 
-				<control type="label">
-					<description>Title label</description>
-					<posx>720</posx>
-					<posy>280</posy>
-					<height>30</height>
-					<width>330</width>
-					<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=accent] (,)[/COLOR]]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>cirrus_20</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>Skin.HasSetting(videowindowglobal)</visible>
-					<visible>Player.HasVideo</visible>
-					<visible>Control.IsVisible(556) + !Control.HasFocus(8241) + !Control.HasFocus(2)</visible>
-					<visible>!Skin.HasSetting(videonotitle)</visible>
-				</control>
+				<posx>600</posx>
+				<posy>50</posy>
+				<width>540</width>
+				<height>303</height>
+				<texture>black-back.png</texture>
+				<bordertexture border="8">contentpanelvertical.png</bordertexture>
+				<bordersize>8</bordersize>
+				<aspectratio>stretch</aspectratio>
+				<align>center</align>
+				<aligy>center</aligy>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>Skin.Hassetting(videowindowglobal)</visible>
+				<visible>Player.HasVideo</visible>
+				<visible>!Skin.Hassetting(videowindownoborder)</visible>
+				<visible>Control.IsVisible(556) + !Control.HasFocus(8241) + !Control.HasFocus(2)</visible>
+			</control>
+			<control type="videowindow" id="8">
+				<posx>614</posx>
+				<posy>65</posy>
+				<width>511</width>
+				<height>275</height>
+				<align>center</align>
+				<aligy>center</aligy>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>Skin.Hassetting(videowindowglobal)</visible>
+				<visible>Control.IsVisible(556) + !Control.HasFocus(8241) + !Control.HasFocus(2)</visible>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>720</posx>
+				<posy>280</posy>
+				<height>30</height>
+				<width>330</width>
+				<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=accent] (,)[/COLOR]]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cirrus_20</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Skin.HasSetting(videowindowglobal)</visible>
+				<visible>Player.HasVideo</visible>
+				<visible>Control.IsVisible(556) + !Control.HasFocus(8241) + !Control.HasFocus(2)</visible>
+				<visible>!Skin.HasSetting(videonotitle)</visible>
+			</control>
 			<!-- START OF ACTUAL LIST -->
-			<control type="wraplist" id="556"> <!-- Trailer mod -->
+			<control type="wraplist" id="556">
+				<!-- Trailer mod -->
 				<visible>Skin.HasSetting(bigposter_view)</visible>
 				<posx>265</posx>
 				<posy>340</posy>
@@ -140,7 +149,7 @@
 				<visible>Container.Content(Movies)</visible>
 				<itemlayout height="390" width="170">
 					<control type="image">
-					<visible>!Skin.HasSetting(showBigposterCases) + !Skin.HasSetting(showBigposterClearCases)</visible>
+						<visible>!Skin.HasSetting(showBigposterCases) + !Skin.HasSetting(showBigposterClearCases)</visible>
 						<posx>2</posx>
 						<posy>85</posy>
 						<width>150</width>
@@ -170,7 +179,8 @@
 						<texture>Overlayicons/$INFO[ListItem.Overlay]</texture>
 						<visible>!Skin.HasSetting(showBigposterCases)</visible>
 					</control>
-					<control type="image"> <!-- need to adjust cover size for clear cases -->
+					<control type="image">
+						<!-- need to adjust cover size for clear cases -->
 						<visible>Skin.HasSetting(showBigposterClearCases) + Skin.HasSetting(showBigposterCases)</visible>
 						<posx>8</posx>
 						<posy>85</posy>
@@ -180,9 +190,11 @@
 						<fadetime>IconCrossfadeTime</fadetime>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 					</control>
-					<control type="group"> <!-- LITTLE DVD CASES IN LIST -->
+					<control type="group">
+						<!-- LITTLE DVD CASES IN LIST -->
 						<visible>Skin.HasSetting(showBigposterCases) + !Skin.HasSetting(showBigposterClearCases)</visible>
-						<control type="image"> <!-- DVD Case -->
+						<control type="image">
+							<!-- DVD Case -->
 							<posx>0</posx>
 							<posy>77</posy>
 							<width>160</width>
@@ -192,7 +204,8 @@
 							<texture>special://skin/extras/flagging/cases/dvd.png</texture>
 							<visible>![stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080) | stringcompare(ListItem.VideoResolution,540)]</visible>
 						</control>
-						<control type="image"> <!-- Bluray Case -->
+						<control type="image">
+							<!-- Bluray Case -->
 							<posx>0</posx>
 							<posy>77</posy>
 							<width>160</width>
@@ -202,7 +215,8 @@
 							<texture>special://skin/extras/flagging/cases/bluray.png</texture>
 							<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + !substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)</visible>
 						</control>
-						<control type="image"> <!-- Bluray 3D Case -->
+						<control type="image">
+							<!-- Bluray 3D Case -->
 							<posx>0</posx>
 							<posy>77</posy>
 							<width>160</width>
@@ -212,7 +226,8 @@
 							<texture>special://skin/extras/flagging/cases/3dbluraycase3.png</texture>
 							<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)</visible>
 						</control>
-						<control type="image"> <!-- HDDVD Case -->
+						<control type="image">
+							<!-- HDDVD Case -->
 							<posx>0</posx>
 							<posy>77</posy>
 							<width>160</width>
@@ -223,18 +238,20 @@
 							<visible>stringcompare(ListItem.VideoResolution,540)</visible>
 						</control>
 						<control type="image">
-						<posx>110</posx>
-						<posy>270</posy>
-						<width>35</width>
-						<height>35</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>Skin.HasSetting(showBigposterCases)</visible>
+							<posx>110</posx>
+							<posy>270</posy>
+							<width>35</width>
+							<height>35</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.Overlay]</texture>
+							<visible>Skin.HasSetting(showBigposterCases)</visible>
+						</control>
 					</control>
-					</control>
-					<control type="group"> <!-- LITTLE CLEAR DVD CASES IN LIST -->
+					<control type="group">
+						<!-- LITTLE CLEAR DVD CASES IN LIST -->
 						<visible>Skin.HasSetting(showBigposterCases) + Skin.HasSetting(showBigposterClearCases)</visible>
-						<control type="image"> <!-- DVD Clear Case -->
+						<control type="image">
+							<!-- DVD Clear Case -->
 							<posx>-10</posx>
 							<posy>77</posy>
 							<width>170</width>
@@ -244,7 +261,8 @@
 							<texture>special://skin/extras/flagging/cases/dvd-clear.png</texture>
 							<visible>![stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080) | stringcompare(ListItem.VideoResolution,540)]</visible>
 						</control>
-						<control type="image"> <!-- Bluray Clear Case -->
+						<control type="image">
+							<!-- Bluray Clear Case -->
 							<posx>0</posx>
 							<posy>77</posy>
 							<width>160</width>
@@ -254,7 +272,8 @@
 							<texture>special://skin/extras/flagging/cases/bluray-clear.png</texture>
 							<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + !substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)</visible>
 						</control>
-						<control type="image"> <!-- Bluray 3D Clear Case -->
+						<control type="image">
+							<!-- Bluray 3D Clear Case -->
 							<posx>0</posx>
 							<posy>77</posy>
 							<width>160</width>
@@ -264,7 +283,8 @@
 							<texture>special://skin/extras/flagging/cases/3dbluray-clear.png</texture>
 							<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)</visible>
 						</control>
-						<control type="image"> <!-- HDDVD Clear Case -->
+						<control type="image">
+							<!-- HDDVD Clear Case -->
 							<posx>0</posx>
 							<posy>77</posy>
 							<width>160</width>
@@ -275,18 +295,17 @@
 							<visible>stringcompare(ListItem.VideoResolution,540)</visible>
 						</control>
 						<control type="image">
-						<posx>115</posx>
-						<posy>270</posy>
-						<width>35</width>
-						<height>35</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>Skin.HasSetting(showBigposterClearCases)</visible>
-					</control>
+							<posx>115</posx>
+							<posy>270</posy>
+							<width>35</width>
+							<height>35</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.Overlay]</texture>
+							<visible>Skin.HasSetting(showBigposterClearCases)</visible>
+						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout height="220" width="160">
-				</focusedlayout>
+				<focusedlayout height="220" width="160"></focusedlayout>
 			</control>
 			<!-- Bigposter BOTTOM INFO MOVIES -->
 			<control type="group">
@@ -294,7 +313,7 @@
 				<posy>0</posy>
 				<visible>Container.Content(Movies)</visible>
 				<control type="group">
-				<visible>!Skin.HasSetting(showBigposterCases)</visible>
+					<visible>!Skin.HasSetting(showBigposterCases)</visible>
 					<posx>0</posx>
 					<posy>100</posy>
 					<control type="image">
@@ -317,15 +336,15 @@
 						<texture>Overlayicons/$INFO[ListItem.Overlay]</texture>
 					</control>
 					<control type="image">
-					<posx>8</posx>
-					<posy>28</posy>
-					<width>91</width>
-					<height>91</height>
-					<aspectratio aligny="bottom">stretch</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture>Overlayicons/TrailerOverlay.png</texture>
-					<visible>Control.IsVisible(556) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
-				</control>
+						<posx>8</posx>
+						<posy>28</posy>
+						<width>91</width>
+						<height>91</height>
+						<aspectratio aligny="bottom">stretch</aspectratio>
+						<fadetime>IconCrossfadeTime</fadetime>
+						<texture>Overlayicons/TrailerOverlay.png</texture>
+						<visible>Control.IsVisible(556) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
+					</control>
 				</control>
 				<!-- Blueray and DVD cover images if turned on -->
 				<control type="group">
@@ -340,7 +359,8 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 					</control>
-					<control type="image"> <!-- DVD Case -->
+					<control type="image">
+						<!-- DVD Case -->
 						<posx>0</posx>
 						<posy>10</posy>
 						<width>410</width>
@@ -349,7 +369,8 @@
 						<texture>special://skin/extras/flagging/cases/dvd.png</texture>
 						<visible>![stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080) | stringcompare(ListItem.VideoResolution,540)]</visible>
 					</control>
-					<control type="image"> <!-- Bluray Case -->
+					<control type="image">
+						<!-- Bluray Case -->
 						<posx>0</posx>
 						<posy>10</posy>
 						<width>410</width>
@@ -358,7 +379,8 @@
 						<texture>special://skin/extras/flagging/cases/bluray.png</texture>
 						<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + !substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)</visible>
 					</control>
-					<control type="image"> <!-- Bluray 3D Case -->
+					<control type="image">
+						<!-- Bluray 3D Case -->
 						<posx>0</posx>
 						<posy>10</posy>
 						<width>410</width>
@@ -367,7 +389,8 @@
 						<texture>special://skin/extras/flagging/cases/3dbluraycase3.png</texture>
 						<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)</visible>
 					</control>
-					<control type="image"> <!-- HDDVD Case -->
+					<control type="image">
+						<!-- HDDVD Case -->
 						<posx>0</posx>
 						<posy>10</posy>
 						<width>410</width>
@@ -386,16 +409,16 @@
 						<visible>Skin.HasSetting(showBigposterCases)</visible>
 					</control>
 					<control type="image">
-					<posx>15</posx>
-					<posy>540</posy>
-					<width>80</width>
-					<height>53</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture>Overlayicons/trailer.png</texture>
-					<visible>Skin.HasSetting(showBigposterCases)</visible>
-					<visible>Control.IsVisible(556) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
-				</control>
+						<posx>15</posx>
+						<posy>540</posy>
+						<width>80</width>
+						<height>53</height>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<fadetime>IconCrossfadeTime</fadetime>
+						<texture>Overlayicons/trailer.png</texture>
+						<visible>Skin.HasSetting(showBigposterCases)</visible>
+						<visible>Control.IsVisible(556) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
+					</control>
 				</control>
 				<!-- Blueray and DVD CLEAR cover images if turned on -->
 				<control type="group">
@@ -410,7 +433,8 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 					</control>
-					<control type="image"> <!-- DVD Clear Case -->
+					<control type="image">
+						<!-- DVD Clear Case -->
 						<posx>-10</posx>
 						<posy>0</posy>
 						<width>415</width>
@@ -419,7 +443,8 @@
 						<texture>special://skin/extras/flagging/cases/dvd-clear.png</texture>
 						<visible>![stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080) | stringcompare(ListItem.VideoResolution,540)]</visible>
 					</control>
-					<control type="image"> <!-- Bluray Clear Case -->
+					<control type="image">
+						<!-- Bluray Clear Case -->
 						<posx>-10</posx>
 						<posy>0</posy>
 						<width>415</width>
@@ -428,7 +453,8 @@
 						<texture>special://skin/extras/flagging/cases/bluray-clear.png</texture>
 						<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + !substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)</visible>
 					</control>
-					<control type="image"> <!-- Bluray 3D Clear Case -->
+					<control type="image">
+						<!-- Bluray 3D Clear Case -->
 						<posx>-10</posx>
 						<posy>0</posy>
 						<width>415</width>
@@ -437,7 +463,8 @@
 						<texture>special://skin/extras/flagging/cases/3dbluray-clear.png</texture>
 						<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)</visible>
 					</control>
-					<control type="image"> <!-- HDDVD Clear Case -->
+					<control type="image">
+						<!-- HDDVD Clear Case -->
 						<posx>-10</posx>
 						<posy>0</posy>
 						<width>415</width>
@@ -456,16 +483,16 @@
 						<visible>Skin.HasSetting(showBigposterClearCases)</visible>
 					</control>
 					<control type="image">
-					<posx>65</posx>
-					<posy>530</posy>
-					<width>80</width>
-					<height>53</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture>Overlayicons/trailer.png</texture>
-					<visible>Skin.HasSetting(showBigposterClearCases)</visible>
-					<visible>Control.IsVisible(556) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
-				</control>
+						<posx>65</posx>
+						<posy>530</posy>
+						<width>80</width>
+						<height>53</height>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<fadetime>IconCrossfadeTime</fadetime>
+						<texture>Overlayicons/trailer.png</texture>
+						<visible>Skin.HasSetting(showBigposterClearCases)</visible>
+						<visible>Control.IsVisible(556) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
+					</control>
 				</control>
 				<control type="group">
 					<posx>250</posx>
@@ -485,111 +512,22 @@
 						<visible>Control.IsVisible(556) + Container.Content(movies) + Control.HasFocus(8241) | Control.HasFocus(2)</visible>
 						<animation effect="slide" start="1000,0" end="0,0" time="400" delay="400">Visible</animation>
 					</control>-
-					<control type="textbox">
-						<description>plot</description>
-						<posx>160</posx>
-						<posy>85</posy>
-						<width>810</width>
-						<height>170</height>
-						<label>$INFO[ListItem.Plot]</label>
-						<align>justify</align>
-						<aligny>top</aligny>
-						<font>cirrus_20</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-						<visible>Control.IsVisible(556) + Container.Content(movies) + Control.HasFocus(8241) | Control.HasFocus(2)</visible>
-						<animation effect="slide" start="1000,0" end="0,0" time="400" delay="400">Visible</animation>
-					</control>
-					<control type="label">
-						<description>Titel label</description>
-						<posx>160</posx>
-						<posy>280</posy>
-						<width>510</width>
-						<height>25</height>
-						<label>$INFO[ListItem.Label]</label>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>cirrus_30_Bold</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<scrollspeed>30</scrollspeed>
-						<scrollout>true</scrollout>
-						<pauseatend>1500</pauseatend>
-						<scroll>true</scroll>
-					</control>
-					<control type="label"> <!-- Top250IMDB Mod 1.2 -->
-						<description>Year Label if mins</description>
-						<posx>770</posx>
-						<posy>278</posy>
-						<width>400</width>
-						<height>30</height>
-						<label>[COLOR=accent]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Duration] mins</label>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>cirrus_35</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<visible>!SubString(ListItem.Duration,mins)</visible>
-						<visible>!ListItem.IsFolder</visible>
-					</control>
-					<control type="label"> <!-- Top250IMDB Mod 1.2 -->
-						<description>Year Label if mins</description>
-						<posx>770</posx>
-						<posy>278</posy>
-						<width>400</width>
-						<height>30</height>
-						<label>[COLOR=accent]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Duration]</label>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>cirrus_35</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<visible>SubString(ListItem.Duration,mins)</visible>
-						<visible>!ListItem.IsFolder</visible>
-					</control>
-				<control type="image"> <!-- Top250IMDB Mod 1.2 -->
-					<posx>665</posx>
-					<posy>277</posy>
-					<width>88</width>
-					<height>30</height>
-					<aspectratio aligny="bottom">stretch</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture>IMDBFlag.png</texture>
-					<visible>!IsEmpty(ListItem.Top250)</visible>
-					<colordiffuse>accent</colordiffuse>
-				</control>
-					<control type="label"> <!-- Top250IMDB Mod 1.2 -->
-						<description>top250</description>
-						<posx>525</posx>
-						<posy>276</posy>
-						<width>400</width>
-						<height>30</height>
-						<label>$INFO[ListItem.Top250]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>cirrus_38_Bold</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-					</control>
-				</control>
+					<control type="textbox"><description>plot</description><posx>160</posx><posy>85</posy><width>810</width><height>170</height><label>$INFO[ListItem.Plot]</label><align>justify</align><aligny>top</aligny><font>cirrus_20</font><textcolor>white</textcolor><shadowcolor>black</shadowcolor><autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll><visible>Control.IsVisible(556) + Container.Content(movies) + Control.HasFocus(8241) | Control.HasFocus(2)</visible><animation effect="slide" start="1000,0" end="0,0" time="400" delay="400">Visible</animation></control><control type="label"><description>Titel label</description><posx>160</posx><posy>280</posy><width>510</width><height>25</height><label>$INFO[ListItem.Label]</label><align>left</align><aligny>center</aligny><font>cirrus_30_Bold</font><textcolor>white</textcolor><shadowcolor>black</shadowcolor><scrollspeed>30</scrollspeed><scrollout>true</scrollout><pauseatend>1500</pauseatend><scroll>true</scroll></control><control type="label"><!-- Top250IMDB Mod 1.2 --><description>Year Label if mins</description><posx>770</posx><posy>278</posy><width>400</width><height>30</height><label>[COLOR=accent]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Duration] mins</label><align>left</align><aligny>center</aligny><font>cirrus_35</font><textcolor>white</textcolor><shadowcolor>black</shadowcolor><visible>!SubString(ListItem.Duration,mins)</visible><visible>!ListItem.IsFolder</visible></control><control type="label"><!-- Top250IMDB Mod 1.2 --><description>Year Label if mins</description><posx>770</posx><posy>278</posy><width>400</width><height>30</height><label>[COLOR=accent]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Duration]</label><align>left</align><aligny>center</aligny><font>cirrus_35</font><textcolor>white</textcolor><shadowcolor>black</shadowcolor><visible>SubString(ListItem.Duration,mins)</visible><visible>!ListItem.IsFolder</visible></control><control type="image"><!-- Top250IMDB Mod 1.2 --><posx>665</posx><posy>277</posy><width>88</width><height>30</height><aspectratio aligny="bottom">stretch</aspectratio><fadetime>IconCrossfadeTime</fadetime><texture>IMDBFlag.png</texture><visible>!IsEmpty(ListItem.Top250)</visible><colordiffuse>accent</colordiffuse></control><control type="label"><!-- Top250IMDB Mod 1.2 --><description>top250</description><posx>525</posx><posy>276</posy><width>400</width><height>30</height><label>$INFO[ListItem.Top250]</label><align>center</align><aligny>center</aligny><font>cirrus_38_Bold</font><textcolor>white</textcolor><shadowcolor>black</shadowcolor></control></control>
 				<!-- Changes Begin Info MOD 1.2.0 -->
 				<control type="group" id="8240">
-				<control type="button" id="8241">
-				<width>1</width>
-				<height>1</height>
-				<posx>0</posx>
-				<posy>870</posy>
-				<onleft>556</onleft>
-				<onright>556</onright>
-				<onup>60</onup>
-				<ondown>556</ondown> 
-				<onclick>PlayMedia($INFO[ListItem.FileNameAndPath])</onclick>
-			<visible allowhiddenfocus="true">ControlGroup(8240).HasFocus</visible>
-		</control>
-	</control>
-				
-				
+					<control type="button" id="8241">
+						<width>1</width>
+						<height>1</height>
+						<posx>0</posx>
+						<posy>870</posy>
+						<onleft>556</onleft>
+						<onright>556</onright>
+						<onup>60</onup>
+						<ondown>556</ondown>
+						<onclick>PlayMedia($INFO[ListItem.FileNameAndPath])</onclick>
+						<visible allowhiddenfocus="true">ControlGroup(8240).HasFocus</visible>
+					</control>
+				</control>
 				<!-- Changes Begin Butchabay MOD 1.2.0 -->
 				<control type="image">
 					<width>240</width>
@@ -639,20 +577,20 @@
 					<include condition="Skin.HasSetting(newFlags)">AudioCodecFlaggingConditionsNew</include>
 					<include condition="Skin.HasSetting(newFlags)">AspectCodecFlaggingConditionsNew</include>
 				</control>
-					<control type="scrollbar" id="60">
-				<posx>-30</posx>
-				<posy>80</posy>
-				<width>1300</width>
-				<height>35</height>
-				<texturesliderbackground border="14,0,14,0">ScrollBarV.png</texturesliderbackground>
-				<textureslidernib>ScrollBarV.png</textureslidernib>
-				<textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
-				<onup>2</onup>
-				<ondown>556</ondown>
-				<showonepage>false</showonepage>
-				<orientation>horizontal</orientation>
-				<visible allowhiddenfocus="true">Control.IsVisible(556) + Control.HasFocus(60)</visible>
-			</control>
+				<control type="scrollbar" id="60">
+					<posx>-30</posx>
+					<posy>80</posy>
+					<width>1300</width>
+					<height>35</height>
+					<texturesliderbackground border="14,0,14,0">ScrollBarV.png</texturesliderbackground>
+					<textureslidernib>ScrollBarV.png</textureslidernib>
+					<textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
+					<onup>2</onup>
+					<ondown>556</ondown>
+					<showonepage>false</showonepage>
+					<orientation>horizontal</orientation>
+					<visible allowhiddenfocus="true">Control.IsVisible(556) + Control.HasFocus(60)</visible>
+				</control>
 			</control>
 		</control>
 	</include>

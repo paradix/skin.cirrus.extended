@@ -1,31 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
-<!-- ===================================================================================== -->
-<!-- =================================== WALL VIEW ID 513 ================================ -->
-<!-- ============================= Movies, TV Shows top level============================= -->
+	<!-- ===================================================================================== -->
+	<!-- =================================== WALL VIEW ID 513 ================================ -->
+	<!-- ============================= Movies, TV Shows top level============================= -->
 	<include name="WallView">
 		<control type="group">
-		<visible>Control.IsVisible(513)</visible>
-			<control type="image"> <!-- bottom bar background -->
+			<visible>Control.IsVisible(513)</visible>
+			<control type="image">
+				<!-- bottom bar background -->
 				<posx>0</posx>
 				<posy>130r</posy>
 				<width>1280</width>
 				<height>700</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>rightlistbackground.png</texture>
+				<texture>rightlistbackground.png</texture>
 			</control>
-			<control type="image"> <!-- bottom bar background -->
+			<control type="image">
+				<!-- bottom bar background -->
 				<posx>0</posx>
 				<posy>50r</posy>
 				<width>1280</width>
 				<height>700</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>rightlistbackground.png</texture>
+				<texture>rightlistbackground.png</texture>
 				<visible>Container.Content(Movies)</visible>
 				<visible>!ListItem.IsFolder</visible>
 			</control>
 			<!-- wall panel -->
 			<control type="panel" id="513">
-			<visible>Skin.HasSetting(wall_view)</visible>
+				<visible>Skin.HasSetting(wall_view)</visible>
 				<posx>25</posx>
 				<posy>130</posy>
 				<width>1250</width>
@@ -52,22 +55,22 @@
 							<aspectratio>stretch</aspectratio>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
 							<bordertexture border="6">contentpanelvertical.png</bordertexture>
-						<bordersize>6</bordersize>
+							<bordersize>6</bordersize>
 						</control>
 						<control type="image">
-						<posx>70</posx>
-						<posy>115</posy>
-						<width>30</width>
-						<height>40</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
+							<posx>70</posx>
+							<posy>115</posy>
+							<width>30</width>
+							<height>40</height>
+							<texture>$INFO[ListItem.Overlay]</texture>
+						</control>
 					</control>
-					</control>		
 				</itemlayout>
 				<focusedlayout height="190" width="124">
 					<control type="group">
-                    <animation type="Focus" condition="Container(513).Row(0) | Container(513).Row(1)" reversible="false">
-                    <effect type="zoom" center="55,81" start="100" end="160" time="200" easing="out" tween="cubic" reversible="false"/>
-                    </animation>
+						<animation type="Focus" condition="Container(513).Row(0) | Container(513).Row(1)" reversible="false">
+							<effect type="zoom" center="55,81" start="100" end="160" time="200" easing="out" tween="cubic" reversible="false" />
+						</animation>
 						<posx>0</posx>
 						<posy>0</posy>
 						<control type="image">
@@ -77,8 +80,8 @@
 							<height>160</height>
 							<aspectratio>stretch</aspectratio>
 							<texture>black-back.png</texture>
-					        <bordertexture>contentpanelvertical.png</bordertexture>
-					        <bordersize>6</bordersize>
+							<bordertexture>contentpanelvertical.png</bordertexture>
+							<bordersize>6</bordersize>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -90,17 +93,17 @@
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordersize>6</bordersize>
 						</control>
-							<control type="image">
+						<control type="image">
 							<posx>70</posx>
 							<posy>115</posy>
 							<width>30</width>
 							<height>40</height>
 							<texture>$INFO[ListItem.Overlay]</texture>
+						</control>
 					</control>
-					</control>	
 				</focusedlayout>
-			</control>		
-			<!-- Movie info down thebottom -->	
+			</control>
+			<!-- Movie info down thebottom -->
 			<control type="group">
 				<posx>20</posx>
 				<posy>360</posy>
@@ -166,7 +169,8 @@
 						<shadowcolor>black</shadowcolor>
 					</control>
 				</control>
-				<control type="image"> <!-- Top250IMDB Mod 1.2 -->
+				<control type="image">
+					<!-- Top250IMDB Mod 1.2 -->
 					<posx>390</posx>
 					<posy>38r</posy>
 					<width>88</width>
@@ -177,19 +181,20 @@
 					<visible>!IsEmpty(ListItem.Top250)</visible>
 					<colordiffuse>accent</colordiffuse>
 				</control>
-					<control type="label"> <!-- Top250IMDB Mod 1.2 -->
-						<description>top250</description>
-						<posx>251</posx>
-						<posy>40r</posy>
-						<width>400</width>
-						<height>30</height>
-						<label>$INFO[ListItem.Top250]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>cirrus_38_Bold</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-						</control>
+				<control type="label">
+					<!-- Top250IMDB Mod 1.2 -->
+					<description>top250</description>
+					<posx>251</posx>
+					<posy>40r</posy>
+					<width>400</width>
+					<height>30</height>
+					<label>$INFO[ListItem.Top250]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>cirrus_38_Bold</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
 				<control type="image">
 					<posx>648</posx>
 					<posy>38r</posy>
@@ -210,7 +215,8 @@
 					<aligny>bottom</aligny>
 					<texture>$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
 				</control>
-				<control type="grouplist"> <!-- MPAA Rating -->
+				<control type="grouplist">
+					<!-- MPAA Rating -->
 					<description>MPAA Rating Flagging Images</description>
 					<posx>935</posx>
 					<posy>245</posy>
@@ -224,7 +230,8 @@
 					<visible>!Skin.HasSetting(NewMPAAFlags)</visible>
 					<visible>!ListItem.IsFolder</visible>
 				</control>
-				<control type="grouplist"> <!-- MPAA Rating -->
+				<control type="grouplist">
+					<!-- MPAA Rating -->
 					<description>MPAA NEW Rating Flagging Images</description>
 					<posx>950</posx>
 					<posy>270</posy>
@@ -268,7 +275,7 @@
 					<showonepage>true</showonepage>
 					<orientation>vertical</orientation>
 					<visible allowhiddenfocus="true">Control.IsVisible(513) + Control.HasFocus(60)</visible>
-				</control>						
+				</control>
 			</control>
 			<!-- TV Show info down the bottom -->
 			<control type="group">
@@ -286,7 +293,7 @@
 					<aligny>center</aligny>
 					<font>cirrus_24</font>
 					<scroll>true</scroll>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="label">
 					<description>Episodes</description>
@@ -299,7 +306,7 @@
 					<aligny>center</aligny>
 					<font>cirrus_30</font>
 					<scroll>true</scroll>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="label">
 					<description>First Aired</description>
@@ -312,7 +319,7 @@
 					<aligny>center</aligny>
 					<font>cirrus_24</font>
 					<scroll>true</scroll>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="image">
 					<width>146</width>
@@ -324,15 +331,15 @@
 					<texture>$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
 				</control>
 				<!-- TV SHOW LOGO -->
-				<control type="largeimage" id="7914"> 
-					<posx>260r</posx> 
-					<posy>-20</posy> 
-					<width>232</width> 
-					<height>90</height> 
-					<texture>$INFO[ListItem.path]logo.png</texture> 
-					<fadetime>100</fadetime> 
-					<aspectratio scalediffuse="false">keep</aspectratio> 
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+				<control type="largeimage" id="7914">
+					<posx>260r</posx>
+					<posy>-20</posy>
+					<width>232</width>
+					<height>90</height>
+					<texture>$INFO[ListItem.path]logo.png</texture>
+					<fadetime>100</fadetime>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="scrollbar" id="60">
 					<posx>-30</posx>
@@ -340,14 +347,14 @@
 					<width>25</width>
 					<height>350</height>
 					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-                    <textureslidernib>ScrollBarV.png</textureslidernib>
-                    <textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
+					<textureslidernib>ScrollBarV.png</textureslidernib>
+					<textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
 					<onleft>2</onleft>
 					<onright>513</onright>
 					<showonepage>true</showonepage>
 					<orientation>vertical</orientation>
 					<visible allowhiddenfocus="true">Control.IsVisible(513) + Control.HasFocus(60)</visible>
-				</control>						
+				</control>
 			</control>
 		</control>
 	</include>

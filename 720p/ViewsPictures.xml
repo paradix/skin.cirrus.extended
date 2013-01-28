@@ -1,8 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="PictureThumbView">
 		<control type="group">
 			<visible>Control.IsVisible(511)</visible>
-			<control type="image"> <!-- panel behind the wall -->
+			<control type="image">
+				<!-- panel behind the wall -->
 				<posx>500r</posx>
 				<posy>0</posy>
 				<width>500</width>

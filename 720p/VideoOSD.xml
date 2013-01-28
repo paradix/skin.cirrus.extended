@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="2901">
 	<defaultcontrol always="true">602</defaultcontrol>
 	<controls>
@@ -5,14 +6,15 @@
 			<animation effect="slide" start="0,-145" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,-145" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="0,0" end="0,-145" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)">Conditional</animation>
-
-			<control type="image"> <!-- background -->
+			<control type="image">
+				<!-- background -->
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
 				<height>100</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture flipy="true">OSDbackground.png</texture> <!-- flip y when up the top -->
+				<texture flipy="true">OSDbackground.png</texture>
+				<!-- flip y when up the top -->
 			</control>
 			<!-- SETTINGS GROUP (Bookmarks audio video) -->
 			<control type="group" id="200">
@@ -57,7 +59,7 @@
 					<onright>703</onright>
 					<onclick>ActivateWindow(123)</onclick>
 				</control>
-			<control type="button" id="703">
+				<control type="button" id="703">
 					<posx>150</posx>
 					<posy>0</posy>
 					<width>40</width>
@@ -260,7 +262,6 @@
 					<colordiffuse>66FFFFFF</colordiffuse>
 					<texture>separator2.png</texture>
 				</control>
-				
 			</control>
 			<control type="label">
 				<posx>20</posx>

@@ -1,80 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
 <window id="3000">
-
 	<defaultcontrol always="true">8</defaultcontrol>
-	
 	<allowoverlay>no</allowoverlay>
-	
 	<controls>
-	
 		<control type="group">
 			<visible>![Window.IsVisible(FileBrowser) | Window.IsVisible(script-Actors-Browser.xml) | [Window.IsVisible(DialogSelect.xml) + StringCompare(Window.Property(actorsselect),1)]]</visible>
 			<animation effect="slide" start="1280,0" end="0,0" time="600" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="1280,0" time="600" tween="quadratic" easing="out">WindowClose</animation>
-        <control type="image">
-            <posx>0</posx>
-            <posy>0</posy>
-             <width>1280</width>
-             <height>720</height>
-             <texture>special://skin/backgrounds/blackbackground.jpg</texture>
-             <aspectratio>stretch</aspectratio>
-        </control>
-			 <control type="image">
-            <posx>0</posx>
-            <posy>0</posy>
-             <width>1280</width>
-             <height>720</height>
-             <texture>special://skin/backgrounds/videosfanart.jpg</texture>
-             <aspectratio>stretch</aspectratio>
-        </control>
-		  <control type="image">
-        <posx>0</posx>
-        <posy>-20</posy>
-        <width>1280</width>
-        <height>750</height>
-        <texture>black-back3.png</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
-	   <control type="image">
-        <posx>0</posx>
-        <posy>-20</posy>
-        <width>1280</width>
-        <height>750</height>
-        <texture>black-back3.png</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
-	   <control type="image">
-        <posx>0</posx>
-        <posy>-20</posy>
-        <width>1280</width>
-        <height>750</height>
-        <texture>black-back3.png</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
-	   <control type="image">
-        <posx>0</posx>
-        <posy>-20</posy>
-        <width>1280</width>
-        <height>750</height>
-        <texture>black-back3.png</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
-
-			<control type="image"> <!--fanart-->
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>special://skin/backgrounds/blackbackground.jpg</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>special://skin/backgrounds/videosfanart.jpg</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-20</posy>
+				<width>1280</width>
+				<height>750</height>
+				<texture>black-back3.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-20</posy>
+				<width>1280</width>
+				<height>750</height>
+				<texture>black-back3.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-20</posy>
+				<width>1280</width>
+				<height>750</height>
+				<texture>black-back3.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-20</posy>
+				<width>1280</width>
+				<height>750</height>
+				<texture>black-back3.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<!--fanart-->
 				<description>background image</description>
 				<posx>200</posx>
 				<posy>65</posy>
 				<width>400</width>
 				<height>230</height>
-				<aspectratio scalediffuse="false">scale</aspectratio> 
+				<aspectratio scalediffuse="false">scale</aspectratio>
 				<texture fallback="special://skin/backgrounds/videosfanart.jpg" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 				<bordertexture border="8">contentpanelvertical.png</bordertexture>
 				<bordersize>8</bordersize>
 				<visible>!ControlGroup(2500).HasFocus</visible>
-			</control> 
-			
+			</control>
 			<control type="group">
-				
-				<control type="label"> <!--name-->
+				<control type="label">
+					<!--name-->
 					<description>header label</description>
 					<posx>672</posx>
 					<posy>70</posy>
@@ -84,13 +80,13 @@
 					<label>$INFO[ListItem.Title]</label>
 					<scroll>true</scroll>
 				</control>
-				
-				<control type="group">  <!--actor info-->
+				<control type="group">
+					<!--actor info-->
 					<visible>!ControlGroup(2500).HasFocus</visible>
 					<posx>672</posx>
 					<posy>120</posy>
-				
-					<control type="label"> <!--also known as-->
+					<control type="label">
+						<!--also known as-->
 						<posx>178</posx>
 						<posy>0</posy>
 						<width>450</width>
@@ -99,9 +95,9 @@
 						<font>cirrus_24</font>
 						<label>$INFO[ListItem.Property(AlsoKnownAs)]</label>
 						<textcolor>accent</textcolor>
-					</control>	
-				
-					<control type="label"> <!--known movies label-->
+					</control>
+					<control type="label">
+						<!--known movies label-->
 						<posx>0</posx>
 						<posy>30</posy>
 						<width>450</width>
@@ -110,8 +106,9 @@
 						<font>cirrus_24</font>
 						<label>$ADDON[script.metadata.actors 32011]: [COLOR=white]$INFO[ListItem.Property(TotalMovies)][/COLOR]</label>
 						<textcolor>accent</textcolor>
-					</control>	
-					<control type="label"> <!--birthday label-->
+					</control>
+					<control type="label">
+						<!--birthday label-->
 						<posx>0</posx>
 						<posy>60</posy>
 						<width>450</width>
@@ -120,8 +117,9 @@
 						<font>cirrus_24</font>
 						<label>$ADDON[script.metadata.actors 32012]: [COLOR=white]$INFO[ListItem.Property(Birthday)]$INFO[ListItem.Property(AgeLong), (,)][/COLOR]</label>
 						<textcolor>accent</textcolor>
-					</control>		
-					<control type="label"> <!--died label-->
+					</control>
+					<control type="label">
+						<!--died label-->
 						<posx>0</posx>
 						<posy>90</posy>
 						<width>450</width>
@@ -131,8 +129,8 @@
 						<textcolor>accent</textcolor>
 						<label>$ADDON[script.metadata.actors 32013]: [COLOR=white]$INFO[ListItem.Property(Deathday)]$INFO[ListItem.Property(DeathageLong), (,)][/COLOR]</label>
 					</control>
-	  
-					<control type="label"> <!--bith place label-->
+					<control type="label">
+						<!--bith place label-->
 						<posx>0</posx>
 						<posy>120</posy>
 						<width>450</width>
@@ -141,8 +139,9 @@
 						<font>cirrus_24</font>
 						<textcolor>accent</textcolor>
 						<label>$ADDON[script.metadata.actors 32014]: [COLOR=white]$INFO[ListItem.Property(PlaceOfBirth)][/COLOR]</label>
-					</control>	
-					<control type="label"> <!--adult label-->
+					</control>
+					<control type="label">
+						<!--adult label-->
 						<posx>0</posx>
 						<posy>150</posy>
 						<width>450</width>
@@ -151,10 +150,10 @@
 						<font>cirrus_24</font>
 						<textcolor>accent</textcolor>
 						<label>$ADDON[script.metadata.actors 32015]: [COLOR=white]$INFO[ListItem.Property(Adult)][/COLOR]</label>
-					</control>			
-				</control>	
-
-				<control type="textbox" id="400"> <!--plot-->
+					</control>
+				</control>
+				<control type="textbox" id="400">
+					<!--plot-->
 					<description>Plot</description>
 					<posx>672</posx>
 					<posy>380</posy>
@@ -170,14 +169,14 @@
 					<animation effect="fade" start="0" end="100" time="500" delay="500">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
 				</control>
-				
-				<control type="group"> <!--actor image-->
+				<control type="group">
+					<!--actor image-->
 					<posx>232.5</posx>
 					<posy>52.5</posy>
 					<animation effect="fade" time="300">Visible</animation>
-					<animation effect="fade" time="300">Hidden</animation> 
-
-					<control type="image"> <!--thumb-->
+					<animation effect="fade" time="300">Hidden</animation>
+					<control type="image">
+						<!--thumb-->
 						<description>actor thumb</description>
 						<posx>0</posx>
 						<posy>330</posy>
@@ -188,10 +187,9 @@
 						<bordertexture border="8">contentpanelvertical.png</bordertexture>
 						<bordersize>8</bordersize>
 					</control>
-					
 				</control>
-    
-				<control type="wraplist" id="150"> <!--filmography focused-->
+				<control type="wraplist" id="150">
+					<!--filmography focused-->
 					<posx>680</posx>
 					<posy>330</posy>
 					<width>560</width>
@@ -200,7 +198,7 @@
 					<onright>150</onright>
 					<onback>9000</onback>
 					<onup>9000</onup>
-					<ondown>9000</ondown>				
+					<ondown>9000</ondown>
 					<viewtype label="list">wraplist</viewtype>
 					<pagecontrol>-</pagecontrol>
 					<focusposition>0</focusposition>
@@ -209,81 +207,80 @@
 					<preloaditems>2</preloaditems>
 					<animation effect="fade" start="0" end="100" time="500" delay="500">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
-					
-				<itemlayout height="210" width="140">
-				
-					<control type="image" id="501"> 
-					<description>Movie Cover</description>
-					<posx>0</posx>
-					<posy>65</posy>
-					<width>135</width>
-					<height>200</height>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<texture fallback="DefaultVideoBigPoster.png">$INFO[Listitem.Icon]</texture>
-					<bordertexture border="8">contentpanelvertical.png</bordertexture>
-				    <bordersize>8</bordersize>
-					<visible>Control.IsVisible(150)</visible>
-				</control>
-				<control type="image"> 
-					<description>Movie Cover</description>
-					<posx>0</posx>
-					<posy>65</posy>
-					<width>135</width>
-					<height>200</height>
-					<texture fallback="DefaultVideoBigPoster.png">DefaultVideoBigPoster.png</texture>
-					<bordertexture border="8">contentpanelvertical.png</bordertexture>
-					<bordersize>8</bordersize>
-					<visible>Control.IsVisible(150) + SubString(Control.GetLabel(501),DefaultMovies.png)</visible>
-				</control>
-				</itemlayout>
-				<focusedlayout height="210" width="140">
-				<control type="group">
-                    <animation type="Focus" reversible="false">
-                    <effect type="zoom" center="55,116" start="100" end="130" time="200" easing="out" tween="cubic" reversible="false"/>
-                    </animation>
-					<posx>0</posx>
-					<posy>0</posy>
-				<control type="image" id="501"> <!--film cover-->
-					<description>Movie Cover</description>
-					<posx>0</posx>
-					<posy>65</posy>
-					<width>135</width>
-					<height>200</height>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<texture>$INFO[Listitem.Icon]</texture>
-					<bordertexture border="8">contentpanelvertical.png</bordertexture>
-				    <bordersize>8</bordersize>
-					<visible>Control.IsVisible(150)</visible>
-				</control>
-				<control type="image"> <!--film cover-->
-					<description>Movie Cover</description>
-					<posx>0</posx>
-					<posy>65</posy>
-					<width>135</width>
-					<height>200</height>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<texture fallback="DefaultVideoBigPoster.png">DefaultVideoBigPoster.png</texture>
-					<bordertexture border="8">contentpanelvertical.png</bordertexture>
-					<bordersize>8</bordersize>
-					<visible>Control.IsVisible(150) + SubString(Control.GetLabel(501),DefaultMovies.png)</visible>
-				</control>
-				</control>
-					</focusedlayout>
-				</control>	
-				<control type="label">
-							<posx>675</posx>
-							<posy>340</posy>
-							<width>500</width>
-							<height>25</height>
-							<align>left</align>
-							<aligny>center</aligny>
-							<font>cirrus_24_Bold</font>
-							<textcolor>accent</textcolor>
-							<scrollspeed>30</scrollspeed>
-							<label>$INFO[Container(150).Listitem.Label]</label>
+					<itemlayout height="210" width="140">
+						<control type="image" id="501">
+							<description>Movie Cover</description>
+							<posx>0</posx>
+							<posy>65</posy>
+							<width>135</width>
+							<height>200</height>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<texture fallback="DefaultVideoBigPoster.png">$INFO[Listitem.Icon]</texture>
+							<bordertexture border="8">contentpanelvertical.png</bordertexture>
+							<bordersize>8</bordersize>
 							<visible>Control.IsVisible(150)</visible>
 						</control>
-				
+						<control type="image">
+							<description>Movie Cover</description>
+							<posx>0</posx>
+							<posy>65</posy>
+							<width>135</width>
+							<height>200</height>
+							<texture fallback="DefaultVideoBigPoster.png">DefaultVideoBigPoster.png</texture>
+							<bordertexture border="8">contentpanelvertical.png</bordertexture>
+							<bordersize>8</bordersize>
+							<visible>Control.IsVisible(150) + SubString(Control.GetLabel(501),DefaultMovies.png)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="210" width="140">
+						<control type="group">
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="55,116" start="100" end="130" time="200" easing="out" tween="cubic" reversible="false" />
+							</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<control type="image" id="501">
+								<!--film cover-->
+								<description>Movie Cover</description>
+								<posx>0</posx>
+								<posy>65</posy>
+								<width>135</width>
+								<height>200</height>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<texture>$INFO[Listitem.Icon]</texture>
+								<bordertexture border="8">contentpanelvertical.png</bordertexture>
+								<bordersize>8</bordersize>
+								<visible>Control.IsVisible(150)</visible>
+							</control>
+							<control type="image">
+								<!--film cover-->
+								<description>Movie Cover</description>
+								<posx>0</posx>
+								<posy>65</posy>
+								<width>135</width>
+								<height>200</height>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<texture fallback="DefaultVideoBigPoster.png">DefaultVideoBigPoster.png</texture>
+								<bordertexture border="8">contentpanelvertical.png</bordertexture>
+								<bordersize>8</bordersize>
+								<visible>Control.IsVisible(150) + SubString(Control.GetLabel(501),DefaultMovies.png)</visible>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="label">
+					<posx>675</posx>
+					<posy>340</posy>
+					<width>500</width>
+					<height>25</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>cirrus_24_Bold</font>
+					<textcolor>accent</textcolor>
+					<scrollspeed>30</scrollspeed>
+					<label>$INFO[Container(150).Listitem.Label]</label>
+					<visible>Control.IsVisible(150)</visible>
+				</control>
 				<control type="list" id="50">
 					<description>container actor properties</description>
 					<posx>0</posx>
@@ -299,14 +296,13 @@
 					<itemlayout height="1" width="1" />
 					<focusedlayout height="1" width="1" />
 				</control>
-
-				<control type="group" id="2500"> <!--thumb selection-->
+				<control type="group" id="2500">
+					<!--thumb selection-->
 					<visible>ControlGroup(2500).HasFocus</visible>
 					<posx>200</posx>
 					<posy>120</posy>
 					<animation effect="fade" time="300">Visible</animation>
 					<animation effect="fade" time="300">Hidden</animation>
-					
 					<control type="wraplist" id="250">
 						<posx>50</posx>
 						<posy>0</posy>
@@ -317,12 +313,13 @@
 						<onup>9000</onup>
 						<ondown>9000</ondown>
 						<viewtype label="list">wraplist</viewtype>
-					    <focusposition>0</focusposition>
-					    <scrolltime tween="quadratic" easing="out">200</scrolltime>
-					    <preloaditems>2</preloaditems>
+						<focusposition>0</focusposition>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<preloaditems>2</preloaditems>
 						<orientation>horizontal</orientation>
 						<itemlayout height="210" width="140">
-							<control type="image"> <!--actor thumb-->
+							<control type="image">
+								<!--actor thumb-->
 								<posx>0</posx>
 								<posy>0</posy>
 								<width>135</width>
@@ -334,26 +331,24 @@
 							</control>
 						</itemlayout>
 						<focusedlayout height="210" width="140">
-				            <control type="group">
-                            <animation type="Focus" reversible="false">
-                            <effect type="zoom" center="55,116" start="100" end="130" time="200" easing="out" tween="cubic" reversible="false"/>
-                             </animation>
-							<control type="image"> <!--actor thumb-->
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>135</width>
-								<height>200</height>
-								<aspectratio scalediffuse="false">stretch</aspectratio>
-								<texture>$INFO[ListItem.Icon]</texture>
-								<bordertexture border="8">contentpanelvertical.png</bordertexture>
-								<bordersize>8</bordersize>
-					           </control>	
-							</control>	
-						
+							<control type="group">
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="55,116" start="100" end="130" time="200" easing="out" tween="cubic" reversible="false" />
+								</animation>
+								<control type="image">
+									<!--actor thumb-->
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>135</width>
+									<height>200</height>
+									<aspectratio scalediffuse="false">stretch</aspectratio>
+									<texture>$INFO[ListItem.Icon]</texture>
+									<bordertexture border="8">contentpanelvertical.png</bordertexture>
+									<bordersize>8</bordersize>
+								</control>
+							</control>
 						</focusedlayout>
-						
 					</control>
-					
 					<control type="label">
 						<posx>45</posx>
 						<posy>230</posy>
@@ -367,10 +362,9 @@
 						<animation effect="fade" time="300">Visible</animation>
 						<animation effect="fade" time="300">Hidden</animation>
 					</control>
-					
 				</control>
-
-				<control type="grouplist" id="9000"> <!--buttons-->
+				<control type="grouplist" id="9000">
+					<!--buttons-->
 					<posx>20</posx>
 					<posy>670</posy>
 					<width>1200</width>
@@ -384,65 +378,49 @@
 					<align>center</align>
 					<aligny>top</aligny>
 					<scrolltime>0</scrolltime>
-					
 					<control type="button" id="8">
 						<description>browse to Show</description>
 						<include>ButtonVideoInfoCommonValues</include>
 						<label>1024</label>
 					</control>
-					
 					<control type="button" id="5">
 						<description>Filmography/Biography</description>
 						<include>ButtonVideoInfoCommonValues</include>
 						<label>$ADDON[script.metadata.actors 32010]</label>
 						<!-- <onclick>Set.Focus(150)</onclick> -->
 					</control>
-					
 					<control type="button" id="6">
 						<description>Refresh</description>
 						<include>ButtonVideoInfoCommonValues</include>
 						<label>184</label>
 					</control>
-					
 					<control type="button" id="10">
 						<description>Get Thumb</description>
 						<include>ButtonVideoInfoCommonValues</include>
 						<label>13405</label>
 						<onclick>SetFocus(250)</onclick>
 					</control>
-					
 					<control type="button" id="20">
 						<description>Get Fanart</description>
 						<include>ButtonVideoInfoCommonValues</include>
 						<label>20413</label>
 					</control>
-					
 					<control type="button" id="11">
 						<description>edit (require tmdb account)</description>
 						<include>ButtonVideoInfoCommonValues</include>
 						<label>20067</label>
 					</control>
-					
 					<control type="button" id="25">
 						<description>addon settings</description>
 						<include>ButtonVideoInfoCommonValues</include>
 						<label>24002</label>
 					</control>
-					
 				</control>
-				
 			</control>
-
-			<control type="group"> 
+			<control type="group">
 				<posx>0</posx>
 				<posy>520</posy>
-				
-				
-			
-			</control>	
-			
+			</control>
 		</control>
-		
 	</controls>
-	
 </window>

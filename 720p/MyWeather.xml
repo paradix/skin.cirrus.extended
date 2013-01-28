@@ -1,43 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
 <window id="2600">
 	<defaultcontrol always="true">6000</defaultcontrol>
-
 	<controls>
-	  <!-- el_Paraguayo mod -->
-            <control type="multiimage"><!-- weather fanart - weather plus -->
+		<!-- el_Paraguayo mod -->
+		<control type="multiimage">
+			<!-- weather fanart - weather plus -->
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
 			<timeperimage>30000</timeperimage>
-            <imagepath fallback="special://skin/backgrounds/weatherplus.jpg">$INFO[Skin.String(HomeWeatherFanartFolder)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+			<imagepath fallback="special://skin/backgrounds/weatherplus.jpg">$INFO[Skin.String(HomeWeatherFanartFolder)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
 			<randomize>true</randomize>
-   			<fadetime>600</fadetime>
+			<fadetime>600</fadetime>
 			<animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-            <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-            <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+			<animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+			<animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
 			<include>Animation_CommonFadeNoHide</include>
 			<visible>Weather.IsFetched + StringCompare(Weather.Plugin,weather.weatherplus) + Skin.HasSetting(HomeWeatherFanart)</visible>
 		</control>
-        
-        <control type="multiimage"><!-- weather fanart - not weather plus -->
+		<control type="multiimage">
+			<!-- weather fanart - not weather plus -->
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
 			<timeperimage>30000</timeperimage>
-            <imagepath fallback="special://skin/backgrounds/weatherfanart.jpg">$INFO[Skin.String(HomeWeatherFanartFolder)]$INFO[Weather.FanartCode]</imagepath>
+			<imagepath fallback="special://skin/backgrounds/weatherfanart.jpg">$INFO[Skin.String(HomeWeatherFanartFolder)]$INFO[Weather.FanartCode]</imagepath>
 			<randomize>true</randomize>
-   			<fadetime>600</fadetime>
+			<fadetime>600</fadetime>
 			<animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-            <animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-            <animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+			<animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+			<animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
 			<include>Animation_CommonFadeNoHide</include>
 			<visible>Weather.IsFetched + !StringCompare(Weather.Plugin,weather.weatherplus) + Skin.HasSetting(HomeWeatherFanart)</visible>
 		</control>
-    
-    
-    <!-- end el_P mod -->
-    
+		<!-- end el_P mod -->
 		<control type="multiimage">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -48,7 +46,8 @@
 			<timeperimage>5000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>2000</fadetime>
-			<visible>!Skin.HasSetting(HomeWeatherFanart)</visible><!-- el_P mod -->
+			<visible>!Skin.HasSetting(HomeWeatherFanart)</visible>
+			<!-- el_P mod -->
 			<visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
 		</control>
 		<control type="multiimage">
@@ -61,11 +60,12 @@
 			<timeperimage>5000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>2000</fadetime>
-			<visible>!Skin.HasSetting(HomeWeatherFanart)</visible><!-- el_P mod -->
+			<visible>!Skin.HasSetting(HomeWeatherFanart)</visible>
+			<!-- el_P mod -->
 			<visible>!StringCompare(Weather.Plugin,weather.weatherplus)</visible>
 		</control>
 		<control type="group">
-		  <include>CommonMediaPlayingBackgroundBrowser</include>
+			<include>CommonMediaPlayingBackgroundBrowser</include>
 			<include>ContentFade</include>
 			<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)">weather</include>
 			<include condition="StringCompare(Weather.Plugin,weather.weatherplus)">weatherplus</include>
@@ -73,8 +73,8 @@
 		<control type="group">
 			<posx>-300</posx>
 			<posy>0</posy>
-		<animation effect="slide" start="0,0" end="280,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
-		<animation effect="slide" start="0,0" end="-380,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus">WindowClose</animation>
+			<animation effect="slide" start="0,0" end="280,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(8999)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-380,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus">WindowClose</animation>
 			<visible>!Skin.HasSetting(KioskMode)</visible>
 			<control type="group" id="9000">
 				<control type="image">
@@ -84,20 +84,20 @@
 					<texture border="5">DialogBackground.png</texture>
 				</control>
 				<control type="image">
-			<posx>50</posx>
-			<posy>650</posy>
-			<width>160</width>
-			<height>40</height>
-			<texture>xbmc_logo_white.png</texture>
-		</control>
-		<control type="image">
-			<posx>220</posx>
-			<posy>650</posy>
-			<width>45</width>
-			<height>50</height>
-			<texture>twc-logo.png</texture>
-		</control>
-			<control type="label">
+					<posx>50</posx>
+					<posy>650</posy>
+					<width>160</width>
+					<height>40</height>
+					<texture>xbmc_logo_white.png</texture>
+				</control>
+				<control type="image">
+					<posx>220</posx>
+					<posy>650</posy>
+					<width>45</width>
+					<height>50</height>
+					<texture>twc-logo.png</texture>
+				</control>
+				<control type="label">
 					<description>View options</description>
 					<posx>260</posx>
 					<posy>-52</posy>
@@ -159,7 +159,7 @@
 					<onright>6000</onright>
 					<onup>101</onup>
 					<ondown>103</ondown>
-          <onfocus>Skin.SetString(WeatherPlus,2)</onfocus>
+					<onfocus>Skin.SetString(WeatherPlus,2)</onfocus>
 					<visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
 				</control>
 				<control type="button" id="103">
@@ -201,23 +201,22 @@
 					<animation effect="slide" start="0,0" end="0,-135" time="0" condition="!StringCompare(Weather.Plugin,weather.weatherplus)">Conditional</animation>
 					<visible>Player.HasAudio | Player.HasVideo</visible>
 				</control>
-			<control type="button">
-				<description>Fake button for mouse control</description>
-				<posx>-20</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>720</height>
-				<label>-</label>
-				<font>-</font>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
-				<visible>true</visible>
-        			</control>
+				<control type="button">
+					<description>Fake button for mouse control</description>
+					<posx>-20</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>720</height>
+					<label>-</label>
+					<font>-</font>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<visible>true</visible>
+				</control>
 			</control>
 		</control>
 		<control type="group">
 			<include>ContentFade</include>
-
 		</control>
 	</controls>
 </window>

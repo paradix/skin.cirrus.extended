@@ -1,39 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
-<!-- ===================================================================================== -->
-<!-- ============================== RIGHTLIST VIEW ID 594 ================================ -->
-<!-- ====================                  GAMES                    ====================== -->
+	<!-- ===================================================================================== -->
+	<!-- ============================== RIGHTLIST VIEW ID 594 ================================ -->
+	<!-- ====================                  GAMES                    ====================== -->
 	<include name="RightListView_Games_Square">
 		<control type="group">
-		<animation type="WindowOpen" reversible="false">
-			<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-			<effect type="fade" start="0" end="100" time="300" />
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+				<effect type="fade" start="0" end="100" time="300" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-			<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-			<effect type="fade" start="100" end="0" time="300" />
-			</animation>      
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
 			<visible>Control.IsVisible(594)</visible>
 			<include>VisibleFadeEffect</include>
-			<control type="image"> <!-- bottom bar background -->
+			<control type="image">
+				<!-- bottom bar background -->
 				<posx>0</posx>
 				<posy>155r</posy>
 				<width>1280</width>
 				<height>700</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>rightlistbackground.png</texture>
+				<texture>rightlistbackground.png</texture>
 			</control>
-			<control type="image"> <!-- bottom bar background -->
+			<control type="image">
+				<!-- bottom bar background -->
 				<posx>0</posx>
 				<posy>50r</posy>
 				<width>1280</width>
 				<height>700</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>rightlistbackground.png</texture>
+				<texture>rightlistbackground.png</texture>
 				<visible>Control.IsVisible(594)</visible>
 				<visible>!Window.IsVisible(VideoFiles)</visible>
 				<visible>!Window.IsVisible(VideoLibrary)</visible>
 			</control>
-			<control type="image"> <!-- Black gradient up the top -->
+			<control type="image">
+				<!-- Black gradient up the top -->
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
@@ -41,7 +45,8 @@
 				<texture>blackgradientvert.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="image"> <!-- right gradient -->
+			<control type="image">
+				<!-- right gradient -->
 				<posx>700r</posx>
 				<posy>0</posy>
 				<width>700</width>
@@ -49,53 +54,54 @@
 				<texture flipx="true">blackgradient.png</texture>
 			</control>
 			<control type="image">
-        <posx>268</posx>
-        <posy>360</posy>
-        <width>385</width>
-        <height>200</height>
-		<texture>black-back.png</texture>
-		<bordertexture border="8">contentpanelvertical.png</bordertexture>
-		<bordersize>8</bordersize>
-        <aspectratio>stretch</aspectratio>
-		<visible>Skin.Hassetting(videowindowglobal)</visible>
-		<visible>Player.HasVideo</visible>
-		<visible>!Skin.Hassetting(videowindownoborder)</visible>
-		<visible>Control.IsVisible(594)</visible>
-      </control>
-			<control type="videowindow" id="8">
-		        <posx>280</posx>
-		        <posy>370</posy>
-		        <width>362</width>
-		        <height>180</height>
-		        <visible>Skin.Hassetting(videowindowglobal)</visible>
+				<posx>268</posx>
+				<posy>360</posy>
+				<width>385</width>
+				<height>200</height>
+				<texture>black-back.png</texture>
+				<bordertexture border="8">contentpanelvertical.png</bordertexture>
+				<bordersize>8</bordersize>
+				<aspectratio>stretch</aspectratio>
+				<visible>Skin.Hassetting(videowindowglobal)</visible>
+				<visible>Player.HasVideo</visible>
+				<visible>!Skin.Hassetting(videowindownoborder)</visible>
 				<visible>Control.IsVisible(594)</visible>
-		     </control> 
-		  <control type="label">
-          <description>Title label</description>
-          <posx>296</posx>
-          <posy>510</posy>
-          <height>30</height>
-          <width>330</width>
-          <label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=accent] (,)[/COLOR]]</label>
-          <align>center</align>
-          <aligny>center</aligny>
-          <font>cirrus_20</font>
-          <textcolor>white</textcolor>
-          <shadowcolor>black</shadowcolor>
-		  <visible>Skin.HasSetting(videowindowglobal)</visible>
-		  <visible>Player.HasVideo</visible>
-		  <visible>Control.IsVisible(594)</visible>
-		  <visible>!Skin.HasSetting(videonotitle)</visible>
-        </control>
+			</control>
+			<control type="videowindow" id="8">
+				<posx>280</posx>
+				<posy>370</posy>
+				<width>362</width>
+				<height>180</height>
+				<visible>Skin.Hassetting(videowindowglobal)</visible>
+				<visible>Control.IsVisible(594)</visible>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>296</posx>
+				<posy>510</posy>
+				<height>30</height>
+				<width>330</width>
+				<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=accent] (,)[/COLOR]]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cirrus_20</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Skin.HasSetting(videowindowglobal)</visible>
+				<visible>Player.HasVideo</visible>
+				<visible>Control.IsVisible(594)</visible>
+				<visible>!Skin.HasSetting(videonotitle)</visible>
+			</control>
 			<!-- START OF ACTUAL LIST -->
-			<control type="fixedlist" id="594"> <!-- CUSTOM Scroll + Trailer  Hack  + Advanced Launcher -->
+			<control type="fixedlist" id="594">
+				<!-- CUSTOM Scroll + Trailer  Hack  + Advanced Launcher -->
 				<posx>600r</posx>
 				<posy>90</posy>
 				<width>600</width>
 				<height>440</height>
 				<orientation>vertical</orientation>
-			<focusposition>5</focusposition>
-			<movement>9</movement>
+				<focusposition>5</focusposition>
+				<movement>9</movement>
 				<onleft>60</onleft>
 				<onup>594</onup>
 				<ondown>594</ondown>
@@ -170,7 +176,7 @@
 						<textcolor>black</textcolor>
 						<scroll>false</scroll>
 					</control>
-						<control type="label">
+					<control type="label">
 						<description>System</description>
 						<posx>30r</posx>
 						<posy>40</posy>
@@ -182,23 +188,22 @@
 						<font>cirrus_26_Bold</font>
 						<textcolor>black</textcolor>
 						<scroll>false</scroll>
-						</control>
+					</control>
 					<control type="image">
 						<posx>20r</posx>
 						<posy>15</posy>
 						<width>30</width>
 						<height>40</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
-					</control>					
+					</control>
 				</focusedlayout>
-				</control>
+			</control>
 			<!-- RIGHLIST BOTTOM INFO  -->
 			<control type="group">
 				<posx>20</posx>
 				<posy>360</posy>
 				<visible>Control.IsVisible(594) | Window.IsVisible(VideoFiles) | Window.IsVisible(VideoLibrary)</visible>
 				<control type="group">
-				
 					<posx>0</posx>
 					<posy>-30</posy>
 					<control type="image">
@@ -265,7 +270,8 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
-					<control type="textbox"> <!-- CUSTOM mod plotoutline -->
+					<control type="textbox">
+						<!-- CUSTOM mod plotoutline -->
 						<description>plot</description>
 						<posx>0</posx>
 						<posy>32</posy>
@@ -278,7 +284,6 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-						
 					</control>
 					<!-- Addon Info -->
 					<control type="textbox">
@@ -331,7 +336,7 @@
 					<bordersize>8</bordersize>
 					<visible>!Window.IsVisible(VideoFiles) + !Window.IsVisible(VideoLibrary)</visible>
 				</control>
-				 <control type="image">
+				<control type="image">
 					<posx>282r</posx>
 					<posy>207</posy>
 					<width>263</width>
@@ -355,22 +360,22 @@
 					<bordersize>8</bordersize>
 					<visible>!Window.IsVisible(VideoFiles) + !Window.IsVisible(VideoLibrary)</visible>
 				</control>
-		</control>
-		 <control type="scrollbar" id="60">
-        <posx>10</posx>
-        <posy>100</posy>
-        <width>25</width>
-        <height>220</height>
-        <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-        <textureslidernib>ScrollBarV.png</textureslidernib>
-        <textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
-        <onleft>2</onleft>
-        <onright>594</onright>
-        <showonepage>false</showonepage>
-        <orientation>vertical</orientation>
-        <visible>Control.IsVisible(594)</visible>
-		<visible allowhiddenfocus="true">Control.IsVisible(594) + Control.HasFocus(60)</visible>
-      </control>
+			</control>
+			<control type="scrollbar" id="60">
+				<posx>10</posx>
+				<posy>100</posy>
+				<width>25</width>
+				<height>220</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<textureslidernib>ScrollBarV.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
+				<onleft>2</onleft>
+				<onright>594</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(594)</visible>
+				<visible allowhiddenfocus="true">Control.IsVisible(594) + Control.HasFocus(60)</visible>
+			</control>
 		</control>
 	</include>
 </includes>

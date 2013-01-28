@@ -1,25 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
-<!-- ===================================================================================== -->
-<!-- ============================== BANNER WALL VIEW ID 519 ============================== -->
-<!-- =================================== TV Shows only =================================== -->
+	<!-- ===================================================================================== -->
+	<!-- ============================== BANNER WALL VIEW ID 519 ============================== -->
+	<!-- =================================== TV Shows only =================================== -->
 	<include name="BannerWallView">
 		<control type="group">
-		<visible>Control.IsVisible(519)</visible>
-			<control type="image"> <!-- bottom bar background -->
+			<visible>Control.IsVisible(519)</visible>
+			<control type="image">
+				<!-- bottom bar background -->
 				<posx>0</posx>
 				<posy>170r</posy>
 				<width>1280</width>
 				<height>700</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>rightlistbackground.png</texture>
+				<texture>rightlistbackground.png</texture>
 			</control>
-			<control type="image"> <!-- darken the background a bit -->
+			<control type="image">
+				<!-- darken the background a bit -->
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
 				<height>720</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>black-back3.png</texture>
+				<texture>black-back3.png</texture>
 			</control>
 			<control type="image">
 				<posx>35r</posx>
@@ -53,7 +56,8 @@
 				<preloaditems>2</preloaditems>
 				<visible>Container.Content(TVShows)</visible>
 				<itemlayout height="106" width="575">
-					<control type="group"> <!-- banner mod -->
+					<control type="group">
+						<!-- banner mod -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<control type="image">
@@ -70,14 +74,14 @@
 							<visible>Skin.HasSetting(jpgsupport)</visible>
 						</control>
 						<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>575</width>
-						<height>106</height>
-						<aspectratio>stretch</aspectratio>
-						<texture>black-back3.png</texture>
-						<colordiffuse>AAFFFFFF</colordiffuse>
-					</control>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>575</width>
+							<height>106</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>black-back3.png</texture>
+							<colordiffuse>AAFFFFFF</colordiffuse>
+						</control>
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -91,21 +95,22 @@
 							<visible>!Skin.HasSetting(jpgsupport)</visible>
 						</control>
 						<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>575</width>
-						<height>106</height>
-						<aspectratio>stretch</aspectratio>
-						<texture>black-back3.png</texture>
-						<colordiffuse>AAFFFFFF</colordiffuse>
-					</control>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>575</width>
+							<height>106</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>black-back3.png</texture>
+							<colordiffuse>AAFFFFFF</colordiffuse>
+						</control>
 					</control>
 				</itemlayout>
 				<focusedlayout height="140" width="758">
-					<control type="group">	
+					<control type="group">
 						<posx>0</posx>
 						<posy>0</posy>
-						<control type="image"> <!-- banner mod -->
+						<control type="image">
+							<!-- banner mod -->
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>575</width>
@@ -118,7 +123,8 @@
 							<bordersize>8</bordersize>
 							<visible>Skin.HasSetting(jpgsupport)</visible>
 						</control>
-						<control type="image"> <!-- banner mod -->
+						<control type="image">
+							<!-- banner mod -->
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>575</width>
@@ -143,7 +149,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<!-- Tv show info down thebottom -->	
+			<!-- Tv show info down thebottom -->
 			<control type="group">
 				<posx>30</posx>
 				<posy>580</posy>
@@ -157,10 +163,10 @@
 					<include>NextAired</include>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
-				</control>	
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
 				<control type="label">
 					<description>First Aired</description>
 					<posx>0</posx>
@@ -170,9 +176,9 @@
 					<label fallback="416">[COLOR=accent]$LOCALIZE[20416]: [/COLOR]$INFO[listitem.premiered]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="label">
 					<description>Genre</description>
@@ -183,9 +189,9 @@
 					<label fallback="416">[COLOR=accent]$LOCALIZE[515]: [/COLOR]$INFO[listitem.genre]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="label">
 					<description>Episodes</description>
@@ -196,9 +202,9 @@
 					<label fallback="416">[COLOR=accent]$LOCALIZE[20360]: [/COLOR]$INFO[listitem.episode] [COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="image">
 					<width>161</width>
@@ -210,16 +216,16 @@
 					<texture>$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
 				</control>
 				<!-- TV SHOW LOGO -->
-				<control type="largeimage" id="7914"> 
-					<posx>370r</posx> 
-					<posy>-10</posy> 
-					<width>335</width> 
-					<height>130</height> 
-					<texture>$INFO[ListItem.path]logo.png</texture> 
-					<fadetime>100</fadetime> 
-					<aspectratio scalediffuse="false">keep</aspectratio> 
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
-				</control>			
+				<control type="largeimage" id="7914">
+					<posx>370r</posx>
+					<posy>-10</posy>
+					<width>335</width>
+					<height>130</height>
+					<texture>$INFO[ListItem.path]logo.png</texture>
+					<fadetime>100</fadetime>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
 			</control>
 		</control>
 	</include>

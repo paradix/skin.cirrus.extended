@@ -1,10 +1,11 @@
-
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
-<!-- ===================================================================================== -->
-<!-- ================================= FANART VIEW ID 666 ================================ -->
-<!-- ====================== Movies ===================== -->
+	<!-- ===================================================================================== -->
+	<!-- ================================= FANART VIEW ID 666 ================================ -->
+	<!-- ====================== Movies ===================== -->
 	<include name="FanartSlide">
-			<control type="image"> <!-- bottom bar background -->
+		<control type="image">
+			<!-- bottom bar background -->
 			<posx>0</posx>
 			<posy>230r</posy>
 			<width>1280</width>
@@ -13,7 +14,8 @@
 			<texture>rightlistbackground.png</texture>
 			<visible>Control.IsVisible(666)</visible>
 		</control>
-		<control type="image"> <!-- Black gradient up the top -->
+		<control type="image">
+			<!-- Black gradient up the top -->
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -24,13 +26,13 @@
 		</control>
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
-			<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-			<effect type="fade" start="0" end="100" time="300" />
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+				<effect type="fade" start="0" end="100" time="300" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-			<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-			<effect type="fade" start="100" end="0" time="300" />
-			</animation>      
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
 			<visible>Control.IsVisible(666)</visible>
 			<include>VisibleFadeEffect</include>
 			<posx>0</posx>
@@ -45,10 +47,11 @@
 				<onleft>666</onleft>
 				<onright>666</onright>
 				<onup>60</onup>
-				<ondown condition="Container.Content(Movies) | Container.Content(Episodes)">ActivateWindow(1121)</ondown>   <!-- ,1 VideoWindow ,0 Fullscreen -->
+				<ondown condition="Container.Content(Movies) | Container.Content(Episodes)">ActivateWindow(1121)</ondown>
+				<!-- ,1 VideoWindow ,0 Fullscreen -->
 				<viewtype label="41122">wraplist</viewtype>
 				<pagecontrol>60</pagecontrol>
-			    <scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<focusposition>5</focusposition>
 				<orientation>horizontal</orientation>
 				<preloaditems>3</preloaditems>
@@ -64,7 +67,7 @@
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture border="8">contentpanelvertical.png</bordertexture>
 						<bordersize>8</bordersize>
-				</control>
+					</control>
 					<control type="image">
 						<posx>70</posx>
 						<posy>140</posy>
@@ -97,12 +100,12 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 					</control>
 				</focusedlayout>
-				</control>
+			</control>
 			<!-- INFO OFF MOVIES -->
 			<control type="group">
-			<visible>Container.Content(Movies)</visible>
-			<posx>0</posx>
-			<posy>0</posy>
+				<visible>Container.Content(Movies)</visible>
+				<posx>0</posx>
+				<posy>0</posy>
 				<control type="label">
 					<description>title</description>
 					<posx>20</posx>
@@ -117,8 +120,7 @@
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
-				</control>
-			
+			</control>
 			<control type="scrollbar" id="60">
 				<posx>-10</posx>
 				<posy>-70</posy>
@@ -133,12 +135,12 @@
 				<orientation>horizontal</orientation>
 				<visible allowhiddenfocus="true">Control.IsVisible(666) + Control.HasFocus(60)</visible>
 			</control>
-			</control>
-			<!-- Fanart Slide Mod 1.2.2 -->
+		</control>
+		<!-- Fanart Slide Mod 1.2.2 -->
 		<control type="group">
-		<visible>!Container(666).OnNext + !Container(666).OnPrevious + Container.Content(movies) + !Control.HasFocus(60)</visible>
-		<animation effect="slide" start="-1300" end="0" time="500" delay="3000" reversible="false">Visible</animation>
-		<posx>0</posx>
+			<visible>!Container(666).OnNext + !Container(666).OnPrevious + Container.Content(movies) + !Control.HasFocus(60)</visible>
+			<animation effect="slide" start="-1300" end="0" time="500" delay="3000" reversible="false">Visible</animation>
+			<posx>0</posx>
 			<posy>100</posy>
 			<visible>Control.IsVisible(666) + !Window.IsVisible(VideoFiles) + Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
 			<control type="image">
@@ -230,8 +232,8 @@
 					<visible>!SubString(ListItem.Duration,mins)</visible>
 					<visible>!ListItem.IsFolder</visible>
 				</control>
-				
-				<control type="image"> <!-- Top250IMDB Mod 1.2 -->
+				<control type="image">
+					<!-- Top250IMDB Mod 1.2 -->
 					<posx>220</posx>
 					<posy>87</posy>
 					<width>88</width>
@@ -242,20 +244,20 @@
 					<visible>!IsEmpty(ListItem.Top250)</visible>
 					<colordiffuse>accent</colordiffuse>
 				</control>
-					<control type="label"> <!-- Top250IMDB Mod 1.2 -->
-						<description>top250</description>
-						<posx>80</posx>
-						<posy>86</posy>
-						<width>400</width>
-						<height>30</height>
-						<label>$INFO[ListItem.Top250]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>cirrus_38_Bold</font>
-						<textcolor>white</textcolor>
-						
-					</control>
-					<control type="label">
+				<control type="label">
+					<!-- Top250IMDB Mod 1.2 -->
+					<description>top250</description>
+					<posx>80</posx>
+					<posy>86</posy>
+					<width>400</width>
+					<height>30</height>
+					<label>$INFO[ListItem.Top250]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>cirrus_38_Bold</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="label">
 					<description>Trailer Label while movie is playing</description>
 					<posx>45</posx>
 					<posy>90</posy>
@@ -269,7 +271,8 @@
 					<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(trailerflag) | Player.HasVideo</visible>
 					<visible>!ListItem.IsFolder</visible>
 				</control>
-				<control type="textbox"> <!-- Plotoutline Mod -->
+				<control type="textbox">
+					<!-- Plotoutline Mod -->
 					<description>Movie Plot</description>
 					<posx>-60</posx>
 					<posy>130</posy>
@@ -297,8 +300,8 @@
 				</control>
 			</control>
 			<control type="group">
-			<posx>-60</posx>
-			<control type="image">
+				<posx>-60</posx>
+				<control type="image">
 					<posx>700</posx>
 					<posy>40</posy>
 					<width>540</width>
@@ -309,10 +312,10 @@
 					<bordersize>8</bordersize>
 					<visible>!Skin.HasSetting(Smallwindowhidden)</visible>
 					<visible>!Player.HasVideo | !Skin.HasSetting(videowindownoborder) | !Skin.HasSetting(videowindowglobal)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="image">
-				    <posx>700</posx>
+					<posx>700</posx>
 					<posy>40</posy>
 					<width>540</width>
 					<height>303</height>
@@ -345,7 +348,7 @@
 					<align>right</align>
 					<visible>Skin.Hassetting(videowindowglobal)</visible>
 					<visible>Control.IsVisible(666)</visible>
-				</control> 
+				</control>
 				<control type="label">
 					<description>Title label</description>
 					<posx>810</posx>
@@ -357,24 +360,23 @@
 					<aligny>center</aligny>
 					<font>cirrus_20</font>
 					<textcolor>white</textcolor>
-					
 					<visible>Skin.HasSetting(videowindowglobal)</visible>
 					<visible>Player.HasVideo</visible>
 					<visible>Control.IsVisible(666)</visible>
 					<visible>!Skin.HasSetting(videonotitle)</visible>
 				</control>
 				<control type="image">
-						<posx>1142</posx>
-						<posy>48</posy>
-						<width>91</width>
-						<height>91</height>
-						<aspectratio>keep</aspectratio>
-						<fadetime>FanartCrossfadeTime</fadetime>
-						<texture>Overlayicons/$INFO[ListItem.Overlay]</texture>
-					    <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
-					    <visible>!Skin.HasSetting(Smallwindowhidden)</visible>
-					    <visible>!Skin.HasSetting(originalwatched)</visible>
-					</control>
+					<posx>1142</posx>
+					<posy>48</posy>
+					<width>91</width>
+					<height>91</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<texture>Overlayicons/$INFO[ListItem.Overlay]</texture>
+					<visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
+					<visible>!Skin.HasSetting(Smallwindowhidden)</visible>
+					<visible>!Skin.HasSetting(originalwatched)</visible>
+				</control>
 				<control type="image">
 					<posx>708</posx>
 					<posy>48</posy>
@@ -397,12 +399,12 @@
 					<align>center</align>
 					<itemgap>30</itemgap>
 					<orientation>vertical</orientation>
-		  <include condition="!Skin.HasSetting(newFlags)">VideoCodecFlaggingConditions</include>
-          <include condition="!Skin.HasSetting(newFlags)">AudioCodecFlaggingConditions</include>
-          <include condition="!Skin.HasSetting(newFlags)">AspectCodecFlaggingConditions</include>
-          <include condition="Skin.HasSetting(newFlags)">VideoCodecFlaggingConditionsNew</include>
-          <include condition="Skin.HasSetting(newFlags)">AudioCodecFlaggingConditionsNew</include>
-          <include condition="Skin.HasSetting(newFlags)">AspectCodecFlaggingConditionsNew</include>
+					<include condition="!Skin.HasSetting(newFlags)">VideoCodecFlaggingConditions</include>
+					<include condition="!Skin.HasSetting(newFlags)">AudioCodecFlaggingConditions</include>
+					<include condition="!Skin.HasSetting(newFlags)">AspectCodecFlaggingConditions</include>
+					<include condition="Skin.HasSetting(newFlags)">VideoCodecFlaggingConditionsNew</include>
+					<include condition="Skin.HasSetting(newFlags)">AudioCodecFlaggingConditionsNew</include>
+					<include condition="Skin.HasSetting(newFlags)">AspectCodecFlaggingConditionsNew</include>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -454,55 +456,53 @@
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
 				<texture>$INFO[Listitem.StarRating]</texture>
-				<visible>!Skin.HasSetting(imdbnrfanart)</visible> 
+				<visible>!Skin.HasSetting(imdbnrfanart)</visible>
 				<visible>!ListItem.IsFolder</visible>
 			</control>
 			<control type="label">
-						<description>Rating value</description>
-						<posx>100</posx>
-						<posy>345</posy>
-						<width>183</width>
-						<height>25</height>
-						<textcolor>white</textcolor>
-						<font>cirrus_30</font>
-						<align>left</align>
-						<label>$INFO[Listitem.Rating]</label>
-						<colordiffuse>black</colordiffuse>
-						<visible>Skin.HasSetting(imdbnrfanart)</visible>
-						<visible>!IsEmpty(ListItem.Thumb)</visible> 
-					</control>
-					<control type="image">
-			  <width>84</width>
-			  <height>31</height>
-			  <posx>15</posx>
-			  <posy>345</posy>
-			  <aspectratio align="center">keep</aspectratio>
-			  <texture>imdb-logo.png</texture>
-			  <visible>Skin.HasSetting(imdbnrfanart)</visible>
-			  <visible>!ListItem.IsFolder + !IsEmpty(Listitem.Rating)</visible>
+				<description>Rating value</description>
+				<posx>100</posx>
+				<posy>345</posy>
+				<width>183</width>
+				<height>25</height>
+				<textcolor>white</textcolor>
+				<font>cirrus_30</font>
+				<align>left</align>
+				<label>$INFO[Listitem.Rating]</label>
+				<colordiffuse>black</colordiffuse>
+				<visible>Skin.HasSetting(imdbnrfanart)</visible>
+				<visible>!IsEmpty(ListItem.Thumb)</visible>
 			</control>
 			<control type="image">
-			  <width>150</width>
-			  <height>87</height>
-			  <posx>210</posx>
-			  <posy>290</posy>
-			  <aspectratio align="center">keep</aspectratio>
-			  <texture border="2">$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
-			  <visible>!Skin.HasSetting(NewMPAAFlags)</visible>
-			  <visible>!Skin.HasSetting(noMPAAStudioFlags)</visible>
+				<width>84</width>
+				<height>31</height>
+				<posx>15</posx>
+				<posy>345</posy>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>imdb-logo.png</texture>
+				<visible>Skin.HasSetting(imdbnrfanart)</visible>
+				<visible>!ListItem.IsFolder + !IsEmpty(Listitem.Rating)</visible>
 			</control>
 			<control type="image">
-			  <width>150</width>
-			  <height>87</height>
-			  <posx>500</posx>
-			  <posy>300</posy>
-			  <aspectratio align="center">keep</aspectratio>
-			  <texture border="2">$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
-			  <visible>Skin.HasSetting(NewMPAAFlags)</visible>
-			  <visible>!Skin.HasSetting(noMPAAStudioFlags)</visible>
+				<width>150</width>
+				<height>87</height>
+				<posx>210</posx>
+				<posy>290</posy>
+				<aspectratio align="center">keep</aspectratio>
+				<texture border="2">$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
+				<visible>!Skin.HasSetting(NewMPAAFlags)</visible>
+				<visible>!Skin.HasSetting(noMPAAStudioFlags)</visible>
+			</control>
+			<control type="image">
+				<width>150</width>
+				<height>87</height>
+				<posx>500</posx>
+				<posy>300</posy>
+				<aspectratio align="center">keep</aspectratio>
+				<texture border="2">$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
+				<visible>Skin.HasSetting(NewMPAAFlags)</visible>
+				<visible>!Skin.HasSetting(noMPAAStudioFlags)</visible>
 			</control>
 		</control>
 	</include>
 </includes>
-
-

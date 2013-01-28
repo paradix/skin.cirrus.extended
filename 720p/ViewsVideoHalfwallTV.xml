@@ -1,39 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
-<!-- ===================================================================================== -->
-<!-- ============================== TV HALF WALL VIEW ID 560 ================================ -->
-<!-- =================================== TV Only ===================================== -->
+	<!-- ===================================================================================== -->
+	<!-- ============================== TV HALF WALL VIEW ID 560 ================================ -->
+	<!-- =================================== TV Only ===================================== -->
 	<include name="HalfWallTV">
 		<control type="group">
-		<animation type="WindowOpen" reversible="false">
+			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
 				<effect type="fade" start="0" end="100" time="300" />
-				</animation>
-				<animation type="WindowClose" reversible="false">
+			</animation>
+			<animation type="WindowClose" reversible="false">
 				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
 				<effect type="fade" start="100" end="0" time="300" />
-			</animation>      
-			<control type="image"> <!-- darken the background a bit -->
+			</animation>
+			<control type="image">
+				<!-- darken the background a bit -->
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>660</width>
 				<height>720</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>black-back.png</texture>
- 				<visible>Container.Content(Episodes)</visible>
+				<texture>black-back.png</texture>
+				<visible>Container.Content(Episodes)</visible>
 				<visible>Control.IsVisible(560)</visible>
 			</control>
-			<control type="image"> <!-- right panel behind the wall -->
+			<control type="image">
+				<!-- right panel behind the wall -->
 				<posx>620r</posx>
 				<posy>0</posy>
 				<width>620</width>
 				<height>720</height>
 				<texture border="15,0,0,0">homesubbackground.png</texture>
- 				<visible>Container.Content(Episodes)</visible>
+				<visible>Container.Content(Episodes)</visible>
 				<visible>Control.IsVisible(560)</visible>
 			</control>
 			<!-- PANEL -->
 			<control type="panel" id="560">
-			<visible>Skin.HasSetting(halfwalltv_view)</visible>
+				<visible>Skin.HasSetting(halfwalltv_view)</visible>
 				<posx>620</posx>
 				<posy>50</posy>
 				<width>680</width>
@@ -43,7 +46,7 @@
 				<onup>560</onup>
 				<ondown>560</ondown>
 				<viewtype label="41124">panel</viewtype>
- 				<visible>Container.Content(Episodes)</visible>
+				<visible>Container.Content(Episodes)</visible>
 				<pagecontrol>70</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>200</preloaditems>
@@ -73,7 +76,7 @@
 						<width>187</width>
 						<height>124</height>
 						<aspectratio>stretch</aspectratio>
-						<texture background="true">black-back3.png</texture> 
+						<texture background="true">black-back3.png</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout condition="Container.Content(Episodes)" height="200" width="250">
@@ -96,9 +99,10 @@
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
 					</control>
-				</focusedlayout>cusedlayout>
+				</focusedlayout>cusedlayout&gt;
 			</control>
-			<control type="group"> <!-- Labels -->
+			<control type="group">
+				<!-- Labels -->
 				<posx>20</posx>
 				<posy>120</posy>
 				<visible>Container.Content(Episodes)</visible>
@@ -119,33 +123,33 @@
 					<pauseatend>2000</pauseatend>
 				</control>
 				<control type="label">
-						<posx>0</posx>
-						<posy>10</posy>
-						<width>230</width>
-						<height>30</height>
-						<font>cirrus_20</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>left</align>
-						<aligny>bottom</aligny>
-						<label>[COLOR=accent]$LOCALIZE[20373]:[/COLOR] $INFO[ListItem.Season] [COLOR=accent]$LOCALIZE[20359]: [/COLOR]$INFO[ListItem.Episode]</label>
-						<scroll>true</scroll>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>40</posy>
-						<width>400</width>
-						<height>27</height>
-						<font>cirrus_30</font>
-						<textcolor>grey2</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>left</align>
-						<aligny>bottom</aligny>
-						<label>$INFO[ListItem.Title]</label>
-						<scroll>true</scroll>
-					</control>
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>230</width>
+					<height>30</height>
+					<font>cirrus_20</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<label>[COLOR=accent]$LOCALIZE[20373]:[/COLOR] $INFO[ListItem.Season] [COLOR=accent]$LOCALIZE[20359]: [/COLOR]$INFO[ListItem.Episode]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>40</posy>
+					<width>400</width>
+					<height>27</height>
+					<font>cirrus_30</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<label>$INFO[ListItem.Title]</label>
+					<scroll>true</scroll>
+				</control>
 				<control type="fadelabel">
 					<posx>0</posx>
 					<posy>80</posy>
@@ -191,20 +195,21 @@
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
-			<control type="group"> <!-- Fanart and media flags -->
+			<control type="group">
+				<!-- Fanart and media flags -->
 				<posx>10</posx>
 				<posy>330</posy>
 				<width>640</width>
 				<height>360</height>
 				<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-				<effect type="fade" start="0" end="100" time="300" />
+					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+					<effect type="fade" start="0" end="100" time="300" />
 				</animation>
 				<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-				<effect type="fade" start="100" end="0" time="300" />
-				</animation>      
- 				<visible>Container.Content(Episodes)</visible>
+					<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+					<effect type="fade" start="100" end="0" time="300" />
+				</animation>
+				<visible>Container.Content(Episodes)</visible>
 				<visible>Control.IsVisible(560)</visible>
 				<control type="image">
 					<posx>10</posx>
@@ -218,7 +223,7 @@
 					<bordersize>12</bordersize>
 					<colordiffuse>888A8A8A</colordiffuse>
 					<visible>!Player.HasVideo | !Skin.HasSetting(videowindownoborder) | !Skin.HasSetting(videowindowglobal)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="image">
 					<posx>24</posx>
@@ -230,15 +235,15 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
 				</control>
-					<control type="videowindow" id="8">
+				<control type="videowindow" id="8">
 					<posx>24</posx>
 					<posy>61</posy>
 					<width>513</width>
 					<height>270</height>
 					<visible>Skin.Hassetting(videowindowglobal)</visible>
 					<visible>Control.IsVisible(560)</visible>
-				</control> 
-					<control type="label">
+				</control>
+				<control type="label">
 					<description>Title label</description>
 					<posx>120</posx>
 					<posy>280</posy>
@@ -263,15 +268,14 @@
 					<align>center</align>
 					<itemgap>30</itemgap>
 					<orientation>vertical</orientation>
-		            <include condition="!Skin.HasSetting(newFlags)">VideoCodecFlaggingConditions</include>
-                    <include condition="!Skin.HasSetting(newFlags)">AudioCodecFlaggingConditions</include>
-                    <include condition="!Skin.HasSetting(newFlags)">AspectCodecFlaggingConditions</include>
-                    <include condition="Skin.HasSetting(newFlags)">VideoCodecFlaggingConditionsNew</include>
-                    <include condition="Skin.HasSetting(newFlags)">AudioCodecFlaggingConditionsNew</include>
-                    <include condition="Skin.HasSetting(newFlags)">AspectCodecFlaggingConditionsNew</include>
+					<include condition="!Skin.HasSetting(newFlags)">VideoCodecFlaggingConditions</include>
+					<include condition="!Skin.HasSetting(newFlags)">AudioCodecFlaggingConditions</include>
+					<include condition="!Skin.HasSetting(newFlags)">AspectCodecFlaggingConditions</include>
+					<include condition="Skin.HasSetting(newFlags)">VideoCodecFlaggingConditionsNew</include>
+					<include condition="Skin.HasSetting(newFlags)">AudioCodecFlaggingConditionsNew</include>
+					<include condition="Skin.HasSetting(newFlags)">AspectCodecFlaggingConditionsNew</include>
 				</control>
 			</control>
-			
 		</control>
 	</include>
 </includes>

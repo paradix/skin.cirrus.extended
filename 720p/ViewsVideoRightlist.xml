@@ -1,21 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
-<!-- ===================================================================================== -->
-<!-- ============================== RIGHTLIST VIEW ID 569 ================================ -->
-<!-- ====================Movies, TV Shows, Seasons, Episodes, Music ====================== -->
+	<!-- ===================================================================================== -->
+	<!-- ============================== RIGHTLIST VIEW ID 569 ================================ -->
+	<!-- ====================Movies, TV Shows, Seasons, Episodes, Music ====================== -->
 	<include name="RightListView">
 		<control type="group">
-		<animation type="WindowOpen" reversible="false">
-			<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-			<effect type="fade" start="0" end="100" time="300" />
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+				<effect type="fade" start="0" end="100" time="300" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-			<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-			<effect type="fade" start="100" end="0" time="300" />
-			</animation>      
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
 			<visible>Control.IsVisible(569)</visible>
 			<include>VisibleFadeEffect</include>
-			
-			<control type="image"> <!-- bottom bar background -->
+			<control type="image">
+				<!-- bottom bar background -->
 				<posx>0</posx>
 				<posy>155r</posy>
 				<width>1280</width>
@@ -24,7 +25,8 @@
 				<texture>rightlistbackground.png</texture>
 				<visible>Container.Content(TVShows)</visible>
 			</control>
-			<control type="image"> <!-- bottom bar background -->
+			<control type="image">
+				<!-- bottom bar background -->
 				<posx>0</posx>
 				<posy>155r</posy>
 				<width>1280</width>
@@ -33,7 +35,8 @@
 				<texture>rightlistbackground.png</texture>
 				<visible>Container.Content(Seasons)</visible>
 			</control>
-			<control type="image"> <!-- bottom bar background -->
+			<control type="image">
+				<!-- bottom bar background -->
 				<posx>0</posx>
 				<posy>155r</posy>
 				<width>1280</width>
@@ -41,16 +44,18 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>rightlistbackground.png</texture>
 			</control>
-			<control type="image"> <!-- bottom bar background -->
+			<control type="image">
+				<!-- bottom bar background -->
 				<posx>0</posx>
 				<posy>50r</posy>
 				<width>1280</width>
 				<height>700</height>
 				<aspectratio>stretch</aspectratio>
- 				<texture>rightlistbackground.png</texture>
+				<texture>rightlistbackground.png</texture>
 				<visible>Container.Content(Movies) | Container.Content(Episodes)</visible>
 			</control>
-			<control type="image"> <!-- Black gradient up the top -->
+			<control type="image">
+				<!-- Black gradient up the top -->
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
@@ -58,7 +63,8 @@
 				<texture>blackgradientvert.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="image"> <!-- right gradient -->
+			<control type="image">
+				<!-- right gradient -->
 				<posx>700r</posx>
 				<posy>0</posy>
 				<width>700</width>
@@ -66,61 +72,61 @@
 				<texture flipx="true">blackgradient.png</texture>
 			</control>
 			<control type="image">
-        <posx>268</posx>
-        <posy>360</posy>
-        <width>385</width>
-        <height>200</height>
-		<texture>black-back.png</texture>
-		<bordertexture border="8">contentpanelvertical.png</bordertexture>
-		<bordersize>8</bordersize>
-        <aspectratio>stretch</aspectratio>
-		<visible>Skin.Hassetting(videowindowglobal)</visible>
-		<visible>Player.HasVideo</visible>
-		<visible>!Skin.Hassetting(videowindownoborder)</visible>
-		<visible>Control.IsVisible(569)</visible>
-      </control>
-			<control type="videowindow" id="8">
-		        <posx>280</posx>
-		        <posy>370</posy>
-		        <width>362</width>
-		        <height>180</height>
-		        <visible>Skin.Hassetting(videowindowglobal)</visible>
+				<posx>268</posx>
+				<posy>360</posy>
+				<width>385</width>
+				<height>200</height>
+				<texture>black-back.png</texture>
+				<bordertexture border="8">contentpanelvertical.png</bordertexture>
+				<bordersize>8</bordersize>
+				<aspectratio>stretch</aspectratio>
+				<visible>Skin.Hassetting(videowindowglobal)</visible>
+				<visible>Player.HasVideo</visible>
+				<visible>!Skin.Hassetting(videowindownoborder)</visible>
 				<visible>Control.IsVisible(569)</visible>
-		     </control> 
-		  <control type="label">
-          <description>Title label</description>
-          <posx>296</posx>
-          <posy>510</posy>
-          <height>30</height>
-          <width>330</width>
-          <label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=accent] (,)[/COLOR]]</label>
-          <align>center</align>
-          <aligny>center</aligny>
-          <font>cirrus_20</font>
-          <textcolor>white</textcolor>
-          
-		  <visible>Skin.HasSetting(videowindowglobal)</visible>
-		  <visible>Player.HasVideo</visible>
-		  <visible>Control.IsVisible(569)</visible>
-		  <visible>!Skin.HasSetting(videonotitle)</visible>
-        </control>
+			</control>
+			<control type="videowindow" id="8">
+				<posx>280</posx>
+				<posy>370</posy>
+				<width>362</width>
+				<height>180</height>
+				<visible>Skin.Hassetting(videowindowglobal)</visible>
+				<visible>Control.IsVisible(569)</visible>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>296</posx>
+				<posy>510</posy>
+				<height>30</height>
+				<width>330</width>
+				<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=accent] (,)[/COLOR]]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cirrus_20</font>
+				<textcolor>white</textcolor>
+				<visible>Skin.HasSetting(videowindowglobal)</visible>
+				<visible>Player.HasVideo</visible>
+				<visible>Control.IsVisible(569)</visible>
+				<visible>!Skin.HasSetting(videonotitle)</visible>
+			</control>
 			<!-- START OF ACTUAL LIST -->
-			<control type="list" id="569"> <!-- CUSTOM Scroll + Trailer  Hack -->
-			<visible>Skin.HasSetting(rightlist_view)</visible>
-			<animation type="WindowOpen" reversible="false">
-			<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-			<effect type="fade" start="0" end="100" time="300" />
-			</animation>
-			<animation type="WindowClose" reversible="false">
-			<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-			<effect type="fade" start="100" end="0" time="300" />
-			</animation>      
+			<control type="list" id="569">
+				<!-- CUSTOM Scroll + Trailer  Hack -->
+				<visible>Skin.HasSetting(rightlist_view)</visible>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+					<effect type="fade" start="0" end="100" time="300" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+					<effect type="fade" start="100" end="0" time="300" />
+				</animation>
 				<posx>600r</posx>
 				<posy>100</posy>
 				<width>600</width>
 				<height>435</height>
 				<orientation>vertical</orientation>
-			    <focusposition>5</focusposition>
+				<focusposition>5</focusposition>
 				<onleft>60</onleft>
 				<onup>569</onup>
 				<ondown>569</ondown>
@@ -130,7 +136,6 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>Container.Content(TVShows) | Window.IsVisible(VideoFiles) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)</visible>
-				
 				<!-- SLIM LAYOUT -->
 				<itemlayout height="40" width="580">
 					<control type="image">
@@ -230,11 +235,12 @@
 						<width>30</width>
 						<height>40</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
-					</control>					
+					</control>
 				</focusedlayout>
 			</control>
 			<!-- RIGHTLIST BOTTOM INFO TV SHOWS LEVEL -->
-			<control type="group"> <!-- poster + widethumb + banner update + next aired v1.1 -->
+			<control type="group">
+				<!-- poster + widethumb + banner update + next aired v1.1 -->
 				<posx>30</posx>
 				<posy>580</posy>
 				<visible>Container.Content(TVShows)</visible>
@@ -247,11 +253,11 @@
 					<include>NextAired</include>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
 					<visible>!Skin.HasSetting(poster) + !Skin.HasSetting(banner) + !Skin.HasSetting(widethumb)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
-				</control>	
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
 				<control type="label">
 					<description>Episodes</description>
 					<posx>12</posx>
@@ -261,12 +267,11 @@
 					<label fallback="416">[COLOR=accent]$LOCALIZE[20360]: [/COLOR]$INFO[listitem.episode] [COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
 					<visible>!Skin.HasSetting(poster) + !Skin.HasSetting(banner) + !Skin.HasSetting(widethumb)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
-
 				<control type="label">
 					<description>Genre</description>
 					<posx>12</posx>
@@ -276,10 +281,10 @@
 					<label fallback="416">[COLOR=accent]$LOCALIZE[515]: [/COLOR]$INFO[listitem.genre]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
 					<visible>!Skin.HasSetting(poster) + !Skin.HasSetting(banner) + !Skin.HasSetting(widethumb)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="label">
 					<description>First Aired</description>
@@ -290,12 +295,11 @@
 					<label fallback="416">[COLOR=accent]$LOCALIZE[20416]: [/COLOR]$INFO[listitem.premiered]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
 					<visible>!Skin.HasSetting(poster) + !Skin.HasSetting(banner) + !Skin.HasSetting(widethumb)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
-				</control>				
-				
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
 				<control type="group">
 					<description>Nextaired</description>
 					<posx>160</posx>
@@ -305,11 +309,11 @@
 					<include>NextAired</include>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
 					<visible>Skin.HasSetting(poster) + !Skin.HasSetting(banner)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
-				</control>	
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
 				<control type="label">
 					<description>First Aired</description>
 					<posx>240</posx>
@@ -319,10 +323,10 @@
 					<label fallback="416">[COLOR=accent]$LOCALIZE[20416]: [/COLOR]$INFO[listitem.premiered]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
 					<visible>Skin.HasSetting(poster) + !Skin.HasSetting(banner)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="label">
 					<description>Genre</description>
@@ -333,10 +337,10 @@
 					<label fallback="416">[COLOR=accent]$LOCALIZE[515]: [/COLOR]$INFO[listitem.genre]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
 					<visible>Skin.HasSetting(poster) + !Skin.HasSetting(banner)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="label">
 					<description>Episodes</description>
@@ -347,10 +351,10 @@
 					<label fallback="416">[COLOR=accent]$LOCALIZE[20360]: [/COLOR]$INFO[listitem.episode] [COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
 					<visible>Skin.HasSetting(poster) + !Skin.HasSetting(banner)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="group">
 					<description>Nextaired</description>
@@ -361,11 +365,11 @@
 					<include>NextAired</include>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
 					<visible>Skin.HasSetting(widethumb) + !Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
-				</control>	
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
 				<control type="label">
 					<description>First Aired</description>
 					<posx>247</posx>
@@ -375,10 +379,10 @@
 					<label fallback="416">[COLOR=accent]$LOCALIZE[20416]: [/COLOR]$INFO[listitem.premiered]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
 					<visible>Skin.HasSetting(widethumb) + !Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="label">
 					<description>Genre</description>
@@ -389,10 +393,10 @@
 					<label fallback="416">[COLOR=accent]$LOCALIZE[515]: [/COLOR]$INFO[listitem.genre]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
 					<visible>Skin.HasSetting(widethumb) + !Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="label">
 					<description>Episodes</description>
@@ -403,12 +407,12 @@
 					<label fallback="416">[COLOR=accent]$LOCALIZE[20360]: [/COLOR]$INFO[listitem.episode] [COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
 					<visible>Skin.HasSetting(widethumb) + !Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
-				<control type="image"> 
+				<control type="image">
 					<posx>-10</posx>
 					<posy>-7</posy>
 					<width>250</width>
@@ -418,9 +422,9 @@
 					<bordertexture border="8">contentpanelvertical.png</bordertexture>
 					<bordersize>8</bordersize>
 					<visible>Skin.HasSetting(widethumb) + !Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
-				<control type="image"> 
+				<control type="image">
 					<posx>-10</posx>
 					<posy>-7</posy>
 					<width>250</width>
@@ -430,7 +434,7 @@
 					<texture background="true" fallback="landscape fallback.png">$INFO[ListItem.Path]landscape.jpg</texture>
 					<bordersize>8</bordersize>
 					<visible>Skin.HasSetting(widethumb) + !Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="image">
 					<width>130</width>
@@ -441,20 +445,20 @@
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
 					<visible>!Skin.HasSetting(poster) + !Skin.HasSetting(widethumb)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<!-- TV SHOW LOGO -->
-				<control type="largeimage" id="7914"> 
-					<posx>370r</posx> 
-					<posy>0</posy> 
-					<width>335</width> 
-					<height>130</height> 
+				<control type="largeimage" id="7914">
+					<posx>370r</posx>
+					<posy>0</posy>
+					<width>335</width>
+					<height>130</height>
 					<fadetime>200</fadetime>
-					<texture background="true">$INFO[ListItem.path]logo.png</texture> 
-					<aspectratio scalediffuse="false">keep</aspectratio> 
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<texture background="true">$INFO[ListItem.path]logo.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
-				<!-- Banner Mod -->		
+				<!-- Banner Mod -->
 				<control type="image">
 					<posx>0</posx>
 					<posy>14</posy>
@@ -465,8 +469,8 @@
 					<bordertexture border="8">contentpanelvertical.png</bordertexture>
 					<bordersize>8</bordersize>
 					<visible>Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
-					</control>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>14</posy>
@@ -478,10 +482,10 @@
 					<texture fallback="tvbanner.png" background="true">$INFO[ListItem.Art(banner)]</texture>
 					<bordersize>8</bordersize>
 					<visible>Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 					<visible>Skin.HasSetting(jpgsupport)</visible>
-					</control>
-					<control type="image">
+				</control>
+				<control type="image">
 					<posx>0</posx>
 					<posy>14</posy>
 					<width>514</width>
@@ -491,9 +495,9 @@
 					<texture background="true" fallback="tvbanner.png">$INFO[ListItem.Icon]</texture>
 					<bordersize>8</bordersize>
 					<visible>Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 					<visible>!Skin.HasSetting(jpgsupport)</visible>
-					</control>
+				</control>
 				<control type="label">
 					<description>Episodes</description>
 					<posx>13</posx>
@@ -503,10 +507,10 @@
 					<label fallback="416">[COLOR=accent]$LOCALIZE[20360]: [/COLOR]$INFO[listitem.episode] [COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
 					<visible>Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="group">
 					<description>Nextaired</description>
@@ -517,12 +521,11 @@
 					<include>NextAired</include>
 					<align>left</align>
 					<aligny>center</aligny>
-					 <font>cirrus_24</font>
+					<font>cirrus_24</font>
 					<scroll>true</scroll>
 					<visible>Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
-				</control>	
-				
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
 				<!-- Poster update v1.1-->
 				<control type="group">
 					<visible>Skin.HasSetting(poster) + !Skin.HasSetting(banner)</visible>
@@ -533,9 +536,9 @@
 						<height>360</height>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 						<texture>black-back.png</texture>
-		                <bordertexture border="8">contentpanelvertical.png</bordertexture>
-		                <bordersize>8</bordersize>
-                    </control>
+						<bordertexture border="8">contentpanelvertical.png</bordertexture>
+						<bordersize>8</bordersize>
+					</control>
 					<control type="image">
 						<posx>-10</posx>
 						<posy>-230</posy>
@@ -547,7 +550,6 @@
 						<bordersize>8</bordersize>
 					</control>
 				</control>
-							
 			</control>
 			<!-- RIGHTLIST BOTTOM INFO SEASONS LEVEL -->
 			<control type="group">
@@ -593,8 +595,7 @@
 						<aligny>center</aligny>
 						<font>cirrus_30</font>
 						<textcolor>white</textcolor>
-						
-						<visible>!IsEmpty(ListItem.Thumb)</visible> 
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
 					</control>
 					<control type="label">
 						<description>Episodes Values</description>
@@ -607,7 +608,7 @@
 						<aligny>center</aligny>
 						<font>cirrus_24</font>
 						<scroll>true</scroll>
-						<visible>!IsEmpty(ListItem.Thumb)</visible> 
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
 					</control>
 					<control type="image">
 						<width>131</width>
@@ -617,10 +618,9 @@
 						<fadetime>200</fadetime>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
-						<visible>!IsEmpty(ListItem.Thumb)</visible> 
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
 					</control>
 				</control>
-				
 				<control type="group">
 					<visible>!Skin.HasSetting(posterlessRightList)</visible>
 					<posx>0</posx>
@@ -635,8 +635,7 @@
 						<aligny>center</aligny>
 						<font>cirrus_30</font>
 						<textcolor>white</textcolor>
-						
-						<visible>!IsEmpty(ListItem.Thumb)</visible> 
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
 					</control>
 					<control type="label">
 						<description>Episodes Values</description>
@@ -649,7 +648,7 @@
 						<aligny>center</aligny>
 						<font>cirrus_24</font>
 						<scroll>true</scroll>
-						<visible>!IsEmpty(ListItem.Thumb)</visible> 
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
 					</control>
 					<control type="image">
 						<width>131</width>
@@ -661,17 +660,16 @@
 						<texture>$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
 					</control>
 				</control>
-				
 				<!-- TV SHOW LOGO -->
-				<control type="largeimage" id="7915"> 
-					<posx>370r</posx> 
-					<posy>220</posy> 
-					<width>283</width> 
-					<height>110</height> 
-				    <texture background="true">$INFO[ListItem.path]logo.png</texture>
-					<fadetime>200</fadetime> 
-					<aspectratio scalediffuse="false">keep</aspectratio> 
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+				<control type="largeimage" id="7915">
+					<posx>370r</posx>
+					<posy>220</posy>
+					<width>283</width>
+					<height>110</height>
+					<texture background="true">$INFO[ListItem.path]logo.png</texture>
+					<fadetime>200</fadetime>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 			</control>
 			<!-- RIGHTLIST BOTTOM INFO EPISODES LEVEL -->
@@ -686,10 +684,10 @@
 					<height>128</height>
 					<aspectratio aligny="bottom">stretch</aspectratio>
 					<texture>black-back.png</texture>
-		            <bordertexture border="8">contentpanelvertical.png</bordertexture>
-		            <bordersize>8</bordersize>
-		            <visible>!IsEmpty(ListItem.Thumb)</visible> 
-                </control>
+					<bordertexture border="8">contentpanelvertical.png</bordertexture>
+					<bordersize>8</bordersize>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
 				<control type="image">
 					<posx>10</posx>
 					<posy>-115</posy>
@@ -699,7 +697,7 @@
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordersize>8</bordersize>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="label">
 					<description>Season and episode txt</description>
@@ -712,7 +710,6 @@
 					<aligny>center</aligny>
 					<font>cirrus_30</font>
 					<textcolor>white</textcolor>
-					
 				</control>
 				<control type="textbox">
 					<description>Plot for TVShows</description>
@@ -742,27 +739,27 @@
 					<include condition="Skin.HasSetting(newFlags)">AspectCodecFlaggingConditionsNew</include>
 				</control>
 				<!-- TV SHOW LOGO -->
-				<control type="largeimage" id="7916"> 
-					<posx>370r</posx> 
-					<posy>35</posy> 
-					<width>268</width> 
-					<height>80</height> 
-					<texture background="true">$INFO[ListItem.path]logo.png</texture> 
-					<fadetime>200</fadetime> 
-					<aspectratio scalediffuse="false">keep</aspectratio> 
-					<visible>!substring(listitem.path,season)</visible> 
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+				<control type="largeimage" id="7916">
+					<posx>370r</posx>
+					<posy>35</posy>
+					<width>268</width>
+					<height>80</height>
+					<texture background="true">$INFO[ListItem.path]logo.png</texture>
+					<fadetime>200</fadetime>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<visible>!substring(listitem.path,season)</visible>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
-                <control type="largeimage" id="7917"> 
-                    <posx>370r</posx> 
-                    <posy>35</posy> 
-                    <width>268</width> 
-                    <height>80</height> 
-                    <texture background="true">$INFO[ListItem.path]../logo.png</texture> 
-                    <fadetime>200</fadetime> 
-                    <aspectratio scalediffuse="false">keep</aspectratio> 
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
-                </control>
+				<control type="largeimage" id="7917">
+					<posx>370r</posx>
+					<posy>35</posy>
+					<width>268</width>
+					<height>80</height>
+					<texture background="true">$INFO[ListItem.path]../logo.png</texture>
+					<fadetime>200</fadetime>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
 			</control>
 			<!-- RIGHLIST BOTTOM INFO MOVIES -->
 			<control type="group">
@@ -794,15 +791,15 @@
 						<bordersize>8</bordersize>
 					</control>
 					<control type="image">
-					<posx>8</posx>
-					<posy>28</posy>
-					<width>91</width>
-					<height>91</height>
-					<aspectratio>keep</aspectratio>
-					<fadetime>FanartCrossfadeTime</fadetime>
-					<texture>Overlayicons/TrailerOverlay.png</texture>
-					<visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
-				</control>
+						<posx>8</posx>
+						<posy>28</posy>
+						<width>91</width>
+						<height>91</height>
+						<aspectratio>keep</aspectratio>
+						<fadetime>FanartCrossfadeTime</fadetime>
+						<texture>Overlayicons/TrailerOverlay.png</texture>
+						<visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
+					</control>
 				</control>
 				<!-- Blueray and DVD cover images if turned on -->
 				<control type="group">
@@ -818,7 +815,8 @@
 						<fadetime>IconCrossfadeTime</fadetime>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 					</control>
-					<control type="image"> <!-- DVD Case -->
+					<control type="image">
+						<!-- DVD Case -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>240</width>
@@ -828,7 +826,8 @@
 						<texture>special://skin/extras/flagging/cases/dvd.png</texture>
 						<visible>![stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080) | stringcompare(ListItem.VideoResolution,540)]</visible>
 					</control>
-					<control type="image"> <!-- Bluray Case -->
+					<control type="image">
+						<!-- Bluray Case -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>240</width>
@@ -838,7 +837,8 @@
 						<texture>special://skin/extras/flagging/cases/bluray.png</texture>
 						<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + !substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)</visible>
 					</control>
-					<control type="image"> <!-- Bluray 3D Case -->
+					<control type="image">
+						<!-- Bluray 3D Case -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>240</width>
@@ -848,7 +848,8 @@
 						<texture>special://skin/extras/flagging/cases/3dbluraycase3.png</texture>
 						<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)</visible>
 					</control>
-					<control type="image"> <!-- HDDVD Case -->
+					<control type="image">
+						<!-- HDDVD Case -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>240</width>
@@ -873,7 +874,8 @@
 						<fadetime>IconCrossfadeTime</fadetime>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 					</control>
-					<control type="image"> <!-- DVD Clear Case -->
+					<control type="image">
+						<!-- DVD Clear Case -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>240</width>
@@ -883,7 +885,8 @@
 						<texture>special://skin/extras/flagging/cases/dvd-clear.png</texture>
 						<visible>![stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080) | stringcompare(ListItem.VideoResolution,540)]</visible>
 					</control>
-					<control type="image"> <!-- Bluray Clear Case -->
+					<control type="image">
+						<!-- Bluray Clear Case -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>240</width>
@@ -893,7 +896,8 @@
 						<texture>special://skin/extras/flagging/cases/bluray-clear.png</texture>
 						<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + !substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)</visible>
 					</control>
-					<control type="image"> <!-- Bluray 3D Clear Case -->
+					<control type="image">
+						<!-- Bluray 3D Clear Case -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>240</width>
@@ -903,7 +907,8 @@
 						<texture>special://skin/extras/flagging/cases/3dbluray-clear.png</texture>
 						<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)</visible>
 					</control>
-					<control type="image"> <!-- HDDVD Clear Case -->
+					<control type="image">
+						<!-- HDDVD Clear Case -->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>240</width>
@@ -929,9 +934,9 @@
 						<aligny>center</aligny>
 						<font>cirrus_24</font>
 						<textcolor>white</textcolor>
-						
 					</control>
-					<control type="textbox"> <!-- plot -->
+					<control type="textbox">
+						<!-- plot -->
 						<description>plot</description>
 						<posx>0</posx>
 						<posy>32</posy>
@@ -961,7 +966,7 @@
 						<visible>!Skin.HasSetting(plotoutline)</visible>
 						<visible>Skin.HasSetting(noMPAAStudioFlags)</visible>
 					</control>
-					<control type="textbox"> 
+					<control type="textbox">
 						<description>plot</description>
 						<posx>0</posx>
 						<posy>32</posy>
@@ -976,8 +981,8 @@
 						<visible>!Skin.HasSetting(plotoutline)</visible>
 						<visible>Skin.HasSetting(newMPAAFlags) + !Skin.HasSetting(noMPAAStudioFlags)</visible>
 					</control>
-					
-					<control type="textbox"> <!-- CUSTOM mod plotoutline -->
+					<control type="textbox">
+						<!-- CUSTOM mod plotoutline -->
 						<description>plotoutline</description>
 						<posx>0</posx>
 						<posy>32</posy>
@@ -1003,7 +1008,6 @@
 						<aligny>top</aligny>
 						<font>cirrus_18</font>
 						<textcolor>white</textcolor>
-						
 						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>Skin.HasSetting(plotoutline)</visible>
 						<visible>Skin.HasSetting(noMPAAStudioFlags)</visible>
@@ -1034,7 +1038,6 @@
 						<aligny>center</aligny>
 						<font>cirrus_26</font>
 						<textcolor>accent</textcolor>
-						
 					</control>
 					<control type="label">
 						<description>Runtime label</description>
@@ -1061,23 +1064,23 @@
 						<aligny>center</aligny>
 						<font>cirrus_26</font>
 						<textcolor>white</textcolor>
-						
 						<visible>SubString(ListItem.Duration,mins)</visible>
 						<visible>!ListItem.IsFolder</visible>
 					</control>
-		
-					<control type="image"> <!-- Top250IMDB Mod 1.2 -->
-					<posx>190</posx>
-					<posy>110</posy>
-					<width>88</width>
-					<height>30</height>
-					<aspectratio aligny="bottom">stretch</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture>IMDBFlag.png</texture>
-					<visible>!IsEmpty(ListItem.Top250)</visible>
-					<colordiffuse>accent</colordiffuse>
-				</control>
-					<control type="label"> <!-- Top250IMDB Mod 1.2 -->
+					<control type="image">
+						<!-- Top250IMDB Mod 1.2 -->
+						<posx>190</posx>
+						<posy>110</posy>
+						<width>88</width>
+						<height>30</height>
+						<aspectratio aligny="bottom">stretch</aspectratio>
+						<fadetime>IconCrossfadeTime</fadetime>
+						<texture>IMDBFlag.png</texture>
+						<visible>!IsEmpty(ListItem.Top250)</visible>
+						<colordiffuse>accent</colordiffuse>
+					</control>
+					<control type="label">
+						<!-- Top250IMDB Mod 1.2 -->
 						<description>top250</description>
 						<posx>51</posx>
 						<posy>108</posy>
@@ -1088,8 +1091,7 @@
 						<aligny>center</aligny>
 						<font>cirrus_38_Bold</font>
 						<textcolor>white</textcolor>
-						
-						</control>
+					</control>
 				</control>
 				<control type="group">
 					<posx>5</posx>
@@ -1106,7 +1108,6 @@
 						<aligny>center</aligny>
 						<font>cirrus_24</font>
 						<textcolor>white</textcolor>
-						
 					</control>
 					<control type="textbox">
 						<description>plot</description>
@@ -1161,7 +1162,6 @@
 						<aligny>center</aligny>
 						<font>cirrus_35</font>
 						<textcolor>accent</textcolor>
-						
 					</control>
 					<control type="label">
 						<description>Runtime label</description>
@@ -1188,22 +1188,23 @@
 						<aligny>center</aligny>
 						<font>cirrus_35</font>
 						<textcolor>white</textcolor>
-						
 						<visible>SubString(ListItem.Duration,mins)</visible>
 						<visible>!ListItem.IsFolder</visible>
 					</control>
-					<control type="image"> <!-- Top250IMDB Mod 1.2 -->
-					<posx>230</posx>
-					<posy>110</posy>
-					<width>88</width>
-					<height>30</height>
-					<aspectratio aligny="bottom">stretch</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture>IMDBFlag.png</texture>
-					<visible>!IsEmpty(ListItem.Top250)</visible>
-					<colordiffuse>accent</colordiffuse>
-				</control>
-					<control type="label"> <!-- Top250IMDB Mod 1.2 -->
+					<control type="image">
+						<!-- Top250IMDB Mod 1.2 -->
+						<posx>230</posx>
+						<posy>110</posy>
+						<width>88</width>
+						<height>30</height>
+						<aspectratio aligny="bottom">stretch</aspectratio>
+						<fadetime>IconCrossfadeTime</fadetime>
+						<texture>IMDBFlag.png</texture>
+						<visible>!IsEmpty(ListItem.Top250)</visible>
+						<colordiffuse>accent</colordiffuse>
+					</control>
+					<control type="label">
+						<!-- Top250IMDB Mod 1.2 -->
 						<description>top250</description>
 						<posx>91</posx>
 						<posy>108</posy>
@@ -1214,8 +1215,7 @@
 						<aligny>center</aligny>
 						<font>cirrus_38_Bold</font>
 						<textcolor>white</textcolor>
-						
-						</control>
+					</control>
 				</control>
 				<control type="image">
 					<width>240</width>
@@ -1280,24 +1280,24 @@
 					<include condition="Skin.HasSetting(newFlags)">VideoCodecFlaggingConditionsNew</include>
 					<include condition="Skin.HasSetting(newFlags)">AudioCodecFlaggingConditionsNew</include>
 					<include condition="Skin.HasSetting(newFlags)">AspectCodecFlaggingConditionsNew</include>
-					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
 				</control>
 			</control>
-			 <control type="scrollbar" id="60">
-        <posx>10</posx>
-        <posy>100</posy>
-        <width>25</width>
-        <height>220</height>
-        <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-        <textureslidernib>ScrollBarV.png</textureslidernib>
-        <textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
-        <onleft>2</onleft>
-        <onright>569</onright>
-        <showonepage>false</showonepage>
-        <orientation>vertical</orientation>
-        <visible>Control.IsVisible(569)</visible>
-		<visible allowhiddenfocus="true">Control.IsVisible(569) + Control.HasFocus(60)</visible>
-      </control>
+			<control type="scrollbar" id="60">
+				<posx>10</posx>
+				<posy>100</posy>
+				<width>25</width>
+				<height>220</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<textureslidernib>ScrollBarV.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
+				<onleft>2</onleft>
+				<onright>569</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(569)</visible>
+				<visible allowhiddenfocus="true">Control.IsVisible(569) + Control.HasFocus(60)</visible>
+			</control>
 		</control>
 	</include>
 </includes>
