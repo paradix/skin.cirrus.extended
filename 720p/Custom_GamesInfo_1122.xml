@@ -1,93 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="1122" type="dialog">
     <defaultcontrol always="true">8</defaultcontrol>
-    <allowoverlay>no</allowoverlay>
     <controls>
-        <!--     <control type="button" id="7050">
-      <texturefocus>-</texturefocus>
-      <texturenofocus>-</texturenofocus>
-      <onfocus>SendClick(movieinformation,5)</onfocus>
-      <onfocus>SetFocus(5)</onfocus>
-    </control>
-    <control type="button" id="7051">
-      <texturefocus>-</texturefocus>
-      <texturenofocus>-</texturenofocus>
-      <onfocus>SendClick(movieinformation,5)</onfocus>
-      <onfocus>SetFocus(50)</onfocus>
-    </control> -->
         <control type="group">
             <visible>!Window.IsVisible(FileBrowser)</visible>
             <animation effect="slide" start="1300,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
             <animation effect="slide" start="0,0" end="1300,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
             <control type="image">
-                <posx>0</posx>
-                <posy>0</posy>
+                <left>0</left>
+                <top>0</top>
                 <width>1280</width>
                 <height>720</height>
                 <texture>special://skin/backgrounds/blackbackground.jpg</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
-            <!-- Background -->
             <control type="image">
-                <posx>0</posx>
-                <posy>0</posy>
+                <left>0</left>
+                <top>0</top>
                 <width>1280</width>
                 <height>720</height>
                 <aspectratio>stretch</aspectratio>
                 <texture fallback="special://skin/backgrounds/games.jpg" background="true">$INFO[ListItem.Art(fanart)]</texture>
             </control>
             <control type="image">
-                <posx>0</posx>
-                <posy>-20</posy>
+                <left>0</left>
+                <top>-20</top>
                 <width>1280</width>
                 <height>750</height>
                 <texture>black-back3.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
-                <posx>0</posx>
-                <posy>-20</posy>
+                <left>0</left>
+                <top>-20</top>
                 <width>1280</width>
                 <height>750</height>
                 <texture>black-back3.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
-                <posx>0</posx>
-                <posy>-20</posy>
+                <left>0</left>
+                <top>-20</top>
                 <width>1280</width>
                 <height>750</height>
                 <texture>black-back3.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
-                <posx>0</posx>
-                <posy>-20</posy>
+                <left>0</left>
+                <top>-20</top>
                 <width>1280</width>
                 <height>750</height>
                 <texture>black-back3.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
-            <!--  <control type="image">
-        <posx>0</posx>
-        <posy>-20</posy>
-        <width>1280</width>
-        <height>750</height>
-        <texture>black-back3.png</texture>
-        <aspectratio>stretch</aspectratio>
-      </control> -->
             <control type="group">
                 <animation effect="fade" delay="400" start="0" end="100" time="200">WindowOpen</animation>
                 <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-
-                <!-- Appears when FANART Button selected -->
                 <control type="group">
                     <visible>Control.HasFocus(12)</visible>
-                    <posy>0</posy>
-                    <posx>0</posx>
+                    <top>0</top>
+                    <left>0</left>
                     <control type="image">
                         <description>Current Fanart image</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <left>0</left>
+                        <top>0</top>
                         <width>1280</width>
                         <height>720</height>
                         <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
@@ -95,18 +72,16 @@
                         <visible>!IsEmpty(ListItem.Art(fanart))</visible>
                     </control>
                     <control type="image">
-                        <!-- bottom bar background -->
-                        <posx>0</posx>
-                        <posy>60r</posy>
+                        <left>0</left>
+                        <top>60r</top>
                         <width>1280</width>
                         <height>720</height>
                         <aspectratio>stretch</aspectratio>
                         <texture>rightlistbackground.png</texture>
                     </control>
                     <control type="image">
-                        <!-- bottom bar background -->
-                        <posx>0</posx>
-                        <posy>60r</posy>
+                        <left>0</left>
+                        <top>60r</top>
                         <width>1280</width>
                         <height>720</height>
                         <aspectratio>stretch</aspectratio>
@@ -116,47 +91,43 @@
                         <visible>IsEmpty(ListItem.Art(fanart))</visible>
                         <control type="image">
                             <description>No Fanart Back</description>
-                            <posx>0</posx>
-                            <posy>0</posy>
+                            <left>0</left>
+                            <top>0</top>
                             <width>1280</width>
                             <height>720</height>
                             <texture>special://skin/backgrounds/movies.jpg</texture>
                             <aspectratio>stretch</aspectratio>
                         </control>
                         <control type="image">
-                            <!-- bottom bar background -->
-                            <posx>0</posx>
-                            <posy>60r</posy>
+                            <left>0</left>
+                            <top>60r</top>
                             <width>1280</width>
                             <height>720</height>
                             <aspectratio>stretch</aspectratio>
                             <texture>rightlistbackground.png</texture>
                         </control>
                         <control type="image">
-                            <!-- bottom bar background -->
-                            <posx>0</posx>
-                            <posy>60r</posy>
+                            <left>0</left>
+                            <top>60r</top>
                             <width>1280</width>
                             <height>720</height>
                             <aspectratio>stretch</aspectratio>
                             <texture>rightlistbackground.png</texture>
                         </control>
                         <control type="label">
-                            <posx>0</posx>
-                            <posy>320</posy>
+                            <left>0</left>
+                            <top>320</top>
                             <width>1280</width>
                             <height>380</height>
                             <font>cirrus_40_Bold</font>
                             <textcolor>white</textcolor>
-                            <shadowcolor/>
+                            <shadowcolor />
                             <align>center</align>
                             <aligny>center</aligny>
                             <label>31311</label>
                         </control>
                     </control>
                 </control>
-
-                <!-- ====== ALA SECTION ======== -->
                 <control type="group">
                     <animation type="WindowOpen" reversible="false">
                         <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
@@ -165,27 +136,24 @@
                     <animation type="WindowClose" reversible="false">
                         <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
                         <effect type="fade" start="100" end="0" time="300" />
-                    </animation>      
+                    </animation>
                     <visible>[!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)] + !Control.HasFocus(12)</visible>
-                    <posy>50</posy>
-                    <posx>20</posx>
-
-
-                    <!-- ALA Poster and media flags-->
+                    <top>50</top>
+                    <left>20</left>
                     <control type="group">
-                        <posx>20</posx>
-                        <posy>-20</posy>
+                        <left>20</left>
+                        <top>-20</top>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>0</posy>
+                            <left>0</left>
+                            <top>0</top>
                             <width>1</width>
                             <height>350</height>
                             <aspectratio>stretch</aspectratio>
                             <texture>separator_vertical.png</texture>
                         </control>
                         <control type="image">
-                            <posx>90</posx>
-                            <posy>5</posy>
+                            <left>90</left>
+                            <top>5</top>
                             <width>220</width>
                             <height>330</height>
                             <aspectratio>stretch</aspectratio>
@@ -195,60 +163,49 @@
                             <bordersize>8</bordersize>
                         </control>
                         <control type="image">
-                            <!-- STUDIO FLAG -->
                             <width>120</width>
                             <height>69</height>
-                            <posx>620</posx>
-                            <posy>550</posy>
+                            <left>620</left>
+                            <top>550</top>
                             <aspectratio>keep</aspectratio>
                             <align>right</align>
                             <texture>$INFO[listitem.Studio,flagging/studios/,.png]</texture>
                         </control>
                         <control type="image">
-                            <posx>0</posx>
-                            <posy>360</posy>
+                            <left>0</left>
+                            <top>360</top>
                             <width>1280</width>
                             <height>1</height>
                             <aspectratio>stretch</aspectratio>
                             <texture>separator.png</texture>
                         </control>
                         <control type="image">
-                            <posx>760</posx>
-                            <posy>385</posy>
+                            <left>760</left>
+                            <top>385</top>
                             <width>1</width>
                             <height>230</height>
                             <aspectratio>stretch</aspectratio>
                             <texture>separator_vertical.png</texture>
                         </control>
                         <control type="image">
-                            <posx>795</posx>
-                            <posy>385</posy>
+                            <left>795</left>
+                            <top>385</top>
                             <width>405</width>
                             <height>227</height>
-                            <texture background="true">$INFO[ListItem.Art(fanart)]</texture>	
+                            <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
                             <bordertexture border="6">ContentPanelvertical.png</bordertexture>
                             <bordersize>6</bordersize>
                             <aspectratio>stretch</aspectratio>
-                            <visible>!Player.HasVideo | Skin.HasSetting(Use_Startup_DreamVideo)</visible>
                         </control>
-                        <control type="videowindow" id="8">
-                            <posx>795</posx>
-                            <posy>385</posy>
-                            <width>405</width>
-                            <height>227</height>
-                            <visible>!Skin.HasSetting(Use_Startup_DreamVideo)</visible>
-                        </control> 
                     </control>
-
-                    <!-- LABELS -->
                     <control type="group">
-                        <posx>400</posx>
-                        <posy>-20</posy>
+                        <left>400</left>
+                        <top>-20</top>
                         <width>820</width>
                         <control type="label">
                             <description>movie title label</description>
-                            <posx>85</posx>
-                            <posy>10</posy>
+                            <left>85</left>
+                            <top>10</top>
                             <width>570</width>
                             <height>30</height>
                             <font>cirrus_40</font>
@@ -256,12 +213,11 @@
                             <align>left</align>
                             <aligny>center</aligny>
                             <textcolor>white</textcolor>
-                            <shadowcolor/>
                         </control>
                         <control type="label">
                             <description>genre label</description>
-                            <posx>85</posx>
-                            <posy>40</posy>
+                            <left>85</left>
+                            <top>40</top>
                             <width>570</width>
                             <height>30</height>
                             <font>cirrus_20</font>
@@ -269,13 +225,11 @@
                             <align>left</align>
                             <aligny>center</aligny>
                             <textcolor>grey2</textcolor>
-                            <shadowcolor/>
                         </control>
-                        <!-- Changes End Butchabay MOD 1.2.0 -->
                         <control type="image">
                             <description>Movie Title separator</description>
-                            <posx>0</posx>
-                            <posy>75</posy>
+                            <left>0</left>
+                            <top>75</top>
                             <width>880</width>
                             <height>1</height>
                             <aspectratio>stretch</aspectratio>
@@ -283,24 +237,23 @@
                         </control>
                         <control type="image">
                             <description>Bottom separator</description>
-                            <posx>-400</posx>
-                            <posy>630</posy>
+                            <left>-400</left>
+                            <top>630</top>
                             <width>1290</width>
                             <height>1</height>
                             <aspectratio>stretch</aspectratio>
                             <texture>separator.png</texture>
                         </control>
                     </control>
-                    <!-- year, runtime, director, writer, cast (cast label only) -->
                     <control type="list" id="49">
-                        <posx>320</posx>
-                        <posy>60</posy>
+                        <left>320</left>
+                        <top>60</top>
                         <width>600</width>
                         <height>266</height>
                         <itemlayout height="30">
                             <control type="label">
-                                <posx>165</posx>
-                                <posy>0</posy>
+                                <left>165</left>
+                                <top>0</top>
                                 <width>160</width>
                                 <height>30</height>
                                 <font>cirrus_20</font>
@@ -311,8 +264,8 @@
                                 <info>ListItem.Label</info>
                             </control>
                             <control type="label">
-                                <posx>270</posx>
-                                <posy>0</posy>
+                                <left>270</left>
+                                <top>0</top>
                                 <width>565</width>
                                 <height>30</height>
                                 <font>cirrus_20</font>
@@ -325,8 +278,8 @@
                         </itemlayout>
                         <focusedlayout height="30">
                             <control type="label">
-                                <posx>165</posx>
-                                <posy>0</posy>
+                                <left>165</left>
+                                <top>0</top>
                                 <width>160</width>
                                 <height>30</height>
                                 <font>cirrus_20</font>
@@ -337,8 +290,8 @@
                                 <info>ListItem.Label</info>
                             </control>
                             <control type="label">
-                                <posx>270</posx>
-                                <posy>0</posy>
+                                <left>270</left>
+                                <top>0</top>
                                 <width>565</width>
                                 <height>80</height>
                                 <font>cirrus_20</font>
@@ -353,27 +306,26 @@
                             <item>
                                 <label>$LOCALIZE[562]:</label>
                                 <label2>$INFO[ListItem.Year]</label2>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                             </item>
                             <item>
-                                <label>System:</label>
+                                <label>$LOCALIZE[13000]:</label>
                                 <label2>$INFO[ListItem.Writer]</label2>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                             </item>
                             <item>
-                                <label>Studio:</label>
+                                <label>$LOCALIZE[572]:</label>
                                 <label2>$INFO[ListItem.Studio]</label2>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                             </item>
                         </content>
                     </control>
                 </control>
-                <!-- PLOT -->
                 <control type="textbox" id="400">
                     <description>Description Value for Movies</description>
                     <visible>!Control.HasFocus(12)</visible>
-                    <posx>40</posx>
-                    <posy>410</posy>
+                    <left>40</left>
+                    <top>410</top>
                     <width>730</width>
                     <height>145</height>
                     <font>cirrus_22</font>
@@ -383,13 +335,9 @@
                     <label>$INFO[ListItem.Plot]</label>
                     <autoscroll time="3000" delay="4000" repeat="5000">!Control.HasFocus(61) + Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
-
-
-
-                <!-- Buttons -->
                 <control type="grouplist" id="9000">
-                    <posx>1245r</posx>
-                    <posy>677</posy>
+                    <left>1245r</left>
+                    <top>677</top>
                     <width>1200</width>
                     <height>40</height>
                     <itemgap>-1</itemgap>
@@ -409,32 +357,32 @@
                     </control>
                     <control type="button" id="9">
                         <description>Get Info</description>
-                        <include>ButtonVideoInfoCommonValues</include> -->
-                    <onclick>RunPlugin($INFO[ListItem.FileNameAndPath]/%%GET_INFO%%)</onclick> -->
-                <label>41236</label>
-            </control>
-            <control type="button" id="10">
-                <description>Get Thumb</description>
-                <include>ButtonVideoInfoCommonValues</include>
-                <onclick>Dialog.Close(1122)</onclick>
-                <onclick>RunPlugin($INFO[ListItem.FileNameAndPath]/%%GET_THUMB%%)</onclick>
-                <label>13405</label>
-            </control>
-            <control type="button" id="12">
-                <description>Get Fanart</description>
-                <include>ButtonVideoInfoCommonValues</include>
-                <onclick>Dialog.Close(1122)</onclick>
-                <onclick>RunPlugin($INFO[ListItem.FileNameAndPath]/%%GET_FANART%%)</onclick>
-                <label>20413</label>
-            </control> 
-            <control type="button" id="11">
-                <description>Play Game Trailer</description>
-                <include>ButtonVideoInfoCommonValues</include>
-                <onclick>ActivateWindow(1123)</onclick>
-                <label>41238</label>
+                        <include>ButtonVideoInfoCommonValues</include>
+                        <onclick>RunPlugin($INFO[ListItem.FileNameAndPath]/%%GET_INFO%%)</onclick> --&gt;
+                        <label>41236</label>
+                    </control>
+                    <control type="button" id="10">
+                        <description>Get Thumb</description>
+                        <include>ButtonVideoInfoCommonValues</include>
+                        <onclick>Dialog.Close(1122)</onclick>
+                        <onclick>RunPlugin($INFO[ListItem.FileNameAndPath]/%%GET_THUMB%%)</onclick>
+                        <label>13405</label>
+                    </control>
+                    <control type="button" id="12">
+                        <description>Get Fanart</description>
+                        <include>ButtonVideoInfoCommonValues</include>
+                        <onclick>Dialog.Close(1122)</onclick>
+                        <onclick>RunPlugin($INFO[ListItem.FileNameAndPath]/%%GET_FANART%%)</onclick>
+                        <label>20413</label>
+                    </control>
+                    <control type="button" id="11">
+                        <description>Play Game Trailer</description>
+                        <include>ButtonVideoInfoCommonValues</include>
+                        <onclick>ActivateWindow(1123)</onclick>
+                        <label>41238</label>
+                    </control>
+                </control>
             </control>
         </control>
-    </control>
-</control>
-</controls>
+    </controls>
 </window>

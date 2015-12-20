@@ -1,6 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- pop-up menu for games trailer -->
-
-
 <window id="1123" type="dialog">
     <defaultcontrol>9021</defaultcontrol>
 
@@ -12,8 +11,8 @@
 
             <control type="button" id="8999">
                 <description>Fake button for mouse control</description>
-                <posx>-260</posx>
-                <posy>0</posy>
+                <left>-260</left>
+                <top>0</top>
                 <width>265</width>
                 <height>720</height>
                 <label>-</label>
@@ -25,35 +24,36 @@
 
             <!-- Menu background panel -->
             <control type="image">
-                <posx>-820</posx>
-                <posy>0</posy>
+                <left>-820</left>
+                <top>0</top>
                 <width>820</width>
                 <height>720</height>
                 <texture border="5">dialogbackground.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
-                <posx>-820</posx>
-                <posy>0</posy>
+                <left>-820</left>
+                <top>0</top>
                 <width>820</width>
                 <height>720</height>
                 <texture border="5">dialogbackground.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
-                <posx>-250</posx>
-                <posy>650</posy>
+                <left>-250</left>
+                <top>650</top>
                 <width>160</width>
                 <height>40</height>
-                <texture>xbmc_logo_white.png</texture>
+                <aspectratio>keep</aspectratio>
+                <texture>cirrusLogo.png</texture>
             </control>
             <control type="group">   
-                <posx>-240</posx>
-                <posy>20</posy>
+                <left>-240</left>
+                <top>20</top>
                 <control type="label">
                     <description>View options</description>
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>250</width>
                     <height>30</height>
                     <font>cirrus_24</font>
@@ -62,20 +62,19 @@
                     <scroll>false</scroll>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <label>Playback Options</label>
+                    <label>$LOCALIZE[41240]</label>
                 </control>
             </control>
 
             <!-- MENU ITEMS BELOW -->
             <control type="group" id="9021">
-                <posx>-260</posx>
-                <posy>70</posy>
+                <left>-260</left>
+                <top>70</top>
                 <control type="button" id="2">
                     <description>Trailer Windowed</description>
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <include>ButtonCommonValues</include>
-                    <description>Trailer Windowed</description>
                     <onclick>Dialog.Close(1123)</onclick>
                     <onclick>XBMC.PlayMedia($INFO[Skin.String(Menu_GameCustom1_Label)]/$INFO[ListItem.trailer],1)</onclick>
                     <label>41204</label>
@@ -86,10 +85,9 @@
                 </control>
                 <control type="button" id="3">
                     <description>Trailer Fullscreen</description>
-                    <posx>0</posx>
-                    <posy>40</posy>
+                    <left>0</left>
+                    <top>40</top>
                     <include>ButtonCommonValues</include>
-                    <description>TrailerFullscreen</description>
                     <onclick>Dialog.Close(1123)</onclick>
                     <onclick>Dialog.Close(1122)</onclick>
                     <onclick>XBMC.PlayMedia($INFO[Skin.String(Menu_GameCustom1_Label)]/$INFO[ListItem.trailer])</onclick>
@@ -101,8 +99,8 @@
                 </control>
                 <control type="button" id="5">
                     <description>Exit</description>
-                    <posx>0</posx>
-                    <posy>120</posy>
+                    <left>0</left>
+                    <top>120</top>
                     <onclick>Dialog.Close(1123)</onclick>
                     <label>13012</label>
                     <include>ButtonCommonValues</include>

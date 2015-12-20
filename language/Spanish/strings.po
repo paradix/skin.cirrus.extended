@@ -145,14 +145,6 @@ msgctxt "#31106"
 msgid "Miscellaneous options"
 msgstr "Miscelanea"
 
-msgctxt "#31108"
-msgid "Hide Main Menu Buttons"
-msgstr "Ocultar botones del menú principal"
-
-msgctxt "#31109"
-msgid "Home screen backgrounds"
-msgstr "Fondos de pantalla del menú principal"
-
 msgctxt "#31110"
 msgid "Edit Background for Home Button"
 msgstr "Editar fondo para botón principal del menú"
@@ -168,10 +160,6 @@ msgstr "Imagen única"
 msgctxt "#31114"
 msgid "Multi Image"
 msgstr "Multi Imagen"
-
-msgctxt "#31115"
-msgid "Customizer"
-msgstr "Personalizador"
 
 msgctxt "#31120"
 msgid "BUTTON LABEL"
@@ -190,24 +178,12 @@ msgid "Show Background \"Now Playing\" Visualization"
 msgstr "Mostrar Visualización de fondo"
 
 msgctxt "#31126"
-msgid "Enable Lyrics in Music OSD"
+msgid "Enable Lyrics Addon"
 msgstr "Habilitar Letras de canciones en el OSD"
-
-msgctxt "#31127"
-msgid "PATH TO LYRICS SCRIPT"
-msgstr "RUTA AL SCRIPT DE LETRAS"
 
 msgctxt "#31128"
 msgid "XBMC Lyrics"
 msgstr "XBMC Lyrics"
-
-msgctxt "#31129"
-msgid "Enable Subtitle Download in Video OSD"
-msgstr "Habilitar descarga de subtitulos en el OSD"
-
-msgctxt "#31130"
-msgid "PATH TO SUBTITLE SCRIPT"
-msgstr "RUTA AL SCRIPT DE SUBTÍTULOS"
 
 msgctxt "#31185"
 msgid "Listed Shows"
@@ -221,25 +197,9 @@ msgctxt "#31187"
 msgid "TV Guide"
 msgstr "Guia TV"
 
-msgctxt "#31203"
-msgid "Choose Your Song"
-msgstr "Selecciona Canción"
-
 msgctxt "#31205"
 msgid "Lyrics Source"
 msgstr "Fuente de letras de canción"
-
-msgctxt "#31250"
-msgid "Radar & Forecast"
-msgstr "Pronóstico & Radar"
-
-msgctxt "#31251"
-msgid "Forecast"
-msgstr "Pronóstico"
-
-msgctxt "#31252"
-msgid "TWC Script"
-msgstr "TWC Script"
 
 msgctxt "#31301"
 msgid "Last Updated"
@@ -288,14 +248,6 @@ msgstr "Ultimo Logueo"
 msgctxt "#31321"
 msgid "Karaoke Song Selector"
 msgstr "Seleccionar Canción Karaoke"
-
-msgctxt "#31323"
-msgid "Latest Movies"
-msgstr "Últimas Películas"
-
-msgctxt "#31324"
-msgid "Latest Episodes"
-msgstr "Últimos Episodios"
 
 msgctxt "#31325"
 msgid "Playlist Options"
@@ -422,24 +374,20 @@ msgid "Weekend Forecast"
 msgstr "Pronóstico semanal"
 
 msgctxt "#31904"
-msgid "10 Day Forecast"
-msgstr "Pronóstico de 10 días"
+msgid "Daily Forecast"
+msgstr ""
 
 msgctxt "#31905"
 msgid "Forecast"
 msgstr "Pronóstico"
-
-msgctxt "#31908"
-msgid "Chance of Precipitation"
-msgstr "Probabilidad de precipitación"
 
 msgctxt "#31909"
 msgid "Fetching forecast info..."
 msgstr "Obteniendo información meteorológica..."
 
 msgctxt "#31910"
-msgid "Map & Alerts"
-msgstr "Mapa y alertas"
+msgid "Maps"
+msgstr ""
 
 msgctxt "#40000"
 msgid "Fanart Poster"
@@ -501,14 +449,6 @@ msgctxt "#41007"
 msgid "Enable CDArt animation on music visualization screen"
 msgstr "Habilitar animación CDArt en la pantalla de visualización de música"
 
-msgctxt "#41008"
-msgid "Enable CDArt animation on Home"
-msgstr "Habilitar animación CDArt en la página principal"
-
-msgctxt "#41009"
-msgid "Enable ClearArt"
-msgstr "Habilitar ClearArt"
-
 msgctxt "#41010"
 msgid "Enable New Media Flags"
 msgstr "Habilitar nuevos logos de multimedia"
@@ -556,10 +496,6 @@ msgstr "Añadir fondos de pantalla animados"
 msgctxt "#41021"
 msgid "Global Animated Backgrounds"
 msgstr "Añadir fondos de pantalla animados globales"
-
-msgctxt "#41025"
-msgid "Music Visualisation"
-msgstr "Visualización de Música"
 
 msgctxt "#41027"
 msgid "Addon Submenu"
@@ -793,10 +729,6 @@ msgctxt "#41084"
 msgid "Enable Landscape"
 msgstr "Habilitar Landscape.jpg en la TV FanartView"
 
-msgctxt "#41085"
-msgid "Enable .jpg support for BannerView"
-msgstr "Habilitar soporte .jpg  en la BannerView"
-
 msgctxt "#41086"
 msgid "Enable Extra Fanart for Movies"
 msgstr "Habilitar Extra Fanart para las Películas"
@@ -852,10 +784,6 @@ msgstr "Habilitar/Deshabilitar Vistas"
 msgctxt "#41110"
 msgid "Get Artwork"
 msgstr "Obtener Logos/Arte"
-
-msgctxt "#41111"
-msgid "Rightlist Logo"
-msgstr "Rightlist Logo"
 
 msgctxt "#41112"
 msgid "Music Coverflow"
@@ -922,7 +850,7 @@ msgid "Enable IMDB Rating Number in FanartView"
 msgstr "Habilitar puntuación IMDB en FanartView"
 
 msgctxt "#41138"
-msgid "Artist fanart on home while playing music"
+msgid "Artist fanart slideshow on home while playing music"
 msgstr "Fanart de artista en el menú principal mientras se reproduce"
 
 msgctxt "#41139"
@@ -949,10 +877,6 @@ msgctxt "#41144"
 msgid "Disable CDArt Spinning in Extended Now Playing"
 msgstr "Deshabilitar rotación de CDArt en \"Ahora reproduciendo\" Extendido"
 
-msgctxt "#41145"
-msgid "Disable Animated Weather Icons"
-msgstr "Deshabilitar Iconos del Tiempo animados"
-
 msgctxt "#41146"
 msgid "Hide Background Weather Widget on Home"
 msgstr "Ocultar Widget de El Tiempo en el menú principal"
@@ -972,10 +896,6 @@ msgstr "Lista Canales"
 msgctxt "#41153"
 msgid "Teletext"
 msgstr "Teletexto"
-
-msgctxt "#41160"
-msgid "Disable Autoscroll in Extended Now Playing"
-msgstr "Deshabilitar Autoscroll en \"Ahora reproduciendo\" Extendido"
 
 msgctxt "#41161"
 msgid "Advanced Launcher Plugin"
@@ -1029,10 +949,6 @@ msgctxt "#41176"
 msgid "Music Path"
 msgstr "Ruta a Música"
 
-msgctxt "#41177"
-msgid "Enable Moviegenres Pack by N.O.W.A.L.L"
-msgstr "Habilitar Moviegenres Pack by N.O.W.A.L.L"
-
 msgctxt "#41178"
 msgid "Enable Custom Random Fanart"
 msgstr "Habilitar Fanart Personalizado Aleatorio"
@@ -1057,65 +973,13 @@ msgctxt "#41183"
 msgid "Movie Sets"
 msgstr "Movie Sets"
 
-msgctxt "#41184"
-msgid "Horizontal Layout"
-msgstr "Menú Horizontal"
-
 msgctxt "#41185"
 msgid "Global Search"
 msgstr "Búsqueda Global"
 
-msgctxt "#41186"
-msgid "Latest Albums"
-msgstr "Últimos Albums"
-
-msgctxt "#41187"
-msgid "Random Addons"
-msgstr "Addons Aleatorios"
-
-msgctxt "#41188"
-msgid "Enable Latest Movies"
-msgstr "Habilitar Últimas Películas"
-
-msgctxt "#41189"
-msgid "Enable Latest Episodes"
-msgstr "Habilitar Últimos Episodios"
-
-msgctxt "#41190"
-msgid "Enable Latest Albums"
-msgstr "Habilitar Últimos Albums"
-
-msgctxt "#41191"
-msgid "Enable Random Addons"
-msgstr "Habilitar Addons Aleatorios"
-
 msgctxt "#41192"
 msgid "Enable Extra Fanart for Music"
 msgstr "Habilitar Extra FanArt para Música"
-
-msgctxt "#41193"
-msgid "Creator"
-msgstr "Creador"
-
-msgctxt "#41195"
-msgid "Movie Widget"
-msgstr "Widget Películas"
-
-msgctxt "#41196"
-msgid "TV Show Widget"
-msgstr "Widget Series"
-
-msgctxt "#41197"
-msgid "Music Widget"
-msgstr "Widget Música"
-
-msgctxt "#41198"
-msgid "Addons Widget"
-msgstr "Widget Addons"
-
-msgctxt "#41199"
-msgid "Status Widget"
-msgstr "Widget Estadísticas"
 
 msgctxt "#41200"
 msgid "Get Extrafanart"
@@ -1157,97 +1021,9 @@ msgctxt "#41210"
 msgid "Dim Background on Home"
 msgstr "Oscurecer Fondo en Inicio"
 
-msgctxt "#41211"
-msgid "Enable Music Playlist at Startup"
-msgstr "Habilitar Lista de Reproducción al Inicio"
-
-msgctxt "#41212"
-msgid "Set Music Playlist"
-msgstr "Asignar Lista de Reproducción"
-
-msgctxt "#41213"
-msgid "Enable Video Playlist at Startup"
-msgstr "Habilitar Lista de Reproduccón de Video al Inicio"
-
-msgctxt "#41214"
-msgid "Set Video Playlist"
-msgstr "Asignar Lista de Reproducción de Video"
-
-msgctxt "#41215"
-msgid "Enable Animated Video Background at Startup"
-msgstr "Habilitar Video Animado de Fondo al Inicio"
-
-msgctxt "#41216"
-msgid "Set Video or Playlist"
-msgstr "Asignar Video ó Lista de Reproducción"
-
 msgctxt "#41217"
 msgid "Original Cirrus Clock"
 msgstr "Reloj Original Cirrus"
-
-msgctxt "#41219"
-msgid "Currently Watching"
-msgstr "Viendo actualmente"
-
-msgctxt "#41220"
-msgid "Movies In Progress"
-msgstr "Películas en progreso"
-
-msgctxt "#41221"
-msgid "Enable Movies in Progress Widget"
-msgstr "Habilitar Widget de Películas en progreso"
-
-msgctxt "#41222"
-msgid "Enable Currently Watching Widget"
-msgstr "Habilitar Widget \"Viendo actualmente\""
-
-msgctxt "#41223"
-msgid "Show Season Thumb"
-msgstr "Mostrar miniatura de Temporada"
-
-msgctxt "#41224"
-msgid "Show TV Show Thumb"
-msgstr "Mostrar miniatura de Serie"
-
-msgctxt "#41225"
-msgid "Show Episode Thumb"
-msgstr "Mostrar miniatura de Episodio"
-
-msgctxt "#41226"
-msgid "Enable Movies In Progress WATCHLIST - Movies -"
-msgstr "Habilitar Películas en progreso WATCHLIST - Películas -"
-
-msgctxt "#41227"
-msgid "Enable Currently Watching WATCHLIST - TV Shows -"
-msgstr "Habilitar Viendo actualmente WATCHLIST - Series -"
-
-msgctxt "#41228"
-msgid "Widgets"
-msgstr "Widgets"
-
-msgctxt "#41229"
-msgid "Choose:"
-msgstr "Elija:"
-
-msgctxt "#41230"
-msgid "Recently Added and Watchlist on Home"
-msgstr "Añadidas recientemente y Watchlist en Menú de Inicio"
-
-msgctxt "#41231"
-msgid "Alternative Recently Added and Watchlist on Home Layout"
-msgstr "Añadidas recientemente y Watchlist alternativo en Menú de Inicio"
-
-msgctxt "#41233"
-msgid "Enable Movies in Progress"
-msgstr "Habilitar Películas en Progreso"
-
-msgctxt "#41234"
-msgid "Enable Currently Watching TV Shows"
-msgstr "Habilitar Viendo actualmente en Series"
-
-msgctxt "#41235"
-msgid "Hide Plot on Pause"
-msgstr "Ocultar Argumento en Pausa"
 
 msgctxt "#41236"
 msgid "Get Info"
@@ -1272,10 +1048,6 @@ msgstr "Hora y Clima"
 msgctxt "#41242"
 msgid "Video Window"
 msgstr "Ventana de Video"
-
-msgctxt "#41243"
-msgid "Hide Plot on Info Fullscreen"
-msgstr "Ocultar Argumento en Información a Pantalla completa"
 
 msgctxt "#41245"
 msgid "Show Cases"
@@ -1317,18 +1089,6 @@ msgctxt "#41258"
 msgid "Enable Slim OSD by Zombierobot in Music Vis."
 msgstr "Habilitar Slim OSD por Zombierobot en Música"
 
-msgctxt "#41259"
-msgid "Enable Slim Info"
-msgstr "Habilitar Slim Info y Ventana Pausada"
-
-msgctxt "#41260"
-msgid "Directed By:"
-msgstr "Dirigido por:"
-
-msgctxt "#41261"
-msgid "Hide Info on Pause"
-msgstr "Ocultar Info durante Pausa"
-
 msgctxt "#41262"
 msgid "Show Buttons"
 msgstr "Mostrar Botones"
@@ -1345,18 +1105,6 @@ msgctxt "#41265"
 msgid "Global Background \"Now Playing\" Video and Visualization"
 msgstr "Pantalla Fondo Global \"Now Playing\" Video y Visualización"
 
-msgctxt "#41266"
-msgid "Enable Slim Paused/Seekbar"
-msgstr "Habilitar Slim Paused/Seekbar"
-
-msgctxt "#41267"
-msgid "Higher Info"
-msgstr "ventana Info más arriba"
-
-msgctxt "#41268"
-msgid "Lower Info"
-msgstr "ventana Info más abajo"
-
 msgctxt "#41269"
 msgid "Show Audiolanguage Flag in Video Info Screen"
 msgstr ""
@@ -1369,40 +1117,8 @@ msgctxt "#41271"
 msgid "Total Seasons:"
 msgstr ""
 
-msgctxt "#41273"
-msgid "Latest Movie Playlists"
-msgstr ""
-
-msgctxt "#41274"
-msgid "Latest TV Shows Playlist"
-msgstr ""
-
 msgctxt "#41276"
 msgid "Hide Common Page Count"
-msgstr ""
-
-msgctxt "#41279"
-msgid "Enable Latest Custom Movie Playlist1"
-msgstr ""
-
-msgctxt "#41280"
-msgid "Enable Latest Custom Movie Playlist2"
-msgstr ""
-
-msgctxt "#41281"
-msgid "Enable Latest Custom Movie Playlist3"
-msgstr ""
-
-msgctxt "#41282"
-msgid "Enable Latest Custom TV Playlist1"
-msgstr ""
-
-msgctxt "#41283"
-msgid "Enable Latest Custom TV Playlist2"
-msgstr ""
-
-msgctxt "#41284"
-msgid "Enable Latest Custom TV Playlist3"
 msgstr ""
 
 msgctxt "#41285"
@@ -1411,30 +1127,6 @@ msgstr ""
 
 msgctxt "#41286"
 msgid "Actor Info"
-msgstr ""
-
-msgctxt "#41287"
-msgid "Latest TV Shows Playlist1 Widget"
-msgstr ""
-
-msgctxt "#41288"
-msgid "Latest TV Shows Playlist2 Widget"
-msgstr ""
-
-msgctxt "#41289"
-msgid "Latest TV Shows Playlist3 Widget"
-msgstr ""
-
-msgctxt "#41290"
-msgid "Latest Movie Playlist1 Widget"
-msgstr ""
-
-msgctxt "#41291"
-msgid "Latest Movie Playlist2 Widget"
-msgstr ""
-
-msgctxt "#41292"
-msgid "Latest Movie Playlist3 Widget"
 msgstr ""
 
 msgctxt "#41293"

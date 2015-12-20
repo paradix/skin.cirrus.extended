@@ -1,38 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <!-- ===================================================================================== -->
     <!-- ============================== Compact VIEW ID 515 ================================ -->
-    <!-- ====================Movies, TV Shows, Seasons, Episodes, Music ====================== -->	
+    <!-- ====================Movies, TV Shows, Seasons, Episodes, Music ====================== -->
     <include name="Compact">
         <control type="group">
             <visible>Control.IsVisible(515)</visible>
-
             <control type="image">
-                <posx>0</posx>
-                <posy>120</posy>
+                <left>0</left>
+                <top>120</top>
                 <width>1280</width>
                 <height>550</height>
                 <texture>videoinfoback.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
-                <posx>-100</posx>
-                <posy>120</posy>
+                <left>-100</left>
+                <top>120</top>
                 <width>1480</width>
                 <height>480</height>
                 <texture>videoinfoback.png</texture>
             </control>
             <control type="image">
                 <!-- Black gradient up the top -->
-                <posx>0</posx>
-                <posy>0</posy>
+                <left>0</left>
+                <top>0</top>
                 <width>1280</width>
                 <height>250</height>
                 <texture>blackgradientvert.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
-                <posx>10</posx>
-                <posy>176</posy>
+                <left>10</left>
+                <top>176</top>
                 <width>450</width>
                 <height>5</height>
                 <aligny>bottom</aligny>
@@ -40,12 +40,11 @@
                 <visible>!Skin.HasSetting(videowindowglobal) | !Player.HasVideo</visible>
                 <visible>!ListItem.IsFolder</visible>
             </control>
-
             <control type="fixedlist" id="515">
                 <!-- start list -->
                 <visible>Skin.HasSetting(compact_view)</visible>
-                <posx>460</posx>
-                <posy>142</posy>
+                <left>460</left>
+                <top>142</top>
                 <width>500</width>
                 <height>435</height>
                 <orientation>vertical</orientation>
@@ -61,17 +60,18 @@
                 <visible>Container.Content(Movies)</visible>
                 <itemlayout height="40" width="580">
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <left>0</left>
+                        <top>0</top>
                         <width>700</width>
                         <height>40</height>
                         <aligny>bottom</aligny>
                         <texture border="2,2,2,2" diffuse="rowdiffuse.png">rowblank2.png</texture>
+                        <aspectratio>stretch</aspectratio>
                     </control>
                     <control type="label">
                         <description>Title</description>
-                        <posx>120r</posx>
-                        <posy>8</posy>
+                        <left>15</left>
+                        <top>8</top>
                         <width>445</width>
                         <height>25</height>
                         <label>$INFO[listitem.Label]</label>
@@ -84,16 +84,17 @@
                 </itemlayout>
                 <focusedlayout height="70" width="580">
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <left>0</left>
+                        <top>0</top>
                         <width>700</width>
                         <height>70</height>
                         <texture border="2,2,2,2">rowfocusback.png</texture>
+                        <aspectratio>stretch</aspectratio>
                     </control>
                     <control type="label">
                         <description>Title</description>
-                        <posx>120r</posx>
-                        <posy>8</posy>
+                        <left>15</left>
+                        <top>8</top>
                         <width>445</width>
                         <height>25</height>
                         <label>$INFO[listitem.Label]</label>
@@ -106,38 +107,36 @@
                     </control>
                     <control type="image">
                         <description>Rating value</description>
-                        <posx>300r</posx>
-                        <posy>40</posy>
+                        <left>300r</left>
+                        <top>40</top>
                         <width>183</width>
                         <height>25</height>
-                        <color>accent</color>
                         <texture>$INFO[Listitem.StarRating]</texture>
                         <colordiffuse>black</colordiffuse>
                         <visible>!Skin.HasSetting(imdbnr) + Container.Content(Movies)</visible>
                         <visible>!system.getbool(filelists.showparentdiritems)</visible>
+                        <aspectratio>keep</aspectratio>
                     </control>
                     <control type="label">
                         <description>Rating value</description>
-                        <posx>203r</posx>
-                        <posy>40</posy>
+                        <left>203r</left>
+                        <top>40</top>
                         <width>183</width>
                         <height>25</height>
                         <textcolor>black</textcolor>
                         <font>cirrus_18_Bold</font>
                         <align>left</align>
-                        <label>Rating $INFO[Listitem.Rating]</label>
-                        <colordiffuse>black</colordiffuse>
+                        <label>$LOCALIZE[563] $INFO[Listitem.Rating]</label>
                         <visible>Skin.HasSetting(imdbnr) + Container.Content(Movies)</visible>
                         <visible>!system.getbool(filelists.showparentdiritems)</visible>
                     </control>
                 </focusedlayout>
             </control>
-
             <control type="group">
                 <control type="label">
                     <description>Tagline label</description>
-                    <posx>15</posx>
-                    <posy>120</posy>
+                    <left>15</left>
+                    <top>120</top>
                     <width>350</width>
                     <height>50</height>
                     <label>$INFO[ListItem.Tagline]</label>
@@ -151,8 +150,8 @@
                 </control>
                 <control type="label">
                     <description>Genre label</description>
-                    <posx>15</posx>
-                    <posy>185</posy>
+                    <left>15</left>
+                    <top>185</top>
                     <width>350</width>
                     <height>25</height>
                     <label>$INFO[ListItem.Genre,[COLOR=accent]$LOCALIZE[515]:[/COLOR] ]</label>
@@ -166,8 +165,8 @@
                 </control>
                 <control type="label">
                     <description>Year Label</description>
-                    <posx>15</posx>
-                    <posy>215</posy>
+                    <left>15</left>
+                    <top>215</top>
                     <width>320</width>
                     <height>30</height>
                     <label>$INFO[ListItem.Year,[COLOR=accent]$LOCALIZE[562]:[/COLOR] ]</label>
@@ -180,8 +179,8 @@
                 </control>
                 <control type="label">
                     <description>Runtime label</description>
-                    <posx>15</posx>
-                    <posy>245</posy>
+                    <left>15</left>
+                    <top>245</top>
                     <width>320</width>
                     <height>30</height>
                     <label>$INFO[ListItem.Duration,[COLOR=accent]$LOCALIZE[31054]:[/COLOR] ] $LOCALIZE[12391]</label>
@@ -195,8 +194,8 @@
                 </control>
                 <control type="label">
                     <description>Runtime label</description>
-                    <posx>15</posx>
-                    <posy>275</posy>
+                    <left>15</left>
+                    <top>275</top>
                     <width>320</width>
                     <height>30</height>
                     <label>$INFO[ListItem.Director,[COLOR=accent]$LOCALIZE[20339]:[/COLOR] ]</label>
@@ -211,8 +210,8 @@
                 <control type="textbox">
                     <!-- CUSTOM mod plotoutline -->
                     <description>plot</description>
-                    <posx>15</posx>
-                    <posy>315</posy>
+                    <left>15</left>
+                    <top>315</top>
                     <width>440</width>
                     <height>195</height>
                     <label>$INFO[ListItem.Plot]</label>
@@ -227,8 +226,8 @@
                 <control type="textbox">
                     <!-- CUSTOM mod plotoutline -->
                     <description>plot</description>
-                    <posx>15</posx>
-                    <posy>380</posy>
+                    <left>15</left>
+                    <top>380</top>
                     <width>440</width>
                     <height>175</height>
                     <label>$INFO[ListItem.Plot]</label>
@@ -240,71 +239,49 @@
                     <autoscroll time="3000" delay="13000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                     <visible>Skin.HasSetting(videowindowglobal) + Player.HasVideo</visible>
                 </control>
-                <control type="image">
-                    <!-- Top250IMDB Mod 1.2 -->
-                    <posx>466</posx>
-                    <posy>619</posy>
-                    <width>88</width>
-                    <height>30</height>
-                    <aspectratio aligny="bottom">stretch</aspectratio>
-                    <fadetime>IconCrossfadeTime</fadetime>
-                    <texture>IMDBFlag.png</texture>
-                    <visible>!IsEmpty(ListItem.Top250)</visible>
-                    <colordiffuse>accent</colordiffuse>
+                <control type="group">
+                    <left>325</left>
+                    <top>617</top>
+                    <include>Top250Label</include>
                 </control>
-                <control type="label">
-                    <!-- Top250IMDB Mod 1.2 -->
-                    <description>top250</description>
-                    <posx>325</posx>
-                    <posy>617</posy>
-                    <width>400</width>
-                    <height>30</height>
-                    <label>$INFO[ListItem.Top250]</label>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <font>cirrus_38_Bold</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-
             </control>
             <control type="group">
-                <posx>870</posx>
-                <posy>100</posy>
+                <left>870</left>
+                <top>100</top>
                 <visible>Control.IsVisible(515)</visible>
                 <control type="image">
-                    <posx>100</posx>
-                    <posy>37</posy>
+                    <left>100</left>
+                    <top>37</top>
                     <width>295</width>
                     <height>440</height>
                     <aspectratio aligny="bottom">stretch</aspectratio>
                     <texture>black-back.png</texture>
                     <bordertexture border="8">ContentPanelvertical.png</bordertexture>
                     <bordersize>8</bordersize>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!IsEmpty(ListItem.Thumb)</visible>
                 </control>
                 <control type="image">
-                    <posx>100</posx>
-                    <posy>37</posy>
+                    <left>100</left>
+                    <top>37</top>
                     <width>295</width>
                     <height>440</height>
                     <aspectratio aligny="bottom">stretch</aspectratio>
                     <fadetime>IconCrossfadeTime</fadetime>
                     <texture background="true">$INFO[ListItem.Icon]</texture>
                     <bordersize>8</bordersize>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!IsEmpty(ListItem.Thumb)</visible>
                 </control>
                 <control type="image">
-                    <posx>296</posx>
-                    <posy>40</posy>
+                    <left>296</left>
+                    <top>40</top>
                     <width>91</width>
                     <height>91</height>
                     <aspectratio>keep</aspectratio>
                     <texture>Overlayicons/$INFO[ListItem.Overlay]</texture>
                 </control>
                 <control type="image">
-                    <posx>108</posx>
-                    <posy>45</posy>
+                    <left>108</left>
+                    <top>45</top>
                     <width>91</width>
                     <height>91</height>
                     <aspectratio aligny="bottom">stretch</aspectratio>
@@ -314,8 +291,8 @@
             </control>
             <control type="grouplist">
                 <description>MPAA Rating Flagging Images</description>
-                <posx>995</posx>
-                <posy>606</posy>
+                <left>995</left>
+                <top>606</top>
                 <width>249</width>
                 <align>left</align>
                 <itemgap>0</itemgap>
@@ -327,8 +304,8 @@
             </control>
             <control type="grouplist">
                 <description>MPAA NEW Rating Flagging Images</description>
-                <posx>1050</posx>
-                <posy>617</posy>
+                <left>1050</left>
+                <top>617</top>
                 <width>249</width>
                 <align>left</align>
                 <itemgap>0</itemgap>
@@ -341,14 +318,14 @@
             <control type="image">
                 <width>112</width>
                 <height>65</height>
-                <posx>750</posx>
-                <posy>600</posy>
+                <left>750</left>
+                <top>600</top>
                 <aspectratio align="center">keep</aspectratio>
                 <texture border="2">$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
             </control>
             <control type="image">
-                <posx>880</posx>
-                <posy>620</posy>
+                <left>880</left>
+                <top>620</top>
                 <width>70</width>
                 <height>31</height>
                 <aspectratio>keep</aspectratio>
@@ -358,22 +335,19 @@
             </control>
             <control type="grouplist">
                 <description>Media Codec Flagging Images</description>
-                <posx>-35</posx>
-                <posy>620</posy>
+                <left>-35</left>
+                <top>620</top>
                 <width>540</width>
                 <align>center</align>
                 <itemgap>15</itemgap>
                 <orientation>horizontal</orientation>
-                <include condition="!Skin.HasSetting(newFlags)">VideoCodecFlaggingConditions</include>
-                <include condition="!Skin.HasSetting(newFlags)">AudioCodecFlaggingConditions</include>
-                <include condition="!Skin.HasSetting(newFlags)">AspectCodecFlaggingConditions</include>
-                <include condition="Skin.HasSetting(newFlags)">VideoCodecFlaggingConditionsNew</include>
-                <include condition="Skin.HasSetting(newFlags)">AudioCodecFlaggingConditionsNew</include>
-                <include condition="Skin.HasSetting(newFlags)">AspectCodecFlaggingConditionsNew</include>
+                <include>VideoCodecFlaggingConditions</include>
+                <include>AudioCodecFlaggingConditions</include>
+                <include>AspectCodecFlaggingConditions</include>
             </control>
             <control type="image">
-                <posx>15</posx>
-                <posy>50</posy>
+                <left>15</left>
+                <top>50</top>
                 <width>540</width>
                 <height>303</height>
                 <texture>black-back.png</texture>
@@ -387,18 +361,18 @@
                 <visible>Control.IsVisible(515)</visible>
             </control>
             <control type="videowindow" id="8">
-                <posx>30</posx>
-                <posy>64</posy>
+                <left>30</left>
+                <top>64</top>
                 <width>511</width>
                 <height>275</height>
                 <align>right</align>
                 <visible>Skin.Hassetting(videowindowglobal)</visible>
                 <visible>Control.IsVisible(515)</visible>
-            </control> 
+            </control>
             <control type="label">
                 <description>Title label</description>
-                <posx>114</posx>
-                <posy>282</posy>
+                <left>114</left>
+                <top>282</top>
                 <height>30</height>
                 <width>330</width>
                 <label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=accent] (,)[/COLOR]]</label>
@@ -415,4 +389,3 @@
         </control>
     </include>
 </includes>
-
