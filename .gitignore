@@ -97,3 +97,6 @@ pip-log.txt
 .DS_Store
 Thumbs.db
 Thumbs.db
+/skin.cirrus.extended.sln
+/skin.cirrus.extended.csproj
+/App.config
