@@ -69,17 +69,20 @@
                 <left>-250</left>
                 <top>130</top>
                 <include>CommonNowPlaying</include>
-                <control type="button" id="2">
-                    <description>View As button</description>
-                    <left>0</left>
-                    <top>0</top>
-                    <include>ButtonCommonValues</include>
-                    <label>-</label>
-                    <onleft>55</onleft>
-                    <onright>55</onright>
-                    <onup>611</onup>
-                    <ondown>20</ondown>
-                </control>
+				<control type="button" id="4403">
+					<!--Set View new method-->
+					<left>0</left>
+					<top>0</top>
+					<include>ButtonCommonValues</include>
+					<label>View: $INFO[Container.Viewmode]</label>
+					<onclick>XBMC.RunScript(script.skin.helper.service,action=SETVIEW)</onclick>
+					<onclick>ActivateWindow(busydialog)</onclick>
+					<visible>!Window.IsActive(tvguide)</visible>
+					<onleft>55</onleft>
+					<onright>55</onright>
+					<onup>661</onup>
+					<ondown>20</ondown>
+				</control>
                 <control type="radiobutton" id="20">
                     <description>Shuffle button</description>
                     <left>0</left>
@@ -88,7 +91,7 @@
                     <label>191</label>
                     <onleft>55</onleft>
                     <onright>55</onright>
-                    <onup>2</onup>
+                    <onup>4403</onup>
                     <ondown>26</ondown>
                 </control>
                 <control type="button" id="26">

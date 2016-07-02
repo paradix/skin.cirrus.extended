@@ -1554,3 +1554,19 @@ msgstr ""
 msgctxt "#41600"
 msgid "Batch Download Artwork"
 msgstr ""
+
+
+
+#. Feature/enhanced views selector
+
+msgctxt "#42001"
+msgid "List"
+msgstr ""
+
+msgctxt "#42002"
+msgid "Fanart"
+msgstr ""
+
+msgctxt "#42013"
+msgid "Coverflow"
+msgstr ""

@@ -1172,3 +1172,19 @@ msgstr "Later bekijken"
 msgctxt "#41301"
 msgid "Listen Later"
 msgstr "Later beluisteren"
+
+
+
+#. Feature/enhanced views selector
+
+msgctxt "#42001"
+msgid "List"
+msgstr "Lijst"
+
+msgctxt "#42002"
+msgid "Fanart"
+msgstr "Fanart"
+
+msgctxt "#42013"
+msgid "Coverflow"
+msgstr "Coverflow"
