@@ -518,7 +518,7 @@
                 <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
                 <textureslidernib>ScrollBarV.png</textureslidernib>
                 <textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
-                <onleft>2</onleft>
+                <onleft>4403</onleft>
                 <onright>668</onright>
                 <showonepage>false</showonepage>
                 <orientation>vertical</orientation>

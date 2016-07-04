@@ -427,7 +427,7 @@
 					<onleft>55</onleft>
 					<onright>55</onright>
 					<onup>3</onup>
-					<ondown>2</ondown>
+					<ondown>4403</ondown>
 					<itemgap>0</itemgap>
 					<control type="togglebutton" id="20">
 						<description>Scan Library</description>

@@ -2,10 +2,10 @@
 	<view id="List"					value="55"  languageid="42001" type="all"/>
 	<view id="PicThumbs"			value="511" languageid="31031" type="pictures" />
 	<view id="Fanart Poster"		value="590" languageid="40000" type="files"/>
-	<view id="Fanart Square"		value="591" languageid="40001" type="files,addons,programs"/>
+	<view id="Fanart Square"		value="591" languageid="40001" type="files,addons,programs,!pictures"/>
 	<view id="Fanart Wide"			value="592" languageid="40002" type="files"/>
 	<view id="Rightlist"			value="593" languageid="40003" type="files" />
-	<view id="Rightlist Square"		value="594" languageid="40004" type="files,addons,programs" />
+	<view id="Rightlist Square"		value="594" languageid="40004" type="files,addons,programs,!pictures" />
 	<view id="Rightlist Landscape"	value="595" languageid="40005" type="files" />
 	<view id="Music Wall"			value="525" languageid="41115" type="addons" />
 	<view id="Showcase"				value="52"	languageid="41130" type="movies,setmovies,tvshows,seasons"/>

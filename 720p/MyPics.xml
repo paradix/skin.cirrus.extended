@@ -137,7 +137,7 @@
                     <label>-</label>
                     <onleft>3</onleft>
                     <onright>55</onright>
-                    <onup>2</onup>
+                    <onup>4403</onup>
                     <ondown>6</ondown>
                 </control>
                 <control type="button" id="6">
