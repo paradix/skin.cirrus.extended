@@ -1,5 +1,6 @@
 <views>
 	<view id="List"					value="55"  languageid="42001" type="all"/>
+	<view id="RightAddonView"		value="503" languageid="42004" type="programs" />
 	<view id="Media info"			value="511" languageid="42003" type="musicvideos" />
 	<view id="PicThumbs"			value="511" languageid="31031" type="pictures" /> 
 	<view id="Music Rightlist"		value="566" languageid="41114" type="albums,artists,songs" />

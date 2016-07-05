@@ -1571,6 +1571,10 @@ msgctxt "#42003"
 msgid "Media Info"
 msgstr ""
 
+msgctxt "#42004"
+msgid "RightAddonView"
+msgstr ""
+
 msgctxt "#42013"
 msgid "Coverflow"
 msgstr ""
