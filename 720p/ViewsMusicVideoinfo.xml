@@ -10,7 +10,7 @@
         <top>60</top>
         <width>760</width>
         <height>601</height>
-        <onleft>2</onleft>
+        <onleft>4403</onleft>
         <onright>60</onright>
         <onup>511</onup>
         <ondown>511</ondown>
@@ -127,7 +127,7 @@
           <textureslidernib>ScrollBarNib.png</textureslidernib>
           <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
           <onleft>511</onleft>
-          <onright>2</onright>
+          <onright>4403</onright>
           <showonepage>false</showonepage>
           <orientation>vertical</orientation>
           <visible>Control.IsVisible(511)</visible>

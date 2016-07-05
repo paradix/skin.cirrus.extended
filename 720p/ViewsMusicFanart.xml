@@ -54,7 +54,7 @@
                 <onleft>508</onleft>
                 <onright>508</onright>
                 <onup>60</onup>
-                <ondown>2</ondown>
+                <ondown>4403</ondown>
                 <viewtype label="41113">wrap</viewtype>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime>200</scrolltime>
@@ -157,7 +157,7 @@
             <texturesliderbackground border="14,0,14,0">ScrollBarV.png</texturesliderbackground>
             <textureslidernib>ScrollBarV.png</textureslidernib>
             <textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
-            <onup>2</onup>
+            <onup>4403</onup>
             <ondown>547</ondown>
             <showonepage>false</showonepage>
             <orientation>horizontal</orientation>
