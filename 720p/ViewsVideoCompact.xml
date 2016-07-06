@@ -50,7 +50,7 @@
         <orientation>vertical</orientation>
         <focusposition>5</focusposition>
         <!-- <movement>9</movement> -->
-        <onleft>2</onleft>
+        <onleft>4403</onleft>
         <onup>515</onup>
         <ondown>515</ondown>
         <onright>ActivateWindow(1121)</onright>

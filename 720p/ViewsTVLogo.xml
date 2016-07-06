@@ -47,7 +47,7 @@
                 <onleft>667</onleft>
                 <onright>667</onright>
                 <onup>60</onup>
-                <ondown>2</ondown>
+                <ondown>4403</ondown>
                 <!-- ,1 VideoWindow ,0 Fullscreen -->
                 <viewtype label="41116">wrap</viewtype>
                 <pagecontrol>60</pagecontrol>
@@ -128,7 +128,7 @@
                 <texturesliderbackground border="14,0,14,0">ScrollBarV.png</texturesliderbackground>
                 <textureslidernib>ScrollBarV.png</textureslidernib>
                 <textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
-                <onup>2</onup>
+                <onup>4403</onup>
                 <ondown>667</ondown>
                 <showonepage>false</showonepage>
                 <orientation>horizontal</orientation>

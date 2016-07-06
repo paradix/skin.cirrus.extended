@@ -45,7 +45,7 @@
         <top>100</top>
         <width>600</width>
         <height>425</height>
-        <onleft>2</onleft>
+        <onleft>4403</onleft>
         <onup>503</onup>
         <ondown>503</ondown>
         <viewtype label="RightAddonView">list</viewtype>

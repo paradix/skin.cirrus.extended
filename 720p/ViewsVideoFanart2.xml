@@ -274,7 +274,7 @@
                 <texturesliderbackground border="14,0,14,0">ScrollBarV.png</texturesliderbackground>
                 <textureslidernib>ScrollBarV.png</textureslidernib>
                 <textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
-                <onup>2</onup>
+                <onup>4403</onup>
                 <ondown>508</ondown>
                 <showonepage>false</showonepage>
                 <orientation>horizontal</orientation>

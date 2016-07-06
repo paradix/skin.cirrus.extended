@@ -1,0 +1,36 @@
+<views>
+	<view id="List"					value="55"  languageid="42001" type="all"/>
+	<view id="RightAddonView"		value="503" languageid="42004" type="programs" />
+	<view id="Media info"			value="511" languageid="42003" type="musicvideos" />
+	<view id="PicThumbs"			value="511" languageid="31031" type="pictures" /> 
+	<view id="Music Rightlist"		value="566" languageid="41114" type="albums,artists,songs" />
+	<view id="Fanart Poster"		value="590" languageid="40000" type="files,playlists"/>
+	<view id="Fanart Square"		value="591" languageid="40001" type="files,playlists,addons,programs,!pictures"/>
+	<view id="Fanart Wide"			value="592" languageid="40002" type="files,playlists"/>
+	<view id="Rightlist"			value="593" languageid="40003" type="files,playlists" />
+	<view id="Rightlist Square"		value="594" languageid="40004" type="files,playlists,addons,programs,!pictures" />
+	<view id="Rightlist Landscape"	value="595" languageid="40005" type="files,playlists" />
+	<view id="Music Wall"			value="525" languageid="41115" type="addons,albums,artists" />
+	<view id="Music Coverflow"		value="555" languageid="41112" type="albums,songs" />
+	<view id="Music Fanart"			value="547" languageid="41113" type="albums,artists,songs" />
+	<view id="Rightlist Logo"		value="701" languageid="40006" type="artists"/>
+	<view id="Showcase"				value="52"	languageid="41130" type="movies,setmovies,tvshows,seasons"/>
+	<view id="Compact"				value="515" languageid="41120" type="movies,setmovies"/>
+	<view id="Fanart"				value="508" languageid="42002" type="movies,setmovies,tvshows,seasons,episodes"/>
+	<view id="Fanart Slide"			value="666" languageid="41122" type="movies,setmovies"/>
+	<view id="Big Poster"			value="556" languageid="41119" type="movies,setmovies"/>
+	<view id="Coverflow"			value="555" languageid="42013" type="movies,setmovies"/>
+	<view id="Fanart Slide Logo"	value="667" languageid="41116" type="movies,setmovies,tvshows"/>
+	<view id="Rightlist"			value="569" languageid="40003" type="movies,sets,setmovies,tvshows,seasons,episodes"/>
+	<view id="Rightlist Logo"		value="668" languageid="40006" type="movies,setmovies,tvshows"/>
+	<view id="Rightlist Banner"		value="570" languageid="41117" type="tvshows"/>
+	<view id="Wall"					value="513" languageid="41126" type="movies,setmovies,tvshows" />
+	<view id="Half wall"			value="514" languageid="41123" type="movies,setmovies"/>
+	<view id="Banner Wall"			value="519" languageid="41118" type="tvshows"/>
+	<view id="Banner Wall2"			value="571" languageid="41125" type="tvshows"/>
+	<view id="Half wall"			value="560" languageid="41124" type="episodes"/> 
+	<view id="Fanart Landscape"		value="691" languageid="41128" type="movies,setmovies,tvshows" />
+	<view id="Double Fanart"		value="720" languageid="41121" type="movies,setmovies,tvshows,seasons,episodes"/>
+	<view id="Showcase mod"			value="721" languageid="41131" type="movies,setmovies,tvshows,seasons"/>
+	<view id="Fanart Movie Sets"	value="766" languageid="41129" type="sets" />
+</views>
