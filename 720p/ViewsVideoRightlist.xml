@@ -187,7 +187,7 @@
                         <top>40</top>
                         <width>183</width>
                         <height>25</height>
-                        <texture>$INFO[Listitem.StarRating]</texture>
+                        <texture>$INFO[ListItem.Rating]</texture>
                         <colordiffuse>black</colordiffuse>
                         <visible>!Skin.HasSetting(imdbnr) + Container.Content(tvshows) | !Skin.HasSetting(imdbnr) + Container.Content(Episodes) | !Skin.HasSetting(imdbnr) + Container.Content(movies) | !Skin.HasSetting(imdbnr) + Container.Content(sets)</visible>
                         <visible>[!ListItem.IsFolder | SubString(ListItem.Path,videodb://movies/sets/,left)]</visible>

@@ -519,7 +519,7 @@
                 <align>left</align>
                 <width>180</width>
                 <height>35</height>
-                <texture>$INFO[Listitem.StarRating]</texture>
+                <texture>$INFO[ListItem.Rating]</texture>
                 <visible>!ListItem.IsFolder</visible>
             </control>
             <control type="label">

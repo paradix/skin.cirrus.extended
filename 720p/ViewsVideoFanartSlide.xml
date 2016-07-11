@@ -412,7 +412,7 @@
                 <align>left</align>
                 <width>200</width>
                 <height>40</height>
-                <texture>$INFO[Listitem.StarRating]</texture>
+                <texture>$INFO[ListItem.Rating]</texture>
                 <visible>!Skin.HasSetting(imdbnrfanart)</visible> 
                 <visible>!ListItem.IsFolder</visible>
             </control>

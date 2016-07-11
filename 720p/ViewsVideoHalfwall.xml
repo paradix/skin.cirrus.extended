@@ -337,7 +337,7 @@
         <width>249</width>
         <height>40</height>
         <aspectratio>keep</aspectratio>
-        <texture>$INFO[Listitem.StarRating]</texture>
+        <texture>$INFO[ListItem.Rating]</texture>
         <visible>!ListItem.IsFolder</visible>
       </control>
       <control type="scrollbar" id="60">

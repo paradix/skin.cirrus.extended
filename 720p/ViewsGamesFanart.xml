@@ -190,7 +190,7 @@
                     <scroll>true</scroll>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <label>[COLOR=white][/COLOR]$INFO[ListItem.Label,]$INFO[ListItem.Property(Addon.Version),  (,)]</label>
+                    <label>[COLOR=white][/COLOR]$INFO[ListItem.Label,]$INFO[ListItem.AddonVersion,  (,)]</label>
                     <scrollout>false</scrollout>
                     <pauseatend>2000</pauseatend>
                 </control>
@@ -221,7 +221,7 @@
                     <scroll>false</scroll>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <label>$INFO[ListItem.Property(Addon.Type),[COLOR=accent]$LOCALIZE[515]:[/COLOR] ]</label>
+                    <label>$INFO[ListItem.AddonType,[COLOR=accent]$LOCALIZE[515]:[/COLOR] ]</label>
                     <scrollout>false</scrollout>
                     <pauseatend>2000</pauseatend>
                 </control>
@@ -253,7 +253,7 @@
                     <scroll>true</scroll>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <label>[COLOR=accent][/COLOR]$INFO[ListItem.Property(Addon.Creator), ]</label>
+                    <label>[COLOR=accent][/COLOR]$INFO[ListItem.AddonCreator, ]</label>
                     <scrollout>false</scrollout>
                     <pauseatend>2000</pauseatend>
                 </control>
@@ -281,7 +281,7 @@
                     <align>justify</align>
                     <textcolor>white</textcolor>
                     <shadowcolor>black</shadowcolor>
-                    <label>$INFO[ListItem.Property(Addon.Description)]</label>
+                    <label>$INFO[ListItem.AddonDescription]</label>
                     <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
             </control>

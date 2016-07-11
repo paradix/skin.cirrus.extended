@@ -242,7 +242,7 @@
                             <top>10</top>
                             <width>150</width>
                             <height>31</height>
-                            <info>ListItem.StarRating</info>
+                            <info>ListItem.Rating</info>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>!Skin.HasSetting(imdbnrinfo)</visible>
                         </control>
@@ -540,7 +540,7 @@
                             <top>10</top>
                             <width>150</width>
                             <height>31</height>
-                            <info>ListItem.StarRating</info>
+                            <info>ListItem.Rating</info>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                         </control>
                     </control>
@@ -816,7 +816,7 @@
                             <top>10</top>
                             <width>150</width>
                             <height>31</height>
-                            <info>ListItem.StarRating</info>
+                            <info>ListItem.Rating</info>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                         </control>
                     </control>

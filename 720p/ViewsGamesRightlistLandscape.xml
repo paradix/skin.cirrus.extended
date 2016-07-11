@@ -159,7 +159,7 @@
             <top>8</top>
             <width>445</width>
             <height>25</height>
-            <label>[COLOR=white]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Label,][COLOR=white]$INFO[ListItem.Property(Addon.Version),  (,)][/COLOR]</label>
+            <label>[COLOR=white]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Label,][COLOR=white]$INFO[ListItem.AddonVersion,  (,)][/COLOR]</label>
             <align>right</align>
             <aligny>center</aligny>
             <font>cirrus_30_Bold</font>
@@ -172,7 +172,7 @@
             <top>40</top>
             <width>445</width>
             <height>25</height>
-            <label>[COLOR=black]$INFO[ListItem.Property(Addon.Creator),][/COLOR]</label>
+            <label>[COLOR=black]$INFO[ListItem.AddonCreator,][/COLOR]</label>
             <align>right</align>
             <aligny>center</aligny>
             <font>cirrus_26_Bold</font>
