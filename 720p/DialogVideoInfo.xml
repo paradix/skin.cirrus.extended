@@ -210,7 +210,7 @@
                             <top>550</top>
                             <aspectratio>keep</aspectratio>
                             <align>right</align>
-                            <texture>$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
+                            <texture>$VAR[StudioIcon]$INFO[ListItem.Studio,,.png]</texture>
                         </control>
                         <control type="image">
                             <description>IMDB rating</description>
@@ -242,7 +242,7 @@
                             <top>10</top>
                             <width>150</width>
                             <height>31</height>
-                            <info>ListItem.StarRating</info>
+                            <info>ListItem.Rating</info>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>!Skin.HasSetting(imdbnrinfo)</visible>
                         </control>
@@ -531,7 +531,7 @@
                             <top>550</top>
                             <aspectratio>keep</aspectratio>
                             <align>right</align>
-                            <texture>$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
+                            <texture>$VAR[StudioIcon]$INFO[ListItem.Studio,,.png]</texture>
                         </control>
                         <control type="image">
                             <!-- STARS -->
@@ -540,7 +540,7 @@
                             <top>10</top>
                             <width>150</width>
                             <height>31</height>
-                            <info>ListItem.StarRating</info>
+                            <info>ListItem.Rating</info>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                         </control>
                     </control>
@@ -807,7 +807,7 @@
                             <top>550</top>
                             <aspectratio>keep</aspectratio>
                             <align>right</align>
-                            <texture>$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
+                            <texture>$VAR[StudioIcon]$INFO[ListItem.Studio,,.png]</texture>
                         </control>
                         <control type="image">
                             <!-- STARS -->
@@ -816,7 +816,7 @@
                             <top>10</top>
                             <width>150</width>
                             <height>31</height>
-                            <info>ListItem.StarRating</info>
+                            <info>ListItem.Rating</info>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                         </control>
                     </control>
@@ -1090,18 +1090,6 @@
                         </control>
                     </focusedlayout>
                 </control>
-                <control type="label">
-                    <left>105</left>
-                    <top>10</top>
-                    <width>410</width>
-                    <height>21</height>
-                    <font>cirrus_20</font>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <textcolor>accent</textcolor>
-                    <label>41285</label>
-                    <visible>Control.HasFocus(50) + System.HasAddon(script.metadata.actors)</visible>
-                </control>
                 <control type="image">
                     <left>10</left>
                     <top>685</top>
@@ -1140,6 +1128,13 @@
                         <altlabel>1024</altlabel>
                         <usealttexture>Container.Content(TVShows)</usealttexture>
                     </control>
+                    <control type="button" id="11">
+                        <description>Play Trailer</description>
+                        <include>ButtonVideoInfoCommonValues</include>
+                        <label>20410</label>
+                        <ondown>ActivateWindow(1121)</ondown>
+                        <visible>!IsEmpty(ListItem.Trailer)</visible>
+                    </control>
                     <control type="button" id="134">
                         <description>Wishlist</description>
                         <include>ButtonVideoInfoCommonValues</include>
@@ -1154,18 +1149,15 @@
                         <include>ButtonVideoInfoCommonValues</include>
                         <label>184</label>
                     </control>
+                    <control type="button" id="7">
+                        <description>Refresh</description>
+                        <include>ButtonVideoInfoCommonValues</include>
+                        <label>38023</label>
+                    </control>
                     <control type="button" id="10">
                         <description>Choose Art</description>
                         <include>ButtonVideoInfoCommonValues</include>
                         <label>13511</label>
-                    </control>
-                    <control type="button" id="105">
-                        <description>Get Cast Info</description>
-                        <include>ButtonVideoInfoCommonValues</include>
-                        <label>41286</label>
-                        <onclick>Dialog.Close(MovieInformation)</onclick>
-                        <onclick>XBMC.RunScript(script.metadata.actors,$INFO[Container(50).ListItem.Label])</onclick>
-                        <visible>System.HasAddon(script.metadata.actors)</visible>
                     </control>
                     <control type="button" id="106">
                         <description>Get Artwork Movies</description>
@@ -1183,13 +1175,7 @@
                         <onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=movie, dbid=$INFO[ListItem.DBID], extrafanart)</onclick>
                         <visible>Container.Content(movies) +System.HasAddon(script.artwork.downloader)</visible>
                     </control>
-                    <control type="button" id="11">
-                        <description>Play Trailer</description>
-                        <include>ButtonVideoInfoCommonValues</include>
-                        <label>20410</label>
-                        <ondown>ActivateWindow(1121)</ondown>
-                        <visible>!IsEmpty(ListItem.Trailer)</visible>
-                    </control>
+                    
                     <control type="button" id="107">
                         <description>Home Cinema Experience</description>
                         <include>ButtonVideoInfoCommonValues</include>
@@ -1222,21 +1208,6 @@
                         <onclick>XBMC.RunScript(script.tvtunes,mode=solo)</onclick>
                         <visible>Skin.HasSetting(tv_theme) + System.HasAddon(script.tvtunes) + [Container.Content(TVShows) | Container.Content(Movies) | Container.content(musicvideos)]</visible>
                     </control>
-                    <control type="button" id="132">
-                        <description>Edit library</description>
-                        <visible>System.HasAddon(script.libraryeditor)</visible>
-                        <include>ButtonVideoInfoCommonValues</include>
-                        <onclick>XBMC.RunScript(script.libraryeditor, DBID=$INFO[ListItem.DBID])</onclick>
-                        <label>41127</label>
-                    </control>
-                    <!--<control type="button" id="133">
-                        <description>Edit Library</description>
-                        <visible>Container.content(episodes) | container.content(TVShows) | container.content(seasons)</visible>
-                        <visible>System.HasAddon(script.library.editor)</visible>
-                        <include>ButtonVideoInfoCommonValues</include>
-                        <onclick>XBMC.RunScript(script.library.editor)</onclick>
-                        <label>41127</label>
-                    </control>-->
                 </control>
             </control>
         </control>
