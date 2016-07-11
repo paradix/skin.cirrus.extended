@@ -43,7 +43,8 @@
     <!-- Added this view  Movie Sets View Butchabay -->  
     <include file="ViewsVideoShowcase.xml"/>
     <!-- Added this view 52 -->  
-    <!--  <include file="ViewsVideoSlide.xml" />  -->	              <!-- Added this view 56 -->  
+    <!--  <include file="ViewsVideoSlide.xml" />  -->
+    <!-- Added this view 56 -->  
     <include file="ViewsVideoFanart2.xml"/>
     <!-- Added this view 720 by jugger75 -->
     <include file="ViewsVideoShowcase_Mod.xml"/>
@@ -246,25 +247,12 @@
             <top>0</top>
             <width>1280</width>
             <height>720</height>
-            <imagepath fallback="special://skin/backgrounds/weatherfanart.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</imagepath>
+            <imagepath background="true">$VAR[WeatherFanartBackground]</imagepath>
             <timeperimage>10000</timeperimage>
             <randomize>true</randomize>
             <fadetime>1000</fadetime>
             <animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
             <animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-            <visible>![Skin.HasSetting(HomeWeatherFanart) + !IsEmpty(Skin.String(HomeWeatherFanartFolder))]</visible>
-        </control>
-        <control type="multiimage">
-            <left>0</left>
-            <top>0</top>
-            <width>1280</width>
-            <height>720</height>
-            <imagepath background="true">$INFO[Skin.String(HomeWeatherFanartFolder)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
-            <timeperimage>10000</timeperimage>
-            <randomize>true</randomize>
-            <fadetime>1000</fadetime>  
-            <visible>Skin.HasSetting(HomeWeatherFanart) + !IsEmpty(Skin.String(HomeWeatherFanartFolder))</visible>
-            <animation effect="fade" time="200">WindowClose</animation>
         </control>
     </include>
     <include name="CommonSettingsBackground">
@@ -291,7 +279,7 @@
             <texture>black-back.png</texture>
             <animation effect="fade" time="400">Visible</animation>
             <animation effect="fade" time="200">Hidden</animation>
-            <visible>Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(FileBrowser) | Window.IsActive(ContentSettings) | Window.IsActive(SelectDialog) | Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | Window.IsActive(PlayerControls) | Window.IsActive(VirtualKeyboard) | Window.IsActive(NumericInput) | Window.IsActive(ProfileSettings) | Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(SmartPlaylistRule) | Window.IsActive(script-XBMC_Lyrics-settings.xml) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml)</visible>
+            <visible>Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(FileBrowser) | Window.IsActive(ContentSettings) | Window.IsActive(SelectDialog) | Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | Window.IsActive(PlayerControls) | Window.IsActive(VirtualKeyboard) | Window.IsActive(NumericInput) | Window.IsActive(ProfileSettings) | Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(SmartPlaylistRule) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(audiodspmanager)</visible>
         </control>
     </include>
     <include name="WindowOpenCloseAnimation">
@@ -1516,15 +1504,29 @@
         </control>
     </include>
     <include name="Top250Label">
-        <!-- Top250IMDB Mod 1.2 -->
-        <description>top250</description>
-        <width>400</width>
-        <height>30</height>
-        <label>$INFO[ListItem.Top250]</label>
-        <align>center</align>
-        <aligny>center</aligny>
-        <font>font13</font>
-        <textcolor>white</textcolor>        
+        <control type="image">
+            <left>140</left>
+            <top>1</top>
+            <width>88</width>
+            <height>30</height>
+            <aspectratio aligny="bottom">stretch</aspectratio>
+            <fadetime>IconCrossfadeTime</fadetime>
+            <texture>IMDBFlag.png</texture>
+            <visible>!IsEmpty(ListItem.Top250)</visible>
+            <colordiffuse>accent</colordiffuse>
+        </control>
+        <control type="label">
+            <description>top250</description>
+            <left>0</left>
+            <top>0</top>
+            <width>400</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Top250]</label>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>white</textcolor>        
+        </control>
     </include>
     <include name="VideoPlayerTopSlideOutOSD">
         <control type="image">
@@ -1681,7 +1683,7 @@
             <right>20</right>
             <bottom>10</bottom>
             <aspectratio>keep</aspectratio>
-            <texture>$INFO[VideoPlayer.Studio,special://skin/extras/flagging/studios/,.png]</texture>
+            <texture>$VAR[StudioIcon]$INFO[VideoPlayer.Studio,,.png]</texture>
         </control>
         <control type="grouplist">
             <description>Media Codec Flagging Images</description>
@@ -1696,5 +1698,4 @@
             <include>AudioCodecFlaggingConditions</include>
         </control>
     </include>
-
 </includes>

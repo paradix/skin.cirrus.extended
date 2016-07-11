@@ -159,7 +159,7 @@
             <top>8</top>
             <width>445</width>
             <height>25</height>
-            <label>[COLOR=white]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Label,][COLOR=white]$INFO[ListItem.Property(Addon.Version),  (,)][/COLOR]</label>
+            <label>[COLOR=white]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Label,][COLOR=white]$INFO[ListItem.AddonVersion,  (,)][/COLOR]</label>
             <align>right</align>
             <aligny>center</aligny>
             <font>cirrus_30_Bold</font>
@@ -172,7 +172,7 @@
             <top>40</top>
             <width>445</width>
             <height>25</height>
-            <label>[COLOR=black]$INFO[ListItem.Property(Addon.Creator),][/COLOR]</label>
+            <label>[COLOR=black]$INFO[ListItem.AddonCreator,][/COLOR]</label>
             <align>right</align>
             <aligny>center</aligny>
             <font>cirrus_26_Bold</font>
@@ -267,7 +267,7 @@
             <top>0</top>
             <width>550</width>
             <height>25</height>
-            <label>$INFO[ListItem.Property(Addon.Type),[COLOR=accent]$LOCALIZE[515]:[/COLOR] ]</label>
+            <label>$INFO[ListItem.AddonType,[COLOR=accent]$LOCALIZE[515]:[/COLOR] ]</label>
             <align>left</align>
             <aligny>center</aligny>
             <font>cirrus_24</font>
@@ -296,7 +296,7 @@
             <top>32</top>
             <width>700</width>
             <height>68</height>
-            <label>$INFO[ListItem.Property(Addon.Description)]</label>
+            <label>$INFO[ListItem.AddonDescription]</label>
             <align>justify</align>
             <aligny>top</aligny>
             <font>cirrus_20</font>
@@ -326,7 +326,7 @@
           <aspectratio>keep</aspectratio>
           <align>right</align>
           <aligny>bottom</aligny>
-          <texture border="2">$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
+          <texture border="2">$VAR[StudioIcon]$INFO[ListItem.Studio,,.png]</texture>
         </control>
         <control type="image">
           <left>282r</left>

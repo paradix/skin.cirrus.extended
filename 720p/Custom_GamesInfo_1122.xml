@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1122" type="dialog">
     <defaultcontrol always="true">8</defaultcontrol>
-    <allowoverlay>no</allowoverlay>
     <controls>
         <control type="group">
             <visible>!Window.IsVisible(FileBrowser)</visible>
@@ -170,7 +169,7 @@
                             <top>550</top>
                             <aspectratio>keep</aspectratio>
                             <align>right</align>
-                            <texture>$INFO[listitem.Studio,flagging/studios/,.png]</texture>
+                            <texture>$VAR[StudioIcon]$INFO[ListItem.Studio,,.png]</texture>
                         </control>
                         <control type="image">
                             <left>0</left>

@@ -363,18 +363,7 @@
                         <shadowcolor>black</shadowcolor>
                         <visible>!ListItem.IsFolder</visible>
                     </control>
-                    <control type="image">
-                        <left>665</left>
-                        <top>277</top>
-                        <width>88</width>
-                        <height>30</height>
-                        <aspectratio aligny="bottom">stretch</aspectratio>
-                        <fadetime>IconCrossfadeTime</fadetime>
-                        <texture>IMDBFlag.png</texture>
-                        <visible>!IsEmpty(ListItem.Top250)</visible>
-                        <colordiffuse>accent</colordiffuse>
-                    </control>
-                    <control type="label">
+                    <control type="group">
                         <left>525</left>
                         <top>276</top>
                         <include>Top250Label</include>
@@ -388,7 +377,7 @@
                     <aspectratio>keep</aspectratio>
                     <align>right</align>
                     <aligny>top</aligny>
-                    <texture diffuse="maskflags.png">$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
+                    <texture diffuse="maskflags.png">$VAR[StudioIcon]$INFO[ListItem.Studio,,.png]</texture>
                 </control>
                 <control type="image">
                     <description>Rating value</description>
@@ -398,7 +387,7 @@
                     <aligny>center</aligny>
                     <width>200</width>
                     <height>45</height>
-                    <texture>$INFO[Listitem.StarRating]</texture>
+                    <texture>$INFO[ListItem.Rating]</texture>
                     <visible>!ListItem.IsFolder</visible>
                 </control>
             </control>

@@ -634,19 +634,7 @@
                     <shadowcolor>black</shadowcolor>
                     <visible>!ListItem.IsFolder</visible>
                 </control>
-                <control type="image">
-                    <!-- Top250IMDB Mod 1.2 -->
-                    <left>370</left>
-                    <top>110</top>
-                    <width>88</width>
-                    <height>30</height>
-                    <aspectratio aligny="bottom">stretch</aspectratio>
-                    <fadetime>IconCrossfadeTime</fadetime>
-                    <texture>IMDBFlag.png</texture>
-                    <visible>!IsEmpty(ListItem.Top250)</visible>
-                    <colordiffuse>accent</colordiffuse>
-                </control>
-                <control type="label">
+                <control type="group">
                     <left>230</left>
                     <top>109</top>
                     <include>Top250Label</include>
@@ -670,7 +658,7 @@
                 <aspectratio>keep</aspectratio>
                 <align>center</align>
                 <aligny>bottom</aligny>
-                <texture diffuse="maskflags.png">$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
+                <texture diffuse="maskflags.png">$VAR[StudioIcon]$INFO[ListItem.Studio,,.png]</texture>
             </control>
             <control type="grouplist">
                 <description>MPAA Rating Flagging Images</description>
