@@ -4,11 +4,11 @@
         <item id="1">
             <description>Movies</description>
             <label>20342</label>
-            <property name="Path">ActivateWindow(Videos,MovieTitles,return)</property>
+            <property name="Path">ActivateWindow(videos,library://video/movies/,return)</property>
             <icon>special://skin/backgrounds/movies.jpg</icon>
             <thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
             <visible>[!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)] | Window.IsVisible(skinsettings)</visible>
-            <onclick condition="!Window.IsVisible(skinsettings)">ActivateWindow(Videos,MovieTitles,return)</onclick>
+            <onclick condition="!Window.IsVisible(skinsettings)">ActivateWindow(videos,library://video/movies/,return)</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.Label,$LOCALIZE[20342])</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.LabelSuffix,$LOCALIZE[31111])</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.DefaultBackground,special://skin/backgrounds/videos.jpg)</onclick>
@@ -29,11 +29,11 @@
         <item id="30">
             <description>Movie Sets</description>
             <label>41183</label>
-            <property name="Path">ActivateWindow(Videos,MovieSets,return)</property>
+            <property name="Path">ActivateWindow(videos,videodb://movies/sets/,return)</property>
             <icon>special://skin/backgrounds/moviesets.jpg</icon>
             <thumb>$INFO[Skin.String(Home_Custom_Back_MovieSets_Folder)]</thumb>
             <visible>[!Skin.HasSetting(HomeMenuNoMovieSetsButton) + Library.HasContent(MovieSets)] | Window.IsVisible(skinsettings)</visible>
-            <onclick condition="!Window.IsVisible(skinsettings)">ActivateWindow(Videos,MovieSets,return)</onclick>
+            <onclick condition="!Window.IsVisible(skinsettings)">ActivateWindow(videos,videodb://movies/sets/,return)</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.Label,$LOCALIZE[41183])</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.LabelSuffix,$LOCALIZE[31111])</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.DefaultBackground,special://skin/backgrounds/moviesets.jpg)</onclick>
@@ -167,11 +167,11 @@
         <item id="7">
             <description>TV Shows</description>
             <label>41103</label>
-            <property name="Path">ActivateWindow(Videos,TVShowTitles,return)</property>
+            <property name="Path">ActivateWindow(videos,library://video/tvshows/,return)</property>
             <icon>special://skin/backgrounds/tv_shows.jpg</icon>
             <thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
             <visible>[!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)] | Window.IsVisible(skinsettings)</visible>
-            <onclick condition="!Window.IsVisible(skinsettings)">ActivateWindow(Videos,TVShowTitles,return)</onclick>
+            <onclick condition="!Window.IsVisible(skinsettings)">ActivateWindow(videos,library://video/tvshows/,return)</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.Label,$LOCALIZE[41103])</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.LabelSuffix,$LOCALIZE[31111])</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.DefaultBackground,special://skin/backgrounds/tv_shows.jpg)</onclick>
@@ -388,11 +388,11 @@
         <item id="14">
             <description>Music</description>
             <label>2</label>
-            <property name="Path">ActivateWindow(MusicLibrary, root)</property>
+            <property name="Path">ActivateWindow(Music,root)</property>
             <icon>special://skin/backgrounds/musicfanart.jpg</icon>
             <thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
             <visible>!Skin.HasSetting(HomeMenuNoMusicButton) | Window.IsVisible(skinsettings)</visible>
-            <onclick condition="!Window.IsVisible(skinsettings)">ActivateWindow(MusicLibrary, root)</onclick>
+            <onclick condition="!Window.IsVisible(skinsettings)">ActivateWindow(Music,root)</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.Label,$LOCALIZE[2])</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.LabelSuffix,$LOCALIZE[31111])</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.DefaultBackground,special://skin/backgrounds/musicfanart.jpg)</onclick>
@@ -567,11 +567,11 @@
         <item id="23">
             <description>Pictures</description>
             <label>1</label>
-            <property name="Path">ActivateWindow(Pictures)</property>
+            <property name="Path">ActivateWindow(pictures)</property>
             <icon>special://skin/backgrounds/picturesfanart.jpg</icon>
             <thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
             <visible>!Skin.HasSetting(HomeMenuNoPicturesButton) | Window.IsVisible(skinsettings)</visible>
-            <onclick condition="!Window.IsVisible(skinsettings)">ActivateWindow(Pictures)</onclick>
+            <onclick condition="!Window.IsVisible(skinsettings)">ActivateWindow(pictures)</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.Label,$LOCALIZE[1])</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.LabelSuffix,$LOCALIZE[31111])</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.DefaultBackground,special://skin/backgrounds/picturesfanart.jpg)</onclick>
