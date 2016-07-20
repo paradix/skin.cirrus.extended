@@ -557,7 +557,7 @@
                 <left>80</left>
                 <top>20</top>
                 <visible>Container.Content(TVShows)</visible>
-                <control type="largeimage" id="7914"> 
+                <control type="image" id="7914"> 
                     <left>-60</left> 
                     <top>-20</top> 
                     <width>470</width> 

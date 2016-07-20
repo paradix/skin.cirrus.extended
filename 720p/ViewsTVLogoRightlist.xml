@@ -498,12 +498,11 @@
                     <visible>Skin.HasSetting(banner)</visible>
                 </control>
                 <!-- TV SHOW LOGO -->
-                <control type="largeimage" id="7914"> 
+                <control type="image" id="7914"> 
                     <left>285r</left> 
                     <top>8</top> 
                     <width>335</width> 
                     <height>130</height> 
-
                     <texture background="true">$INFO[ListItem.Art(clearart)]</texture> 
                     <fadetime>200</fadetime> 
                     <aspectratio scalediffuse="false">keep</aspectratio> 

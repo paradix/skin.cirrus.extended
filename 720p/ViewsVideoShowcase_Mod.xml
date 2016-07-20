@@ -862,7 +862,7 @@
 
                 </control>
                 <!-- ende -->
-                <control type="largeimage" id="7914"> 
+                <control type="image" id="7914"> 
                     <left>999</left> 
                     <top>-14</top> 
                     <width>170</width> 
@@ -1093,12 +1093,11 @@
 
                 </control>
                 <!-- ende -->
-                <control type="largeimage" id="7914"> 
+                <control type="image" id="7914"> 
                     <left>997</left> 
                     <top>-34</top> 
                     <width>170</width> 
                     <height>100</height> 
-
                     <texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
                     <fadetime>IconCrossfadeTime</fadetime>
                     <aspectratio scalediffuse="false" aligny="center" align="left">keep</aspectratio> 

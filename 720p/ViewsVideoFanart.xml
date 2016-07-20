@@ -550,7 +550,7 @@
                 <left>80</left>
                 <top>20</top>
                 <visible>Container.Content(TVShows)</visible>
-                <control type="largeimage" id="7914"> 
+                <control type="image" id="7914"> 
                     <left>-60</left> 
                     <top>-20</top> 
                     <width>470</width> 
@@ -753,7 +753,7 @@
                 <left>80</left>
                 <top>20</top>
                 <visible>Container.Content(Seasons)</visible>
-                <control type="largeimage" id="7914"> 
+                <control type="image" id="7914"> 
                     <left>-60</left> 
                     <top>-20</top> 
                     <width>470</width> 
@@ -1010,7 +1010,7 @@
                     <label>$INFO[ListItem.Plot]</label>
                     <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
-                <control type="largeimage" id="7914"> 
+                <control type="image" id="7914"> 
                     <left>-60</left> 
                     <top>-20</top> 
                     <width>470</width> 
@@ -1021,7 +1021,7 @@
                     <visible>!String.Contains(listitem.path,season)</visible> 
                     <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
-                <control type="largeimage" id="7917"> 
+                <control type="image" id="7917"> 
                     <left>-60</left> 
                     <top>-20</top> 
                     <width>470</width> 

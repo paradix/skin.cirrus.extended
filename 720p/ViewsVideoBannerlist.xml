@@ -398,12 +398,12 @@
                     <visible>!String.IsEmpty(ListItem.Thumb)</visible>
                 </control>
                 <!-- TV SHOW LOGO -->
-                <control type="largeimage" id="7914">
+                <control type="image" id="7914">
                     <left>370r</left>
                     <top>-10</top>
                     <width>335</width>
                     <height>130</height>
-                    <texture>$INFO[ListItem.Art(clearlogo)]</texture>
+                    <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
                     <fadetime>100</fadetime>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                     <visible>!String.IsEmpty(ListItem.Thumb)</visible>

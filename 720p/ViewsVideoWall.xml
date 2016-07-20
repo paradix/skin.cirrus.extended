@@ -291,12 +291,12 @@
                     <texture>$VAR[StudioIcon]$INFO[ListItem.Studio,,.png]</texture>
                 </control>
                 <!-- TV SHOW LOGO -->
-                <control type="largeimage" id="7914"> 
+                <control type="image" id="7914"> 
                     <left>260r</left> 
                     <top>-20</top> 
                     <width>232</width> 
                     <height>90</height> 
-                    <texture>$INFO[ListItem.Art(clearlogo)]</texture> 
+                    <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture> 
                     <fadetime>100</fadetime> 
                     <aspectratio scalediffuse="false">keep</aspectratio> 
                     <visible>!String.IsEmpty(ListItem.Thumb)</visible> 

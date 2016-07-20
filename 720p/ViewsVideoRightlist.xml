@@ -418,7 +418,7 @@
                     <visible>Skin.HasSetting(banner) + !String.IsEmpty(ListItem.Thumb)</visible>
                 </control>
                 <!-- TV SHOW LOGO -->
-                <control type="largeimage" id="7914">
+                <control type="image" id="7914">
                     <left>370r</left>
                     <top>0</top>
                     <width>335</width>
@@ -620,7 +620,7 @@
                     </control>
                 </control>
                 <!-- TV SHOW LOGO -->
-                <control type="largeimage" id="7915">
+                <control type="image" id="7915">
                     <left>370r</left>
                     <top>220</top>
                     <width>283</width>
@@ -695,7 +695,7 @@
                     <include>AspectCodecFlaggingConditions</include>
                 </control>
                 <!-- TV SHOW LOGO -->
-                <control type="largeimage" id="7916">
+                <control type="image" id="7916">
                     <left>370r</left>
                     <top>35</top>
                     <width>268</width>
@@ -705,7 +705,7 @@
                     <aspectratio scalediffuse="false">keep</aspectratio>
                     <visible>!String.Contains(listitem.path,season) + !String.IsEmpty(ListItem.Thumb)</visible>
                 </control>
-                <control type="largeimage" id="7917">
+                <control type="image" id="7917">
                     <left>370r</left>
                     <top>35</top>
                     <width>268</width>

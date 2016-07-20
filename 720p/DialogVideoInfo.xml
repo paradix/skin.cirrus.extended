@@ -468,12 +468,12 @@
                     <control type="group">
                         <left>20</left>
                         <top>-20</top>
-                        <control type="largeimage" id="7914">
+                        <control type="image" id="7914">
                             <left>0</left>
                             <top>545</top>
                             <width>200</width>
                             <height>77</height>
-                            <texture>$INFO[ListItem.Art(clearlogo)]</texture>
+                            <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
                             <fadetime>100</fadetime>
                             <aspectratio scalediffuse="false">keep</aspectratio>
                         </control>
@@ -729,7 +729,7 @@
                     <control type="group">
                         <left>20</left>
                         <top>-20</top>
-                        <control type="largeimage" id="7914">
+                        <control type="image" id="7914">
                             <left>0</left>
                             <top>545</top>
                             <width>200</width>
