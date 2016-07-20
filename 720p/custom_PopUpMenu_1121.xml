@@ -116,7 +116,7 @@
                     <onclick>Dialog.Close(1121)</onclick>
                     <onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
                     <label>41204</label>
-                    <enable>!IsEmpty(ListItem.Trailer)</enable>
+                    <enable>!String.IsEmpty(ListItem.Trailer)</enable>
                     <onleft>9021</onleft>
                     <onright>9021</onright>
                     <onup>10</onup>
@@ -131,7 +131,7 @@
                     <onclick>Dialog.Close(2003)</onclick>
                     <onclick>PlayMedia($INFO[ListItem.Trailer])</onclick>
                     <label>41205</label>
-                    <enable>!IsEmpty(ListItem.Trailer)</enable>
+                    <enable>!String.IsEmpty(ListItem.Trailer)</enable>
                     <onleft>9021</onleft>
                     <onright>9021</onright>
                     <onup>2</onup>
@@ -173,7 +173,7 @@
                     <onclick>Playlist.Clear</onclick>
                     <onclick>Dialog.Close(1121)</onclick>
                     <onclick>XBMC.RunScript(script.cinema.experience)</onclick>
-                    <visible>Container.Content(Movies) + System.HasAddon(script.cinema.experience) + !SubString(Container.FolderPath,plugin://plugin,Left)</visible>
+                    <visible>Container.Content(Movies) + System.HasAddon(script.cinema.experience) + !String.StartsWith(Container.FolderPath,plugin://plugin)</visible>
                     <label>41208</label>
                     <include>ButtonCommonValues</include>
                     <onleft>9021</onleft>

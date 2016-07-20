@@ -105,11 +105,11 @@
         <onleft>60</onleft>
         <onup>595</onup>
         <ondown>595</ondown>
-        <onright condition="substring(container.folderpath,plugin://plugin.program.advanced.launcher)">ActivateWindow(1122)</onright>
+        <onright condition="String.Contains(container.folderpath,plugin://plugin.program.advanced.launcher)">ActivateWindow(1122)</onright>
         <viewtype label="40005">list</viewtype>
         <pagecontrol>60</pagecontrol>
         <scrolltime>200</scrolltime>
-        <visible>substring(container.folderpath,plugin://plugin.program.advanced.launcher) | Window.IsVisible(VideoFiles) | Window.IsVisible(VideoLibrary) + !Container.Content(Genres) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(sets)</visible>
+        <visible>String.Contains(container.folderpath,plugin://plugin.program.advanced.launcher) | Window.IsVisible(VideoFiles) | Window.IsVisible(VideoLibrary) + !Container.Content(Genres) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(sets)</visible>
         <!-- NORMAL LAYOUT -->
         <!-- SLIM LAYOUT GAMES -->
         <itemlayout height="40" width="580">

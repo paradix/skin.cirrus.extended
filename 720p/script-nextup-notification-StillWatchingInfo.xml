@@ -100,7 +100,7 @@
                 <align>right</align>
                 <aligny>center</aligny>
                 <font>cirrus_24</font>
-                <visible>!IsEmpty(Control.GetLabel(4004))</visible>
+                <visible>!String.IsEmpty(Control.GetLabel(4004))</visible>
             </control>
             <control type="label" id="4000">
                 <left>2000</left>

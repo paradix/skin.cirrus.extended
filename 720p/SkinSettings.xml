@@ -210,9 +210,9 @@
                     <control type="button" id="785">
                         <include>MenuItemSettings</include>
                         <label>- $LOCALIZE[24020]</label>
-                        <enable>!IsEmpty(Skin.String(LyricScript_Path))</enable>
+                        <enable>!String.IsEmpty(Skin.String(LyricScript_Path))</enable>
                         <onclick>Addon.OpenSettings($INFO[Skin.String(LyricScript_Path)])</onclick>
-                        <visible>!IsEmpty(Skin.String(LyricScript_Path))</visible>
+                        <visible>!String.IsEmpty(Skin.String(LyricScript_Path))</visible>
                     </control>
                     <control type="radiobutton" id="1000">
                         <description>Enable Kiosk Mode (disable slideout menu)</description>

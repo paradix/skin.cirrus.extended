@@ -41,30 +41,30 @@
                     <include>ButtonCommonValues</include>
                     <label>$LOCALIZE[19019]</label>
                     <onclick condition="Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)">NextChannelGroup</onclick>
-                    <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
-                    <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
+                    <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
+                    <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
                 </control>
                 <control type="button" id="130">
                     <description>TV Guide</description>
                     <include>ButtonCommonValues</include>
                     <label>$LOCALIZE[22020]</label>
                     <onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
-                    <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
-                    <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
+                    <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
+                    <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
                 </control>
                 <control type="button" id="34">
                     <description>Recordings</description>
                     <include>ButtonCommonValues</include>
                     <label>$LOCALIZE[19163]</label>
-                    <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
-                    <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
+                    <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
+                    <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
                 </control>
                 <control type="button" id="35">
                     <description>Timers</description>
                     <include>ButtonCommonValues</include>
                     <label>$LOCALIZE[19040]</label>
-                    <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
-                    <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
+                    <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
+                    <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
                 </control>
                 <control type="label" id="201">
                     <width>250</width>
@@ -119,8 +119,8 @@
                     <description>Search</description>
                     <include>ButtonCommonValues</include>
                     <label>$LOCALIZE[137]</label>
-                    <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
-                    <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
+                    <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
+                    <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
                 </control>
                 <control type="radiobutton" id="31">
                     <description>Filter</description>
@@ -184,12 +184,12 @@
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <label>[COLOR=white]$INFO[System.Time]   [B]$LOCALIZE[19020][/B][/COLOR]</label>
-                <visible>IsEmpty(Window.Property(IsRadio))</visible>
+                <visible>String.IsEmpty(Window.Property(IsRadio))</visible>
             </control>
             <control type="label">
                 <include>WindowTitleCommons</include>
                 <label>[COLOR=white]$INFO[System.Time]   [B]$LOCALIZE[19021][/B][/COLOR]</label>
-                <visible>!IsEmpty(Window.Property(IsRadio))</visible>
+                <visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
             </control>
             <control type="label">
                 <include>WindowTitleCommons</include>

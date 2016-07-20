@@ -285,8 +285,8 @@
                     <altclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</altclick>
                     <altclick>Close</altclick>
                     <altclick>RunScript($INFO[Skin.String(LyricScript_Path)])</altclick>
-                    <usealttexture>IsEmpty(Skin.String(LyricScript_Path))</usealttexture>
-                    <animation effect="fade" start="100" end="50" time="100" condition="!IsEmpty(Skin.String(LyricScript_Path))">Conditional</animation>
+                    <usealttexture>String.IsEmpty(Skin.String(LyricScript_Path))</usealttexture>
+                    <animation effect="fade" start="100" end="50" time="100" condition="!String.IsEmpty(Skin.String(LyricScript_Path))">Conditional</animation>
                 </control>
             </control>
             <control type="image" id="11">

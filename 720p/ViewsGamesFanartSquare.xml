@@ -56,7 +56,7 @@
                 <onleft>591</onleft>
                 <onright>591</onright>
                 <onup>60</onup>
-                <ondown condition="substring(container.folderpath,plugin://plugin.program.advanced.launcher)">ActivateWindow(1122)</ondown>
+                <ondown condition="String.Contains(container.folderpath,plugin://plugin.program.advanced.launcher)">ActivateWindow(1122)</ondown>
                 <viewtype label="40001">wrap</viewtype>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime tween="quadratic" easing="out">300</scrolltime>

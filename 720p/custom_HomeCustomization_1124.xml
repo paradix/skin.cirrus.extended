@@ -153,8 +153,8 @@
                     <include>MenuItemSettings</include>
                     <label>$INFO[Skin.String(HomeItemToEdit.LabelSuffix)] - $VAR[HomeItemCustomFavouriteLabel]</label>
                     <onclick>Skin.ToggleSetting($ESCINFO[Skin.String(HomeItemToEdit.EnableString)])</onclick>
-                    <onclick condition="IsEmpty(Skin.String(HomeItemToEdit.Enabled))">Skin.SetString(HomeItemToEdit.Enabled,1)</onclick>
-                    <onclick condition="!IsEmpty(Skin.String(HomeItemToEdit.Enabled))">Skin.Reset(HomeItemToEdit.Enabled)</onclick>
+                    <onclick condition="String.IsEmpty(Skin.String(HomeItemToEdit.Enabled))">Skin.SetString(HomeItemToEdit.Enabled,1)</onclick>
+                    <onclick condition="!String.IsEmpty(Skin.String(HomeItemToEdit.Enabled))">Skin.Reset(HomeItemToEdit.Enabled)</onclick>
                     <selected>Skin.String(HomeItemToEdit.Enabled,1)</selected>
                 </control>
                 <control type="button" id="3">
@@ -173,7 +173,7 @@
                     <label2>[COLOR=selected]$VAR[HomeItemCustomFavouritePath][/COLOR]</label2>
                     <onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,$INFO[Skin.String(HomeItemToEdit.LabelPathString)])</onclick>
                     <onclick>ActivateWindow(1114)</onclick>
-                    <visible>SubString(Skin.String(HomeItemToEdit.Submenu),customfav)</visible>
+                    <visible>String.Contains(Skin.String(HomeItemToEdit.Submenu),customfav)</visible>
                     <enable>Skin.String(HomeItemToEdit.Enabled,1)</enable>
                 </control>
                 <control type="button" id="5">
@@ -182,7 +182,7 @@
                     <label>$LOCALIZE[41070]</label>
                     <label2>[COLOR=selected]$VAR[HomeItemCustomFavouritePath][/COLOR]</label2>
                     <onclick>Skin.SetFile($INFO[Skin.String(HomeItemToEdit.LabelPathString)],.xsp,special://videoplaylists)</onclick>
-                    <visible>SubString(Skin.String(HomeItemToEdit.Submenu),customplaylist)</visible>
+                    <visible>String.Contains(Skin.String(HomeItemToEdit.Submenu),customplaylist)</visible>
                     <enable>Skin.String(HomeItemToEdit.Enabled,1)</enable>
                 </control>
                 <control type="button" id="6">
@@ -197,8 +197,8 @@
                     <include>MenuItemSettings</include>
                     <label>$LOCALIZE[24022] $LOCALIZE[31330]</label>
                     <onclick>Skin.ToggleSetting($ESCINFO[Skin.String(HomeItemToEdit.EnableRecentlyAddedString)])</onclick>
-                    <onclick condition="IsEmpty(Skin.String(HomeItemToEdit.EnableRecentlyAdded))">Skin.SetString(HomeItemToEdit.EnableRecentlyAdded,1)</onclick>
-                    <onclick condition="!IsEmpty(Skin.String(HomeItemToEdit.EnableRecentlyAdded))">Skin.Reset(HomeItemToEdit.EnableRecentlyAdded)</onclick>
+                    <onclick condition="String.IsEmpty(Skin.String(HomeItemToEdit.EnableRecentlyAdded))">Skin.SetString(HomeItemToEdit.EnableRecentlyAdded,1)</onclick>
+                    <onclick condition="!String.IsEmpty(Skin.String(HomeItemToEdit.EnableRecentlyAdded))">Skin.Reset(HomeItemToEdit.EnableRecentlyAdded)</onclick>
                     <selected>Skin.String(HomeItemToEdit.EnableRecentlyAdded,1)</selected>
                     <visible>Skin.String(HomeItemToEdit.EnableRecentlyAddedString)</visible>
                     <enable>[Skin.String(HomeItemToEdit.Enabled,1) + Skin.String(HomeItemToEdit.LabelSuffix,$LOCALIZE[24022])] | [!Skin.String(HomeItemToEdit.Enabled) + !Skin.String(HomeItemToEdit.LabelSuffix,$LOCALIZE[24022])]</enable>
@@ -208,8 +208,8 @@
                     <include>MenuItemSettings</include>
                     <label>$LOCALIZE[31331]</label>
                     <onclick>Skin.ToggleSetting($ESCINFO[Skin.String(HomeItemToEdit.EnableRecentlyAddedHorzString)])</onclick>
-                    <onclick condition="IsEmpty(Skin.String(HomeItemToEdit.EnableRecentlyAddedHorz))">Skin.SetString(HomeItemToEdit.EnableRecentlyAddedHorz,1)</onclick>
-                    <onclick condition="!IsEmpty(Skin.String(HomeItemToEdit.EnableRecentlyAddedHorz))">Skin.Reset(HomeItemToEdit.EnableRecentlyAddedHorz)</onclick>
+                    <onclick condition="String.IsEmpty(Skin.String(HomeItemToEdit.EnableRecentlyAddedHorz))">Skin.SetString(HomeItemToEdit.EnableRecentlyAddedHorz,1)</onclick>
+                    <onclick condition="!String.IsEmpty(Skin.String(HomeItemToEdit.EnableRecentlyAddedHorz))">Skin.Reset(HomeItemToEdit.EnableRecentlyAddedHorz)</onclick>
                     <selected>Skin.String(HomeItemToEdit.EnableRecentlyAddedHorz,1)</selected>
                     <visible>Skin.String(HomeItemToEdit.EnableRecentlyAddedHorzString)</visible>
                     <enable>Skin.String(HomeItemToEdit.EnableRecentlyAdded) + [[Skin.String(HomeItemToEdit.Enabled,1) + Skin.String(HomeItemToEdit.LabelSuffix,$LOCALIZE[24022])] | [!Skin.String(HomeItemToEdit.Enabled) + !Skin.String(HomeItemToEdit.LabelSuffix,$LOCALIZE[24022])]]</enable>
@@ -219,8 +219,8 @@
                     <include>MenuItemSettings</include>
                     <label>$LOCALIZE[31041]</label>
                     <onclick>Skin.ToggleSetting($ESCINFO[Skin.String(HomeItemToEdit.EnableMovieLogoString)])</onclick>
-                    <onclick condition="IsEmpty(Skin.String(HomeItemToEdit.EnableLogo))">Skin.SetString(HomeItemToEdit.EnableLogo,1)</onclick>
-                    <onclick condition="!IsEmpty(Skin.String(HomeItemToEdit.EnableLogo))">Skin.Reset(HomeItemToEdit.EnableLogo)</onclick>
+                    <onclick condition="String.IsEmpty(Skin.String(HomeItemToEdit.EnableLogo))">Skin.SetString(HomeItemToEdit.EnableLogo,1)</onclick>
+                    <onclick condition="!String.IsEmpty(Skin.String(HomeItemToEdit.EnableLogo))">Skin.Reset(HomeItemToEdit.EnableLogo)</onclick>
                     <selected>Skin.String(HomeItemToEdit.EnableLogo,1)</selected>
                     <visible>Skin.String(HomeItemToEdit.EnableMovieLogoString)</visible>
                     <enable>Skin.String(HomeItemToEdit.EnableRecentlyAdded) + !Skin.String(HomeItemToEdit.EnableRecentlyAddedHorz) + [[Skin.String(HomeItemToEdit.Enabled,1) + Skin.String(HomeItemToEdit.LabelSuffix,$LOCALIZE[24022])] | [!Skin.String(HomeItemToEdit.Enabled) + !Skin.String(HomeItemToEdit.LabelSuffix,$LOCALIZE[24022])]]</enable>
@@ -230,8 +230,8 @@
                     <include>MenuItemSettings</include>
                     <label>$LOCALIZE[31039]</label>
                     <onclick>Skin.ToggleSetting($ESCINFO[Skin.String(HomeItemToEdit.EnableWidgetString)])</onclick>
-                    <onclick condition="IsEmpty(Skin.String(HomeItemToEdit.EnableWidget))">Skin.SetString(HomeItemToEdit.EnableWidget,1)</onclick>
-                    <onclick condition="!IsEmpty(Skin.String(HomeItemToEdit.EnableWidget))">Skin.Reset(HomeItemToEdit.EnableWidget)</onclick>
+                    <onclick condition="String.IsEmpty(Skin.String(HomeItemToEdit.EnableWidget))">Skin.SetString(HomeItemToEdit.EnableWidget,1)</onclick>
+                    <onclick condition="!String.IsEmpty(Skin.String(HomeItemToEdit.EnableWidget))">Skin.Reset(HomeItemToEdit.EnableWidget)</onclick>
                     <selected>Skin.String(HomeItemToEdit.EnableWidget,1)</selected>
                     <visible>Skin.String(HomeItemToEdit.EnableWidgetString)</visible>
                     <enable>Skin.String(HomeItemToEdit.EnableRecentlyAdded) + [[Skin.String(HomeItemToEdit.Enabled,1) + Skin.String(HomeItemToEdit.LabelSuffix,$LOCALIZE[24022])] | [!Skin.String(HomeItemToEdit.Enabled) + !Skin.String(HomeItemToEdit.LabelSuffix,$LOCALIZE[24022])]]</enable>

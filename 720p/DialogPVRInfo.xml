@@ -194,7 +194,7 @@
                         <font>cirrus_24</font>
                         <textcolor>grey</textcolor>
                         <scroll>true</scroll>
-                        <visible>!IsEmpty(ListItem.PlotOutline)</visible>
+                        <visible>!String.IsEmpty(ListItem.PlotOutline)</visible>
                     </control>
                 </control>
                 <control type="label">

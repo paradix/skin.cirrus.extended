@@ -81,14 +81,14 @@
             <top>0</top>
             <width>75</width>
             <height>28</height>
-            <visible>substring(listitem.filename,.en.) | substring(listitem.filename,.de.) | substring(listitem.filename,.es.) | substring(listitem.filename,.fr.) | substring(listitem.filename,.it.)</visible>
+            <visible>String.Contains(listitem.filename,.en.) | String.Contains(listitem.filename,.de.) | String.Contains(listitem.filename,.es.) | String.Contains(listitem.filename,.fr.) | String.Contains(listitem.filename,.it.)</visible>
             <control type="image">
                 <description>English</description>
                 <width>75</width>
                 <height>28</height>
                 <aspectratio>keep</aspectratio>
                 <texture>special://skin/extras/flagging/audiolanguage/eng.png</texture>
-                <visible>substring(listitem.filename,.en.)</visible>
+                <visible>String.Contains(listitem.filename,.en.)</visible>
                 <visible>Skin.HasSetting(showlanflag)</visible>
             </control>
             <control type="image">
@@ -97,7 +97,7 @@
                 <height>28</height>
                 <aspectratio>keep</aspectratio>
                 <texture>special://skin/extras/flagging/audiolanguage/ger.png</texture>
-                <visible>substring(listitem.filename,.de.)</visible>
+                <visible>String.Contains(listitem.filename,.de.)</visible>
                 <visible>Skin.HasSetting(showlanflag)</visible>
             </control>
             <control type="image">
@@ -106,7 +106,7 @@
                 <height>28</height>
                 <aspectratio>keep</aspectratio>
                 <texture>special://skin/extras/flagging/audiolanguage/spa.png</texture>
-                <visible>substring(listitem.filename,.es.)</visible>
+                <visible>String.Contains(listitem.filename,.es.)</visible>
                 <visible>Skin.HasSetting(showlanflag)</visible>
             </control>
             <control type="image">
@@ -115,7 +115,7 @@
                 <height>28</height>
                 <aspectratio>keep</aspectratio>
                 <texture>special://skin/extras/flagging/audiolanguage/fra.png</texture>
-                <visible>substring(listitem.filename,.fr.)</visible>
+                <visible>String.Contains(listitem.filename,.fr.)</visible>
                 <visible>Skin.HasSetting(showlanflag)</visible>
             </control>
             <control type="image">
@@ -124,7 +124,7 @@
                 <height>28</height>
                 <aspectratio>keep</aspectratio>
                 <texture>special://skin/extras/flagging/audiolanguage/ita.png</texture>
-                <visible>substring(listitem.filename,.it.)</visible>
+                <visible>String.Contains(listitem.filename,.it.)</visible>
                 <visible>Skin.HasSetting(showlanflag)</visible>
             </control>
             <control type="image">
@@ -149,7 +149,7 @@
                 <height>28</height>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="special://skin/extras/flagging/audiolanguage/unknown.png">$INFO[ListItem.AudioLanguage,special://skin/extras/flagging/audiolanguage/,.png]</texture>
-                <visible>!IsEmpty(ListItem.AudioLanguage)</visible>
+                <visible>!String.IsEmpty(ListItem.AudioLanguage)</visible>
                 <visible>Skin.HasSetting(showlanflag)</visible>
             </control>
             <control type="image">
@@ -159,7 +159,7 @@
                 <aspectratio>keep</aspectratio>
                 <texture colordiffuse="$VAR[FlagColor]">special://skin/extras/flagging/audiolanguage/frame.png</texture>
                 <visible>Skin.HasSetting(showlanflag)</visible>
-                <visible>!IsEmpty(ListItem.AudioLanguage)</visible>
+                <visible>!String.IsEmpty(ListItem.AudioLanguage)</visible>
             </control>
         </control>
     </include>

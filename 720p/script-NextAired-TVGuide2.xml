@@ -20,7 +20,7 @@
             <randomize>true</randomize>
             <fadetime>2000</fadetime>
             <include condition="Skin.HasSetting(animation_bg_global)">global_kenburns_fanart</include>
-            <visible>![Player.HasVideo + Skin.HasSetting(VideoBackgrounds)] + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)</visible>
+            <visible>![Player.HasVideo + Skin.HasSetting(VideoBackgrounds)] + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)</visible>
         </control>
         <control type="image">
             <left>0</left>
@@ -63,7 +63,7 @@
             <!--  -->
 
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.200.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.200.Wday))</visible>
                 <description>1Day</description>
                 <left>30</left>
                 <top>60</top>
@@ -88,7 +88,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.201.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.201.Wday))</visible>
                 <description>2Day</description>
                 <left>30</left>
                 <top>150</top>
@@ -113,7 +113,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.202.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.202.Wday))</visible>
                 <description>3Day</description>
                 <left>30</left>
                 <top>240</top>
@@ -138,7 +138,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.203.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.203.Wday))</visible>
                 <description>4Day</description>
                 <left>30</left>
                 <top>330</top>
@@ -163,7 +163,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.204.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.204.Wday))</visible>
                 <description>5Day</description>
                 <left>30</left>
                 <top>420</top>
@@ -188,7 +188,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.205.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.205.Wday))</visible>
                 <description>6Day</description>
                 <left>30</left>
                 <top>510</top>
@@ -213,7 +213,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.206.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.206.Wday))</visible>
                 <description>7Day</description>
                 <left>30</left>
                 <top>600</top>
@@ -238,7 +238,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.207.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.207.Wday))</visible>
                 <description>8Day</description>
                 <left>30</left>
                 <top>690</top>
@@ -263,7 +263,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.208.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.208.Wday))</visible>
                 <description>9Day</description>
                 <left>30</left>
                 <top>690</top>
@@ -288,7 +288,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.209.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.209.Wday))</visible>
                 <description>10Day</description>
                 <left>30</left>
                 <top>690</top>
@@ -313,7 +313,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.210.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.210.Wday))</visible>
                 <description>11Day</description>
                 <left>30</left>
                 <top>690</top>
@@ -338,7 +338,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.211.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.211.Wday))</visible>
                 <description>12Day</description>
                 <left>30</left>
                 <top>690</top>
@@ -363,7 +363,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.212.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.212.Wday))</visible>
                 <description>13Day</description>
                 <left>30</left>
                 <top>690</top>
@@ -388,7 +388,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.213.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.213.Wday))</visible>
                 <description>14Day</description>
                 <left>30</left>
                 <top>690</top>
@@ -413,7 +413,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.214.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.214.Wday))</visible>
                 <description>15Day</description>
                 <left>30</left>
                 <top>690</top>
@@ -438,7 +438,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window(Home).Property(NextAired.215.Wday),)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(NextAired.215.Wday))</visible>
                 <description>16Day</description>
                 <left>30</left>
                 <top>690</top>

@@ -260,7 +260,7 @@
                                 <aspectratio aligny="bottom">stretch</aspectratio>
                                 <fadetime>IconCrossfadeTime</fadetime>
                                 <texture>Overlayicons/TrailerOverlay.png</texture>
-                                <visible>Control.IsVisible(556) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
+                                <visible>Control.IsVisible(556) + Container.Content(movies) + !String.IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
                             </control>
                         </control>
                         <control type="group">
@@ -319,7 +319,7 @@
                                 <aspectratio aligny="bottom">keep</aspectratio>
                                 <fadetime>IconCrossfadeTime</fadetime>
                                 <texture>Overlayicons/trailer.png</texture>
-                                <visible>Control.IsVisible(556) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
+                                <visible>Control.IsVisible(556) + Container.Content(movies) + !String.IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
                             </control>
                         </control>
                     </control>

@@ -251,7 +251,7 @@
                 <font>cirrus_20</font>
                 <textcolor>grey2</textcolor>
                 <focusedcolor>white</focusedcolor>
-                <visible>IsEmpty(Window.Property(IsRadio))</visible>
+                <visible>String.IsEmpty(Window.Property(IsRadio))</visible>
                 <texturefocus flipx="true">listwhitegradient.png</texturefocus>
                 <texturenofocus border="5">menuitemNF.png</texturenofocus>
                 <align>center</align>
@@ -270,7 +270,7 @@
                 <font>cirrus_20</font>
                 <textcolor>grey2</textcolor>
                 <focusedcolor>white</focusedcolor>
-                <visible>!IsEmpty(Window.Property(IsRadio))</visible>
+                <visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
                 <texturefocus flipx="true">listwhitegradient.png</texturefocus>
                 <texturenofocus border="5">menuitemNF.png</texturenofocus>
                 <align>center</align>
@@ -557,7 +557,7 @@
                 <aligny>center</aligny>
                 <textcolor>accent</textcolor>
                 <shadowcolor>black</shadowcolor>
-                <visible>IsEmpty(Window.Property(IsRadio))</visible>
+                <visible>String.IsEmpty(Window.Property(IsRadio))</visible>
             </control>
             <control type="label">
                 <description>header label</description>
@@ -571,7 +571,7 @@
                 <aligny>center</aligny>
                 <textcolor>accent</textcolor>
                 <shadowcolor>black</shadowcolor>
-                <visible>IsEmpty(Window.Property(IsRadio))</visible>
+                <visible>String.IsEmpty(Window.Property(IsRadio))</visible>
             </control>
             <control type="label">
                 <description>header label</description>
@@ -585,7 +585,7 @@
                 <aligny>center</aligny>
                 <textcolor>white</textcolor>
                 <shadowcolor>black</shadowcolor>
-                <visible>!IsEmpty(Window.Property(IsRadio))</visible>
+                <visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
             </control>
         </control>
         <include>BehindDialogFadeOut</include>

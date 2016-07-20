@@ -4,7 +4,7 @@
     <variable name="PauseSeekLabel">
         <value condition="Player.Paused + !Player.Caching + !Player.Seeking">$LOCALIZE[31043]</value>
         <value condition="[Player.Paused + Player.Caching] + !Player.Seeking">$LOCALIZE[15107] $INFO[Player.CacheLevel]%</value>
-        <value condition="!IsEmpty(Player.SeekStepSize) + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[31044] $INFO[Player.SeekStepSize]</value>
+        <value condition="!String.IsEmpty(Player.SeekStepSize) + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[31044] $INFO[Player.SeekStepSize]</value>
         <value condition="Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[31044] $INFO[Player.SeekOffset]</value>
         <value condition="!Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[31044]</value>
         <value condition="Player.Forwarding">Fast Forward</value>
@@ -19,46 +19,46 @@
 
     <!-- Overlay variable -->
     <variable name="overlayIcon">
-        <value condition="[[!ListItem.IsResumable + !StringCompare(ListItem.PlayCount, )] | [ListItem.IsResumable + !StringCompare(ListItem.PlayCount, ) + Skin.HasSetting(DisableInProgress)]]">$INFO[ListItem.Overlay]</value>
-        <value condition="ListItem.IsResumable + [[!Skin.HasSetting(DisableInProgress) + !StringCompare(ListItem.PlayCount, )] | [Skin.HasSetting(DisableInProgress) + StringCompare(ListItem.PlayCount, )] | [!Skin.HasSetting(DisableInProgress) + StringCompare(ListItem.PlayCount, )]]">OverlayWatching.png</value>
+        <value condition="[[!ListItem.IsResumable + !String.IsEmpty(ListItem.PlayCount)] | [ListItem.IsResumable + !String.IsEmpty(ListItem.PlayCount) + Skin.HasSetting(DisableInProgress)]]">$INFO[ListItem.Overlay]</value>
+        <value condition="ListItem.IsResumable + [[!Skin.HasSetting(DisableInProgress) + !String.IsEmpty(ListItem.PlayCount)] | [Skin.HasSetting(DisableInProgress) + String.IsEmpty(ListItem.PlayCount)] | [!Skin.HasSetting(DisableInProgress) + String.IsEmpty(ListItem.PlayCount)]]">OverlayWatching.png</value>
     </variable>
     <!-- cases -->
     <variable name="mediaCases">
-        <value condition="![stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080) | stringcompare(ListItem.VideoResolution,540)] + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + !Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + !Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/dvd.png</value>
-        <value condition="[[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + !substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)] + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + !Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + !Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/bluray.png</value>
-        <value condition="[[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)] + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + !Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + !Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/3dbluraycase3.png</value>
-        <value condition="stringcompare(ListItem.VideoResolution,540) + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + !Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + !Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/hddvd.png</value>
+        <value condition="![String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080) | String.IsEqual(ListItem.VideoResolution,540)] + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + !Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + !Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/dvd.png</value>
+        <value condition="[[String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080)] + !String.Contains(listitem.filename,3D) + !String.IsEqual(ListItem.VideoResolution,540)] + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + !Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + !Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/bluray.png</value>
+        <value condition="[[String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080)] + String.Contains(listitem.filename,3D) + !String.IsEqual(ListItem.VideoResolution,540)] + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + !Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + !Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/3dbluraycase3.png</value>
+        <value condition="String.IsEqual(ListItem.VideoResolution,540) + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + !Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + !Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/hddvd.png</value>
         <!-- clearcases -->
-        <value condition="![stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080) | stringcompare(ListItem.VideoResolution,540)] + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/dvd-clear.png</value>
-        <value condition="[[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + !substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)] + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/bluray-clear.png</value>
-        <value condition="[[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + substring(listitem.filename,3D) + !stringcompare(ListItem.VideoResolution,540)] + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/3dbluray-clear.png</value>
-        <value condition="stringcompare(ListItem.VideoResolution,540) + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/hddvd-clear.png</value>
+        <value condition="![String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080) | String.IsEqual(ListItem.VideoResolution,540)] + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/dvd-clear.png</value>
+        <value condition="[[String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080)] + !String.Contains(listitem.filename,3D) + !String.IsEqual(ListItem.VideoResolution,540)] + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/bluray-clear.png</value>
+        <value condition="[[String.IsEqual(ListItem.VideoResolution,720) | String.IsEqual(ListItem.VideoResolution,1080)] + String.Contains(listitem.filename,3D) + !String.IsEqual(ListItem.VideoResolution,540)] + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/3dbluray-clear.png</value>
+        <value condition="String.IsEqual(ListItem.VideoResolution,540) + [[Control.IsVisible(556) + Skin.HasSetting(showBigposterCases) + Skin.HasSetting(showBigposterClearCases)] | [Control.IsVisible(569) + Skin.HasSetting(showCases) + Skin.HasSetting(showClearCases)]]">special://skin/extras/flagging/cases/hddvd-clear.png</value>
     </variable>
 
     <!-- Movie Sets -->
     <variable name="ListItemGenre">
-        <value condition="System.HasAddon(script.skin.info.service) + SubString(ListItem.Path,videodb://movies/sets/,left)">$INFO[Window(home).Property(Set.Movies.Genre),[COLOR=accent]$LOCALIZE[515]:[/COLOR] ]</value>
+        <value condition="System.HasAddon(script.skin.info.service) + String.StartsWith(ListItem.Path,videodb://movies/sets/)">$INFO[Window(home).Property(Set.Movies.Genre),[COLOR=accent]$LOCALIZE[515]:[/COLOR] ]</value>
         <value>$INFO[ListItem.Genre,[COLOR=accent]$LOCALIZE[515]:[/COLOR]]</value>
     </variable>
     <variable name="ListItemPlot">
-        <value condition="System.HasAddon(script.skin.info.service) + SubString(ListItem.Path,videodb://movies/sets/,left)">$INFO[Window(home).Property(Set.Movies.Plot)]</value>
+        <value condition="System.HasAddon(script.skin.info.service) + String.StartsWith(ListItem.Path,videodb://movies/sets/)">$INFO[Window(home).Property(Set.Movies.Plot)]</value>
         <value>$INFO[ListItem.Plot]</value>
     </variable>
     <variable name="ListItemPlotOutline">
-        <value condition="System.HasAddon(script.skin.info.service) + SubString(ListItem.Path,videodb://movies/sets/,left)">$INFO[Window(home).Property(Set.Movies.Plot)]</value>
+        <value condition="System.HasAddon(script.skin.info.service) + String.StartsWith(ListItem.Path,videodb://movies/sets/)">$INFO[Window(home).Property(Set.Movies.Plot)]</value>
         <value>$INFO[ListItem.PlotOutline]</value>
     </variable>
     <variable name="ListItemRuntime">
-        <value condition="System.HasAddon(script.skin.info.service) + SubString(ListItem.Path,videodb://movies/sets/,left) + Control.IsVisible(766)">$INFO[Window(home).Property(Set.Movies.Runtime),[COLOR=accent]$LOCALIZE[2050]: [/COLOR], $LOCALIZE[12391]]</value>
-        <value condition="System.HasAddon(script.skin.info.service) + SubString(ListItem.Path,videodb://movies/sets/,left)">$INFO[Window(home).Property(Set.Movies.Runtime),, $LOCALIZE[12391]]</value>
+        <value condition="System.HasAddon(script.skin.info.service) + String.StartsWith(ListItem.Path,videodb://movies/sets/) + Control.IsVisible(766)">$INFO[Window(home).Property(Set.Movies.Runtime),[COLOR=accent]$LOCALIZE[2050]: [/COLOR], $LOCALIZE[12391]]</value>
+        <value condition="System.HasAddon(script.skin.info.service) + String.StartsWith(ListItem.Path,videodb://movies/sets/)">$INFO[Window(home).Property(Set.Movies.Runtime),, $LOCALIZE[12391]]</value>
         <value>$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
     </variable>
     <variable name="ListItemStudio">
-        <value condition="System.HasAddon(script.skin.info.service) + SubString(ListItem.Path,videodb://movies/sets/,left)">$VAR[StudioIcon]$INFO[Window(home).Property(Set.Movies.Studio),,.png]</value>
+        <value condition="System.HasAddon(script.skin.info.service) + String.StartsWith(ListItem.Path,videodb://movies/sets/)">$VAR[StudioIcon]$INFO[Window(home).Property(Set.Movies.Studio),,.png]</value>
         <value>$VAR[StudioIcon]$INFO[ListItem.Studio,,.png]</value>
     </variable>
     <variable name="ListItemYear">
-        <value condition="System.HasAddon(script.skin.info.service) + SubString(ListItem.Path,videodb://movies/sets/,left) + Control.IsVisible(766)">$INFO[Window(home).Property(Set.Movies.Years),[COLOR=accent]$LOCALIZE[41250]:[/COLOR] ]</value>
+        <value condition="System.HasAddon(script.skin.info.service) + String.StartsWith(ListItem.Path,videodb://movies/sets/) + Control.IsVisible(766)">$INFO[Window(home).Property(Set.Movies.Years),[COLOR=accent]$LOCALIZE[41250]:[/COLOR] ]</value>
         <value>$INFO[ListItem.Year]</value>
     </variable>
 
@@ -77,16 +77,16 @@
         <value condition="Control.HasFocus(8010) | [Control.HasFocus(9110) + !Skin.HasSetting(notvwidgetplaylisttv3)]">$INFO[Container(8010).ListItem.Art(fanart)]</value>
     </variable>
     <variable name="FanartBackgrounds">
-        <value condition="System.HasAddon(script.skin.info.service) + [Container.Content(tags) | Container.Content(directors) | Container.Content(actors) | Container.Content(genres) | Container.Content(studios) | Container.Content(countries) | Container.Content(years) | Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets/,left)]">$INFO[Control.GetLabel(4750)]</value>
+        <value condition="System.HasAddon(script.skin.info.service) + [Container.Content(tags) | Container.Content(directors) | Container.Content(actors) | Container.Content(genres) | Container.Content(studios) | Container.Content(countries) | Container.Content(years) | Container.Content(sets) | String.StartsWith(ListItem.Path,videodb://movies/sets/)]">$INFO[Control.GetLabel(4750)]</value>
     </variable>
     <variable name="TVFanartBackground">
         <value condition="Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(seasons)">$INFO[ListItem.Art(fanart)]</value>
     </variable>
     <variable name="ExtraFanartVar">
-        <value condition="IsEmpty(ListItem.Art(extrafanart1)) + [[Skin.HasSetting(ExtraFanMovies) + Container.Content(Movies)] | [Skin.HasSetting(ExtraFanTV) + [Container.Content(TVShows) | Container.Content(Seasons)]]]">$INFO[ListItem.Path,,extrafanart/]</value>
-        <value condition="IsEmpty(ListItem.Art(extrafanart1)) + Skin.HasSetting(ExtraFanTV) + Container.Content(Episodes)">$INFO[ListItem.Path,,../extrafanart/]</value>
-        <value condition="!IsEmpty(ListItem.Art(extrafanart1)) + [Skin.HasSetting(ExtraFanTV) | Skin.HasSetting(ExtraFanMovies)]">$INFO[Control.GetLabel(4325)]</value>
-        <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+        <value condition="String.IsEmpty(ListItem.Art(extrafanart1)) + [[Skin.HasSetting(ExtraFanMovies) + Container.Content(Movies)] | [Skin.HasSetting(ExtraFanTV) + [Container.Content(TVShows) | Container.Content(Seasons)]]]">$INFO[ListItem.Path,,extrafanart/]</value>
+        <value condition="String.IsEmpty(ListItem.Art(extrafanart1)) + Skin.HasSetting(ExtraFanTV) + Container.Content(Episodes)">$INFO[ListItem.Path,,../extrafanart/]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(extrafanart1)) + [Skin.HasSetting(ExtraFanTV) | Skin.HasSetting(ExtraFanMovies)]">$INFO[Control.GetLabel(4325)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
         <value condition="Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)">special://skin/backgrounds/tv_shows.jpg</value>
         <value condition="Container.Content(Movies)">special://skin/backgrounds/videos.jpg</value>
         <value>special://skin/backgrounds/blackbackground.jpg</value>
@@ -113,7 +113,7 @@
         <value>$INFO[ListItem.VideoCodec,special://skin/extras/flagging/video/,.png]</value>
     </variable>
     <variable name="AudioChannels">
-        <value condition="IsEmpty(ListItem.AudioChannels) + IsEmpty(VideoPlayer.AudioChannels) + IsEmpty(Container(100).ListItem.Property(AudioChannels))">special://skin/extras/flagging/audio/0.png</value>
+        <value condition="String.IsEmpty(ListItem.AudioChannels) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(Container(100).ListItem.Property(AudioChannels))">special://skin/extras/flagging/audio/0.png</value>
         <value condition="Window.IsVisible(script-globalsearch-infodialog.xml)">$INFO[Container(100).ListItem.Property(AudioChannels),special://skin/extras/flagging/audio/,.png]</value>
         <value condition="Window.IsVisible(fullscreenvideo)">$INFO[VideoPlayer.AudioChannels,special://skin/extras/flagging/audio/,.png]</value>
         <value>$INFO[ListItem.AudioChannels,special://skin/extras/flagging/audio/,.png]</value>
@@ -132,173 +132,173 @@
 
     <variable name="MpaaRating">
         <!-- Australia -->
-        <value condition="SubString(ListItem.Mpaa,Australia:G)">australia_g</value>
-        <value condition="SubString(ListItem.Mpaa,Australia:PG)">australia_pg</value>
-        <value condition="SubString(ListItem.Mpaa,Australia:MA)">australia_ma</value>
-        <value condition="SubString(ListItem.mpaa,Australia:M)">australia_m</value>
-        <value condition="SubString(ListItem.Mpaa,Australia:R)">australia_r</value>
-        <value condition="SubString(ListItem.Mpaa,Australia:X)">australia_x</value>
-        <value condition="SubString(Container(100).ListItem.Property(Mpaa),Australia:G)">australia_g</value>
-        <value condition="SubString(Container(100).ListItem.Property(Mpaa),Australia:PG)">australia_pg</value>
-        <value condition="SubString(Container(100).ListItem.Property(Mpaa),Australia:MA)">australia_ma</value>
-        <value condition="SubString(Container(100).ListItem.Property(Mpaa),Australia:M)">australia_m</value>
-        <value condition="SubString(Container(100).ListItem.Property(Mpaa),Australia:R)">australia_r</value>
-        <value condition="SubString(Container(100).ListItem.Property(Mpaa),Australia:X)">australia_x</value>
+        <value condition="String.Contains(ListItem.Mpaa,Australia:G)">australia_g</value>
+        <value condition="String.Contains(ListItem.Mpaa,Australia:PG)">australia_pg</value>
+        <value condition="String.Contains(ListItem.Mpaa,Australia:MA)">australia_ma</value>
+        <value condition="String.Contains(ListItem.mpaa,Australia:M)">australia_m</value>
+        <value condition="String.Contains(ListItem.Mpaa,Australia:R)">australia_r</value>
+        <value condition="String.Contains(ListItem.Mpaa,Australia:X)">australia_x</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(Mpaa),Australia:G)">australia_g</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(Mpaa),Australia:PG)">australia_pg</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(Mpaa),Australia:MA)">australia_ma</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(Mpaa),Australia:M)">australia_m</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(Mpaa),Australia:R)">australia_r</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(Mpaa),Australia:X)">australia_x</value>
         <!-- US -->
-        <value condition="SubString(ListItem.Mpaa,Rated G) | SubString(ListItem.mpaa,US:G) | SubString(ListItem.mpaa,USA:G)">mpaa_general</value>
-        <value condition="SubString(ListItem.Mpaa,Rated PG-13) | SubString(ListItem.mpaa,US:PG-13) | SubString(ListItem.mpaa,USA:PG-13)">mpaa_pg13</value>
-        <value condition="SubString(ListItem.Mpaa,Rated PG) | SubString(ListItem.mpaa,US:PG) | SubString(ListItem.mpaa,USA:PG)">mpaa_pg</value>
-        <value condition="SubString(Listitem.mpaa,Rated R) | SubString(ListItem.mpaa,US:R) | SubString(ListItem.mpaa,USA:R)">mpaa_restricted</value>
-        <value condition="SubString(Listitem.mpaa,Rated NC-17) | SubString(ListItem.mpaa,US:NC-17) | SubString(ListItem.mpaa,USA:NC-17)">mpaa_nc17</value>
-        <value condition="SubString(Container(100).ListItem.Property(Mpaa),Rated G) | SubString(Container(100).ListItem.Property(Mpaa),US:G) | SubString(Container(100).ListItem.Property(Mpaa),USA:G)">mpaa_general</value>
-        <value condition="SubString(Container(100).ListItem.Property(Mpaa),Rated PG-13) | SubString(Container(100).ListItem.Property(Mpaa),US:PG-13) | SubString(Container(100).ListItem.Property(Mpaa),USA:PG-13)">mpaa_pg13</value>
-        <value condition="SubString(Container(100).ListItem.Property(Mpaa),Rated PG) | SubString(Container(100).ListItem.Property(Mpaa),US:PG) | SubString(Container(100).ListItem.Property(Mpaa),USA:PG)">mpaa_pg</value>
-        <value condition="SubString(Container(100).ListItem.Property(mpaa),Rated R) | SubString(Container(100).ListItem.Property(mpaa),US:R) | SubString(Container(100).ListItem.Property(mpaa),USA:R)">mpaa_restricted</value>
-        <value condition="SubString(Container(100).ListItem.Property(mpaa),Rated NC-17) | SubString(Container(100).ListItem.Property(mpaa),US:NC-17) | SubString(Container(100).ListItem.Property(mpaa),USA:NC-17)">mpaa_nc17</value>
+        <value condition="String.Contains(ListItem.Mpaa,Rated G) | String.Contains(ListItem.mpaa,US:G) | String.Contains(ListItem.mpaa,USA:G)">mpaa_general</value>
+        <value condition="String.Contains(ListItem.Mpaa,Rated PG-13) | String.Contains(ListItem.mpaa,US:PG-13) | String.Contains(ListItem.mpaa,USA:PG-13)">mpaa_pg13</value>
+        <value condition="String.Contains(ListItem.Mpaa,Rated PG) | String.Contains(ListItem.mpaa,US:PG) | String.Contains(ListItem.mpaa,USA:PG)">mpaa_pg</value>
+        <value condition="String.Contains(Listitem.mpaa,Rated R) | String.Contains(ListItem.mpaa,US:R) | String.Contains(ListItem.mpaa,USA:R)">mpaa_restricted</value>
+        <value condition="String.Contains(Listitem.mpaa,Rated NC-17) | String.Contains(ListItem.mpaa,US:NC-17) | String.Contains(ListItem.mpaa,USA:NC-17)">mpaa_nc17</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(Mpaa),Rated G) | String.Contains(Container(100).ListItem.Property(Mpaa),US:G) | String.Contains(Container(100).ListItem.Property(Mpaa),USA:G)">mpaa_general</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(Mpaa),Rated PG-13) | String.Contains(Container(100).ListItem.Property(Mpaa),US:PG-13) | String.Contains(Container(100).ListItem.Property(Mpaa),USA:PG-13)">mpaa_pg13</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(Mpaa),Rated PG) | String.Contains(Container(100).ListItem.Property(Mpaa),US:PG) | String.Contains(Container(100).ListItem.Property(Mpaa),USA:PG)">mpaa_pg</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(mpaa),Rated R) | String.Contains(Container(100).ListItem.Property(mpaa),US:R) | String.Contains(Container(100).ListItem.Property(mpaa),USA:R)">mpaa_restricted</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(mpaa),Rated NC-17) | String.Contains(Container(100).ListItem.Property(mpaa),US:NC-17) | String.Contains(Container(100).ListItem.Property(mpaa),USA:NC-17)">mpaa_nc17</value>
         <!-- UK -->
-        <value condition="SubString(Listitem.mpaa,UK:U)">UK_u</value>
-        <value condition="SubString(Listitem.mpaa,UK:PG)">UK_pg</value>
-        <value condition="SubString(Listitem.mpaa,UK:12a)">UK_12a</value>
-        <value condition="SubString(Listitem.mpaa,UK:12)">UK_12</value>
-        <value condition="SubString(Listitem.mpaa,UK:15)">UK_15</value>
-        <value condition="SubString(Listitem.mpaa,UK:18)">UK_18</value>
-        <value condition="SubString(Listitem.mpaa,UK:R18)">UK_r18</value>
-        <value condition="SubString(Container(100).ListItem.Property(mpaa),UK:U)">UK_u</value>
-        <value condition="SubString(Container(100).ListItem.Property(mpaa),UK:PG)">UK_pg</value>
-        <value condition="SubString(Container(100).ListItem.Property(mpaa),UK:12a)">UK_12a</value>
-        <value condition="SubString(Container(100).ListItem.Property(mpaa),UK:12)">UK_12</value>
-        <value condition="SubString(Container(100).ListItem.Property(mpaa),UK:15)">UK_15</value>
-        <value condition="SubString(Container(100).ListItem.Property(mpaa),UK:18)">UK_18</value>
-        <value condition="SubString(Container(100).ListItem.Property(mpaa),UK:R18)">UK_r18</value>
+        <value condition="String.Contains(Listitem.mpaa,UK:U)">UK_u</value>
+        <value condition="String.Contains(Listitem.mpaa,UK:PG)">UK_pg</value>
+        <value condition="String.Contains(Listitem.mpaa,UK:12a)">UK_12a</value>
+        <value condition="String.Contains(Listitem.mpaa,UK:12)">UK_12</value>
+        <value condition="String.Contains(Listitem.mpaa,UK:15)">UK_15</value>
+        <value condition="String.Contains(Listitem.mpaa,UK:18)">UK_18</value>
+        <value condition="String.Contains(Listitem.mpaa,UK:R18)">UK_r18</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(mpaa),UK:U)">UK_u</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(mpaa),UK:PG)">UK_pg</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(mpaa),UK:12a)">UK_12a</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(mpaa),UK:12)">UK_12</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(mpaa),UK:15)">UK_15</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(mpaa),UK:18)">UK_18</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(mpaa),UK:R18)">UK_r18</value>
         <!-- Germany -->
-        <value condition="SubString(Listitem.mpaa,Germany:o.A.) | SubString(Listitem.mpaa, o.A.) | SubString(Listitem.mpaa, Germany:o.Al.) | SubString(Listitem.mpaa, Germany:0) | SubString(Listitem.mpaa, FSK 0)">Germany0</value>
-        <value condition="SubString(Listitem.mpaa,Germany:6) | SubString(Listitem.mpaa,FSK 6) | SubString(ListItem.mpaa,ab 6) | StringCompare(ListItem.mpaa,6) | SubString(ListItem.mpaa,Rated 6)">Germany6</value>
-        <value condition="SubString(Listitem.mpaa,Germany:12) | SubString(Listitem.mpaa,FSK 12) | SubString(ListItem.mpaa,ab 12) | StringCompare(ListItem.mpaa,12) | SubString(ListItem.mpaa,Rated 12)">Germany12</value>
-        <value condition="SubString(Listitem.mpaa,Germany:16) | SubString(Listitem.mpaa,FSK 16) | SubString(ListItem.mpaa,ab 16) | StringCompare(ListItem.mpaa,16) | SubString(ListItem.mpaa,Rated 16)">Germany16</value>
-        <value condition="SubString(Listitem.mpaa,Germany:18) | SubString(Listitem.mpaa,FSK 18) | SubString(ListItem.mpaa,ab 18) | StringCompare(ListItem.mpaa,18) | SubString(ListItem.mpaa,Rated 18)">Germany18</value>
-        <value condition="SubString(Container(100).ListItem.Property(mpaa),Germany:o.A.) | SubString(Container(100).ListItem.Property(mpaa), o.A.) | SubString(Container(100).ListItem.Property(mpaa), Germany:o.Al.) | SubString(Container(100).ListItem.Property(mpaa), Germany:0) | SubString(Container(100).ListItem.Property(mpaa), FSK 0)">Germany0</value>
-        <value condition="SubString(Container(100).ListItem.Property(mpaa),Germany:6) | SubString(Container(100).ListItem.Property(mpaa),FSK 6) | SubString(Container(100).ListItem.Property(mpaa),ab 6) | StringCompare(Container(100).ListItem.Property(mpaa),6) | SubString(Container(100).ListItem.Property(mpaa),Rated 6)">Germany6</value>
-        <value condition="SubString(Container(100).ListItem.Property(mpaa),Germany:12) | SubString(Container(100).ListItem.Property(mpaa),FSK 12) | SubString(Container(100).ListItem.Property(mpaa),ab 12) | StringCompare(Container(100).ListItem.Property(mpaa),12) | SubString(Container(100).ListItem.Property(mpaa),Rated 12)">Germany12</value>
-        <value condition="SubString(Container(100).ListItem.Property(mpaa),Germany:16) | SubString(Container(100).ListItem.Property(mpaa),FSK 16) | SubString(Container(100).ListItem.Property(mpaa),ab 16) | StringCompare(Container(100).ListItem.Property(mpaa),16) | SubString(Container(100).ListItem.Property(mpaa),Rated 16)">Germany16</value>
-        <value condition="SubString(Container(100).ListItem.Property(mpaa),Germany:18) | SubString(Container(100).ListItem.Property(mpaa),FSK 18) | SubString(Container(100).ListItem.Property(mpaa),ab 18) | StringCompare(Container(100).ListItem.Property(mpaa),18) | SubString(Container(100).ListItem.Property(mpaa),Rated 18)">Germany18</value>
+        <value condition="String.Contains(Listitem.mpaa,Germany:o.A.) | String.Contains(Listitem.mpaa, o.A.) | String.Contains(Listitem.mpaa, Germany:o.Al.) | String.Contains(Listitem.mpaa, Germany:0) | String.Contains(Listitem.mpaa, FSK 0)">Germany0</value>
+        <value condition="String.Contains(Listitem.mpaa,Germany:6) | String.Contains(Listitem.mpaa,FSK 6) | String.Contains(ListItem.mpaa,ab 6) | String.IsEqual(ListItem.mpaa,6) | String.Contains(ListItem.mpaa,Rated 6)">Germany6</value>
+        <value condition="String.Contains(Listitem.mpaa,Germany:12) | String.Contains(Listitem.mpaa,FSK 12) | String.Contains(ListItem.mpaa,ab 12) | String.IsEqual(ListItem.mpaa,12) | String.Contains(ListItem.mpaa,Rated 12)">Germany12</value>
+        <value condition="String.Contains(Listitem.mpaa,Germany:16) | String.Contains(Listitem.mpaa,FSK 16) | String.Contains(ListItem.mpaa,ab 16) | String.IsEqual(ListItem.mpaa,16) | String.Contains(ListItem.mpaa,Rated 16)">Germany16</value>
+        <value condition="String.Contains(Listitem.mpaa,Germany:18) | String.Contains(Listitem.mpaa,FSK 18) | String.Contains(ListItem.mpaa,ab 18) | String.IsEqual(ListItem.mpaa,18) | String.Contains(ListItem.mpaa,Rated 18)">Germany18</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(mpaa),Germany:o.A.) | String.Contains(Container(100).ListItem.Property(mpaa), o.A.) | String.Contains(Container(100).ListItem.Property(mpaa), Germany:o.Al.) | String.Contains(Container(100).ListItem.Property(mpaa), Germany:0) | String.Contains(Container(100).ListItem.Property(mpaa), FSK 0)">Germany0</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(mpaa),Germany:6) | String.Contains(Container(100).ListItem.Property(mpaa),FSK 6) | String.Contains(Container(100).ListItem.Property(mpaa),ab 6) | String.IsEqual(Container(100).ListItem.Property(mpaa),6) | String.Contains(Container(100).ListItem.Property(mpaa),Rated 6)">Germany6</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(mpaa),Germany:12) | String.Contains(Container(100).ListItem.Property(mpaa),FSK 12) | String.Contains(Container(100).ListItem.Property(mpaa),ab 12) | String.IsEqual(Container(100).ListItem.Property(mpaa),12) | String.Contains(Container(100).ListItem.Property(mpaa),Rated 12)">Germany12</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(mpaa),Germany:16) | String.Contains(Container(100).ListItem.Property(mpaa),FSK 16) | String.Contains(Container(100).ListItem.Property(mpaa),ab 16) | String.IsEqual(Container(100).ListItem.Property(mpaa),16) | String.Contains(Container(100).ListItem.Property(mpaa),Rated 16)">Germany16</value>
+        <value condition="String.Contains(Container(100).ListItem.Property(mpaa),Germany:18) | String.Contains(Container(100).ListItem.Property(mpaa),FSK 18) | String.Contains(Container(100).ListItem.Property(mpaa),ab 18) | String.IsEqual(Container(100).ListItem.Property(mpaa),18) | String.Contains(Container(100).ListItem.Property(mpaa),Rated 18)">Germany18</value>
         <!-- none -->
-        <value condition="IsEmpty(Listitem.mpaa) | IsEmpty(Container(100).ListItem.Property(mpaa))">mpaa_notrated</value>
+        <value condition="String.IsEmpty(Listitem.mpaa) | String.IsEmpty(Container(100).ListItem.Property(mpaa))">mpaa_notrated</value>
     </variable>
 
 
     <!-- Weather Variables -->
 
     <variable name="WeatherIconResourcePath">
-        <value condition="!IsEmpty(Skin.String(resource.images.weathericons.path))">$INFO[Skin.String(resource.images.weathericons.path)]</value>
+        <value condition="!String.IsEmpty(Skin.String(resource.images.weathericons.path))">$INFO[Skin.String(resource.images.weathericons.path)]</value>
         <value>resource://resource.images.weathericons.default/</value>
     </variable>
     <variable name="WeatherHighTemp0">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.1.HighTemperature)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.1.HighTemperature)]</value>
     </variable>
     <variable name="WeatherHighTemp1">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.2.HighTemperature)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.2.HighTemperature)]</value>
     </variable>
     <variable name="WeatherHighTemp2">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.3.HighTemperature)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.3.HighTemperature)]</value>
     </variable>
     <variable name="WeatherHighTemp3">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.4.HighTemperature)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.4.HighTemperature)]</value>
     </variable>
     <variable name="WeatherHighTemp4">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day4.HighTemp)]$INFO[System.TemperatureUnits]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.5.HighTemperature)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day4.HighTemp)]$INFO[System.TemperatureUnits]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.5.HighTemperature)]</value>
     </variable>
     <variable name="WeatherHighTemp5">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day5.HighTemp)]$INFO[System.TemperatureUnits]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.6.HighTemperature)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day5.HighTemp)]$INFO[System.TemperatureUnits]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.6.HighTemperature)]</value>
     </variable>
     <variable name="WeatherLowTemp0">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.1.LowTemperature)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.1.LowTemperature)]</value>
     </variable>
     <variable name="WeatherLowTemp1">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day1.LowTemp)]$INFO[System.TemperatureUnits]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.2.LowTemperature)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day1.LowTemp)]$INFO[System.TemperatureUnits]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.2.LowTemperature)]</value>
     </variable>
     <variable name="WeatherLowTemp2">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day2.LowTemp)]$INFO[System.TemperatureUnits]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.3.LowTemperature)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day2.LowTemp)]$INFO[System.TemperatureUnits]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.3.LowTemperature)]</value>
     </variable>
     <variable name="WeatherLowTemp3">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day3.LowTemp)]$INFO[System.TemperatureUnits]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.4.LowTemperature)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day3.LowTemp)]$INFO[System.TemperatureUnits]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.4.LowTemperature)]</value>
     </variable>
     <variable name="WeatherLowTemp4">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day4.LowTemp)]$INFO[System.TemperatureUnits]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.5.LowTemperature)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day4.LowTemp)]$INFO[System.TemperatureUnits]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.5.LowTemperature)]</value>
     </variable>
     <variable name="WeatherLowTemp5">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day5.LowTemp)]$INFO[System.TemperatureUnits]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.6.LowTemperature)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day5.LowTemp)]$INFO[System.TemperatureUnits]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.6.LowTemperature)]</value>
     </variable>
     <variable name="WeatherIcon0">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day0.FanartCode),,.png]</value>
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day0.FanartCode)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.1.OutlookIcon)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.1.FanartCode)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day0.FanartCode),,.png]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day0.FanartCode)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.1.OutlookIcon)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.1.FanartCode)]</value>
     </variable>
     <variable name="WeatherIcon1">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day1.FanartCode),,.png]</value>
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day1.FanartCode)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.2.OutlookIcon)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.2.FanartCode)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day1.FanartCode),,.png]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day1.FanartCode)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.2.OutlookIcon)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.2.FanartCode)]</value>
     </variable>
     <variable name="WeatherIcon2">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day2.FanartCode),,.png]</value>
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day2.FanartCode)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.3.OutlookIcon)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.3.FanartCode)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day2.FanartCode),,.png]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day2.FanartCode)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.3.OutlookIcon)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.3.FanartCode)]</value>
     </variable>
     <variable name="WeatherIcon3">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day3.FanartCode),,.png]</value>
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day3.FanartCode)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.4.OutlookIcon)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.4.FanartCode)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day3.FanartCode),,.png]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day3.FanartCode)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.4.OutlookIcon)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.4.FanartCode)]</value>
     </variable>
     <variable name="WeatherIcon4">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day4.FanartCode),,.png]</value>
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day4.FanartCode)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.5.OutlookIcon)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.5.FanartCode)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day4.FanartCode),,.png]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day4.FanartCode)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.5.OutlookIcon)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.5.FanartCode)]</value>
     </variable>
     <variable name="WeatherIcon5">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day5.FanartCode),,.png]</value>
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day5.FanartCode)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.6.OutlookIcon)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.6.FanartCode)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day5.FanartCode),,.png]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Day5.FanartCode)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.6.OutlookIcon)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)">$VAR[WeatherIconResourcePath]$INFO[Window(Weather).Property(Daily.6.FanartCode)]</value>
     </variable>
     <variable name="WeatherShortDay0">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day0.Title)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.1.ShortDay)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day0.Title)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.1.ShortDay)]</value>
     </variable>
     <variable name="WeatherShortDay1">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day1.Title)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.2.LongDay)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day1.Title)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.2.LongDay)]</value>
     </variable>
     <variable name="WeatherShortDay2">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day2.Title)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.3.LongDay)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day2.Title)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.3.LongDay)]</value>
     </variable>
     <variable name="WeatherShortDay3">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day3.Title)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.4.LongDay)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day3.Title)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.4.LongDay)]</value>
     </variable>
     <variable name="WeatherShortDay4">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day4.Title)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.5.LongDay)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day4.Title)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.5.LongDay)]</value>
     </variable>
     <variable name="WeatherShortDay5">
-        <value condition="IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day5.Title)]</value>
-        <value condition="!IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.6.LongDay)]</value>
+        <value condition="String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Day5.Title)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))">$INFO[Window(Weather).Property(Daily.6.LongDay)]</value>
     </variable>
 
     <!-- Music Info Dialog -->
@@ -310,27 +310,27 @@
 
     <!-- NextAired Variables-->
     <variable name="NextAired">
-        <value condition="!IsEmpty(Window(Home).Property(NextAired.Label))+!IsEmpty(Window(Home).Property(NextAired.NextDate))">[COLOR=accent]$LOCALIZE[31062] [/COLOR][COLOR=white]$INFO[Window(Home).Property(NextAired.NextDate)][/COLOR]</value>
-        <value condition="!IsEmpty(Window(Home).Property(NextAired.Label))+IsEmpty(Window(Home).Property(NextAired.NextDate))+!IsEmpty(Window(Home).Property(NextAired.Status))">[COLOR=accent]$LOCALIZE[31009] [/COLOR][COLOR=white]$INFO[Window(Home).Property(NextAired.Status)][/COLOR]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(NextAired.Label))+!String.IsEmpty(Window(Home).Property(NextAired.NextDate))">[COLOR=accent]$LOCALIZE[31062] [/COLOR][COLOR=white]$INFO[Window(Home).Property(NextAired.NextDate)][/COLOR]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(NextAired.Label))+String.IsEmpty(Window(Home).Property(NextAired.NextDate))+!String.IsEmpty(Window(Home).Property(NextAired.Status))">[COLOR=accent]$LOCALIZE[31009] [/COLOR][COLOR=white]$INFO[Window(Home).Property(NextAired.Status)][/COLOR]</value>
     </variable>
 
     <variable name="NextAiredFanart">
-        <value condition="Control.HasFocus(200) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(200).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(201) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(201).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(202) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(202).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(203) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(203).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(204) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(204).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(205) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(205).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(206) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(206).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(207) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(207).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(208) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(208).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(209) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(209).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(210) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(210).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(211) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(211).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(212) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(212).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(213) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(213).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(214) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(214).ListItem.Property(Art(fanart))]</value>
-        <value condition="Control.HasFocus(215) + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(215).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(200) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(200).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(201) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(201).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(202) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(202).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(203) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(203).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(204) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(204).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(205) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(205).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(206) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(206).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(207) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(207).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(208) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(208).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(209) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(209).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(210) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(210).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(211) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(211).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(212) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(212).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(213) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(213).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(214) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(214).ListItem.Property(Art(fanart))]</value>
+        <value condition="Control.HasFocus(215) + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)">$INFO[Container(215).ListItem.Property(Art(fanart))]</value>
     </variable>
     <variable name="NextAiredNetwork">
         <value condition="Control.HasFocus(200)">$VAR[StudioIcon]$INFO[Container(200).ListItem.Property(Network),,.png]</value>
@@ -569,49 +569,49 @@
         <value condition="Container(9000).Hasfocus(11) + [[!Control.IsVisible(9110) + Skin.HasSetting(notvwidgetplaylisttv3)] | [Control.IsVisible(9110) + !Skin.HasSetting(notvwidgetplaylisttv3)]]">$INFO[Container(8008).ListItem.Rating,recentlyadded/,.png]</value>
     </variable>
     <variable name="WidgetHomeArt">
-        <value condition="Container(9000).Hasfocus(1) + SubString(Control.GetLabel(91001),Fanart,right)">$INFO[Container(8000).ListItem.Art(fanart)]</value>
-        <value condition="Container(9000).Hasfocus(1) + SubString(Control.GetLabel(91001),Poster,right)">$INFO[Container(8000).ListItem.Art(poster)]</value>
-        <value condition="Container(9000).Hasfocus(7) + SubString(Control.GetLabel(91001),Thumb,right)">$INFO[Container(8001).ListItem.Art(thumb)]</value>
-        <value condition="Container(9000).Hasfocus(7) + SubString(Control.GetLabel(91001),Fanart,right)">$INFO[Container(8001).ListItem.Art(fanart)]</value>
-        <value condition="Container(9000).Hasfocus(14) + SubString(Control.GetLabel(91001),Cover,right)">$INFO[Container(8002).ListItem.Icon]</value>
-        <value condition="Container(9000).Hasfocus(31) + SubString(Control.GetLabel(91001),Cover,right)">$INFO[Container(8003).ListItem.Icon]</value>
-        <value condition="Container(9000).Hasfocus(18) + SubString(Control.GetLabel(91001),Cover,right)">$INFO[Container(8004).ListItem.Icon]</value>
-        <value condition="Container(9000).Hasfocus(3) + SubString(Control.GetLabel(91001),Fanart,right)">$INFO[Container(8005).ListItem.Art(fanart)]</value>
-        <value condition="Container(9000).Hasfocus(4) + SubString(Control.GetLabel(91001),Fanart,right)">$INFO[Container(8006).ListItem.Art(fanart)]</value>
-        <value condition="Container(9000).Hasfocus(5) + SubString(Control.GetLabel(91001),Fanart,right)">$INFO[Container(8007).ListItem.Art(fanart)]</value>
-        <value condition="Container(9000).Hasfocus(9) + SubString(Control.GetLabel(91001),Thumb,right)">$INFO[Container(8008).ListItem.Art(thumb)]</value>
-        <value condition="Container(9000).Hasfocus(10) + SubString(Control.GetLabel(91001),Thumb,right)">$INFO[Container(8009).ListItem.Art(thumb)]</value>
-        <value condition="Container(9000).Hasfocus(11) + SubString(Control.GetLabel(91001),Thumb,right)">$INFO[Container(8010).ListItem.Art(thumb)]</value>
+        <value condition="Container(9000).Hasfocus(1) + String.StartsWith(Control.GetLabel(91001),Fanart)">$INFO[Container(8000).ListItem.Art(fanart)]</value>
+        <value condition="Container(9000).Hasfocus(1) + String.StartsWith(Control.GetLabel(91001),Poster)">$INFO[Container(8000).ListItem.Art(poster)]</value>
+        <value condition="Container(9000).Hasfocus(7) + String.StartsWith(Control.GetLabel(91001),Thumb)">$INFO[Container(8001).ListItem.Art(thumb)]</value>
+        <value condition="Container(9000).Hasfocus(7) + String.StartsWith(Control.GetLabel(91001),Fanart)">$INFO[Container(8001).ListItem.Art(fanart)]</value>
+        <value condition="Container(9000).Hasfocus(14) + String.StartsWith(Control.GetLabel(91001),Cover)">$INFO[Container(8002).ListItem.Icon]</value>
+        <value condition="Container(9000).Hasfocus(31) + String.StartsWith(Control.GetLabel(91001),Cover)">$INFO[Container(8003).ListItem.Icon]</value>
+        <value condition="Container(9000).Hasfocus(18) + String.StartsWith(Control.GetLabel(91001),Cover)">$INFO[Container(8004).ListItem.Icon]</value>
+        <value condition="Container(9000).Hasfocus(3) + String.StartsWith(Control.GetLabel(91001),Fanart)">$INFO[Container(8005).ListItem.Art(fanart)]</value>
+        <value condition="Container(9000).Hasfocus(4) + String.StartsWith(Control.GetLabel(91001),Fanart)">$INFO[Container(8006).ListItem.Art(fanart)]</value>
+        <value condition="Container(9000).Hasfocus(5) + String.StartsWith(Control.GetLabel(91001),Fanart)">$INFO[Container(8007).ListItem.Art(fanart)]</value>
+        <value condition="Container(9000).Hasfocus(9) + String.StartsWith(Control.GetLabel(91001),Thumb)">$INFO[Container(8008).ListItem.Art(thumb)]</value>
+        <value condition="Container(9000).Hasfocus(10) + String.StartsWith(Control.GetLabel(91001),Thumb)">$INFO[Container(8009).ListItem.Art(thumb)]</value>
+        <value condition="Container(9000).Hasfocus(11) + String.StartsWith(Control.GetLabel(91001),Thumb)">$INFO[Container(8010).ListItem.Art(thumb)]</value>
     </variable>
     <variable name="WidgetListArt">
-        <value condition="Container(9000).Hasfocus(1) + SubString(Control.GetLabel(91001),Poster,left)">$INFO[Container(8000).ListItem.Art(poster)]</value>
-        <value condition="Container(9000).Hasfocus(7) + SubString(Control.GetLabel(91001),Thumb,left)">$INFO[Container(8001).ListItem.Art(thumb)]</value>
-        <value condition="Container(9000).Hasfocus(7) + SubString(Control.GetLabel(91001),Poster,left)">$INFO[Container(8001).ListItem.Art(poster)]</value>
-        <value condition="Container(9000).Hasfocus(14) + SubString(Control.GetLabel(91001),Cover,left)">$INFO[Container(8002).ListItem.Icon]</value>
-        <value condition="Container(9000).Hasfocus(31) + SubString(Control.GetLabel(91001),Cover,left)">$INFO[Container(8003).ListItem.Icon]</value>
-        <value condition="Container(9000).Hasfocus(18) + SubString(Control.GetLabel(91001),Cover,left)">$INFO[Container(8004).ListItem.Icon]</value>
-        <value condition="Container(9000).Hasfocus(3) + SubString(Control.GetLabel(91001),Poster,left)">$INFO[Container(8005).ListItem.Art(poster)]</value>
-        <value condition="Container(9000).Hasfocus(4) + SubString(Control.GetLabel(91001),Poster,left)">$INFO[Container(8006).ListItem.Art(poster)]</value>
-        <value condition="Container(9000).Hasfocus(5) + SubString(Control.GetLabel(91001),Poster,left)">$INFO[Container(8007).ListItem.Art(poster)]</value>
-        <value condition="Container(9000).Hasfocus(9) + SubString(Control.GetLabel(91001),Thumb,left)">$INFO[Container(8008).ListItem.Art(thumb)]</value>
-        <value condition="Container(9000).Hasfocus(10) + SubString(Control.GetLabel(91001),Thumb,left)">$INFO[Container(8009).ListItem.Art(thumb)]</value>
-        <value condition="Container(9000).Hasfocus(11) + SubString(Control.GetLabel(91001),Thumb,left)">$INFO[Container(8010).ListItem.Art(thumb)]</value>
+        <value condition="Container(9000).Hasfocus(1) + String.StartsWith(Control.GetLabel(91001),Poster)">$INFO[Container(8000).ListItem.Art(poster)]</value>
+        <value condition="Container(9000).Hasfocus(7) + String.StartsWith(Control.GetLabel(91001),Thumb)">$INFO[Container(8001).ListItem.Art(thumb)]</value>
+        <value condition="Container(9000).Hasfocus(7) + String.StartsWith(Control.GetLabel(91001),Poster)">$INFO[Container(8001).ListItem.Art(poster)]</value>
+        <value condition="Container(9000).Hasfocus(14) + String.StartsWith(Control.GetLabel(91001),Cover)">$INFO[Container(8002).ListItem.Icon]</value>
+        <value condition="Container(9000).Hasfocus(31) + String.StartsWith(Control.GetLabel(91001),Cover)">$INFO[Container(8003).ListItem.Icon]</value>
+        <value condition="Container(9000).Hasfocus(18) + String.StartsWith(Control.GetLabel(91001),Cover)">$INFO[Container(8004).ListItem.Icon]</value>
+        <value condition="Container(9000).Hasfocus(3) + String.StartsWith(Control.GetLabel(91001),Poster)">$INFO[Container(8005).ListItem.Art(poster)]</value>
+        <value condition="Container(9000).Hasfocus(4) + String.StartsWith(Control.GetLabel(91001),Poster)">$INFO[Container(8006).ListItem.Art(poster)]</value>
+        <value condition="Container(9000).Hasfocus(5) + String.StartsWith(Control.GetLabel(91001),Poster)">$INFO[Container(8007).ListItem.Art(poster)]</value>
+        <value condition="Container(9000).Hasfocus(9) + String.StartsWith(Control.GetLabel(91001),Thumb)">$INFO[Container(8008).ListItem.Art(thumb)]</value>
+        <value condition="Container(9000).Hasfocus(10) + String.StartsWith(Control.GetLabel(91001),Thumb)">$INFO[Container(8009).ListItem.Art(thumb)]</value>
+        <value condition="Container(9000).Hasfocus(11) + String.StartsWith(Control.GetLabel(91001),Thumb)">$INFO[Container(8010).ListItem.Art(thumb)]</value>
     </variable>
     <variable name="WidgetHomeTitle1Label">
         <value condition="Control.IsVisible(9101) + Container(9000).Hasfocus(7)">$INFO[Container(8001).ListItem.TVshowTitle]</value>
         <value condition="Control.IsVisible(9102) + Container(9000).Hasfocus(14)">$INFO[Container(8002).ListItem.Artist]</value>
         <value condition="Control.IsVisible(9103) + Container(9000).Hasfocus(31)">$INFO[Container(8003).ListItem.Artist]</value>
         <value condition="Control.IsVisible(9104) + Container(9000).Hasfocus(18)">$INFO[Container(8004).ListItem.Label]</value>
-        <value condition="Control.IsVisible(9108) + Container(9000).Hasfocus(9) + IsEmpty(Container(8008).ListItem.TVshowTitle)">$INFO[Container(8008).ListItem.Title]</value>
+        <value condition="Control.IsVisible(9108) + Container(9000).Hasfocus(9) + String.IsEmpty(Container(8008).ListItem.TVshowTitle)">$INFO[Container(8008).ListItem.Title]</value>
         <value condition="Control.IsVisible(9108) + Container(9000).Hasfocus(9)">$INFO[Container(8008).ListItem.TVshowTitle]</value>
-        <value condition="Control.IsVisible(9109) + Container(9000).Hasfocus(10) + IsEmpty(Container(8009).ListItem.TVshowTitle)">$INFO[Container(8009).ListItem.Title]</value>
+        <value condition="Control.IsVisible(9109) + Container(9000).Hasfocus(10) + String.IsEmpty(Container(8009).ListItem.TVshowTitle)">$INFO[Container(8009).ListItem.Title]</value>
         <value condition="Control.IsVisible(9109) + Container(9000).Hasfocus(10)">$INFO[Container(8009).ListItem.TVshowTitle]</value>
-        <value condition="Control.IsVisible(9110) + Container(9000).Hasfocus(11) + IsEmpty(Container(8010).ListItem.TVshowTitle)">$INFO[Container(8010).ListItem.Title]</value>
+        <value condition="Control.IsVisible(9110) + Container(9000).Hasfocus(11) + String.IsEmpty(Container(8010).ListItem.TVshowTitle)">$INFO[Container(8010).ListItem.Title]</value>
         <value condition="Control.IsVisible(9110) + Container(9000).Hasfocus(11)">$INFO[Container(8010).ListItem.TVshowTitle]</value>
     </variable>
     <variable name="WidgetHomeTitle2Label">
         <value condition="Control.IsVisible(9100) + Container(9000).Hasfocus(1)">$INFO[Container(8000).ListItem.Label]</value>
-        <value condition="Control.IsVisible(9101) + Container(9000).Hasfocus(7) + StringCompare(Container(8001).ListItem.Title,Container(8001).ListItem.TVshowTitle)">$INFO[Container(8001).ListItem.Rating] / $INFO[Container(8001).ListItem.Votes] $LOCALIZE[205]</value>
+        <value condition="Control.IsVisible(9101) + Container(9000).Hasfocus(7) + String.IsEqual(Container(8001).ListItem.Title,Container(8001).ListItem.TVshowTitle)">$INFO[Container(8001).ListItem.Rating] / $INFO[Container(8001).ListItem.Votes] $LOCALIZE[205]</value>
         <value condition="Control.IsVisible(9101) + Container(9000).Hasfocus(7)">$INFO[Container(8001).ListItem.Title]</value>
         <value condition="Control.IsVisible(9102) + Container(9000).Hasfocus(14)">$INFO[Container(8002).ListItem.Title]</value>
         <value condition="Control.IsVisible(9103) + Container(9000).Hasfocus(31)">$INFO[Container(8003).ListItem.Title]</value>
@@ -630,11 +630,11 @@
         <value condition="Control.HasFocus(9102) + Container(9000).Hasfocus(14)">$INFO[Container(9102).ListItemNoWrap(-1).Label]</value>
     </variable>
     <variable name="WidgetHomeNext">
-        <value condition="Control.HasFocus(9100) + Container(9000).Hasfocus(1) + IntegerGreaterThan(Container(9100).NumItems,1)">$INFO[Container(9100).ListItemNoWrap(1).Label]</value>
+        <value condition="Control.HasFocus(9100) + Container(9000).Hasfocus(1) + Integer.IsGreater(Container(9100).NumItems,1)">$INFO[Container(9100).ListItemNoWrap(1).Label]</value>
         <value condition="Control.HasFocus(9100) + Container(9000).Hasfocus(1)">$INFO[Container(9100).ListItemNoWrap(2).Label]</value>
-        <value condition="Control.HasFocus(9101) + Container(9000).Hasfocus(7) + IntegerGreaterThan(Container(9101).NumItems,1)">$INFO[Container(9101).ListItemNoWrap(1).Label]</value>
+        <value condition="Control.HasFocus(9101) + Container(9000).Hasfocus(7) + Integer.IsGreater(Container(9101).NumItems,1)">$INFO[Container(9101).ListItemNoWrap(1).Label]</value>
         <value condition="Control.HasFocus(9101) + Container(9000).Hasfocus(7)">$INFO[Container(9101).ListItemNoWrap(2).Label]</value>
-        <value condition="Control.HasFocus(9102) + Container(9000).Hasfocus(14) + IntegerGreaterThan(Container(9102).NumItems,1)">$INFO[Container(9102).ListItemNoWrap(1).Label]</value>
+        <value condition="Control.HasFocus(9102) + Container(9000).Hasfocus(14) + Integer.IsGreater(Container(9102).NumItems,1)">$INFO[Container(9102).ListItemNoWrap(1).Label]</value>
         <value condition="Control.HasFocus(9102) + Container(9000).Hasfocus(14)">$INFO[Container(9102).ListItemNoWrap(2).Label]</value>
     </variable>
     <variable name="WidgetListLabel">
@@ -652,8 +652,8 @@
     </variable>
     <variable name="WidgetListHeaderHorz">
         <value condition="Control.HasFocus(8000) | Control.HasFocus(9100)">$INFO[Container(8000).ListItem.Label]  [COLOR=accent]$INFO[Container(8000).ListItem.Year][/COLOR]</value>
-        <value condition="[Control.HasFocus(8001) | Control.HasFocus(9101)] + SubString(Control.GetLabel(91005),Library)">$INFO[Container(8001).ListItem.TVshowTitle]   [COLOR=accent]$INFO[Container(8001).ListItem.Title][/COLOR]</value>
-        <value condition="[Control.HasFocus(8001) | Control.HasFocus(9101)] + !SubString(Control.GetLabel(91005),Library)">$INFO[Container(8001).ListItem.TVshowTitle]   [COLOR=accent]$INFO[Container(8001).ListItem.Premiered][/COLOR]</value>
+        <value condition="[Control.HasFocus(8001) | Control.HasFocus(9101)] + String.Contains(Control.GetLabel(91005),Library)">$INFO[Container(8001).ListItem.TVshowTitle]   [COLOR=accent]$INFO[Container(8001).ListItem.Title][/COLOR]</value>
+        <value condition="[Control.HasFocus(8001) | Control.HasFocus(9101)] + !String.Contains(Control.GetLabel(91005),Library)">$INFO[Container(8001).ListItem.TVshowTitle]   [COLOR=accent]$INFO[Container(8001).ListItem.Premiered][/COLOR]</value>
         <value condition="Control.HasFocus(8002) | Control.HasFocus(9102)">$INFO[Container(8002).ListItem.Artist] [COLOR=grey]$INFO[Container(8002).ListItem.Title][/COLOR] [COLOR=accent]$INFO[Container(8002).ListItem.Year][/COLOR]</value>
         <value condition="Control.HasFocus(8003) | Control.HasFocus(9103)">$INFO[Container(8003).ListItem.Artist]  [COLOR=accent]$INFO[Container(8003).ListItem.Title][/COLOR]</value>
         <value condition="Control.HasFocus(8004) | Control.HasFocus(9104)">$INFO[Container(8004).ListItem.Label] [COLOR=grey]$INFO[Container(8004).ListItem.Label2][/COLOR] [COLOR=accent]$INFO[Container(8004).ListItem.Property(Version)][/COLOR]</value>
@@ -668,9 +668,9 @@
         <!-- Movies-->
         <value condition="Control.HasFocus(8000) | Container(9000).Hasfocus(1)">$INFO[Container(8000).ListItem.Label]</value>
         <!-- TV Shows -->
-        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + SubString(Control.GetLabel(91005),Library)">$INFO[Container(8001).ListItem.TVshowTitle]</value>
-        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + SubString(Control.GetLabel(91005),ExtendedInfoMovieDB)">$INFO[Container(8001).ListItem.Title]</value>
-        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + SubString(Control.GetLabel(91005),TraktTV)">$INFO[Container(8001).ListItem.TVshowTitle]</value>
+        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + String.Contains(Control.GetLabel(91005),Library)">$INFO[Container(8001).ListItem.TVshowTitle]</value>
+        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + String.Contains(Control.GetLabel(91005),ExtendedInfoMovieDB)">$INFO[Container(8001).ListItem.Title]</value>
+        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + String.Contains(Control.GetLabel(91005),TraktTV)">$INFO[Container(8001).ListItem.TVshowTitle]</value>
         <!-- Music -->
         <value condition="Control.HasFocus(8002) | Container(9000).Hasfocus(14)">$INFO[Container(8002).ListItem.Artist]</value>
         <!-- Concerts -->
@@ -700,9 +700,9 @@
         <!-- Addons -->
         <value condition="Control.HasFocus(8004) | Container(9000).Hasfocus(18)">[COLOR=accent]$LOCALIZE[21863]:[/COLOR] $INFO[Container(8004).ListItem.Label2]</value>
         <!-- TV Shows -->
-        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + SubString(Control.GetLabel(91005),ExtendedInfoMovieDB)">[COLOR=accent]$LOCALIZE[20416]:[/COLOR] $INFO[Container(8001).ListItem.Premiered]</value>
-        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + SubString(Control.GetLabel(91005),TraktTV)">[COLOR=accent]$LOCALIZE[20416]:[/COLOR] $INFO[Container(8001).ListItem.Premiered]</value>
-        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + SubString(Control.GetLabel(91005),Library)">[COLOR=accent]$LOCALIZE[20373]:[/COLOR] $INFO[Container(8001).ListItem.Season]</value>
+        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + String.Contains(Control.GetLabel(91005),ExtendedInfoMovieDB)">[COLOR=accent]$LOCALIZE[20416]:[/COLOR] $INFO[Container(8001).ListItem.Premiered]</value>
+        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + String.Contains(Control.GetLabel(91005),TraktTV)">[COLOR=accent]$LOCALIZE[20416]:[/COLOR] $INFO[Container(8001).ListItem.Premiered]</value>
+        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + String.Contains(Control.GetLabel(91005),Library)">[COLOR=accent]$LOCALIZE[20373]:[/COLOR] $INFO[Container(8001).ListItem.Season]</value>
         <!-- Movies Playlist 1-3 -->
         <value condition="Control.HasFocus(8005) | Container(9000).Hasfocus(3)">[COLOR=accent]$LOCALIZE[562]:[/COLOR] $INFO[Container(8005).ListItem.Year]</value>
         <value condition="Control.HasFocus(8006) | Container(9000).Hasfocus(4)">[COLOR=accent]$LOCALIZE[562]:[/COLOR] $INFO[Container(8006).ListItem.Year]</value>
@@ -716,7 +716,7 @@
     <variable name="WidgetListInfo2">
         <!-- Movies -->
         <value condition="Control.HasFocus(8000) | Container(9000).Hasfocus(1)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8000).ListItem.Rating]</value>
-        <value condition="[Control.HasFocus(8000) | Container(9000).Hasfocus(1)]+ !IsEmpty(Container(8000).ListItem.Votes)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8000).ListItem.Rating] INFO[Container(8000).ListItem.Votes]</value>
+        <value condition="[Control.HasFocus(8000) | Container(9000).Hasfocus(1)]+ !String.IsEmpty(Container(8000).ListItem.Votes)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8000).ListItem.Rating] INFO[Container(8000).ListItem.Votes]</value>
         <!-- Music -->
         <value condition="Control.HasFocus(8002) | Container(9000).Hasfocus(14)">[COLOR=accent]$LOCALIZE[515]:[/COLOR] $INFO[Container(8002).ListItem.Genre]</value>
         <!-- Concerts -->
@@ -724,16 +724,16 @@
         <!-- Addons -->
         <value condition="Control.HasFocus(8004) | Container(9000).Hasfocus(18)">[COLOR=accent]$LOCALIZE[19114]:[/COLOR] $INFO[Container(8004).ListItem.Property(Version)]</value>
         <!-- TV Shows -->
-        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + SubString(Control.GetLabel(91005),ExtendedInfoMovieDB)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8001).ListItem.Rating]</value>
-        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + SubString(Control.GetLabel(91005),TraktTV)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8001).ListItem.Rating]</value>
-        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + SubString(Control.GetLabel(91005),Library)">[COLOR=accent]$LOCALIZE[20359]:[/COLOR] $INFO[Container(8001).ListItem.Episode]</value>
+        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + String.Contains(Control.GetLabel(91005),ExtendedInfoMovieDB)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8001).ListItem.Rating]</value>
+        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + String.Contains(Control.GetLabel(91005),TraktTV)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8001).ListItem.Rating]</value>
+        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + String.Contains(Control.GetLabel(91005),Library)">[COLOR=accent]$LOCALIZE[20359]:[/COLOR] $INFO[Container(8001).ListItem.Episode]</value>
         <!-- Movies Playlist 1-3 -->
         <value condition="Control.HasFocus(8005) | Container(9000).Hasfocus(3)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8005).ListItem.Rating]</value>
-        <value condition="[Control.HasFocus(8005) | Container(9000).Hasfocus(3)] + !IsEmpty(Container(8005).ListItem.Votes)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8005).ListItem.Rating] ($INFO[Container(8005).ListItem.Votes] $LOCALIZE[20350])</value>
+        <value condition="[Control.HasFocus(8005) | Container(9000).Hasfocus(3)] + !String.IsEmpty(Container(8005).ListItem.Votes)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8005).ListItem.Rating] ($INFO[Container(8005).ListItem.Votes] $LOCALIZE[20350])</value>
         <value condition="Control.HasFocus(8006) | Container(9000).Hasfocus(4)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8006).ListItem.Rating]</value>
-        <value condition="[Control.HasFocus(8006) | Container(9000).Hasfocus(4)] + !IsEmpty(Container(8006).ListItem.Votes)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8006).ListItem.Rating] ($INFO[Container(8006).ListItem.Votes] $LOCALIZE[20350])</value>
+        <value condition="[Control.HasFocus(8006) | Container(9000).Hasfocus(4)] + !String.IsEmpty(Container(8006).ListItem.Votes)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8006).ListItem.Rating] ($INFO[Container(8006).ListItem.Votes] $LOCALIZE[20350])</value>
         <value condition="Control.HasFocus(8007) | Container(9000).Hasfocus(5)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8007).ListItem.Rating]</value>
-        <value condition="[Control.HasFocus(8007) | Container(9000).Hasfocus(5)] + !IsEmpty(Container(8007).ListItem.Votes)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8007).ListItem.Rating] ($INFO[Container(8007).ListItem.Votes] $LOCALIZE[20350])</value>
+        <value condition="[Control.HasFocus(8007) | Container(9000).Hasfocus(5)] + !String.IsEmpty(Container(8007).ListItem.Votes)">[COLOR=accent]$LOCALIZE[563]:[/COLOR] $INFO[Container(8007).ListItem.Rating] ($INFO[Container(8007).ListItem.Votes] $LOCALIZE[20350])</value>
         <!-- TV Shows Playlist 1-3 -->
         <value condition="[Control.HasFocus(8008) | Container(9000).Hasfocus(9)]">[COLOR=accent]$LOCALIZE[20359]:[/COLOR] $INFO[Container(8008).ListItem.Episode]</value>
         <value condition="[Control.HasFocus(8009) | Container(9000).Hasfocus(10)]">[COLOR=accent]$LOCALIZE[20359]:[/COLOR] $INFO[Container(8009).ListItem.Episode]</value>
@@ -748,9 +748,9 @@
         <value condition="Control.HasFocus(8003) | Container(9000).Hasfocus(31)">[COLOR=accent]$LOCALIZE[562]:[/COLOR] $INFO[Container(8003).ListItem.Year]</value>
         <!-- Addons -->
         <!-- TV Shows -->
-        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + SubString(Control.GetLabel(91005),ExtendedInfoMovieDB)">[COLOR=accent]Votes:[/COLOR] $INFO[Container(8001).ListItem.Votes]</value>
-        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + SubString(Control.GetLabel(91005),TraktTV)">[COLOR=accent]Votes:[/COLOR] $INFO[Container(8001).ListItem.Votes]</value>
-        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + SubString(Control.GetLabel(91005),Library)">[COLOR=accent]$LOCALIZE[31054]:[/COLOR] $INFO[Container(8001).ListItem.Duration] $LOCALIZE[12391]</value>
+        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + String.Contains(Control.GetLabel(91005),ExtendedInfoMovieDB)">[COLOR=accent]Votes:[/COLOR] $INFO[Container(8001).ListItem.Votes]</value>
+        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + String.Contains(Control.GetLabel(91005),TraktTV)">[COLOR=accent]Votes:[/COLOR] $INFO[Container(8001).ListItem.Votes]</value>
+        <value condition="[Control.HasFocus(8001) | Container(9000).Hasfocus(7)] + String.Contains(Control.GetLabel(91005),Library)">[COLOR=accent]$LOCALIZE[31054]:[/COLOR] $INFO[Container(8001).ListItem.Duration] $LOCALIZE[12391]</value>
         <!-- Movies Playlist 1-3 -->
         <value condition="Control.HasFocus(8005) | Container(9000).Hasfocus(3)">[COLOR=accent]$LOCALIZE[31054]:[/COLOR] $INFO[Container(8005).ListItem.Duration] $LOCALIZE[12391]</value>
         <value condition="Control.HasFocus(8006) | Container(9000).Hasfocus(4)">[COLOR=accent]$LOCALIZE[31054]:[/COLOR] $INFO[Container(8006).ListItem.Duration] $LOCALIZE[12391]</value>
@@ -797,7 +797,7 @@
 
     <!-- Banner Fallback -->
     <variable name="BannerFallback">
-        <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
         <value>$INFO[ListItem.Thumb]</value>
     </variable>
 
@@ -912,19 +912,19 @@
         <value condition="Skin.String(HomeItemToEdit.LabelPathString,Menu_Custom13_Path)">$INFO[Skin.String(Menu_Custom13_Path)]</value>
     </variable>
     <variable name="HomeItemCustomFavouriteLabel">
-        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom1_Label) + !IsEmpty(Skin.String(Menu_Custom1_Label))">$INFO[Skin.String(Menu_Custom1_Label)]</value>
-        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom2_Label) + !IsEmpty(Skin.String(Menu_Custom2_Label))">$INFO[Skin.String(Menu_Custom2_Label)]</value>
-        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom3_Label) + !IsEmpty(Skin.String(Menu_Custom3_Label))">$INFO[Skin.String(Menu_Custom3_Label)]</value>
-        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom4_Label) + !IsEmpty(Skin.String(Menu_Custom4_Label))">$INFO[Skin.String(Menu_Custom4_Label)]</value>
-        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom5_Label) + !IsEmpty(Skin.String(Menu_Custom5_Label))">$INFO[Skin.String(Menu_Custom5_Label)]</value>
-        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom6_Label) + !IsEmpty(Skin.String(Menu_Custom6_Label))">$INFO[Skin.String(Menu_Custom6_Label)]</value>
-        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom7_Label) + !IsEmpty(Skin.String(Menu_Custom7_Label))">$INFO[Skin.String(Menu_Custom7_Label)]</value>
-        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom8_Label) + !IsEmpty(Skin.String(Menu_Custom8_Label))">$INFO[Skin.String(Menu_Custom8_Label)]</value>
-        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom9_Label) + !IsEmpty(Skin.String(Menu_Custom9_Label))">$INFO[Skin.String(Menu_Custom9_Label)]</value>
-        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom10_Label) + !IsEmpty(Skin.String(Menu_Custom10_Label))">$INFO[Skin.String(Menu_Custom10_Label)]</value>
-        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom11_Label) + !IsEmpty(Skin.String(Menu_Custom11_Label))">$INFO[Skin.String(Menu_Custom11_Label)]</value>
-        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom12_Label) + !IsEmpty(Skin.String(Menu_Custom12_Label))">$INFO[Skin.String(Menu_Custom12_Label)]</value>
-        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom13_Label) + !IsEmpty(Skin.String(Menu_Custom13_Label))">$INFO[Skin.String(Menu_Custom13_Label)]</value>
+        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom1_Label) + !String.IsEmpty(Skin.String(Menu_Custom1_Label))">$INFO[Skin.String(Menu_Custom1_Label)]</value>
+        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom2_Label) + !String.IsEmpty(Skin.String(Menu_Custom2_Label))">$INFO[Skin.String(Menu_Custom2_Label)]</value>
+        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom3_Label) + !String.IsEmpty(Skin.String(Menu_Custom3_Label))">$INFO[Skin.String(Menu_Custom3_Label)]</value>
+        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom4_Label) + !String.IsEmpty(Skin.String(Menu_Custom4_Label))">$INFO[Skin.String(Menu_Custom4_Label)]</value>
+        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom5_Label) + !String.IsEmpty(Skin.String(Menu_Custom5_Label))">$INFO[Skin.String(Menu_Custom5_Label)]</value>
+        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom6_Label) + !String.IsEmpty(Skin.String(Menu_Custom6_Label))">$INFO[Skin.String(Menu_Custom6_Label)]</value>
+        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom7_Label) + !String.IsEmpty(Skin.String(Menu_Custom7_Label))">$INFO[Skin.String(Menu_Custom7_Label)]</value>
+        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom8_Label) + !String.IsEmpty(Skin.String(Menu_Custom8_Label))">$INFO[Skin.String(Menu_Custom8_Label)]</value>
+        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom9_Label) + !String.IsEmpty(Skin.String(Menu_Custom9_Label))">$INFO[Skin.String(Menu_Custom9_Label)]</value>
+        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom10_Label) + !String.IsEmpty(Skin.String(Menu_Custom10_Label))">$INFO[Skin.String(Menu_Custom10_Label)]</value>
+        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom11_Label) + !String.IsEmpty(Skin.String(Menu_Custom11_Label))">$INFO[Skin.String(Menu_Custom11_Label)]</value>
+        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom12_Label) + !String.IsEmpty(Skin.String(Menu_Custom12_Label))">$INFO[Skin.String(Menu_Custom12_Label)]</value>
+        <value condition="Skin.String(HomeItemToEdit.LabelSkinString,Menu_Custom13_Label) + !String.IsEmpty(Skin.String(Menu_Custom13_Label))">$INFO[Skin.String(Menu_Custom13_Label)]</value>
         <value>$INFO[Skin.String(HomeItemToEdit.Label)]</value>
     </variable>
     <!-- Profile Settings -->
@@ -954,32 +954,32 @@
     </variable>
     <!-- Studio Flags -->
     <variable name="StudioIcon">
-        <value condition="!IsEmpty(Skin.String(resource.images.studios.path))">$INFO[Skin.String(resource.images.studios.path)]</value>
-        <value condition="IsEmpty(Skin.String(resource.images.studios.path)) + System.HasAddon(resource.images.studios.white)">resource://resource.images.studios.white/</value>
+        <value condition="!String.IsEmpty(Skin.String(resource.images.studios.path))">$INFO[Skin.String(resource.images.studios.path)]</value>
+        <value condition="String.IsEmpty(Skin.String(resource.images.studios.path)) + System.HasAddon(resource.images.studios.white)">resource://resource.images.studios.white/</value>
         <value>special://skin/extras/flagging/studios/</value>
     </variable>
     <!-- Movie Genre Icons add-on -->	
     <variable name="MovieGenreIcon">
-        <value condition="System.HasAddon(script.image.resource.select) + [SubString(Skin.String(resource.images.moviegenreicons.path),resource.images.moviegenreicons.transparent) | SubString(Skin.String(resource.images.moviegenreicons.path),resource.images.moviegenreicons.xzener-flat) | SubString(Skin.String(resource.images.moviegenreicons.path),resource.images.moviegenreicons.xzener-reflection)]">$INFO[Skin.String(resource.images.moviegenreicons.path)]$INFO[ListItem.Label,,.png]</value>
-        <value condition="System.HasAddon(script.image.resource.select) + !IsEmpty(Skin.String(resource.images.moviegenreicons.path))">$INFO[Skin.String(resource.images.moviegenreicons.path)]$INFO[ListItem.Label,,.jpg]</value>
+        <value condition="System.HasAddon(script.image.resource.select) + [String.Contains(Skin.String(resource.images.moviegenreicons.path),resource.images.moviegenreicons.transparent) | String.Contains(Skin.String(resource.images.moviegenreicons.path),resource.images.moviegenreicons.xzener-flat) | String.Contains(Skin.String(resource.images.moviegenreicons.path),resource.images.moviegenreicons.xzener-reflection)]">$INFO[Skin.String(resource.images.moviegenreicons.path)]$INFO[ListItem.Label,,.png]</value>
+        <value condition="System.HasAddon(script.image.resource.select) + !String.IsEmpty(Skin.String(resource.images.moviegenreicons.path))">$INFO[Skin.String(resource.images.moviegenreicons.path)]$INFO[ListItem.Label,,.jpg]</value>
         <value>$INFO[ListItem.Label,special://skin/extras/moviegenres/,.png]</value>
     </variable>
     <!-- Music Genre Icons add-on -->
     <variable name="MusicGenreIcon">
-        <value condition="System.HasAddon(script.image.resource.select) + !IsEmpty(Skin.String(resource.images.musicgenreicons.path))">$INFO[Skin.String(resource.images.musicgenreicons.path)]$INFO[ListItem.Label,,.jpg]</value>
+        <value condition="System.HasAddon(script.image.resource.select) + !String.IsEmpty(Skin.String(resource.images.musicgenreicons.path))">$INFO[Skin.String(resource.images.musicgenreicons.path)]$INFO[ListItem.Label,,.jpg]</value>
         <value>$INFO[ListItem.Label,special://skin/extras/musicgenres/,.png]</value>
     </variable>
     <!-- Weather Fanart Home Background -->
     <variable name="WeatherFanartHomeBackground">
-        <value condition="Skin.HasSetting(HomeWeatherFanart) + !IsEmpty(Skin.String(resource.images.weatherfanart.path)) + !Skin.HasSetting(resource.images.weatherfanart.multi)">$INFO[Skin.String(resource.images.weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
-        <value condition="Skin.HasSetting(HomeWeatherFanart) + !IsEmpty(Skin.String(resource.images.weatherfanart.path)) + Skin.HasSetting(resource.images.weatherfanart.multi)">$INFO[Skin.String(resource.images.weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]</value>
-        <value condition="Skin.HasSetting(HomeWeatherFanart) + !IsEmpty(Skin.String(Home_Custom_Back_Weather_Folder)) + IsEmpty(Skin.String(resource.images.weatherfanart.path))">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</value>
+        <value condition="Skin.HasSetting(HomeWeatherFanart) + !String.IsEmpty(Skin.String(resource.images.weatherfanart.path)) + !Skin.HasSetting(resource.images.weatherfanart.multi)">$INFO[Skin.String(resource.images.weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
+        <value condition="Skin.HasSetting(HomeWeatherFanart) + !String.IsEmpty(Skin.String(resource.images.weatherfanart.path)) + Skin.HasSetting(resource.images.weatherfanart.multi)">$INFO[Skin.String(resource.images.weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]</value>
+        <value condition="Skin.HasSetting(HomeWeatherFanart) + !String.IsEmpty(Skin.String(Home_Custom_Back_Weather_Folder)) + String.IsEmpty(Skin.String(resource.images.weatherfanart.path))">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</value>
         <value>special://skin/backgrounds/weatherfanart.jpg</value>
     </variable>
     <!-- Weather Fanart Background -->
     <variable name="WeatherFanartBackground">
-        <value condition="!IsEmpty(Skin.String(resource.images.weatherfanart.path)) + !Skin.HasSetting(resource.images.weatherfanart.multi)">$INFO[Skin.String(resource.images.weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
-        <value condition="!IsEmpty(Skin.String(resource.images.weatherfanart.path)) + Skin.HasSetting(resource.images.weatherfanart.multi)">$INFO[Skin.String(resource.images.weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]</value>
+        <value condition="!String.IsEmpty(Skin.String(resource.images.weatherfanart.path)) + !Skin.HasSetting(resource.images.weatherfanart.multi)">$INFO[Skin.String(resource.images.weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
+        <value condition="!String.IsEmpty(Skin.String(resource.images.weatherfanart.path)) + Skin.HasSetting(resource.images.weatherfanart.multi)">$INFO[Skin.String(resource.images.weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]</value>
         <value>special://skin/backgrounds/weatherfanart.jpg</value>
     </variable>
 </includes>

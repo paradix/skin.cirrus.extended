@@ -98,7 +98,7 @@
                 <width>160</width>
                 <height>40</height>
                 <texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-                <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
+                <visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1)</visible>
                 <aspectratio>keep</aspectratio>
                 <bordersize>3</bordersize>
                 <bordertexture border="3">ContentPanelvertical.png</bordertexture>
@@ -118,7 +118,7 @@
                 <width>160</width>
                 <height>40</height>
                 <texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
-                <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
+                <visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
                 <aspectratio>keep</aspectratio>
                 <bordersize>3</bordersize>
                 <bordertexture border="3">ContentPanelvertical.png</bordertexture>
@@ -129,7 +129,7 @@
                 <width>160</width>
                 <height>40</height>
                 <texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-                <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
+                <visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
                 <aspectratio>keep</aspectratio>
                 <bordersize>3</bordersize>
                 <bordertexture border="3">ContentPanelvertical.png</bordertexture>
@@ -158,7 +158,7 @@
                 <width>160</width>
                 <height>40</height>
                 <texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-                <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
+                <visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1)</visible>
                 <aspectratio>keep</aspectratio>
                 <bordersize>3</bordersize>
                 <bordertexture border="3">ContentPanelvertical.png</bordertexture>
@@ -178,7 +178,7 @@
                 <width>160</width>
                 <height>40</height>
                 <texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
-                <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
+                <visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
                 <aspectratio>keep</aspectratio>
                 <bordersize>3</bordersize>
                 <bordertexture border="3">ContentPanelvertical.png</bordertexture>
@@ -189,7 +189,7 @@
                 <width>160</width>
                 <height>40</height>
                 <texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-                <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
+                <visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
                 <aspectratio>keep</aspectratio>
                 <bordersize>3</bordersize>
                 <bordertexture border="3">ContentPanelvertical.png</bordertexture>

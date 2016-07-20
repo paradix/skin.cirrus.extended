@@ -86,14 +86,14 @@
             <width>1280</width>
             <height>720</height>
             <texture>special://skin/backgrounds/media-overlay.png</texture>
-            <visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo) + IsEmpty(Window(videos).Property(PlayingBackgroundMedia))</visible>
+            <visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo) + String.IsEmpty(Window(videos).Property(PlayingBackgroundMedia))</visible>
         </control>
         <control type="visualisation">
             <left>0</left>
             <top>0</top>
             <width>1280</width>
             <height>720</height>
-            <visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis) + IsEmpty(Window(videos).Property(PlayingBackgroundMedia))</visible>
+            <visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis) + String.IsEmpty(Window(videos).Property(PlayingBackgroundMedia))</visible>
         </control>
         <control type="videowindow">
             <left>0</left>
@@ -111,14 +111,14 @@
             <width>1280</width>
             <height>720</height>
             <texture>special://skin/backgrounds/media-overlay.png</texture>
-            <visible>Player.HasVideo + IsEmpty(Window(videos).Property(PlayingBackgroundMedia)) + !Skin.HasSetting(ShowBackgroundVideoBrowser)</visible>
+            <visible>Player.HasVideo + String.IsEmpty(Window(videos).Property(PlayingBackgroundMedia)) + !Skin.HasSetting(ShowBackgroundVideoBrowser)</visible>
         </control>
         <control type="visualisation">
             <left>0</left>
             <top>0</top>
             <width>1280</width>
             <height>720</height>
-            <visible>Player.HasAudio + IsEmpty(Window(videos).Property(PlayingBackgroundMedia)) + !Skin.HasSetting(ShowBackgroundVideoBrowser)</visible>
+            <visible>Player.HasAudio + String.IsEmpty(Window(videos).Property(PlayingBackgroundMedia)) + !Skin.HasSetting(ShowBackgroundVideoBrowser)</visible>
         </control>
         <control type="videowindow">
             <left>0</left>
@@ -153,7 +153,7 @@
             <fadetime>1000</fadetime>
             <animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
             <animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-            <visible>Container.Content(Movies) + [!IsEmpty(Skin.String(Home_Custom_Back_Movies_Folder)) + Skin.HasSetting(HomeMenuNoMoviesButton)]</visible>	  
+            <visible>Container.Content(Movies) + [!String.IsEmpty(Skin.String(Home_Custom_Back_Movies_Folder)) + Skin.HasSetting(HomeMenuNoMoviesButton)]</visible>	  
         </control>
         <control type="multiimage">
             <left>0</left>
@@ -166,7 +166,7 @@
             <fadetime>1000</fadetime>
             <animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
             <animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-            <visible>[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + [!IsEmpty(Skin.String(Home_Custom_Back_TVShow_Folder)) + Skin.HasSetting(HomeMenuNoTVShowsButton)]</visible>
+            <visible>[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + [!String.IsEmpty(Skin.String(Home_Custom_Back_TVShow_Folder)) + Skin.HasSetting(HomeMenuNoTVShowsButton)]</visible>
         </control>
     </include>
     <!-- PVR Butchabay -->
@@ -313,7 +313,7 @@
         <control type="group">
             <left>20</left>
             <top>50</top>
-            <visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
+            <visible>Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]</visible>
             <include>VisibleFadeEffect</include>
             <animation effect="slide" end="-510,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
             <animation effect="slide" start="-510,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
@@ -1127,8 +1127,8 @@
             <label>$INFO[Window(Home).Property(Detail.Movie.18.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(Detail.Movie.19.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(Detail.Movie.20.Art(fanart))]</label>
-            <visible>[Container.Content(tags) | Container.Content(directors) | Container.Content(actors) | Container.Content(genres) | Container.Content(studios) | Container.Content(countries) | Container.Content(years) | Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets/,left)]</visible>
-            <visible>!Stringcompare(ListItem.Label,..)</visible>
+            <visible>[Container.Content(tags) | Container.Content(directors) | Container.Content(actors) | Container.Content(genres) | Container.Content(studios) | Container.Content(countries) | Container.Content(years) | Container.Content(sets) | String.StartsWith(ListItem.Path,videodb://movies/sets/)]</visible>
+            <visible>!ListItem.IsParentFolder</visible>
         </control>
     </include>
     <include name="NodeFadeLabels">
@@ -1224,8 +1224,8 @@
         <focusedcolor>black</focusedcolor>
     </include>
     <variable name="BannerImageFallback">
-        <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-        <value condition="!IsEmpty(FanArt.image)">$INFO[FanArt.image]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+        <value condition="!String.IsEmpty(FanArt.image)">$INFO[FanArt.image]</value>
         <value>$INFO[ListItem.Thumb]</value>
     </variable>
     <include name="FallbackBanner">
@@ -1236,7 +1236,7 @@
             <texture background="true" fallback="bannerFallback.png">$VAR[BannerImageFallback]</texture>
             <bordertexture border="8">ThumbBorder.png</bordertexture>
             <bordersize>8</bordersize>
-            <visible>IsEmpty(ListItem.Art(banner)) + [Control.IsVisible(519) | Control.IsVisible(571)]</visible>
+            <visible>String.IsEmpty(ListItem.Art(banner)) + [Control.IsVisible(519) | Control.IsVisible(571)]</visible>
         </control>
         <control type="image">
             <left>0</left> 
@@ -1245,7 +1245,7 @@
             <texture background="true" fallback="bannerFallback.png">$VAR[BannerImageFallback]</texture>
             <bordertexture border="8">ContentPanelvertical.png</bordertexture>
             <bordersize>8</bordersize>
-            <visible>IsEmpty(ListItem.Art(banner)) + ![Control.IsVisible(519) | Control.IsVisible(571)]</visible>
+            <visible>String.IsEmpty(ListItem.Art(banner)) + ![Control.IsVisible(519) | Control.IsVisible(571)]</visible>
         </control>
         <control type="image">
             <centerleft>50%</centerleft> 
@@ -1256,7 +1256,7 @@
             <aligny>center</aligny>
             <aspectratio>keep</aspectratio>
             <texture background="true" border="5">$INFO[ListItem.Art(clearlogo)]</texture>
-            <visible>IsEmpty(ListItem.Art(banner)) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+            <visible>String.IsEmpty(ListItem.Art(banner)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
         </control>
         <control type="label">
             <centerleft>50%</centerleft> 
@@ -1270,7 +1270,7 @@
             <shadowcolor>black</shadowcolor>
             <scroll>true</scroll>
             <label>$INFO[ListItem.Label]</label>
-            <visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+            <visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
         </control>
     </include>
     <include name="FallbackWidethumb">
@@ -1280,7 +1280,7 @@
             <aspectratio>stretch</aspectratio>
             <texture background="true">bannerFallback.png</texture>
             <bordersize>8</bordersize>
-            <visible>IsEmpty(ListItem.Art(landscape))</visible>
+            <visible>String.IsEmpty(ListItem.Art(landscape))</visible>
         </control>
         <control type="image">
             <centerleft>50%</centerleft> 
@@ -1291,7 +1291,7 @@
             <aligny>center</aligny>
             <aspectratio>keep</aspectratio>
             <texture background="true" border="5">$INFO[ListItem.Art(clearlogo)]</texture>
-            <visible>IsEmpty(ListItem.Art(landscape)) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+            <visible>String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
         </control>
         <control type="label">
             <centerleft>50%</centerleft> 
@@ -1306,7 +1306,7 @@
             <wrapmultiline>true</wrapmultiline>
             <scroll>true</scroll>
             <label>$INFO[ListItem.Label]</label>
-            <visible>IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+            <visible>String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
         </control>
     </include>
     <include name="TopSlideoutSlimMusicOSD">
@@ -1512,7 +1512,7 @@
             <aspectratio aligny="bottom">stretch</aspectratio>
             <fadetime>IconCrossfadeTime</fadetime>
             <texture>IMDBFlag.png</texture>
-            <visible>!IsEmpty(ListItem.Top250)</visible>
+            <visible>!String.IsEmpty(ListItem.Top250)</visible>
             <colordiffuse>accent</colordiffuse>
         </control>
         <control type="label">

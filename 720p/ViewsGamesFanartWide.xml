@@ -48,7 +48,7 @@
             <left>0</left>
             <top>530</top>
             <control type="fixedlist" id="592">
-                <visible>substring(container.folderpath,plugin://plugin.program.advanced.launcher) | Window.IsVisible(VideoFiles) | Window.IsVisible(VideoLibrary) + !Container.Content(Genres) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(sets)</visible>
+                <visible>String.Contains(container.folderpath,plugin://plugin.program.advanced.launcher) | Window.IsVisible(VideoFiles) | Window.IsVisible(VideoLibrary) + !Container.Content(Genres) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(sets)</visible>
                 <left>-7</left>
                 <top>0</top>
                 <width>1300</width>
@@ -56,7 +56,7 @@
                 <onleft>592</onleft>
                 <onright>592</onright>
                 <onup>60</onup>
-                <ondown condition="substring(container.folderpath,plugin://plugin.program.advanced.launcher)">ActivateWindow(1122)</ondown>
+                <ondown condition="String.Contains(container.folderpath,plugin://plugin.program.advanced.launcher)">ActivateWindow(1122)</ondown>
                 <viewtype label="40002">wrap</viewtype>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime tween="quadratic" easing="out">300</scrolltime>

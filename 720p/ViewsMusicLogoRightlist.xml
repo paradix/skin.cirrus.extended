@@ -179,7 +179,7 @@
             <font>cirrus_20</font>
             <textcolor>white</textcolor>
             <label>[COLOR=accent]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Property(Artist_Genre)]</label>
-            <visible>!IsEmpty(ListItem.Property(Artist_Mood))</visible>
+            <visible>!String.IsEmpty(ListItem.Property(Artist_Mood))</visible>
           </control>
         </control>
       </control>

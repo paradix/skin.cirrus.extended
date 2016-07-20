@@ -36,7 +36,7 @@
             <animation effect="fade" start="100" end="0" time="300">Hidden</animation>
             <animation effect="zoom" start="110" end="130" center="auto" time="6000" pulse="true" condition="Skin.HasSetting(ArtistslideshowAnimation)">Conditional</animation>
             <animation effect="slide" start="-20,-20" end="40,40" time="7000" pulse="true" condition="Skin.HasSetting(ArtistslideshowAnimation)">Conditional</animation>
-            <visible>IsEmpty(Window.Property(ArtistSlideshowRefresh))</visible>
+            <visible>String.IsEmpty(Window.Property(ArtistSlideshowRefresh))</visible>
             <visible>Skin.HasSetting(Artistslideshow)</visible>
             <visible>!Skin.HasSetting(BlackBackground)</visible>
             <visible>!Skin.HasSetting(CustomBackground)</visible>
