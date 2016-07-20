@@ -313,7 +313,7 @@
         <control type="group">
             <left>20</left>
             <top>50</top>
-            <visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
+            <visible>Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]</visible>
             <include>VisibleFadeEffect</include>
             <animation effect="slide" end="-510,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
             <animation effect="slide" start="-510,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
@@ -1128,7 +1128,7 @@
             <label>$INFO[Window(Home).Property(Detail.Movie.19.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(Detail.Movie.20.Art(fanart))]</label>
             <visible>[Container.Content(tags) | Container.Content(directors) | Container.Content(actors) | Container.Content(genres) | Container.Content(studios) | Container.Content(countries) | Container.Content(years) | Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets/,left)]</visible>
-            <visible>!Stringcompare(ListItem.Label,..)</visible>
+            <visible>!ListItem.IsParentFolder</visible>
         </control>
     </include>
     <include name="NodeFadeLabels">

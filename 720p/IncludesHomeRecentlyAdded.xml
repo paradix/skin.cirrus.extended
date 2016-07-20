@@ -160,7 +160,7 @@
         <focusedlayout height="230" width="290" condition="SubString(Control.GetLabel(91004),Cover,left)">
             <include>WidgetContentLabelControl</include>
         </focusedlayout>
-        <focusedlayout height="230" width="220" condition="SubString(Control.GetLabel(91004),Poster,left) | StringCompare(Control.GetLabel(91004),Widget)">
+        <focusedlayout height="230" width="220" condition="SubString(Control.GetLabel(91004),Poster,left) | String.IsEqual(Control.GetLabel(91004),Widget)">
             <include>WidgetContentLabelControl</include>
         </focusedlayout>
     </include>
@@ -440,7 +440,7 @@
                 <width>400</width>
                 <height>400</height>
                 <control type="grouplist">
-                    <animation effect="slide" start="0,0" end="0,20" time="0" condition="!StringCompare(Control.GetLabel(91004),Widget)" reversible="false">Conditional</animation>
+                    <animation effect="slide" start="0,0" end="0,20" time="0" condition="!String.IsEqual(Control.GetLabel(91004),Widget)" reversible="false">Conditional</animation>
                     <orientation>horizontal</orientation>
                     <left>55</left>
                     <top>0</top>

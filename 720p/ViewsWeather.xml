@@ -355,7 +355,7 @@
     </include>
     <include name="Weather36HourForcast">
         <control type="group">
-            <visible>StringCompare(Window.Property(Weather.CurrentView),36hour) + !String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+            <visible>String.IsEqual(Window.Property(Weather.CurrentView),36hour) + !String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
             <include>VisibleFadeEffect</include>
             <control type="button" id="997">
                 <description>Hidden Button for focus</description>
@@ -585,7 +585,7 @@
     </include>
     <include name="WeatherHourlyForcast">
         <control type="group">
-            <visible>StringCompare(Window.Property(Weather.CurrentView),hourly)</visible>
+            <visible>String.IsEqual(Window.Property(Weather.CurrentView),hourly)</visible>
             <include>VisibleFadeEffect</include>
             <control type="label">
                 <description>header label</description>
@@ -831,7 +831,7 @@
     </include>
     <include name="WeatherWeekendForcast">
         <control type="group">
-            <visible>StringCompare(Window.Property(Weather.CurrentView),weekend)</visible>
+            <visible>String.IsEqual(Window.Property(Weather.CurrentView),weekend)</visible>
             <include>VisibleFadeEffect</include>
             <control type="button" id="998">
                 <description>Hidden Button for focus</description>
@@ -1042,7 +1042,7 @@
     </include>
     <include name="WeatherMaps">
         <control type="group">
-            <visible>StringCompare(Window.Property(Weather.CurrentView),map) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
+            <visible>String.IsEqual(Window.Property(Weather.CurrentView),map) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
             <include>VisibleFadeEffect</include>
             <control type="label">
                 <description>header label</description>
@@ -1107,7 +1107,7 @@
                 <scrolltime>200</scrolltime>
                 <orientation>horizontal</orientation>
                 <include>VisibleFadeEffect</include>
-                <visible>StringCompare(Window.Property(Weather.CurrentView),map) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
+                <visible>String.IsEqual(Window.Property(Weather.CurrentView),map) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
                 <itemlayout height="470" width="590">
                     <control type="image">
                         <description>area image</description>
@@ -1197,7 +1197,7 @@
     </include>
     <include name="WeatherAlerts">
         <control type="group">
-            <visible>StringCompare(Window.Property(Weather.CurrentView),alerts) + !String.IsEmpty(Window.Property(Alerts.IsFetched))</visible>
+            <visible>String.IsEqual(Window.Property(Weather.CurrentView),alerts) + !String.IsEmpty(Window.Property(Alerts.IsFetched))</visible>
             <include>VisibleFadeEffect</include>
             <control type="button" id="996">
                 <description>Hidden Button for focus</description>
@@ -1235,7 +1235,7 @@
                 <label>$LOCALIZE[33050]</label>
             </control>
             <control type="group">
-                <visible>!StringCompare(Window.Property(Alerts.Count),0)</visible>
+                <visible>!String.IsEqual(Window.Property(Alerts.Count),0)</visible>
                 <control type="textbox">
                     <left>40</left>
                     <top>115</top>
@@ -1259,7 +1259,7 @@
                 <align>center</align>
                 <aligny>center</aligny>
                 <label>$LOCALIZE[19055]</label>
-                <visible>StringCompare(Window.Property(Alerts.Count),0)</visible>
+                <visible>String.IsEqual(Window.Property(Alerts.Count),0)</visible>
             </control>
         </control>
     </include>

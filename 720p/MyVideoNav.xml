@@ -80,7 +80,7 @@
                 <randomize>false</randomize>
                 <fadetime>FanartCrossfadeTime</fadetime>
                 <include>global_kenburns_fanart</include>
-                <visible>!Stringcompare(ListItem.Label,..) + [Skin.HasSetting(ExtraFanMovies) + Container.Content(Movies)] | [Skin.HasSetting(ExtraFanTV) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]]</visible>
+                <visible>!ListItem.IsParentFolder + [Skin.HasSetting(ExtraFanMovies) + Container.Content(Movies)] | [Skin.HasSetting(ExtraFanTV) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]]</visible>
             </control>
             <control type="multiimage">
                 <left>0</left>

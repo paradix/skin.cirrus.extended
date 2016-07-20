@@ -26,7 +26,7 @@
             <randomize>true</randomize>
             <fadetime>2000</fadetime>
             <include condition="Skin.HasSetting(animation_bg_global)">global_kenburns_fanart</include>
-            <visible>![Player.HasVideo + Skin.HasSetting(VideoBackgrounds)] + StringCompare(Window(Home).Property(TVGuide.BackgroundFanart),1)</visible>
+            <visible>![Player.HasVideo + Skin.HasSetting(VideoBackgrounds)] + String.IsEqual(Window(Home).Property(TVGuide.BackgroundFanart),1)</visible>
         </control>
         <control type="image">
             <left>0</left>
