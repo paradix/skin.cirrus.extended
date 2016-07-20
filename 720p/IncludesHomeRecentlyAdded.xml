@@ -1276,6 +1276,13 @@
                                     <property name="source">Library</property>
                                 </item>
                                 <item id="2">
+                                    <label>$LOCALIZE[626]</label>
+                                    <onclick>noop</onclick>
+                                    <property name="content">videodb://inprogresstvshows /</property>
+                                    <property name="layout">ThumbThumb</property>
+                                    <property name="source">Library</property>
+                                </item>
+                                <item id="3">
                                     <label>$LOCALIZE[31265]</label>
                                     <onclick>noop</onclick>
                                     <property name="content">plugin://service.library.data.provider?type=randomepisodes&amp;reload=10&amp;limit=10</property>
@@ -1283,7 +1290,7 @@
                                     <property name="source">Library</property>
                                     <visible>System.HasAddon(service.library.data.provider)</visible>
                                 </item>
-                                <item id="3">
+                                <item id="4">
                                     <label>$LOCALIZE[31266]</label>
                                     <onclick>noop</onclick>
                                     <property name="content">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=10&amp;limit=10</property>
@@ -1291,7 +1298,7 @@
                                     <property name="source">Library</property>
                                     <visible>System.HasAddon(service.library.data.provider)</visible>
                                 </item>
-                                <item id="4">
+                                <item id="5">
                                     <label>$LOCALIZE[31267]</label>
                                     <onclick>noop</onclick>
                                     <property name="content">plugin://script.extendedinfo?info=populartvshows</property>
@@ -1299,7 +1306,7 @@
                                     <property name="source">ExtendedInfoMovieDB</property>
                                     <visible>System.HasAddon(script.extendedinfo)</visible>
                                 </item>
-                                <item id="5">
+                                <item id="6">
                                     <label>$LOCALIZE[31268]</label>
                                     <onclick>noop</onclick>
                                     <property name="content">plugin://script.extendedinfo?info=airingtodaytvshows</property>
@@ -1307,7 +1314,7 @@
                                     <property name="source">ExtendedInfoMovieDB</property>
                                     <visible>System.HasAddon(script.extendedinfo)</visible>
                                 </item>
-                                <item id="6">
+                                <item id="7">
                                     <label>$LOCALIZE[31269]</label>
                                     <onclick>noop</onclick>
                                     <property name="content">plugin://script.extendedinfo?info=onairtvshows</property>
@@ -1315,7 +1322,7 @@
                                     <property name="source">ExtendedInfoMovieDB</property>
                                     <visible>System.HasAddon(script.extendedinfo)</visible>
                                 </item>
-                                <item id="7">
+                                <item id="8">
                                     <label>$LOCALIZE[31270]</label>
                                     <onclick>noop</onclick>
                                     <property name="content">plugin://script.extendedinfo?info=airingtodaytvshows</property>
@@ -1323,7 +1330,7 @@
                                     <property name="source">ExtendedInfoMovieDB</property>
                                     <visible>System.HasAddon(script.extendedinfo)</visible>
                                 </item>
-                                <item id="8">
+                                <item id="9">
                                     <label>$LOCALIZE[31271]</label>
                                     <onclick>noop</onclick>
                                     <property name="content">plugin://script.extendedinfo?info=trendingshows</property>
@@ -1331,7 +1338,7 @@
                                     <property name="source">TraktTV</property>
                                     <visible>System.HasAddon(script.extendedinfo)</visible>
                                 </item>
-                                <item id="9">
+                                <item id="10">
                                     <label>$LOCALIZE[31272]</label>
                                     <onclick>noop</onclick>
                                     <property name="content">plugin://script.extendedinfo?info=airingshows</property>
@@ -1339,7 +1346,7 @@
                                     <property name="source">TraktTV</property>
                                     <visible>System.HasAddon(script.extendedinfo)</visible>
                                 </item>
-                                <item id="10">
+                                <item id="11">
                                     <label>$LOCALIZE[31273]</label>
                                     <onclick>noop</onclick>
                                     <property name="content">plugin://script.extendedinfo?info=premiereshows</property>
