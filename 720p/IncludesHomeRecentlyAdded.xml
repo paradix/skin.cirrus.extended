@@ -32,7 +32,7 @@
                 <height>30</height>
                 <texture background="true" flipx="true">OSDPlayNF.png</texture>
                 <aspectratio>stretch</aspectratio>
-                <visible>!IsEmpty(Control.GetLabel(91002))</visible>
+                <visible>!String.IsEmpty(Control.GetLabel(91002))</visible>
             </control>
             <control type="image">
                 <left>225</left>
@@ -41,7 +41,7 @@
                 <height>30</height>
                 <texture background="true">OSDPlayNF.png</texture>
                 <aspectratio>stretch</aspectratio>
-                <visible>!IsEmpty(Control.GetLabel(91003))</visible>
+                <visible>!String.IsEmpty(Control.GetLabel(91003))</visible>
             </control>
             <!-- Thumb Picture -->
             <control type="image">
@@ -398,7 +398,7 @@
                 <height>20</height>
                 <texture background="true" flipx="true">OSDPlayNF.png</texture>
                 <aspectratio>stretch</aspectratio>
-                <visible>!IsEmpty(Control.GetLabel(91002))</visible>
+                <visible>!String.IsEmpty(Control.GetLabel(91002))</visible>
             </control>
             <control type="image">
                 <right>518</right>
@@ -407,7 +407,7 @@
                 <height>20</height>
                 <texture background="true">OSDPlayNF.png</texture>
                 <aspectratio>stretch</aspectratio>
-                <visible>!IsEmpty(Control.GetLabel(91003))</visible>
+                <visible>!String.IsEmpty(Control.GetLabel(91003))</visible>
             </control>
         </control>
     </include>
@@ -461,7 +461,7 @@
                             <height>30</height>
                             <texture background="true" flipx="true">-</texture>
                             <aspectratio>stretch</aspectratio>
-                            <visible>IsEmpty(Control.GetLabel(91002))</visible>
+                            <visible>String.IsEmpty(Control.GetLabel(91002))</visible>
                         </control>
                         <control type="image">
                             <left>0</left>
@@ -472,7 +472,7 @@
                             <height>30</height>
                             <texture background="true" flipx="true">OSDPlayNF.png</texture>
                             <aspectratio>stretch</aspectratio>
-                            <visible>!IsEmpty(Control.GetLabel(91002))</visible>
+                            <visible>!String.IsEmpty(Control.GetLabel(91002))</visible>
                         </control>
                     </control>
                     <control type="group">
@@ -538,7 +538,7 @@
                             <height>30</height>
                             <texture background="true">OSDPlayNF.png</texture>
                             <aspectratio>stretch</aspectratio>
-                            <visible>!IsEmpty(Control.GetLabel(91003))</visible>
+                            <visible>!String.IsEmpty(Control.GetLabel(91003))</visible>
                         </control>
                     </control>
                 </control>
@@ -906,7 +906,7 @@
                                 <onclick>noop</onclick>
                                 <property name="content">$INFO[Skin.String(Menu_Custom4_Path)]</property>
                                 <property name="layout">PosterFanart</property>
-                                <visible>Skin.HasSetting(Menu_Custom4) + !IsEmpty(Skin.String(Menu_Custom4_Path))</visible>
+                                <visible>Skin.HasSetting(Menu_Custom4) + !String.IsEmpty(Skin.String(Menu_Custom4_Path))</visible>
                             </item>
                         </content>
                     </control>
@@ -966,7 +966,7 @@
                                 <onclick>noop</onclick>
                                 <property name="content">$INFO[Skin.String(Menu_Custom5_Path)]</property>
                                 <property name="layout">PosterFanart</property>
-                                <visible>Skin.HasSetting(Menu_Custom5) + !IsEmpty(Skin.String(Menu_Custom5_Path))</visible>
+                                <visible>Skin.HasSetting(Menu_Custom5) + !String.IsEmpty(Skin.String(Menu_Custom5_Path))</visible>
                             </item>
                         </content>
                     </control>
@@ -1026,7 +1026,7 @@
                                 <onclick>noop</onclick>
                                 <property name="content">$INFO[Skin.String(Menu_Custom6_Path)]</property>
                                 <property name="layout">PosterFanart</property>
-                                <visible>Skin.HasSetting(Menu_Custom6) + !IsEmpty(Skin.String(Menu_Custom6_Path))</visible>
+                                <visible>Skin.HasSetting(Menu_Custom6) + !String.IsEmpty(Skin.String(Menu_Custom6_Path))</visible>
                             </item>
                         </content>
                     </control>
@@ -1406,7 +1406,7 @@
                                 <onclick>noop</onclick>
                                 <property name="content">$INFO[Skin.String(Menu_Custom9_Path)]</property>
                                 <property name="layout">ThumbThumb</property>
-                                <visible>Skin.HasSetting(Menu_Custom9) + !IsEmpty(Skin.String(Menu_Custom9_Path))</visible>
+                                <visible>Skin.HasSetting(Menu_Custom9) + !String.IsEmpty(Skin.String(Menu_Custom9_Path))</visible>
                             </item>
                         </content>
                     </control>
@@ -1466,7 +1466,7 @@
                                 <onclick>noop</onclick>
                                 <property name="content">$INFO[Skin.String(Menu_Custom10_Path)]</property>
                                 <property name="layout">ThumbThumb</property>
-                                <visible>Skin.HasSetting(Menu_Custom10) + !IsEmpty(Skin.String(Menu_Custom10_Path))</visible>
+                                <visible>Skin.HasSetting(Menu_Custom10) + !String.IsEmpty(Skin.String(Menu_Custom10_Path))</visible>
                             </item>
                         </content>
                     </control>
@@ -1526,7 +1526,7 @@
                                 <onclick>noop</onclick>
                                 <property name="content">$INFO[Skin.String(Menu_Custo11_Path)]</property>
                                 <property name="layout">ThumbThumb</property>
-                                <visible>Skin.HasSetting(Menu_Custom11) + !IsEmpty(Skin.String(Menu_Custo11_Path))</visible>
+                                <visible>Skin.HasSetting(Menu_Custom11) + !String.IsEmpty(Skin.String(Menu_Custo11_Path))</visible>
                             </item>
                         </content>
                     </control>

@@ -669,7 +669,7 @@
                 <font>cirrus_30_Bold</font>
                 <align>left</align>
                 <label>$INFO[Listitem.Rating]</label>
-                <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
             </control>
             <control type="image">
                 <width>84</width>
@@ -678,7 +678,7 @@
                 <top>568</top>
                 <aspectratio align="center">keep</aspectratio>
                 <texture>imdb-logo.png</texture>
-                <visible>!ListItem.IsFolder + !IsEmpty(Listitem.Rating)</visible>
+                <visible>!ListItem.IsFolder + !String.IsEmpty(Listitem.Rating)</visible>
             </control>
             <control type="image">
                 <left>525</left>
@@ -694,7 +694,7 @@
                 <animation effect="fade" start="0" end="1000" easing="out" time="800" delay="800" reversible="false">Visible</animation>
                 <animation effect="fade" start="0" end="1000" easing="out" time="800" delay="800" reversible="false">Visible</animation>
                 <animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-                <visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
+                <visible>!String.IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
                 <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
                 <visible>!Skin.HasSetting(Smallwindowhidden)</visible>
             </control>
@@ -911,7 +911,7 @@
                     <aligny>center</aligny>
                     <font>cirrus_22</font>
                     <scroll>true</scroll>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>	
                 <control type="label">
                     <left>-20</left>
@@ -940,7 +940,7 @@
                     <label>[COLOR=accent]$LOCALIZE[20416]:[/COLOR] $INFO[ListItem.Premiered]</label>
                     <scrollout>false</scrollout>
                     <pauseatend>2000</pauseatend>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
 
                 <control type="textbox">
@@ -979,7 +979,7 @@
                     <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="1200" delay="900" reversible="false">WindowOpen</animation>
                     <animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
                     <visible>Skin.HasSetting(tvfanart)</visible>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
                 <control type="image">
                     <left>940</left>
@@ -996,7 +996,7 @@
                     <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="1200" delay="900" reversible="false">WindowOpen</animation>
                     <animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
                     <visible>Skin.HasSetting(tvfanart)</visible>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
                 <control type="label">
                     <description>Episodes</description>
@@ -1008,7 +1008,7 @@
                     <align>left</align>
                     <font>cirrus_22</font>
                     <scroll>true</scroll>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
             </control>
 
@@ -1210,7 +1210,7 @@
                     <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="1200" delay="900" reversible="false">WindowOpen</animation>
                     <animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
                     <visible>Skin.HasSetting(tvfanart)</visible>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
 
                 <control type="textbox">
@@ -1282,7 +1282,7 @@
                     <align>center</align>
                     <font>cirrus_22</font>
                     <scroll>true</scroll>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
             </control>
             <control type="image">

@@ -44,7 +44,7 @@
             <!-- Add-on Category -->
             <left>20</left>
             <top>20</top>
-            <visible>!IsEmpty(Container.Property(AddonCategory))</visible>
+            <visible>!String.IsEmpty(Container.Property(AddonCategory))</visible>
             <include>VisibleFadeEffect</include>
             <animation effect="slide" end="-710,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
             <animation effect="slide" start="-710,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
@@ -63,7 +63,7 @@
         <control type="group">
             <left>20</left>
             <top>-15</top>
-            <visible>!IsEmpty(Container.Property(RepoName))</visible>
+            <visible>!String.IsEmpty(Container.Property(RepoName))</visible>
             <include>VisibleFadeEffect</include>
             <animation effect="slide" end="-600,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
             <animation effect="slide" start="-600,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>

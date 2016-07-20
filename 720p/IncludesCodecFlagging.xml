@@ -149,7 +149,7 @@
                 <height>28</height>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="special://skin/extras/flagging/audiolanguage/unknown.png">$INFO[ListItem.AudioLanguage,special://skin/extras/flagging/audiolanguage/,.png]</texture>
-                <visible>!IsEmpty(ListItem.AudioLanguage)</visible>
+                <visible>!String.IsEmpty(ListItem.AudioLanguage)</visible>
                 <visible>Skin.HasSetting(showlanflag)</visible>
             </control>
             <control type="image">
@@ -159,7 +159,7 @@
                 <aspectratio>keep</aspectratio>
                 <texture colordiffuse="$VAR[FlagColor]">special://skin/extras/flagging/audiolanguage/frame.png</texture>
                 <visible>Skin.HasSetting(showlanflag)</visible>
-                <visible>!IsEmpty(ListItem.AudioLanguage)</visible>
+                <visible>!String.IsEmpty(ListItem.AudioLanguage)</visible>
             </control>
         </control>
     </include>

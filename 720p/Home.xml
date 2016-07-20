@@ -139,7 +139,7 @@
             <include condition="Skin.HasSetting(horzHomeMenu) + Skin.HasSetting(horzLowHomeMenu)">HomeHorzLowSubmenu</include>
             <!-- Weather Plus Widget Beginning -->
             <control type="group">
-                <!-- <visible>!IsEmpty(Window(Weather).Property(Daily.IsFetched))</visible> -->
+                <!-- <visible>!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))</visible> -->
                 <left>80</left>
                 <top>100</top>
                 <animation type="Conditional" condition="Container(9000).HasFocus(25)" reversible="false">

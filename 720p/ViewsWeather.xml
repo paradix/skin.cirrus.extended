@@ -2,7 +2,7 @@
 <includes>
     <include name="Weather10DayForcast">
         <control type="group">
-            <visible>IsEmpty(Window.Property(Weather.CurrentView))</visible>
+            <visible>String.IsEmpty(Window.Property(Weather.CurrentView))</visible>
             <include>VisibleFadeEffect</include>
             <control type="label">
                 <description>header label</description>
@@ -30,8 +30,8 @@
                 <pagecontrol>61</pagecontrol>
                 <scrolltime>200</scrolltime>
                 <include>VisibleFadeEffect</include>
-                <visible>IsEmpty(Window.Property(Weather.CurrentView))</visible>
-                <itemlayout height="135" width="600" condition="IsEmpty(Window.Property(Daily.IsFetched))">
+                <visible>String.IsEmpty(Window.Property(Weather.CurrentView))</visible>
+                <itemlayout height="135" width="600" condition="String.IsEmpty(Window.Property(Daily.IsFetched))">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -66,7 +66,7 @@
                         <align>center</align>
                         <aligny>center</aligny>
                         <label>[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[ListItem.Property(HighTemp)]$INFO[ListItem.Property(TempUnits)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[ListItem.Property(LowTemp)]$INFO[ListItem.Property(TempUnits)]</label>
-                        <visible>!IsEmpty(ListItem.Property(HighTemp))</visible>
+                        <visible>!String.IsEmpty(ListItem.Property(HighTemp))</visible>
                     </control>
                     <control type="textbox">
                         <left>30</left>
@@ -81,7 +81,7 @@
                         <label>$INFO[ListItem.Property(Outlook)]</label>
                     </control>
                 </itemlayout>
-                <focusedlayout height="135" width="600" condition="IsEmpty(Window.Property(Daily.IsFetched))">
+                <focusedlayout height="135" width="600" condition="String.IsEmpty(Window.Property(Daily.IsFetched))">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -129,7 +129,7 @@
                         <align>center</align>
                         <aligny>center</aligny>
                         <label>[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[ListItem.Property(HighTemp)]$INFO[ListItem.Property(TempUnits)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[ListItem.Property(LowTemp)]$INFO[ListItem.Property(TempUnits)]</label>
-                        <visible>!IsEmpty(ListItem.Property(HighTemp))</visible>
+                        <visible>!String.IsEmpty(ListItem.Property(HighTemp))</visible>
                     </control>
                     <control type="textbox">
                         <left>30</left>
@@ -144,7 +144,7 @@
                         <label>$INFO[ListItem.Property(Outlook)]</label>
                     </control>
                 </focusedlayout>
-                <itemlayout height="135" width="600" condition="!IsEmpty(Window.Property(Daily.IsFetched))">
+                <itemlayout height="135" width="600" condition="!String.IsEmpty(Window.Property(Daily.IsFetched))">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -191,7 +191,7 @@
                         <label>$INFO[ListItem.ActualIcon]</label>
                     </control>
                 </itemlayout>
-                <focusedlayout height="135" width="600" condition="!IsEmpty(Window.Property(Daily.IsFetched))">
+                <focusedlayout height="135" width="600" condition="!String.IsEmpty(Window.Property(Daily.IsFetched))">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -355,7 +355,7 @@
     </include>
     <include name="Weather36HourForcast">
         <control type="group">
-            <visible>StringCompare(Window.Property(Weather.CurrentView),36hour) + !IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+            <visible>StringCompare(Window.Property(Weather.CurrentView),36hour) + !String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
             <include>VisibleFadeEffect</include>
             <control type="button" id="997">
                 <description>Hidden Button for focus</description>
@@ -391,12 +391,12 @@
                 <align>center</align>
                 <aligny>center</aligny>
                 <label>$LOCALIZE[31909]</label>
-                <visible>IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+                <visible>String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
             </control>
             <control type="group">
                 <left>20</left>
                 <top>50</top>
-                <visible>!IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+                <visible>!String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
                 <include>VisibleFadeEffect</include>
                 <control type="group">
                     <left>0</left>
@@ -722,7 +722,7 @@
                     <item>
                         <icon>$LOCALIZE[31909]</icon>
                         <onclick>noop</onclick>
-                        <visible>IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                        <visible>String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
                     </item>
                     <include name="WeatherHourlyItem">
                         <param name="item_id" value="1" />
@@ -867,12 +867,12 @@
                 <align>center</align>
                 <aligny>center</aligny>
                 <label>$LOCALIZE[31909]</label>
-                <visible>IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+                <visible>String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
             </control>
             <control type="group">
                 <left>20</left>
                 <top>50</top>
-                <visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+                <visible>!String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
                 <include>VisibleFadeEffect</include>
                 <control type="group">
                     <left>0</left>
@@ -1042,7 +1042,7 @@
     </include>
     <include name="WeatherMaps">
         <control type="group">
-            <visible>StringCompare(Window.Property(Weather.CurrentView),map) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+            <visible>StringCompare(Window.Property(Weather.CurrentView),map) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
             <include>VisibleFadeEffect</include>
             <control type="label">
                 <description>header label</description>
@@ -1107,7 +1107,7 @@
                 <scrolltime>200</scrolltime>
                 <orientation>horizontal</orientation>
                 <include>VisibleFadeEffect</include>
-                <visible>StringCompare(Window.Property(Weather.CurrentView),map) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+                <visible>StringCompare(Window.Property(Weather.CurrentView),map) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
                 <itemlayout height="470" width="590">
                     <control type="image">
                         <description>area image</description>
@@ -1197,7 +1197,7 @@
     </include>
     <include name="WeatherAlerts">
         <control type="group">
-            <visible>StringCompare(Window.Property(Weather.CurrentView),alerts) + !IsEmpty(Window.Property(Alerts.IsFetched))</visible>
+            <visible>StringCompare(Window.Property(Weather.CurrentView),alerts) + !String.IsEmpty(Window.Property(Alerts.IsFetched))</visible>
             <include>VisibleFadeEffect</include>
             <control type="button" id="996">
                 <description>Hidden Button for focus</description>
@@ -1273,7 +1273,7 @@
             <property name="Outlook">$INFO[Window.Property(Day$PARAM[item_id].Outlook)]</property>
             <property name="TempUnits">$INFO[System.TemperatureUnits]</property>
             <onclick>noop</onclick>
-            <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day$PARAM[item_id].Outlook)) + IsEmpty(Window.Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)</visible>
+            <visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Day$PARAM[item_id].Outlook)) + String.IsEmpty(Window.Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)</visible>
         </item>
         <item>
             <label>$INFO[Window.Property(Day$PARAM[item_id].Title)]</label>
@@ -1284,7 +1284,7 @@
             <property name="Outlook">$INFO[Window.Property(Day$PARAM[item_id].Outlook)]</property>
             <property name="TempUnits">$INFO[System.TemperatureUnits]</property>
             <onclick>noop</onclick>
-            <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day$PARAM[item_id].Outlook)) + IsEmpty(Window.Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)</visible>
+            <visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Day$PARAM[item_id].Outlook)) + String.IsEmpty(Window.Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)</visible>
         </item>
     </include>
     <include name="WeatherDailyItem">
@@ -1295,7 +1295,7 @@
             <icon>$INFO[Window.Property(Daily.$PARAM[item_id].Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.$PARAM[item_id].WindSpeed)] $INFO[Window.Property(Daily.$PARAM[item_id].WindDirection)]</icon>
             <property name="FanartCode">$INFO[Window.Property(Daily.$PARAM[item_id].FanartCode)]</property>
             <onclick>noop</onclick>
-            <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.$PARAM[item_id].Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)</visible>
+            <visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.$PARAM[item_id].Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)</visible>
         </item>
         <item>
             <label>[B]$INFO[Window.Property(Daily.$PARAM[item_id].ShortDay)][/B][CR][COLOR=grey2]$INFO[Window.Property(Daily.$PARAM[item_id].ShortDate)][/COLOR]</label>
@@ -1304,7 +1304,7 @@
             <icon>$INFO[Window.Property(Daily.$PARAM[item_id].Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.$PARAM[item_id].WindSpeed)] $INFO[Window.Property(Daily.$PARAM[item_id].WindDirection)]</icon>
             <property name="FanartCode">$INFO[Window.Property(Daily.$PARAM[item_id].FanartCode)]</property>
             <onclick>noop</onclick>
-            <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.$PARAM[item_id].Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)</visible>
+            <visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.$PARAM[item_id].Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)</visible>
         </item>
     </include>
     <include name="WeatherHourlyItem">
@@ -1315,7 +1315,7 @@
             <icon>$INFO[Window.Property(Hourly.$PARAM[item_id].Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.$PARAM[item_id].WindSpeed)] $INFO[Window.Property(Hourly.$PARAM[item_id].WindDirection)]</icon>
             <property name="FanartCode">$VAR[WeatherIconResourcePath]$INFO[Window.Property(Hourly.$PARAM[item_id].FanartCode)]</property>
             <onclick>noop</onclick>
-            <visible>!IsEmpty(Window.Property(Hourly.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)</visible>
+            <visible>!String.IsEmpty(Window.Property(Hourly.IsFetched)) + Skin.HasSetting(resource.images.weathericons.multi)</visible>
         </item>
         <item>
             <label>[B]$INFO[Window.Property(Hourly.$PARAM[item_id].Time)][/B][CR][COLOR=grey2]$INFO[Window.Property(Hourly.$PARAM[item_id].ShortDate)][/COLOR]</label>
@@ -1324,7 +1324,7 @@
             <icon>$INFO[Window.Property(Hourly.$PARAM[item_id].Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.$PARAM[item_id].WindSpeed)] $INFO[Window.Property(Hourly.$PARAM[item_id].WindDirection)]</icon>
             <property name="FanartCode">$VAR[WeatherIconResourcePath]$INFO[Window.Property(Hourly.$PARAM[item_id].FanartCode)]</property>
             <onclick>noop</onclick>
-            <visible>!IsEmpty(Window.Property(Hourly.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)</visible>
+            <visible>!String.IsEmpty(Window.Property(Hourly.IsFetched)) + !Skin.HasSetting(resource.images.weathericons.multi)</visible>
         </item>
     </include>
     <include name="WeatherMapItem">
@@ -1334,7 +1334,7 @@
             <icon>$INFO[Window.Property(Map.$PARAM[item_id].Area)]</icon>
             <property name="Layer">$INFO[Window.Property(Map.$PARAM[item_id].Layer)]</property>
             <onclick>noop</onclick>
-            <visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.$PARAM[item_id].Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+            <visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.$PARAM[item_id].Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
         </item>
     </include>
     <!-- Weather Includes -->

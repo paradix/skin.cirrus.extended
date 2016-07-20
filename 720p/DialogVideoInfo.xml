@@ -87,7 +87,7 @@
                         <height>720</height>
                         <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
                         <aspectratio>stretch</aspectratio>
-                        <visible>!IsEmpty(ListItem.Art(fanart))</visible>
+                        <visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
                     </control>
                     <control type="image">
                         <!-- bottom bar background -->
@@ -108,7 +108,7 @@
                         <texture>rightlistbackground.png</texture>
                     </control>
                     <control type="group">
-                        <visible>IsEmpty(ListItem.Art(fanart))</visible>
+                        <visible>String.IsEmpty(ListItem.Art(fanart))</visible>
                         <control type="image">
                             <description>No Fanart Back</description>
                             <left>0</left>
@@ -221,7 +221,7 @@
                             <texture>imdb-logo.png</texture>
                             <aspectratio align="center">keep</aspectratio>
                             <visible>Skin.HasSetting(imdbnrinfo)</visible>
-                            <visible>!ListItem.IsFolder + !IsEmpty(Listitem.Rating)</visible>
+                            <visible>!ListItem.IsFolder + !String.IsEmpty(Listitem.Rating)</visible>
                         </control>
                         <control type="label">
                             <description>Rating value</description>
@@ -1133,7 +1133,7 @@
                         <include>ButtonVideoInfoCommonValues</include>
                         <label>20410</label>
                         <ondown>ActivateWindow(1121)</ondown>
-                        <visible>!IsEmpty(ListItem.Trailer)</visible>
+                        <visible>!String.IsEmpty(ListItem.Trailer)</visible>
                     </control>
                     <control type="button" id="134">
                         <description>Wishlist</description>

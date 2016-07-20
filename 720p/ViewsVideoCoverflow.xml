@@ -399,7 +399,7 @@
                     <height>91</height>
                     <aspectratio aligny="bottom">stretch</aspectratio>
                     <texture background="true">Overlayicons/TrailerOverlay.png</texture>
-                    <visible>Control.IsVisible(555) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
+                    <visible>Control.IsVisible(555) + Container.Content(movies) + !String.IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
                 </control>
             </control>
         </control>
@@ -648,7 +648,7 @@
                 <aspectratio>keep</aspectratio>
                 <fadetime>FanartCrossfadeTime</fadetime>
                 <texture>Overlayicons/trailer.png</texture>
-                <visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(trailerflag)</visible>
+                <visible>!String.IsEmpty(ListItem.Trailer) + Skin.HasSetting(trailerflag)</visible>
             </control>
             <control type="image">
                 <width>240</width>

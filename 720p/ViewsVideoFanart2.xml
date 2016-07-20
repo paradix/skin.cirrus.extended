@@ -366,7 +366,7 @@
                     <texture>black-back.png</texture>
                     <bordertexture border="8">ContentPanelvertical.png</bordertexture>
                     <bordersize>8</bordersize>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
                 <control type="image">
                     <left>875</left>
@@ -426,7 +426,7 @@
                     <texture>black-back.png</texture>
                     <bordertexture border="8">ContentPanelvertical.png</bordertexture>
                     <bordersize>8</bordersize>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible>
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible>
                 </control>
                 <control type="image">
                     <left>875</left>
@@ -459,7 +459,7 @@
                     <aspectratio>keep</aspectratio>
                     <fadetime>FanartCrossfadeTime</fadetime>
                     <texture>Overlayicons/TrailerOverlay.png</texture>
-                    <visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
+                    <visible>!String.IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
                     <visible>!Skin.HasSetting(Smallwindowhidden)</visible>
                 </control>
@@ -532,7 +532,7 @@
                 <font>cirrus_30_Bold</font>
                 <align>left</align>
                 <label>$INFO[Listitem.Rating]</label>
-                <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
             </control>
             <control type="image">
                 <width>84</width>
@@ -541,7 +541,7 @@
                 <top>210</top>
                 <aspectratio align="center">keep</aspectratio>
                 <texture>imdb-logo.png</texture>
-                <visible>!ListItem.IsFolder + !IsEmpty(Listitem.Rating)</visible>
+                <visible>!ListItem.IsFolder + !String.IsEmpty(Listitem.Rating)</visible>
             </control>
             <control type="image">
                 <width>120</width>
@@ -769,7 +769,7 @@
                     <aligny>center</aligny>
                     <font>cirrus_22</font>
                     <scroll>true</scroll>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>	
                 <control type="label">
                     <left>65</left>
@@ -798,7 +798,7 @@
                     <label>[COLOR=accent]$LOCALIZE[20416]:[/COLOR] $INFO[ListItem.Premiered]</label>
                     <scrollout>false</scrollout>
                     <pauseatend>2000</pauseatend>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
                 <control type="textbox">
                     <!--Beschreibung Serien -->
@@ -827,7 +827,7 @@
                     <texture>black-back.png</texture>
                     <bordertexture border="8">ContentPanelvertical.png</bordertexture>
                     <bordersize>8</bordersize>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
                 <control type="image">
                     <left>875</left>
@@ -839,7 +839,7 @@
                     <texture fallback="splashm.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
                     <bordersize>8</bordersize>
                     <visible>!Skin.HasSetting(tvfanart)</visible>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
                 <control type="image">
                     <left>875</left>
@@ -851,7 +851,7 @@
                     <texture fallback="splashm.png" background="true">$INFO[ListItem.Art(landscape)]</texture>
                     <bordersize>8</bordersize>
                     <visible>Skin.HasSetting(tvfanart)</visible>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
                 <control type="videowindow" id="8">
                     <left>885</left>
@@ -898,7 +898,7 @@
                     <aspectratio>keep</aspectratio>
                     <fadetime>FanartCrossfadeTime</fadetime>
                     <texture>Overlayicons/TrailerOverlay.png</texture>
-                    <visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
+                    <visible>!String.IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
                     <visible>!Skin.HasSetting(SmallwindowhiddenTV)</visible>
                 </control>
@@ -912,7 +912,7 @@
                     <align>left</align>
                     <font>cirrus_22</font>
                     <scroll>true</scroll>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
             </control>
             <control type="image">
@@ -989,7 +989,7 @@
                     <bordersize>8</bordersize>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindownoborder) | !Skin.HasSetting(videowindowglobal)</visible>
                     <visible>!Skin.HasSetting(SmallwindowhiddenTV)</visible>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
                 <control type="image">
                     <!-- seasonthumb mod -->
@@ -1053,7 +1053,7 @@
                     <visible>Player.HasVideo</visible>
                     <visible>Control.IsVisible(720)</visible>
                     <visible>!Skin.HasSetting(videonotitle)</visible>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
                 <control type="image">
                     <left>1092</left>
@@ -1075,7 +1075,7 @@
                     <aspectratio>keep</aspectratio>
                     <fadetime>FanartCrossfadeTime</fadetime>
                     <texture>Overlayicons/TrailerOverlay.png</texture>
-                    <visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
+                    <visible>!String.IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
                     <visible>!Skin.HasSetting(SmallwindowhiddenTV)</visible>
                 </control>
@@ -1129,7 +1129,7 @@
                     <font>cirrus_22</font>
                     <scroll>true</scroll>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
             </control>
             <control type="image">
@@ -1222,7 +1222,7 @@
                     <fadetime>IconCrossfadeTime</fadetime>
                     <aspectratio scalediffuse="false" aligny="center" align="left">keep</aspectratio> 
                     <visible>!substring(listitem.path,season)</visible> 
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
                 <control type="largeimage" id="7917"> 
                     <left>760</left> 
@@ -1232,7 +1232,7 @@
                     <texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture> 
                     <fadetime>IconCrossfadeTime</fadetime>
                     <aspectratio scalediffuse="false" aligny="center" align="left">keep</aspectratio> 
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
             </control>
             <control type="group">
@@ -1248,7 +1248,7 @@
                     <bordersize>8</bordersize>
                     <visible>!Skin.HasSetting(SmallwindowhiddenTV)</visible>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindownoborder) | !Skin.HasSetting(videowindowglobal)</visible>
-                    <visible>!IsEmpty(ListItem.Thumb)</visible> 
+                    <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
                 <control type="image">
                     <!-- episodethumb mod -->
@@ -1334,7 +1334,7 @@
                     <aspectratio>keep</aspectratio>
                     <fadetime>FanartCrossfadeTime</fadetime>
                     <texture>Overlayicons/TrailerOverlay.png</texture>
-                    <visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
+                    <visible>!String.IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerflag)</visible>
                     <visible>!Player.HasVideo | !Skin.HasSetting(videowindowglobal)</visible>
                     <visible>!Skin.HasSetting(SmallwindowhiddenTV)</visible>
                 </control>
