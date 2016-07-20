@@ -1018,7 +1018,7 @@
                     <texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture> 
                     <fadetime>IconCrossfadeTime</fadetime>
                     <aspectratio scalediffuse="false" aligny="center" align="left">keep</aspectratio> 
-                    <visible>!substring(listitem.path,season)</visible> 
+                    <visible>!String.Contains(listitem.path,season)</visible> 
                     <visible>!String.IsEmpty(ListItem.Thumb)</visible> 
                 </control>
                 <control type="largeimage" id="7917"> 

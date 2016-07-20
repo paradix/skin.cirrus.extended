@@ -173,7 +173,7 @@
                     <onclick>Playlist.Clear</onclick>
                     <onclick>Dialog.Close(1121)</onclick>
                     <onclick>XBMC.RunScript(script.cinema.experience)</onclick>
-                    <visible>Container.Content(Movies) + System.HasAddon(script.cinema.experience) + !SubString(Container.FolderPath,plugin://plugin,Left)</visible>
+                    <visible>Container.Content(Movies) + System.HasAddon(script.cinema.experience) + !String.StartsWith(Container.FolderPath,plugin://plugin)</visible>
                     <label>41208</label>
                     <include>ButtonCommonValues</include>
                     <onleft>9021</onleft>

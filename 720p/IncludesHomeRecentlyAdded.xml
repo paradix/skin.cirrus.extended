@@ -151,16 +151,16 @@
         <orientation>horizontal</orientation>
         <scrolltime>0</scrolltime>
         <itemlayout/>
-        <focusedlayout height="230" width="220" condition="SubString(Control.GetLabel(91004),Horizontal,left)">
+        <focusedlayout height="230" width="220" condition="String.StartsWith(Control.GetLabel(91004),Horizontal)">
             <include>WidgetContentLabelControl</include>
         </focusedlayout>
-        <focusedlayout height="230" width="370" condition="SubString(Control.GetLabel(91004),Thumb,left)">
+        <focusedlayout height="230" width="370" condition="String.StartsWith(Control.GetLabel(91004),Thumb)">
             <include>WidgetContentLabelControl</include>
         </focusedlayout>
-        <focusedlayout height="230" width="290" condition="SubString(Control.GetLabel(91004),Cover,left)">
+        <focusedlayout height="230" width="290" condition="String.StartsWith(Control.GetLabel(91004),Cover)">
             <include>WidgetContentLabelControl</include>
         </focusedlayout>
-        <focusedlayout height="230" width="220" condition="SubString(Control.GetLabel(91004),Poster,left) | String.IsEqual(Control.GetLabel(91004),Widget)">
+        <focusedlayout height="230" width="220" condition="String.StartsWith(Control.GetLabel(91004),Poster) | String.IsEqual(Control.GetLabel(91004),Widget)">
             <include>WidgetContentLabelControl</include>
         </focusedlayout>
     </include>
@@ -243,7 +243,7 @@
                 <height>240</height>
                 <aspectratio>stretch</aspectratio>
                 <texture>separator_vertical.png</texture>
-                <visible>SubString(Control.GetLabel(91001),Poster,left)</visible>
+                <visible>String.StartsWith(Control.GetLabel(91001),Poster)</visible>
             </control>
             <control type="image">
                 <left>370</left>
@@ -252,7 +252,7 @@
                 <height>240</height>
                 <aspectratio>stretch</aspectratio>
                 <texture>separator_vertical.png</texture>
-                <visible>SubString(Control.GetLabel(91001),Thumb,left)</visible>
+                <visible>String.StartsWith(Control.GetLabel(91001),Thumb)</visible>
             </control>
             <control type="image">
                 <left>270</left>
@@ -261,7 +261,7 @@
                 <height>240</height>
                 <aspectratio>stretch</aspectratio>
                 <texture>separator_vertical.png</texture>
-                <visible>SubString(Control.GetLabel(91001),Cover,left)</visible>
+                <visible>String.StartsWith(Control.GetLabel(91001),Cover)</visible>
             </control>
             <control type="image">
                 <left>975</left>
@@ -327,7 +327,7 @@
             <shadowcolor>black</shadowcolor>
             <label>$VAR[WidgetListPlot]</label>
             <autoscroll delay="5000" time="3000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-            <visible>SubString(Control.GetLabel(91001),Poster,left)</visible>
+            <visible>String.StartsWith(Control.GetLabel(91001),Poster)</visible>
         </control>
         <control type="textbox">
             <left>0</left>
@@ -341,7 +341,7 @@
             <shadowcolor>black</shadowcolor>
             <label>$VAR[WidgetListPlot]</label>
             <autoscroll delay="5000" time="3000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-            <visible>SubString(Control.GetLabel(91001),Cover,left)</visible>
+            <visible>String.StartsWith(Control.GetLabel(91001),Cover)</visible>
         </control>
         <control type="textbox">
             <left>0</left>
@@ -355,7 +355,7 @@
             <shadowcolor>black</shadowcolor>
             <label>$VAR[WidgetListPlot]</label>
             <autoscroll delay="5000" time="3000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-            <visible>SubString(Control.GetLabel(91001),Thumb,left)</visible>
+            <visible>String.StartsWith(Control.GetLabel(91001),Thumb)</visible>
         </control>
         <control type="image">
             <description>Show clearlogo</description>
@@ -422,17 +422,17 @@
             <control type="group">
                 <left>280</left>
                 <include>WidgetListInfoLabels</include>
-                <visible>SubString(Control.GetLabel(91001),Poster,left)</visible>
+                <visible>String.StartsWith(Control.GetLabel(91001),Poster)</visible>
             </control>
             <control type="group">
                 <left>340</left>
                 <include>WidgetListInfoLabels</include>
-                <visible>SubString(Control.GetLabel(91001),Cover,left)</visible>
+                <visible>String.StartsWith(Control.GetLabel(91001),Cover)</visible>
             </control>
             <control type="group">
                 <left>440</left>
                 <include>WidgetListInfoLabels</include>
-                <visible>SubString(Control.GetLabel(91001),Thumb,left)</visible>
+                <visible>String.StartsWith(Control.GetLabel(91001),Thumb)</visible>
             </control>
             <control type="group">
                 <left>0</left>
@@ -478,7 +478,7 @@
                     <control type="group">
                         <width>150</width>
                         <height>230</height>
-                        <visible>SubString(Control.GetLabel(91001),Poster,left)</visible>
+                        <visible>String.StartsWith(Control.GetLabel(91001),Poster)</visible>
                         <control type="image">
                             <description>Poster</description>
                             <left>0</left>
@@ -495,7 +495,7 @@
                     <control type="group">
                         <width>320</width>
                         <height>230</height>
-                        <visible>SubString(Control.GetLabel(91001),Thumb,left)</visible>
+                        <visible>String.StartsWith(Control.GetLabel(91001),Thumb)</visible>
                         <control type="image">
                             <description>Thumb</description>
                             <left>0</left>
@@ -512,7 +512,7 @@
                     <control type="group">
                         <width>220</width>
                         <height>230</height>
-                        <visible>SubString(Control.GetLabel(91001),Cover,left)</visible>
+                        <visible>String.StartsWith(Control.GetLabel(91001),Cover)</visible>
                         <control type="image">
                             <description>Cover</description>
                             <left>0</left>
@@ -558,7 +558,7 @@
         <pagecontrol>-</pagecontrol>
         <scrolltime>200</scrolltime>
         <preloaditems>3</preloaditems>
-        <itemlayout width="120" height="200" condition="SubString(Control.GetLabel(91001),Poster,left)">
+        <itemlayout width="120" height="200" condition="String.StartsWith(Control.GetLabel(91001),Poster)">
             <control type="image">
                 <left>20</left>
                 <top>0</top>
@@ -570,7 +570,7 @@
                 <bordersize>6</bordersize>
             </control>
         </itemlayout>
-        <focusedlayout width="120" height="200" condition="SubString(Control.GetLabel(91001),Poster,left)">
+        <focusedlayout width="120" height="200" condition="String.StartsWith(Control.GetLabel(91001),Poster)">
             <control type="image">
                 <left>20</left>
                 <top>0</top>
@@ -584,7 +584,7 @@
                 <aspectratio>stretch</aspectratio>
             </control>
         </focusedlayout>
-        <itemlayout width="250" height="200" condition="SubString(Control.GetLabel(91001),Thumb,left)">
+        <itemlayout width="250" height="200" condition="String.StartsWith(Control.GetLabel(91001),Thumb)">
             <control type="image">
                 <left>0</left>
                 <top>10</top>
@@ -596,7 +596,7 @@
                 <aspectratio>stretch</aspectratio>
             </control>
         </itemlayout>
-        <focusedlayout width="250" height="200" condition="SubString(Control.GetLabel(91001),Thumb,left)">
+        <focusedlayout width="250" height="200" condition="String.StartsWith(Control.GetLabel(91001),Thumb)">
             <control type="image">
                 <left>0</left>
                 <top>10</top>
@@ -611,7 +611,7 @@
                 <animation reversible="false" effect="zoom" end="0,0,240,134" start="-10,-11,260,156" time="200">unfocus</animation>
             </control>
         </focusedlayout>
-        <itemlayout width="180" height="200" condition="SubString(Control.GetLabel(91001),Cover,left)">
+        <itemlayout width="180" height="200" condition="String.StartsWith(Control.GetLabel(91001),Cover)">
             <control type="image">
                 <left>0</left>
                 <top>0</top>
@@ -623,7 +623,7 @@
                 <aspectratio>stretch</aspectratio>
             </control>
         </itemlayout>
-        <focusedlayout width="180" height="200" condition="SubString(Control.GetLabel(91001),Cover,left)">
+        <focusedlayout width="180" height="200" condition="String.StartsWith(Control.GetLabel(91001),Cover)">
             <control type="image">
                 <left>0</left>
                 <top>0</top>

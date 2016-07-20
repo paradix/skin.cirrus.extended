@@ -1183,7 +1183,7 @@
                         <onclick>Playlist.Clear</onclick>
                         <onclick>Dialog.Close(MovieInformation)</onclick>
                         <onclick>XBMC.RunScript(script.cinema.experience)</onclick>
-                        <visible>Container.Content(Movies) + System.HasAddon(script.cinema.experience) + !SubString(Container.FolderPath,plugin://plugin,Left)</visible>
+                        <visible>Container.Content(Movies) + System.HasAddon(script.cinema.experience) + !String.StartsWith(Container.FolderPath,plugin://plugin)</visible>
                     </control>
                     <control type="button" id="14">
                         <description>Get Artwork TV Shows</description>

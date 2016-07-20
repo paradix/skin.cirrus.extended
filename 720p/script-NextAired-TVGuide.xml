@@ -7,13 +7,13 @@
             <width>1</width>
             <height>1</height>
             <label>-</label>
-            <include condition="substring(System.Date,$LOCALIZE[41])">NextAiredMonday</include>
-            <include condition="substring(System.Date,$LOCALIZE[42])">NextAiredTuesday</include>
-            <include condition="substring(System.Date,$LOCALIZE[43])">NextAiredWednesday</include>
-            <include condition="substring(System.Date,$LOCALIZE[44])">NextAiredThursday</include>
-            <include condition="substring(System.Date,$LOCALIZE[45])">NextAiredFriday</include>
-            <include condition="substring(System.Date,$LOCALIZE[46])">NextAiredSaturday</include>
-            <include condition="substring(System.Date,$LOCALIZE[47])">NextAiredSunday</include>
+            <include condition="String.Contains(System.Date,$LOCALIZE[41])">NextAiredMonday</include>
+            <include condition="String.Contains(System.Date,$LOCALIZE[42])">NextAiredTuesday</include>
+            <include condition="String.Contains(System.Date,$LOCALIZE[43])">NextAiredWednesday</include>
+            <include condition="String.Contains(System.Date,$LOCALIZE[44])">NextAiredThursday</include>
+            <include condition="String.Contains(System.Date,$LOCALIZE[45])">NextAiredFriday</include>
+            <include condition="String.Contains(System.Date,$LOCALIZE[46])">NextAiredSaturday</include>
+            <include condition="String.Contains(System.Date,$LOCALIZE[47])">NextAiredSunday</include>
         </control>
         <control type="multiimage">
             <left>0</left>
@@ -63,7 +63,7 @@
                 <top>60</top>
                 <include>Window_OpenClose_Left_Animation</include>
                 <include>NextAireDayBackgroundBright</include>
-                <include condition="substring(System.Date,$LOCALIZE[41])">NextAiredHighlight</include>
+                <include condition="String.Contains(System.Date,$LOCALIZE[41])">NextAiredHighlight</include>
                 <control type="label">
                     <include>NextAiredDayCommon</include>
                     <label>[B]$LOCALIZE[41][/B]</label>
@@ -82,7 +82,7 @@
                 <top>150</top>
                 <include>Window_OpenClose_Right_Animation</include>
                 <include>NextAireDayBackgroundDark</include>
-                <include condition="substring(System.Date,$LOCALIZE[42])">NextAiredHighlight</include>
+                <include condition="String.Contains(System.Date,$LOCALIZE[42])">NextAiredHighlight</include>
                 <control type="label">
                     <include>NextAiredDayCommon</include>
                     <label>[B]$LOCALIZE[42][/B]</label>
@@ -101,7 +101,7 @@
                 <top>240</top>
                 <include>Window_OpenClose_Right_Animation</include>
                 <include>NextAireDayBackgroundBright</include>
-                <include condition="substring(System.Date,$LOCALIZE[43])">NextAiredHighlight</include>
+                <include condition="String.Contains(System.Date,$LOCALIZE[43])">NextAiredHighlight</include>
                 <control type="label">
                     <include>NextAiredDayCommon</include>
                     <label>[B]$LOCALIZE[43][/B]</label>
@@ -120,7 +120,7 @@
                 <top>330</top>
                 <include>Window_OpenClose_Right_Animation</include>
                 <include>NextAireDayBackgroundDark</include>
-                <include condition="substring(System.Date,$LOCALIZE[44])">NextAiredHighlight</include>
+                <include condition="String.Contains(System.Date,$LOCALIZE[44])">NextAiredHighlight</include>
                 <control type="label">
                     <include>NextAiredDayCommon</include>
                     <label>[B]$LOCALIZE[44][/B]</label>
@@ -139,7 +139,7 @@
                 <top>420</top>
                 <include>Window_OpenClose_Right_Animation</include>
                 <include>NextAireDayBackgroundBright</include>
-                <include condition="substring(System.Date,$LOCALIZE[45])">NextAiredHighlight</include>
+                <include condition="String.Contains(System.Date,$LOCALIZE[45])">NextAiredHighlight</include>
                 <control type="label">
                     <include>NextAiredDayCommon</include>
                     <label>[B]$LOCALIZE[45][/B]</label>
@@ -158,7 +158,7 @@
                 <top>510</top>
                 <include>Window_OpenClose_Right_Animation</include>
                 <include>NextAireDayBackgroundDark</include>
-                <include condition="substring(System.Date,$LOCALIZE[46])">NextAiredHighlight</include>
+                <include condition="String.Contains(System.Date,$LOCALIZE[46])">NextAiredHighlight</include>
                 <control type="label">
                     <include>NextAiredDayCommon</include>
                     <label>[B]$LOCALIZE[46][/B]</label>
@@ -177,7 +177,7 @@
                 <top>600</top>
                 <include>Window_OpenClose_Right_Animation</include>
                 <include>NextAireDayBackgroundBright</include>
-                <include condition="substring(System.Date,$LOCALIZE[47])">NextAiredHighlight</include>
+                <include condition="String.Contains(System.Date,$LOCALIZE[47])">NextAiredHighlight</include>
                 <control type="label">
                     <include>NextAiredDayCommon</include>
                     <label>[B]$LOCALIZE[47][/B]</label>

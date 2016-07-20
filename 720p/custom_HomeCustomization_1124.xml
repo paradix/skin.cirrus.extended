@@ -173,7 +173,7 @@
                     <label2>[COLOR=selected]$VAR[HomeItemCustomFavouritePath][/COLOR]</label2>
                     <onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,$INFO[Skin.String(HomeItemToEdit.LabelPathString)])</onclick>
                     <onclick>ActivateWindow(1114)</onclick>
-                    <visible>SubString(Skin.String(HomeItemToEdit.Submenu),customfav)</visible>
+                    <visible>String.Contains(Skin.String(HomeItemToEdit.Submenu),customfav)</visible>
                     <enable>Skin.String(HomeItemToEdit.Enabled,1)</enable>
                 </control>
                 <control type="button" id="5">
@@ -182,7 +182,7 @@
                     <label>$LOCALIZE[41070]</label>
                     <label2>[COLOR=selected]$VAR[HomeItemCustomFavouritePath][/COLOR]</label2>
                     <onclick>Skin.SetFile($INFO[Skin.String(HomeItemToEdit.LabelPathString)],.xsp,special://videoplaylists)</onclick>
-                    <visible>SubString(Skin.String(HomeItemToEdit.Submenu),customplaylist)</visible>
+                    <visible>String.Contains(Skin.String(HomeItemToEdit.Submenu),customplaylist)</visible>
                     <enable>Skin.String(HomeItemToEdit.Enabled,1)</enable>
                 </control>
                 <control type="button" id="6">

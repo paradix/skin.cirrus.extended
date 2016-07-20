@@ -190,7 +190,7 @@
                         <texture>$INFO[ListItem.Rating]</texture>
                         <colordiffuse>black</colordiffuse>
                         <visible>!Skin.HasSetting(imdbnr) + Container.Content(tvshows) | !Skin.HasSetting(imdbnr) + Container.Content(Episodes) | !Skin.HasSetting(imdbnr) + Container.Content(movies) | !Skin.HasSetting(imdbnr) + Container.Content(sets)</visible>
-                        <visible>[!ListItem.IsFolder | SubString(ListItem.Path,videodb://movies/sets/,left)]</visible>
+                        <visible>[!ListItem.IsFolder | String.StartsWith(ListItem.Path,videodb://movies/sets/)]</visible>
                         <aspectratio>keep</aspectratio>
                     </control>
                     <control type="label">
@@ -203,7 +203,7 @@
                         <font>cirrus_18_Bold</font>
                         <align>left</align>
                         <label>$LOCALIZE[563] $INFO[ListItem.Rating]</label>
-                        <visible>Skin.HasSetting(imdbnr) + [Container.Content(tvshows) | Container.Content(Episodes) | Container.Content(movies) | Container.Content(sets)] + [!ListItem.IsFolder | SubString(ListItem.Path,videodb://movies/sets/,left)]</visible>
+                        <visible>Skin.HasSetting(imdbnr) + [Container.Content(tvshows) | Container.Content(Episodes) | Container.Content(movies) | Container.Content(sets)] + [!ListItem.IsFolder | String.StartsWith(ListItem.Path,videodb://movies/sets/)]</visible>
                     </control>
                     <control type="image">
                         <left>20r</left>
@@ -703,7 +703,7 @@
                     <texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
                     <fadetime>200</fadetime>
                     <aspectratio scalediffuse="false">keep</aspectratio>
-                    <visible>!substring(listitem.path,season) + !String.IsEmpty(ListItem.Thumb)</visible>
+                    <visible>!String.Contains(listitem.path,season) + !String.IsEmpty(ListItem.Thumb)</visible>
                 </control>
                 <control type="largeimage" id="7917">
                     <left>370r</left>

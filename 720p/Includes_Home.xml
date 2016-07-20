@@ -205,7 +205,7 @@
                         <align>left</align>
                         <font>cirrus_20</font>
                         <textcolor>white</textcolor>
-                        <visible>SubString(System.ScreenResolution,1920x1080)</visible>
+                        <visible>String.Contains(System.ScreenResolution,1920x1080)</visible>
                         <label fallback="-">$LOCALIZE[13287] True 1080p</label>
                     </control>
                     <control type="label">
@@ -216,7 +216,7 @@
                         <align>left</align>
                         <font>cirrus_20</font>
                         <textcolor>white</textcolor>
-                        <visible>SubString(System.ScreenResolution,1280x720)</visible>
+                        <visible>String.Contains(System.ScreenResolution,1280x720)</visible>
                         <label fallback="-">$LOCALIZE[13287] True 720p</label>
                     </control>
                     <control type="label">
@@ -227,7 +227,7 @@
                         <align>left</align>
                         <font>cirrus_20</font>
                         <textcolor>white</textcolor>
-                        <visible>!SubString(System.ScreenResolution,1280x720) + !SubString(System.ScreenResolution,1920x1080)</visible>
+                        <visible>!String.Contains(System.ScreenResolution,1280x720) + !String.Contains(System.ScreenResolution,1920x1080)</visible>
                         <label fallback="-">[COLOR=grey]$LOCALIZE[13287][/COLOR] $INFO[System.ScreenWidth]x$INFO[System.ScreenHeight]</label>
                     </control>
                     <control type="label">
