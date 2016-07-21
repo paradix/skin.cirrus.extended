@@ -208,7 +208,8 @@
                 <onup>100</onup>
                 <ondown>100</ondown>
                 <onclick>Dialog.Close(playercontrols)</onclick>
-                <onclick>ActivateWindow(musicplaylist)</onclick>
+                <onclick condition="Player.HasAudio">ActivateWindow(musicplaylist)</onclick>
+                <onclick condition="Player.HasVideo">ActivateWindow(videoplaylist)</onclick>
             </control>
             <control type="button" id="609">
                 <left>415</left>
