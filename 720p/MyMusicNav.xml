@@ -304,7 +304,7 @@
                 </control>
                 <control type="togglebutton" id="20">
                     <description>Scan Library</description>
-                    <visible>Window.IsVisible(MusicLibrary)</visible>
+                    <visible>Window.IsVisible(Music)</visible>
                     <include>ButtonCommonValues</include>
                     <label>653</label>
                     <altlabel>13353</altlabel>

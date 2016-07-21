@@ -162,7 +162,6 @@
             <left>0</left>
             <top>100</top>
             <visible>Control.IsVisible(691) + Container.Content(Movies)</visible>
-            <!-- <visible>Control.IsVisible(691) + !Window.IsVisible(VideoFiles) + ![ListItem.IsFolder + Container.Content(Movies)] + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible> -->
             <control type="image">
                 <left>-100</left>
                 <top>-10</top>

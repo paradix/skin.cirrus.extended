@@ -142,7 +142,7 @@
             <control type="group">
                 <left>20</left>
                 <top>360</top>
-                <visible>Control.IsVisible(593) | !Window.IsVisible(VideoFiles) | Container.Content(genres) | Window.IsVisible(VideoLibrary)</visible>
+                <visible>Control.IsVisible(593) | Container.Content(genres) | [Window.IsVisible(Videos) + !Container.Content(files)]</visible>
                 <control type="group">
                     <left>0</left>
                     <top>-30</top>
@@ -263,7 +263,7 @@
                     <texture>black-back.png</texture>
                     <bordertexture border="8">ContentPanelvertical.png</bordertexture>
                     <bordersize>8</bordersize>
-                    <visible>!Window.IsVisible(VideoFiles) + !Window.IsVisible(VideoLibrary)</visible>
+                    <visible>!Window.IsVisible(Videos)</visible>
                 </control>
                 <control type="image">
                     <left>282r</left>
@@ -274,7 +274,7 @@
                     <fadetime>IconCrossfadeTime</fadetime>
                     <texture fallback="splashm.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
                     <bordersize>8</bordersize>
-                    <visible>!Window.IsVisible(VideoFiles) + !Container.Content(Genres) + !Window.IsVisible(VideoLibrary)</visible>
+                    <visible>!Container.Content(Genres) + !Window.IsVisible(Videos)</visible>
                 </control>
                 <control type="multiimage">
                     <left>274r</left>
@@ -285,7 +285,7 @@
                     <fadetime>IconCrossfadeTime</fadetime>
                     <timeperimage>5000</timeperimage>
                     <imagepath background="true">$INFO[Skin.String(Menu_GameCustom1_Label)]/$INFO[ListItem.label]/extrathumb</imagepath>
-                    <visible>!Window.IsVisible(VideoFiles) + !Container.Content(Genres) + !Window.IsVisible(VideoLibrary)</visible>			
+                    <visible>!Container.Content(Genres) + !Window.IsVisible(Videos)</visible>			
                 </control>
             </control>
             <control type="scrollbar" id="60">

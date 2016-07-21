@@ -108,7 +108,7 @@
                 <viewtype label="40003">list</viewtype>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime>200</scrolltime>
-                <visible>Container.Content(tvshows) | Window.IsVisible(VideoFiles) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(movies) | Container.Content(sets)</visible>
+                <visible>Container.Content(tvshows) | [Window.IsVisible(Videso) + Container.Content(files)] |Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(movies) | Container.Content(sets)</visible>
                 <!-- SLIM LAYOUT -->
                 <itemlayout height="40" width="580">
                     <control type="image">

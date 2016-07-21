@@ -38,7 +38,7 @@
             <left>0</left>
             <top>530</top>
             <control type="wraplist" id="766">
-                <visible>Window.IsVisible(VideoFiles) | Window.IsVisible(VideoLibrary) + Container.Content(Sets) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
+                <visible>Window.IsVisible(Videos) + Container.Content(Sets) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
                 <left>-20</left>
                 <top>0</top>
                 <width>1320</width>
@@ -100,7 +100,7 @@
             </control>
             <!-- INFO OFF MOVIES -->
             <control type="group">
-                <visible>Window.IsVisible(VideoFiles) | Window.IsVisible(VideoLibrary) + Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
+                <visible>Window.IsVisible(Videos) + Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
                 <left>0</left>
                 <top>0</top>
                 <control type="label">

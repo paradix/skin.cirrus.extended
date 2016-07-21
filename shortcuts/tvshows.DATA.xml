@@ -4,44 +4,44 @@
         <label>137</label>
         <label2>3</label2>
         <icon>DefaultTVShows.png</icon>
-        <action>ActivateWindow(Videos,TVShowTitles,return)</action>
+        <action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
         <action>SendClick(8)</action>
     </shortcut>
     <shortcut>
         <label>369</label>
         <label2>20343</label2>
         <icon>DefaultTVShows.png</icon>
-        <action>ActivateWindow(Videos,TVShowTitles,return)</action>
+        <action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
     </shortcut>
     <shortcut>
         <label>135</label>
         <label2>20343</label2>
         <icon>DefaultTVShows.png</icon>
-        <action>ActivateWindow(VideoLibrary,TVShowGenres,return)</action>
+        <action>ActivateWindow(VideoLibrary,videodb://tvshows/genres/,return)</action>
     </shortcut>
     <shortcut>
         <label>652</label>
         <label2>20343</label2>
         <icon>DefaultTVShows.png</icon>
-        <action>ActivateWindow(VideoLibrary,TVShowYears,return)</action>
+        <action>ActivateWindow(VideoLibrary,videodb://tvshows/years,return)</action>
     </shortcut>
     <shortcut>
         <label>344</label>
         <label2>20343</label2>
         <icon>DefaultActor.png</icon>
-        <action>ActivateWindow(VideoLibrary,TVShowActors,return)</action>
+        <action>ActivateWindow(VideoLibrary,videodb://tvshows/actors/,return)</action>
     </shortcut>
     <shortcut>
         <label>575</label>
         <label2>20343</label2>
         <icon>DefaultRecentlyAddedEpisodes.png</icon>
-        <action>ActivateWindow(Videos,library://video/inprogressshows.xml,return)</action>
+        <action>ActivateWindow(Videos,videodb://inprogressshows/,return)</action>
     </shortcut>
     <shortcut>
         <label>31328</label>
         <label2>20343</label2>
         <icon>DefaultRecentlyAddedEpisodes.png</icon>
-        <action>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</action>
+        <action>ActivateWindow(VideoLibrary,videodb://recentlyaddedepisodes/,return)</action>
     </shortcut>
     <shortcut>
         <label>653</label>

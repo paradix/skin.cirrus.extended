@@ -48,7 +48,7 @@
             <left>0</left>
             <top>530</top>
             <control type="fixedlist" id="591">
-                <visible>Window.IsActive(1) | Container.Content(Addons) | Window.IsVisible(VideoLibrary) + Container.Content(Genres) | Window.IsVisible(VideoLibrary) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(sets)</visible>
+                <visible>Window.IsActive(1) | Container.Content(Addons) | Window.IsVisible(Videos) + Container.Content(Genres) | Window.IsVisible(Videos) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(sets)</visible>
                 <left>-162</left> 
                 <top>0</top>
                 <width>1480</width>
@@ -86,7 +86,7 @@
                         <aspectratio>keep</aspectratio>
                         <fadetime>200</fadetime>
                         <texture fallback="special://skin/extras/moviegenres/Unknown.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].png</texture>
-                        <visible>Container.Content(Genres) + Window.IsVisible(VideoLibrary)</visible>
+                        <visible>Container.Content(Genres) + Window.IsVisible(Videos)</visible>
                     </control>
                 </itemlayout>
                 <focusedlayout height="200" width="180">
@@ -114,7 +114,7 @@
                         <texture fallback="special://skin/extras/moviegenres/Unknown.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].png</texture>
                         <animation reversible="false" effect="zoom" start="-2,16,160,160" end="-12,4,180,180" time="200">focus</animation>
                         <animation reversible="false" effect="zoom" end="-2,16,160,160" start="-12,4,180,180" time="200">unfocus</animation>
-                        <visible>Container.Content(Genres) + Window.IsVisible(VideoLibrary)</visible>
+                        <visible>Container.Content(Genres) + Window.IsVisible(Videos)</visible>
                     </control>
                 </focusedlayout>
             </control>
@@ -136,7 +136,7 @@
                     <align>left</align>
                     <aligny>center</aligny>
                     <label>[COLOR=accent]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Label]</label>
-                    <visible>Skin.HasSetting(View591HideInfo) | Window.IsVisible(VideoFiles) | Container.Content(genres)</visible>
+                    <visible>Skin.HasSetting(View591HideInfo) | Window.IsVisible(Videos) | Container.Content(genres)</visible>
                 </control>
             </control>
             <control type="scrollbar" id="60">
@@ -179,7 +179,7 @@
             <control type="group">
                 <left>80</left>
                 <top>20</top>
-                <visible>Window.IsActive(1) | Container.Content(Addons) | Window.IsVisible(VideoLibrary)</visible>
+                <visible>Window.IsActive(1) | Container.Content(Addons) | Window.IsVisible(Videos)</visible>
                 <control type="fadelabel">
                     <left>-60</left>
                     <top>0</top>

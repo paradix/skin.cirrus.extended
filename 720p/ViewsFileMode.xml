@@ -87,7 +87,7 @@
                         <align>right</align>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label2]</label>
-                        <animation effect="slide" start="0,0" end="20,0" delay="0" time="0" condition="[Window.IsVisible(VideoLibrary) | Window.IsVisible(VideoFiles)]">conditional</animation>
+                        <animation effect="slide" start="0,0" end="20,0" delay="0" time="0" condition="Window.IsVisible(Videos)">conditional</animation>
                     </control>
                     <control type="image">
                         <left>590</left>
@@ -140,7 +140,7 @@
                         <align>right</align>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label2]</label>
-                        <animation effect="slide" start="0,0" end="20,0" delay="0" time="0" condition="[Window.IsVisible(VideoLibrary) | Window.IsVisible(VideoFiles)]">conditional</animation>
+                        <animation effect="slide" start="0,0" end="20,0" delay="0" time="0" condition="Window.IsVisible(Videos)">conditional</animation>
                     </control>
                     <control type="image">
                         <left>590</left>
@@ -192,7 +192,7 @@
                     <aspectratio aligny="center">keep</aspectratio>
                     <fadetime>IconCrossfadeTime</fadetime>
                     <texture background="true" fallback="special://skin/extras/moviegenres/Unknown.png">$VAR[MovieGenreIcon]</texture>
-                    <visible>Container.Content(Genres) + Window.IsVisible(VideoLibrary)</visible>
+                    <visible>Container.Content(Genres) + Window.IsVisible(Videos)</visible>
                 </control>
                 <control type="image">
                     <left>0</left>
@@ -202,7 +202,7 @@
                     <aspectratio aligny="center">keep</aspectratio>
                     <fadetime>IconCrossfadeTime</fadetime>
                     <texture background="true" fallback="special://skin/extras/musicgenres/default.png">$VAR[MusicGenreIcon]</texture>
-                    <visible>Container.Content(Genres) + Window.IsVisible(MusicLibrary)</visible>
+                    <visible>Container.Content(Genres) + Window.IsVisible(Music)</visible>
                 </control>
             </control>
         </control>

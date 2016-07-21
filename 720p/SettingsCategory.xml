@@ -3,7 +3,7 @@
     <defaultcontrol>3</defaultcontrol>
     <controls>
         <control type="group">
-            <visible>!Window.Previous(Weather) + !Window.Previous(VideoFiles) + !Window.Previous(VideoLibrary) + !Window.Previous(MusicFiles) + !Window.Previous(MusicLibrary) + !Window.Previous(Pictures) + !Window.Previous(Programs)</visible>
+            <visible>!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(Music) + !Window.Previous(Pictures) + !Window.Previous(Programs)</visible>
             <include>CommonSettingsBackground</include>
         </control>
         <control type="group">
@@ -15,11 +15,11 @@
             <include>CommonProgramsBackground</include>
         </control>
         <control type="group">
-            <visible>Window.Previous(VideoFiles) | Window.Previous(VideoLibrary)</visible>
+            <visible>Window.Previous(Videos)</visible>
             <include>CommonVideoBackground</include>
         </control>
         <control type="group">
-            <visible>Window.Previous(MusicFiles) | Window.Previous(MusicLibrary) | Window.Previous(Pictures)</visible>
+            <visible>Window.Previous(Music) | Window.Previous(Pictures)</visible>
             <include>CommonMusicBackground</include>
         </control>
         <control type="group">

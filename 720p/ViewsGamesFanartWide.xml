@@ -48,7 +48,7 @@
             <left>0</left>
             <top>530</top>
             <control type="fixedlist" id="592">
-                <visible>String.Contains(container.folderpath,plugin://plugin.program.advanced.launcher) | Window.IsVisible(VideoFiles) | Window.IsVisible(VideoLibrary) + !Container.Content(Genres) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(sets)</visible>
+                <visible>String.Contains(container.folderpath,plugin://plugin.program.advanced.launcher) | Window.IsVisible(Videos) + !Container.Content(Genres) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(sets)</visible>
                 <left>-7</left>
                 <top>0</top>
                 <width>1300</width>
@@ -95,7 +95,7 @@
             </control>
             <!-- INFO OFF GAMES -->
             <control type="group">
-                <visible>Skin.HasSetting(View592HideInfo) | Window.IsVisible(VideoFiles)</visible>
+                <visible>Skin.HasSetting(View592HideInfo) | Container.Content(files)</visible>
                 <left>0</left>
                 <top>0</top>
                 <control type="label">
@@ -141,7 +141,7 @@
             </animation>      
             <left>0</left>
             <top>110</top>
-            <visible>Control.IsVisible(592) + !Skin.HasSetting(View592HideInfo) + !Window.IsVisible(VideoFiles)</visible>
+            <visible>Control.IsVisible(592) + !Skin.HasSetting(View592HideInfo) + !Container.Content(files) + !Window.IsVisible(Videos)</visible>
             <include>VisibleFadeEffect</include>
             <control type="image">
                 <left>0</left>
@@ -154,7 +154,7 @@
             <control type="group">
                 <left>80</left>
                 <top>20</top>
-                <visible>Window.IsActive(1) | Window.IsVisible(VideoFiles) | Window.IsVisible(VideoLibrary)</visible>
+                <visible>Window.IsActive(1) | Window.IsVisible(Videos)</visible>
                 <control type="fadelabel">
                     <left>-60</left>
                     <top>0</top>

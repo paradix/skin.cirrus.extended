@@ -141,7 +141,7 @@
             <animation effect="slide" start="-1300" end="0" time="500" delay="3000" reversible="false">Visible</animation>
             <left>0</left>
             <top>100</top>
-            <visible>Control.IsVisible(667) + !Window.IsVisible(VideoFiles) + Container.Content(Movies)</visible>
+            <visible>Control.IsVisible(667) + Container.Content(Movies) + Window.IsVisible(Videos)</visible>
             <control type="image">
                 <left>-100</left>
                 <top>-10</top>
@@ -464,7 +464,7 @@
             <control type="group">
                 <left>80</left>
                 <top>20</top>
-                <visible>Control.IsVisible(667) + !Window.IsVisible(VideoFiles)</visible>
+                <visible>Control.IsVisible(667) + Window.IsVisible(Videos) + !Container.Content(files)</visible>
                 <control type="image"> 
                     <left>-60</left> 
                     <top>20</top> 

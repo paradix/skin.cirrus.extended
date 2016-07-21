@@ -4,11 +4,11 @@
         <item id="1">
             <description>Movies</description>
             <label>20342</label>
-            <property name="Path">ActivateWindow(videos,library://video/movies/,return)</property>
+            <property name="Path">ActivateWindow(videos,videodb://movies/titles/,return)</property>
             <icon>special://skin/backgrounds/movies.jpg</icon>
             <thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
             <visible>[!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)] | Window.IsVisible(skinsettings)</visible>
-            <onclick condition="!Window.IsVisible(skinsettings)">ActivateWindow(videos,library://video/movies/,return)</onclick>
+            <onclick condition="!Window.IsVisible(skinsettings)">ActivateWindow(videos,videodb://movies/titles/,return)</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.Label,$LOCALIZE[20342])</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.LabelSuffix,$LOCALIZE[31111])</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.DefaultBackground,special://skin/backgrounds/videos.jpg)</onclick>
@@ -167,11 +167,11 @@
         <item id="7">
             <description>TV Shows</description>
             <label>41103</label>
-            <property name="Path">ActivateWindow(videos,library://video/tvshows/,return)</property>
+            <property name="Path">ActivateWindow(videos,videodb://tvshows/titles/,return)</property>
             <icon>special://skin/backgrounds/tv_shows.jpg</icon>
             <thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
             <visible>[!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)] | Window.IsVisible(skinsettings)</visible>
-            <onclick condition="!Window.IsVisible(skinsettings)">ActivateWindow(videos,library://video/tvshows/,return)</onclick>
+            <onclick condition="!Window.IsVisible(skinsettings)">ActivateWindow(videos,videodb://tvshows/titles/,return)</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.Label,$LOCALIZE[41103])</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.LabelSuffix,$LOCALIZE[31111])</onclick>
             <onclick condition="Window.IsVisible(skinsettings)">Skin.SetString(HomeItemToEdit.DefaultBackground,special://skin/backgrounds/tv_shows.jpg)</onclick>
@@ -762,36 +762,36 @@
     <include name="DefaultTvShowsSubmenuContent">
         <item>
             <label>137</label>
-            <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
             <onclick>SendClick(8)</onclick>
         </item>
         <item>
             <label>369</label>
-            <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
             <visible>!Skin.HasSetting(hidetvtitle)</visible>
         </item>
         <item>
             <label>135</label>
-            <onclick>ActivateWindow(VideoLibrary,TVShowGenres,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://tvshows/genres/,return)</onclick>
             <visible>!Skin.HasSetting(hidetvgenre)</visible>
         </item>
         <item>
             <label>652</label>
-            <onclick>ActivateWindow(VideoLibrary,TVShowYears,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://tvshows/years/,return)</onclick>
             <visible>!Skin.HasSetting(hidetvyears)</visible>
         </item>
         <item>
             <label>344</label>
-            <onclick>ActivateWindow(VideoLibrary,TVShowActors,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://tvshows/actors/,return)</onclick>
             <visible>!Skin.HasSetting(hidetvactor)</visible>
         </item>
         <item>
             <label>575</label>
-            <onclick>ActivateWindow(Videos,library://video/inprogressshows.xml,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://inprogressshows/,return)</onclick>
         </item>
         <item>
             <label>31328</label>
-            <onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</onclick>
             <visible>!Skin.HasSetting(hidetvrecently)</visible>	
         </item>
         <item>
@@ -980,28 +980,28 @@
     <include name="DefaultMusicSubmenuContent">
         <item>
             <label>137</label>
-            <onclick>ActivateWindow(MusicLibrary)</onclick>
+            <onclick>ActivateWindow(Music)</onclick>
             <onclick>SendClick(8)</onclick>
         </item>
         <item>
             <label>133</label>
-            <onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
+            <onclick>ActivateWindow(Music,Artists,return)</onclick>
         </item>
         <item>
             <label>132</label>
-            <onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
+            <onclick>ActivateWindow(Music,Albums,return)</onclick>
         </item>
         <item>
             <label>134</label>
-            <onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
+            <onclick>ActivateWindow(Music,Songs,return)</onclick>
         </item>
         <item>
             <label>744</label>
-            <onclick>ActivateWindow(MusicFiles)</onclick>
+            <onclick>ActivateWindow(Music,Files,return)</onclick>
         </item>
         <item>
             <label>14022</label>
-            <onclick>ActivateWindow(MusicLibrary)</onclick>
+            <onclick>ActivateWindow(Music)</onclick>
         </item>
         <item>
             <label>653</label>
@@ -1009,7 +1009,7 @@
         </item>
         <item>
             <label>41255</label>
-            <onclick>ActivateWindow(MusicFiles,$LOCALIZE[1038])</onclick>
+            <onclick>ActivateWindow(Music,addons://sources/audio/,return)</onclick>
         </item>
     </include>
     <include name="DefaultVideoSubmenuContent">
@@ -1019,11 +1019,11 @@
         </item>
         <item>
             <label>342</label>
-            <onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
         </item>
         <item>
             <label>20343</label>
-            <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
         </item>
         <item>
             <label>20389</label>
@@ -1046,7 +1046,7 @@
     <include name="DefaultMoviesSubmenuContent">
         <item>
             <label>137</label>
-            <onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
         </item>
         <item>
             <label>1219</label>
@@ -1055,32 +1055,32 @@
         </item>
         <item>
             <label>369</label>
-            <onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
             <visible>!Skin.HasSetting(hidemovietitle)</visible>
         </item>
         <item>
             <label>135</label>
-            <onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://movies/genres/,return)</onclick>
             <visible>!Skin.HasSetting(hidemoviegenre)</visible>
         </item>
         <item>
             <label>652</label>
-            <onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://movies/years/,return)</onclick>
             <visible>!Skin.HasSetting(hidemovieyears)</visible>
         </item>
         <item>
             <label>31328</label>
-            <onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://recentlyaddedmovies/,return)</onclick>
             <visible>!Skin.HasSetting(hidemovierecently)</visible>
         </item>
         <item>
             <label>344</label>
-            <onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://movies/actors/,return)</onclick>
             <visible>!Skin.HasSetting(hidemovieactor)</visible>
         </item>
         <item>
             <label>20348</label>
-            <onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://movies/directors/,return)</onclick>
             <visible>!Skin.HasSetting(hidemoviedirector)</visible>
         </item>
         <item>
@@ -1091,7 +1091,7 @@
         <item>
             <label>31007</label>
             <onclick>SetProperty(DontRunTVShowScripts,True,Home)</onclick>
-            <onclick>ActivateWindow(Videos,Addons,return)</onclick>
+            <onclick>ActivateWindow(Videos,addons://sources/video/,return)</onclick>
             <visible>!Skin.HasSetting(hidemovievideoaddon)</visible>
         </item>
         <item>
@@ -1166,7 +1166,7 @@
         </item>
         <item>
             <label>41183</label>
-            <onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
+            <onclick>ActivateWindow(Videos,videodb://movies/sets/,return)</onclick>
             <visible>!Skin.HasSetting(hidemovievideofiles)</visible>
         </item>
     </include>

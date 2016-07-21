@@ -11,13 +11,13 @@
         <label>342</label>
         <label2>342</label2>
         <icon>DefaultMovies.png</icon>
-        <action>ActivateWindow(Videos,MovieTitles,return)</action>
+        <action>ActivateWindow(Videos,videodb://movies/titles/,,return)</action>
     </shortcut>
     <shortcut>
         <label>20343</label>
         <label2>20343</label2>
         <icon>DefaultTVShows.png</icon>
-        <action>ActivateWindow(Videos,TVShowTitles,return)</action>
+        <action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
     </shortcut>
     <shortcut>
         <label>20389</label>
@@ -42,6 +42,6 @@
         <label2>1037</label2>
         <icon>DefaultVideoPlugins.png</icon>
         <action>SetProperty(DontRunTVShowScripts,True,Home)</action>
-        <action>ActivateWindow(Videos,Addons,return)</action>
+        <action>ActivateWindow(Videos,addons://sources/video/,return)</action>
     </shortcut>
 </shortcuts>

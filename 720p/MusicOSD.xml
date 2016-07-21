@@ -5,7 +5,7 @@
         <control type="group">
             <animation effect="slide" start="0,-145" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
             <animation effect="slide" start="0,0" end="0,-145" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
-            <animation effect="slide" start="0,0" end="0,-145" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(selectdialog)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,-145" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(AddonSettings) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(selectdialog)">Conditional</animation>
             <control type="image">
                 <!-- background -->
                 <left>0</left>

@@ -474,7 +474,7 @@
         <control type="wraplist" id="555">
             <include>Window_OpenClose_Animation</include>
             <description>Fake list to control coverflow movement</description>
-            <visible>Container.Content(Albums) | Window.IsVisible(Musicfiles) | Container.Content(Songs)</visible> -->
+            <visible>Container.Content(Albums) | [Window.IsVisible(Music) + Container.Content(files)] | Container.Content(Songs)</visible> -->
         <left>460</left>
         <top>175</top>
         <width>366</width>

@@ -142,7 +142,7 @@
             <animation effect="slide" start="-1300" end="0" time="500" delay="3000" reversible="false">Visible</animation>
             <left>0</left>
             <top>100</top>
-            <visible>Control.IsVisible(666) + !Window.IsVisible(VideoFiles) + Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
+            <visible>Control.IsVisible(666) + Window.IsVisible(Videos) + Container.Content(Movies)</visible>
             <control type="image">
                 <left>-100</left>
                 <top>-10</top>

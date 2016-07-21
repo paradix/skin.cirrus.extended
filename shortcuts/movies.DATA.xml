@@ -3,7 +3,7 @@
         <label>137</label>
         <label2>342</label2>
         <icon>DefaultMovie.png</icon>
-        <action>ActivateWindow(Videos,MovieTitles,return)</action>
+        <action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
         <action>SendClick(8)</action>
     </shortcut>
     <shortcut>
@@ -16,31 +16,31 @@
         <label>369</label>
         <label2>342</label2>
         <icon>DefaultMovie.png</icon>
-        <action>ActivateWindow(Videos,MovieTitles,return)</action>
+        <action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
     </shortcut>
     <shortcut>
         <label>135</label>
         <label2>342</label2>
         <icon>DefaultMovie.png</icon>
-        <action>ActivateWindow(VideoLibrary,MovieGenres,return)</action>
+        <action>ActivateWindow(Videos,videodb://movies/genres/,return)</action>
     </shortcut>
     <shortcut>
         <label>652</label>
         <label2>342</label2>
         <icon>DefaultMovie.png</icon>
-        <action>ActivateWindow(VideoLibrary,MovieYears,return)</action>
+        <action>ActivateWindow(Videos,videodb://movies/years/,return)</action>
     </shortcut>
     <shortcut>
         <label>31328</label>
         <label2>3</label2>
         <icon>DefaultRecentlyAddedMovies.png</icon>
-        <action>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</action>
+        <action>ActivateWindow(VideoLibrary,videodb://recentlyaddedmovies/,return)</action>
     </shortcut>
     <shortcut>
         <label>344</label>
         <label2>342</label2>
         <icon>DefaultActor.png</icon>
-        <action>ActivateWindow(VideoLibrary,MovieActors,return)</action>
+        <action>ActivateWindow(VideoLibrary,videodb://movies/actors/,return)</action>
     </shortcut>
     <shortcut>
         <label>20348</label>
@@ -59,7 +59,7 @@
         <label2>342</label2>
         <icon>DefaultMovie.png</icon>
         <action>SetProperty(DontRunTVShowScripts,True,Home)</action>
-        <action>ActivateWindow(Videos,Addons,return)</action>
+        <action>ActivateWindow(Videos,addons://sources/video/,return)</action>
     </shortcut>
     <shortcut>
         <label>41181</label>
@@ -79,6 +79,6 @@
         <label>41183</label>
         <label2>342</label2>
         <icon>DefaultMovie.png</icon>
-        <action>ActivateWindow(Videos,MovieSets,return)</action>
+        <action>ActivateWindow(Videos,videodb://movies/sets/,return)</action>
     </shortcut>
 </shortcuts>

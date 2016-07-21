@@ -36,7 +36,7 @@
             <left>0</left>
             <top>510</top>
             <control type="wraplist" id="590">
-                <visible>String.Contains(container.folderpath,plugin://plugin.program.advanced.launcher) | Window.IsVisible(VideoFiles) | Window.IsVisible(VideoLibrary) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(Sets)</visible>
+                <visible>String.Contains(container.folderpath,plugin://plugin.program.advanced.launcher) | Window.IsVisible(Videos) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(Sets)</visible>
                 <left>-20</left>
                 <top>-10</top>
                 <width>1300</width>
@@ -72,7 +72,7 @@
                         <texture fallback="special://skin/extras/moviegenresposter/default.jpg">special://skin/extras/moviegenresposter/$INFO[ListItem.Label].jpg</texture>
                         <bordertexture border="6">ContentPanelvertical.png</bordertexture>
                         <bordersize>6</bordersize>
-                        <visible>Container.Content(Genres) + Window.IsVisible(VideoLibrary)</visible>
+                        <visible>Container.Content(Genres) + Window.IsVisible(Videos)</visible>
                     </control>
                 </itemlayout>
                 <focusedlayout height="310" width="120">
@@ -111,7 +111,7 @@
                             <aspectratio>stretch</aspectratio>
                             <texture fallback="special://skin/extras/moviegenresposter/default.jpg">special://skin/extras/moviegenresposter/$INFO[ListItem.Label].jpg</texture>
                             <bordersize>6</bordersize>
-                            <visible>Container.Content(Genres) + Window.IsVisible(VideoLibrary)</visible>
+                            <visible>Container.Content(Genres) + Window.IsVisible(Videos)</visible>
                         </control>
                     </control>
                 </focusedlayout>
@@ -119,7 +119,7 @@
 
             <!-- INFO OFF GAMES -->
             <control type="group">
-                <visible>Skin.HasSetting(View590HideInfo) | Window.IsVisible(VideoFiles) | Container.Content(genres)</visible>
+                <visible>Skin.HasSetting(View590HideInfo) | Window.IsVisible(Videos) | Container.Content(genres)</visible>
                 <left>0</left>
                 <top>0</top>
                 <control type="label">
@@ -135,7 +135,7 @@
                     <align>left</align>
                     <aligny>center</aligny>
                     <label>[COLOR=accent]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Label]</label>
-                    <visible>Skin.HasSetting(View590HideInfo) | Window.IsVisible(VideoFiles) | Container.Content(genres)</visible>
+                    <visible>Skin.HasSetting(View590HideInfo) | Window.IsVisible(Videos) | Container.Content(genres)</visible>
                 </control>
             </control>
             <control type="scrollbar" id="60">
@@ -165,7 +165,7 @@
             </animation>      
             <left>0</left>
             <top>110</top>
-            <visible>Control.IsVisible(590) + !Skin.HasSetting(View590HideInfo) + !Container.Content(genres) + !Window.IsVisible(VideoFiles)</visible>
+            <visible>Control.IsVisible(590) + !Skin.HasSetting(View590HideInfo) + !Container.Content(genres) + [Window.IsVisible(Videos) + !Container.Content(files)]</visible>
             <include>VisibleFadeEffect</include>
             <control type="image">
                 <left>0</left>
@@ -178,7 +178,7 @@
             <control type="group">
                 <left>80</left>
                 <top>20</top>
-                <visible>Window.IsActive(1) | Window.IsVisible(VideoFiles) | Window.IsVisible(VideoLibrary)</visible>
+                <visible>Window.IsActive(1) | Window.IsVisible(Videos)</visible>
                 <control type="fadelabel">
                     <left>-60</left>
                     <top>0</top>

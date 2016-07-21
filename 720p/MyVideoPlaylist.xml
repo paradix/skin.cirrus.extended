@@ -117,7 +117,7 @@
                     <left>0</left>
                     <top>160</top>
                     <label>192</label>
-                    <onclick>ReplaceWindow(video)</onclick>
+                    <onclick>ReplaceWindow(Videos)</onclick>
                     <include>ButtonCommonValues</include>
                     <onleft>55</onleft>
                     <onright>55</onright>

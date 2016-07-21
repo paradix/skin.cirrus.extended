@@ -35,8 +35,7 @@
         <texture>rightlistbackground.png</texture>
         <visible>Control.IsVisible(593)</visible>
         <visible>!Container.Content(Genres)</visible>
-        <visible>!Window.IsVisible(VideoFiles)</visible>
-        <visible>!Window.IsVisible(VideoLibrary)</visible>
+        <visible>!Window.IsVisible(Videos)</visible>
       </control>
       <control type="image">
         <!-- Black gradient up the top -->
@@ -111,7 +110,7 @@
         <viewtype label="40003">list</viewtype>
         <pagecontrol>60</pagecontrol>
         <scrolltime>200</scrolltime>
-        <visible>String.Contains(container.folderpath,plugin://plugin.program.advanced.launcher) | Window.IsVisible(VideoFiles) | Container.Content(genres) | Window.IsVisible(VideoLibrary) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(sets)</visible>
+        <visible>String.Contains(container.folderpath,plugin://plugin.program.advanced.launcher) | Container.Content(genres) | Window.IsVisible(Videos) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(sets)</visible>
         <!-- NORMAL LAYOUT -->
         <!-- SLIM LAYOUT GAMES -->
         <itemlayout height="40" width="580">
@@ -208,7 +207,7 @@
       <control type="group">
         <left>20</left>
         <top>360</top>
-        <visible>Control.IsVisible(593) | !Window.IsVisible(VideoFiles) | Container.Content(genres) | Window.IsVisible(VideoLibrary)</visible>
+        <visible>Control.IsVisible(593) | Container.Content(genres) | [Window.IsVisible(Videos) + !Container.Content(files)]</visible>
         <control type="group">
           <left>0</left>
           <top>-30</top>
@@ -243,7 +242,7 @@
             <aspectratio>keep</aspectratio>
             <fadetime>200</fadetime>
             <texture fallback="special://skin/extras/moviegenres/Unknown.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].png</texture>
-            <visible>Container.Content(Genres) + Window.IsVisible(VideoLibrary)</visible>
+            <visible>Container.Content(Genres) + Window.IsVisible(Videos)</visible>
           </control>
         </control>
         <control type="group">
@@ -340,7 +339,7 @@
           <texture>black-back.png</texture>
           <bordertexture border="8">ContentPanelvertical.png</bordertexture>
           <bordersize>8</bordersize>
-          <visible>!Window.IsVisible(VideoFiles) + !Window.IsVisible(VideoLibrary)</visible>
+          <visible>!Window.IsVisible(Videos)</visible>
         </control>
         <control type="image">
           <left>282r</left>
@@ -351,7 +350,7 @@
           <fadetime>IconCrossfadeTime</fadetime>
           <texture fallback="splashm.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
           <bordersize>8</bordersize>
-          <visible>!Window.IsVisible(VideoFiles) + !Container.Content(Genres) + !Window.IsVisible(VideoLibrary)</visible>
+          <visible>!Container.Content(Genres) + !Window.IsVisible(Videos)</visible>
         </control>
         <control type="multiimage">
           <left>274r</left>
@@ -362,7 +361,7 @@
           <fadetime>IconCrossfadeTime</fadetime>
           <timeperimage>5000</timeperimage>
           <imagepath background="true">$INFO[Skin.String(Menu_GameCustom1_Label)]/$INFO[ListItem.label]/extrathumb</imagepath>
-          <visible>!Window.IsVisible(VideoFiles) + !Container.Content(Genres) + !Window.IsVisible(VideoLibrary)</visible>
+          <visible>!Container.Content(Genres) + !Window.IsVisible(Videos)</visible>
         </control>
       </control>
       <control type="scrollbar" id="60">

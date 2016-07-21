@@ -955,7 +955,7 @@
                         <label> - $LOCALIZE[31121]</label>
                         <label2>[COLOR=selected]$INFO[Skin.String(movieplaylistButton1_Path)][/COLOR]</label2>
                         <onclick>Skin.SetFile(movieplaylistButtonPathScript_1,.xsp,special://videoplaylists)</onclick>
-                        <onclick>Skin.SetString(movieplaylistButton1_Path,ActivateWindow(videolibrary,$INFO[Skin.String(movieplaylistButtonPathScript_1)]))</onclick>
+                        <onclick>Skin.SetString(movieplaylistButton1_Path,ActivateWindow(Videos,$INFO[Skin.String(movieplaylistButtonPathScript_1)]))</onclick>
                         <visible>Skin.HasSetting(movieplaylistButton1) + Skin.HasSetting(MovieItems)</visible>
                     </control>
                     <control type="radiobutton" id="458">
@@ -977,7 +977,7 @@
                         <label> - $LOCALIZE[31121]</label>
                         <label2>[COLOR=selected]$INFO[Skin.String(movieplaylistButton2_Path)][/COLOR]</label2>
                         <onclick>Skin.SetFile(movieplaylistButtonPathScript_2,.xsp,special://videoplaylists)</onclick>
-                        <onclick>Skin.SetString(movieplaylistButton2_Path,ActivateWindow(videolibrary,$INFO[Skin.String(movieplaylistButtonPathScript_2)]))</onclick>
+                        <onclick>Skin.SetString(movieplaylistButton2_Path,ActivateWindow(Videos,$INFO[Skin.String(movieplaylistButtonPathScript_2)]))</onclick>
                         <visible>Skin.HasSetting(movieplaylistButton2) + Skin.HasSetting(MovieItems)</visible>
                     </control>
                     <control type="radiobutton" id="461">
@@ -999,7 +999,7 @@
                         <label> - $LOCALIZE[31121]</label>
                         <label2>[COLOR=selected]$INFO[Skin.String(movieplaylistButton3_Path)][/COLOR]</label2>
                         <onclick>Skin.SetFile(movieplaylistButtonPathScript_3,.xsp,special://videoplaylists)</onclick>
-                        <onclick>Skin.SetString(movieplaylistButton3_Path,ActivateWindow(videolibrary,$INFO[Skin.String(movieplaylistButtonPathScript_3)]))</onclick>
+                        <onclick>Skin.SetString(movieplaylistButton3_Path,ActivateWindow(Videos,$INFO[Skin.String(movieplaylistButtonPathScript_3)]))</onclick>
                         <visible>Skin.HasSetting(movieplaylistButton3) + Skin.HasSetting(MovieItems)</visible>
                     </control>
                     <control type="radiobutton" id="600">
@@ -1021,7 +1021,7 @@
                         <label> - $LOCALIZE[31121]</label>
                         <label2>[COLOR=selected]$INFO[Skin.String(movieplaylistButton4_Path)][/COLOR]</label2>
                         <onclick>Skin.SetFile(movieplaylistButtonPathScript_4,.xsp,special://videoplaylists)</onclick>
-                        <onclick>Skin.SetString(movieplaylistButton4_Path,ActivateWindow(videolibrary,$INFO[Skin.String(movieplaylistButtonPathScript_4)]))</onclick>
+                        <onclick>Skin.SetString(movieplaylistButton4_Path,ActivateWindow(Videos,$INFO[Skin.String(movieplaylistButtonPathScript_4)]))</onclick>
                         <visible>Skin.HasSetting(movieplaylistButton4) + Skin.HasSetting(MovieItems)</visible>
                     </control>
                     <control type="radiobutton" id="603">
@@ -1043,7 +1043,7 @@
                         <label> - $LOCALIZE[31121]</label>
                         <label2>[COLOR=selected]$INFO[Skin.String(movieplaylistButton5_Path)][/COLOR]</label2>
                         <onclick>Skin.SetFile(movieplaylistButtonPathScript_5,.xsp,special://videoplaylists)</onclick>
-                        <onclick>Skin.SetString(movieplaylistButton5_Path,ActivateWindow(videolibrary,$INFO[Skin.String(movieplaylistButtonPathScript_5)]))</onclick>
+                        <onclick>Skin.SetString(movieplaylistButton5_Path,ActivateWindow(Videos,$INFO[Skin.String(movieplaylistButtonPathScript_5)]))</onclick>
                         <visible>Skin.HasSetting(movieplaylistButton5) + Skin.HasSetting(MovieItems)</visible>
                     </control>
                     <control type="radiobutton" id="606">
@@ -1065,7 +1065,7 @@
                         <label> - $LOCALIZE[31121]</label>
                         <label2>[COLOR=selected]$INFO[Skin.String(movieplaylistButton6_Path)][/COLOR]</label2>
                         <onclick>Skin.SetFile(movieplaylistButtonPathScript_6,.xsp,special://videoplaylists)</onclick>
-                        <onclick>Skin.SetString(movieplaylistButton6_Path,ActivateWindow(videolibrary,$INFO[Skin.String(movieplaylistButtonPathScript_6)]))</onclick>
+                        <onclick>Skin.SetString(movieplaylistButton6_Path,ActivateWindow(Videos,$INFO[Skin.String(movieplaylistButtonPathScript_6)]))</onclick>
                         <visible>Skin.HasSetting(movieplaylistButton6) + Skin.HasSetting(MovieItems)</visible>
                     </control>
                     <control type="radiobutton" id="489">
@@ -1315,7 +1315,7 @@
                         <label> - $LOCALIZE[31121]</label>
                         <label2>[COLOR=selected]$INFO[Skin.String(tvplaylistButton1_Path)][/COLOR]</label2>
                         <onclick>Skin.SetFile(tvplaylistButtonPathScript_1,.xsp,special://videoplaylists)</onclick>
-                        <onclick>Skin.SetString(tvplaylistButton1_Path,ActivateWindow(videolibrary,$INFO[Skin.String(tvplaylistButtonPathScript_1)]))</onclick>
+                        <onclick>Skin.SetString(tvplaylistButton1_Path,ActivateWindow(Videos,$INFO[Skin.String(tvplaylistButtonPathScript_1)]))</onclick>
                         <visible>Skin.HasSetting(tvplaylistButton1) + Skin.HasSetting(TVItems)</visible>
                     </control>
                     <control type="radiobutton" id="740">
@@ -1337,7 +1337,7 @@
                         <label> - $LOCALIZE[31121]</label>
                         <label2>[COLOR=selected]$INFO[Skin.String(tvplaylistButton2_Path)][/COLOR]</label2>
                         <onclick>Skin.SetFile(tvplaylistButtonPathScript_2,.xsp,special://videoplaylists)</onclick>
-                        <onclick>Skin.SetString(tvplaylistButton2_Path,ActivateWindow(videolibrary,$INFO[Skin.String(tvplaylistButtonPathScript_2)]))</onclick>
+                        <onclick>Skin.SetString(tvplaylistButton2_Path,ActivateWindow(Videos,$INFO[Skin.String(tvplaylistButtonPathScript_2)]))</onclick>
                         <visible>Skin.HasSetting(tvplaylistButton2) + Skin.HasSetting(TVItems)</visible>
                     </control>
                     <control type="radiobutton" id="743">
@@ -1359,7 +1359,7 @@
                         <label> - $LOCALIZE[31121]</label>
                         <label2>[COLOR=selected]$INFO[Skin.String(tvplaylistButton3_Path)][/COLOR]</label2>
                         <onclick>Skin.SetFile(tvplaylistButtonPathScript_3,.xsp,special://videoplaylists)</onclick>
-                        <onclick>Skin.SetString(tvplaylistButton3_Path,ActivateWindow(videolibrary,$INFO[Skin.String(tvplaylistButtonPathScript_3)]))</onclick>
+                        <onclick>Skin.SetString(tvplaylistButton3_Path,ActivateWindow(Videos,$INFO[Skin.String(tvplaylistButtonPathScript_3)]))</onclick>
                         <visible>Skin.HasSetting(tvplaylistButton3) + Skin.HasSetting(TVItems)</visible>
                     </control>
                     <control type="radiobutton" id="746">
@@ -1381,7 +1381,7 @@
                         <label> - $LOCALIZE[31121]</label>
                         <label2>[COLOR=selected]$INFO[Skin.String(tvplaylistButton4_Path)][/COLOR]</label2>
                         <onclick>Skin.SetFile(tvplaylistButtonPathScript_4,.xsp,special://videoplaylists)</onclick>
-                        <onclick>Skin.SetString(tvplaylistButton4_Path,ActivateWindow(videolibrary,$INFO[Skin.String(tvplaylistButtonPathScript_4)]))</onclick>
+                        <onclick>Skin.SetString(tvplaylistButton4_Path,ActivateWindow(Videos,$INFO[Skin.String(tvplaylistButtonPathScript_4)]))</onclick>
                         <visible>Skin.HasSetting(tvplaylistButton4) + Skin.HasSetting(TVItems)</visible>
                     </control>
                     <control type="radiobutton" id="749">
@@ -1403,7 +1403,7 @@
                         <label> - $LOCALIZE[31121]</label>
                         <label2>[COLOR=selected]$INFO[Skin.String(tvplaylistButton5_Path)][/COLOR]</label2>
                         <onclick>Skin.SetFile(tvplaylistButtonPathScript_5,.xsp,special://videoplaylists)</onclick>
-                        <onclick>Skin.SetString(tvplaylistButton5_Path,ActivateWindow(videolibrary,$INFO[Skin.String(tvplaylistButtonPathScript_5)]))</onclick>
+                        <onclick>Skin.SetString(tvplaylistButton5_Path,ActivateWindow(Videos,$INFO[Skin.String(tvplaylistButtonPathScript_5)]))</onclick>
                         <visible>Skin.HasSetting(tvplaylistButton5) + Skin.HasSetting(TVItems)</visible>
                     </control>
                     <control type="radiobutton" id="752">
@@ -1425,7 +1425,7 @@
                         <label> - $LOCALIZE[31121]</label>
                         <label2>[COLOR=selected]$INFO[Skin.String(tvplaylistButton6_Path)][/COLOR]</label2>
                         <onclick>Skin.SetFile(tvplaylistButtonPathScript_6,.xsp,special://videoplaylists)</onclick>
-                        <onclick>Skin.SetString(tvplaylistButton6_Path,ActivateWindow(videolibrary,$INFO[Skin.String(tvplaylistButtonPathScript_6)]))</onclick>
+                        <onclick>Skin.SetString(tvplaylistButton6_Path,ActivateWindow(Videos,$INFO[Skin.String(tvplaylistButtonPathScript_6)]))</onclick>
                         <visible>Skin.HasSetting(tvplaylistButton6) + Skin.HasSetting(TVItems)</visible>
                     </control>
                     <control type="radiobutton" id="755">
