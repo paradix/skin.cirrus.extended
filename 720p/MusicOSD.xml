@@ -19,7 +19,7 @@
             <!-- GROUP FOR PLAYER CONTROLS -->
             <control type="group" id="100">
                 <left>300</left>
-                <top>20</top>
+                <top>20</top>              
                 <control type="button" id="600">
                     <left>0</left>
                     <top>0</top>
@@ -188,15 +188,28 @@
                     <alttexturenofocus>OSDRandomOnNF.png</alttexturenofocus>
                     <onclick>XBMC.PlayerControl(Random)</onclick>
                     <onleft>704</onleft>
-                    <onright>700</onright>
+                    <onright>707</onright>
                 </control>
             </control>
             <!-- SETTING GROUP -->
             <control type="group" id="200">
                 <left>775</left>
                 <top>20</top>
-                <control type="button" id="700">
+                <control type="button" id="707">
                     <left>0</left>
+                    <top>0</top>
+                    <width>28</width>
+                    <height>28</height>
+                    <label>15047</label>
+                    <font>-</font>
+                    <texturefocus>OSDRateFO.png</texturefocus>
+                    <texturenofocus>OSDRateNF.png</texturenofocus>
+                    <onleft>705</onleft>
+                    <onright>700</onright>
+                    <onclick>setrating</onclick>
+                </control>
+                <control type="button" id="700">
+                    <left>50</left>
                     <top>0</top>
                     <width>40</width>
                     <height>28</height>
@@ -204,7 +217,7 @@
                     <font>-</font>
                     <texturefocus>OSDPlaylistFO.png</texturefocus>
                     <texturenofocus>OSDPlaylistNF.png</texturenofocus>
-                    <onleft>705</onleft>
+                    <onleft>707</onleft>
                     <onright>706</onright>
                     <onup>600</onup>
                     <ondown>600</ondown>
@@ -212,7 +225,7 @@
                     <onclick>ActivateWindow(musicplaylist)</onclick>
                 </control>
                 <control type="button" id="706">
-                    <left>50</left>
+                    <left>100</left>
                     <top>0</top>
                     <width>40</width>
                     <height>28</height>
@@ -226,7 +239,7 @@
                     <visible>system.getbool(audiooutput.dspaddonsenabled)</visible>
                 </control>
                 <control type="button" id="500">
-                    <left>100</left>
+                    <left>150</left>
                     <top>0</top>
                     <width>40</width>
                     <height>28</height>
@@ -237,9 +250,8 @@
                     <onleft>706</onleft>
                     <onright>701</onright>
                 </control>
-                
                 <control type="button" id="701">
-                    <left>150</left>
+                    <left>200</left>
                     <top>0</top>
                     <width>40</width>
                     <height>28</height>
@@ -252,7 +264,7 @@
                     <onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
                 </control>
                 <control type="button" id="702">
-                    <left>200</left>
+                    <left>250</left>
                     <top>0</top>
                     <width>40</width>
                     <height>28</height>
@@ -266,7 +278,7 @@
                 </control>
                 <!-- LYRICS  -->
                 <control type="togglebutton" id="703">
-                    <left>250</left>
+                    <left>300</left>
                     <top>0</top>
                     <width>40</width>
                     <height>28</height>
