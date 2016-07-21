@@ -343,9 +343,9 @@
         <textwidth>215</textwidth>
         <aligny>center</aligny>
         <font>cirrus_20</font>
-        <texturefocus border="0">button-backFO.png</texturefocus>
-        <texturenofocus>-</texturenofocus>
-        <focusedcolor>black</focusedcolor>
+        <texturefocus border="5">button-backFO.png</texturefocus>
+        <texturenofocus border="5">button-backNF.png</texturenofocus>
+        <focusedcolor>white</focusedcolor>
         <pulseonselect>false</pulseonselect>
     </include>
     <!-- Home sub-menu stuff -->
@@ -367,8 +367,8 @@
         <align>center</align>
         <aligny>center</aligny>
         <font>cirrus_16</font>
-        <texturefocus border="0" flipx="true">button-backFO.png</texturefocus>
-        <texturenofocus border="0">button-backNF.png</texturenofocus>
+        <texturefocus border="5">button-backFO.png</texturefocus>
+        <texturenofocus border="5">button-backNF.png</texturenofocus>
         <pulseonselect>false</pulseonselect>
     </include>
     <include name="ButtonVideoInfoCommonValues">

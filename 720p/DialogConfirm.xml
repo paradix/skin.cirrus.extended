@@ -60,7 +60,7 @@
                 <height>40</height>
                 <label>107</label>
                 <font>cirrus_24</font>
-                <textcolor>white</textcolor>
+                <textcolor>grey2</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <align>center</align>
                 <texturefocus border="5">button-backFO.png</texturefocus>
@@ -72,7 +72,7 @@
                 <height>40</height>
                 <label>106</label>
                 <font>cirrus_24</font>
-                <textcolor>white</textcolor>
+                <textcolor>grey2</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <align>center</align>
                 <texturefocus border="5">button-backFO.png</texturefocus>
@@ -84,7 +84,7 @@
                 <height>40</height>
                 <label>106</label>
                 <font>cirrus_24</font>
-                <textcolor>white</textcolor>
+                <textcolor>grey2</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <align>center</align>
                 <texturefocus border="5">button-backFO.png</texturefocus>

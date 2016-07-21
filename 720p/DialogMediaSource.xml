@@ -59,7 +59,7 @@
                     <top>0</top>
                     <width>500</width>
                     <height>41</height>
-                    <texture>button-pathboxNF.png</texture>
+                    <texture border="5">button-backNF.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
                 <control type="label">
@@ -82,7 +82,7 @@
                     <width>500</width>
                     <height>41</height>
                     <visible>!Control.HasFocus(10)</visible>
-                    <texture>button-pathboxNF.png</texture>
+                    <texture border="5">button-backNF.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
                 <control type="image">
@@ -91,7 +91,7 @@
                     <width>500</width>
                     <height>41</height>
                     <visible>Control.HasFocus(10)</visible>
-                    <texture>button-pathboxFO.png</texture>
+                    <texture border="5">button-backFO.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
                 <control type="label">
@@ -200,8 +200,8 @@
             <aligny>center</aligny>
             <label>-</label>
             <font>cirrus_24</font>
-            <texturefocus>button-pathboxFO.png</texturefocus>
-            <texturenofocus>button-pathboxNF.png</texturenofocus>
+            <texturefocus border="5">button-backFO.png</texturefocus>
+            <texturenofocus border="5">button-backNF.png</texturenofocus>
             <onup>10</onup>
             <onleft>12</onleft>
             <onright>19</onright>
@@ -219,7 +219,7 @@
                 <texturenofocus border="5">button-backNF.png</texturenofocus>
                 <texturefocus border="5">button-backFO.png</texturefocus>
                 <label>186</label>
-                <font>cirrus_20</font>
+                <font>cirrus_24</font>
                 <onup>12</onup>
                 <onleft>20</onleft>
                 <onright>19</onright>
@@ -237,7 +237,7 @@
                 <texturenofocus border="5">button-backNF.png</texturenofocus>
                 <texturefocus border="5">button-backFO.png</texturefocus>
                 <label>222</label>
-                <font>cirrus_20</font>
+                <font>cirrus_24</font>
                 <onup>12</onup>
                 <onleft>18</onleft>
                 <onright>20</onright>
@@ -255,7 +255,7 @@
                 <texturenofocus border="5">button-backNF.png</texturenofocus>
                 <texturefocus border="5">button-backFO.png</texturefocus>
                 <label>20333</label>
-                <font>cirrus_20</font>
+                <font>cirrus_24</font>
                 <onup>12</onup>
                 <onleft>19</onleft>
                 <onright>18</onright>
