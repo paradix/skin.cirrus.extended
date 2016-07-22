@@ -66,6 +66,13 @@
                     <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
                     <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
                 </control>
+                <control type="button" id="37">
+                    <description>TimerRules</description>
+                    <include>ButtonCommonValues</include>
+                    <label>$LOCALIZE[19138]</label>
+                    <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimerRules)</onclick>
+                    <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimerRules)</onclick>
+                </control>
                 <control type="label" id="201">
                     <width>250</width>
                     <height>35</height>
@@ -151,6 +158,12 @@
                     <include>ButtonCommonValues</include>
                     <label>$LOCALIZE[19184]</label>
                     <visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
+                </control>
+                <control type="radiobutton" id="8">
+                    <description>Hide disabled timers</description>
+                    <include>ButtonCommonValues</include>
+                    <label>$LOCALIZE[19077]</label>
+                    <visible>Window.IsActive(MyPVRTimers.xml)</visible>
                 </control>
                 <control type="button" id="610">
                     <description>Fake Button to fix Player Controls Navigation</description>

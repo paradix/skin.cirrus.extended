@@ -128,7 +128,8 @@
                         <height>480</height>
                         <onup>50</onup>
                         <ondown>50</ondown>
-                        <onleft>35</onleft>
+                        <onleft condition="Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)">35</onleft>
+                        <onleft condition="Window.IsActive(TVTimerRules) | Window.IsActive(RadioTimerRules)">37</onleft>
                         <onright>73</onright>
                         <pagecontrol>73</pagecontrol>
                         <scrolltime>200</scrolltime>
@@ -288,7 +289,8 @@
                         <textureslidernib>ScrollBarNib.png</textureslidernib>
                         <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
                         <onleft>11</onleft>
-                        <onright>35</onright>
+                        <onright condition="Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)">35</onright>
+                        <onright condition="Window.IsActive(TVTimerRules) | Window.IsActive(RadioTimerRules)">37</onright>
                         <ondown>73</ondown>
                         <onup>73</onup>
                         <showonepage>false</showonepage>
